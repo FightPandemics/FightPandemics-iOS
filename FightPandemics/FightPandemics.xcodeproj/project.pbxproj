@@ -13,7 +13,6 @@
 		E1E41DBF2458AE6C00AFD86F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E41DBE2458AE6C00AFD86F /* Assets.xcassets */; };
 		E1E41DC22458AE6C00AFD86F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E41DC02458AE6C00AFD86F /* LaunchScreen.storyboard */; };
 		E1E41DCA2458AE7A00AFD86F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DC92458AE7A00AFD86F /* BaseViewController.swift */; };
-		E1E41DCC2458AE8000AFD86F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DCB2458AE8000AFD86F /* ViewController.swift */; };
 		E1E41DD52458AE8D00AFD86F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DCD2458AE8C00AFD86F /* UIViewExtension.swift */; };
 		E1E41DD62458AE8D00AFD86F /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DCE2458AE8C00AFD86F /* UIResponderExtension.swift */; };
 		E1E41DD72458AE8D00AFD86F /* Array+Chunked.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DCF2458AE8C00AFD86F /* Array+Chunked.swift */; };
@@ -29,6 +28,7 @@
 		E1E41DE92458AEA100AFD86F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DE22458AEA100AFD86F /* Button.swift */; };
 		E1E41DEA2458AEA100AFD86F /* MainText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DE32458AEA100AFD86F /* MainText.swift */; };
 		E1E41DEB2458AEA100AFD86F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DE42458AEA100AFD86F /* MenuItem.swift */; };
+		E1E41DF02458C82800AFD86F /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E41DEF2458C82800AFD86F /* home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,6 @@
 		E1E41DC12458AE6C00AFD86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1E41DC32458AE6C00AFD86F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E41DC92458AE7A00AFD86F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		E1E41DCB2458AE8000AFD86F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../FightPandemicsV2/AtilihyV2/ViewController.swift; sourceTree = "<group>"; };
 		E1E41DCD2458AE8C00AFD86F /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E1E41DCE2458AE8C00AFD86F /* UIResponderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
 		E1E41DCF2458AE8C00AFD86F /* Array+Chunked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Chunked.swift"; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		E1E41DE22458AEA100AFD86F /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		E1E41DE32458AEA100AFD86F /* MainText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainText.swift; sourceTree = "<group>"; };
 		E1E41DE42458AEA100AFD86F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		E1E41DEF2458C82800AFD86F /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 				E1E41DEC2458AEA500AFD86F /* UIComponets */,
 				E1E41DDD2458AE9200AFD86F /* Utilities */,
 				E1E41DB52458AE6800AFD86F /* AppDelegate.swift */,
-				E1E41DCB2458AE8000AFD86F /* ViewController.swift */,
+				E1E41DEF2458C82800AFD86F /* home.swift */,
 				E1E41DC92458AE7A00AFD86F /* BaseViewController.swift */,
 				E1E41DB72458AE6800AFD86F /* SceneDelegate.swift */,
 				E1E41DBB2458AE6800AFD86F /* Main.storyboard */,
@@ -204,7 +204,6 @@
 			files = (
 				E1E41DD52458AE8D00AFD86F /* UIViewExtension.swift in Sources */,
 				E1E41DE52458AEA100AFD86F /* Header.swift in Sources */,
-				E1E41DCC2458AE8000AFD86F /* ViewController.swift in Sources */,
 				E1E41DD72458AE8D00AFD86F /* Array+Chunked.swift in Sources */,
 				E1E41DE62458AEA100AFD86F /* progress.swift in Sources */,
 				E1E41DD82458AE8D00AFD86F /* UIWindow+ViewControllerUtility.swift in Sources */,
@@ -220,6 +219,7 @@
 				E1E41DB82458AE6800AFD86F /* SceneDelegate.swift in Sources */,
 				E1E41DDC2458AE8D00AFD86F /* AccessibilityLabel.swift in Sources */,
 				E1E41DE92458AEA100AFD86F /* Button.swift in Sources */,
+				E1E41DF02458C82800AFD86F /* home.swift in Sources */,
 				E1E41DEB2458AEA100AFD86F /* MenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
