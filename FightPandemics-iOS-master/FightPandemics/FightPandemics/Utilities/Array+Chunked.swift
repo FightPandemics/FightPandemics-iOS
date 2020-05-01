@@ -1,6 +1,4 @@
-//
-//  Created by Zsombor Szabo on 18/03/2020.
-//
+
 
 import Foundation
 

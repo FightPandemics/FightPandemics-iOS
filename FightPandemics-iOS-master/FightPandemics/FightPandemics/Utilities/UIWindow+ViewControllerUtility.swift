@@ -1,7 +1,3 @@
-//
-//  Created by Zsombor Szabo on 11/03/2020.
-//
-//
 
 import UIKit
 

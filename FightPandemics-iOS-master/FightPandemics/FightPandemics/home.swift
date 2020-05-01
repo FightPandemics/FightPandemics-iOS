@@ -1,10 +1,3 @@
-//
-//  home.swift
-//  FightPandemics
-//
-//  Created by Andreas Ink on 4/28/20.
-//  Copyright © 2020 Andreas Ink. All rights reserved.
-//
 
 
 import UIKit
@@ -18,15 +11,13 @@ class ViewController: BaseViewController {
     var text1: LargeText!
     var text2: MainText!
      var shade = UIView()
-     var panGesture = UIPanGestureRecognizer()
+     
     var blob = UIImageView(image: UIImage(named: "blob"))
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.Primary.Sand
        
-    panGesture = UIPanGestureRecognizer(target: self, action: #selector(draggedView2(_:)))
-                              view.isUserInteractionEnabled = true
-                view.addGestureRecognizer(panGesture)
+   
         
    drawScreen()
     }
@@ -135,104 +126,4 @@ class ViewController: BaseViewController {
                      }, completion: nil)
 
     }
-    @objc func draggedView2(_ sender:UIPanGestureRecognizer){
-                
-        
-      
-        
-         
-           UIView.animate(
-            withDuration: 0.7, delay: 0.0, options: [],
-                                animations: { [weak self] in
-                                    if let controller = self {
-                                     
-                                     let translation = sender.translation(in: controller.view)
-                                       
-                                        controller.news1.center = CGPoint(x: controller.news1.center.x + translation.x/2 , y: controller.news1.center.y)
-                                      
-                                        controller.news1.text.center.x = controller.news1.center.x - controller.news1.frame.size.width/5
-                                        
-                                        controller.news1.img.center.x = controller.news1.center.x
-                                        controller.news1.img.center.y = controller.news1.center.y - 20
-                                        
-                                        
-                                    }
-                                }, completion: nil)
-           
-             
-        if news1.center.x > view.center.x {
-            UIView.animate(
-                       withDuration: 0.7, delay: 0.1, options: [],
-                                           animations: { [weak self] in
-                                               if let controller = self {
-                                                
-                                              
-                                                  
-                                                controller.news1.center.x = controller.view.center.x - controller.screenWidth/10
-                                                controller.news1.text.center.x = controller.news1.center.x - controller.news1.frame.size.width/5
-                                                
-                                                controller.news1.img.center.x = controller.news1.center.x
-                                                controller.news1.img.center.y = controller.news1.center.y - 20
-                                               
-                                               }
-                                           }, completion: nil)
-        }
-       
-        if news4.center.x < view.center.x  {
-                   UIView.animate(
-                              withDuration: 0.7, delay: 0.1, options: [],
-                                                  animations: { [weak self] in
-                                                      if let controller = self {
-                                                       
-                                                     print(1)
-                                                          controller.news1.center.x =  controller.news1.center.x + controller.news1.frame.size.width - 50
-                                                        controller.news4.center.x =  controller.news2.center.x + controller.news1.frame.size.width + 50
-                                                          controller.news4.text.center.x = controller.news3.center.x - controller.news3.frame.size.width/3.5
-                                                        
-                                                        controller.news4.img.center.x = controller.news4.center.x
-                                                        controller.news4.img.center.y = controller.news4.center.y - 20
-                                                      
-                                                      }
-                                                  }, completion: nil)
-               }
-       UIView.animate(
-        withDuration: 0.7, delay: 0.1, options: [],
-                            animations: { [weak self] in
-                                if let controller = self {
-                                    controller.news2.center.x =  controller.news1.center.x  + controller.news1.frame.width + 50
-                                 controller.news2.text.center.x = controller.news2.center.x - controller.news2.frame.size.width/3.5
-                                    controller.news2.img.center.x = controller.news2.center.x
-                                    controller.news2.img.center.y = controller.news2.center.y - 20
-                                   
-                                    
-                                }
-                            }, completion: nil)
-        UIView.animate(
-            withDuration: 0.7, delay: 0.2, options: [],
-                                   animations: { [weak self] in
-                                       if let controller = self {
-                                           controller.news3.center.x = controller.news2.center.x  + controller.news2.frame.width + 50
-                                        controller.news3.text.center.x = controller.news3.center.x - controller.news3.frame.size.width/3.5
-                                          controller.news3.img.center.x = controller.news3.center.x
-                                                                            controller.news3.img.center.y = controller.news3.center.y - 20
-                                           
-                                       }
-                                   }, completion: nil)
-        
-                     
-    
-        
-    UIView.animate(
-    withDuration: 0.7, delay: 0.3, options: [],
-                           animations: { [weak self] in
-                               if let controller = self {
-                                   controller.news4.center.x = controller.news3.center.x  + controller.news2.frame.width + 50
-                                controller.news4.text.center.x = controller.news4.center.x - controller.news4.frame.size.width/3.5
-                                  controller.news4.img.center.x = controller.news4.center.x
-                                                                                                            controller.news4.img.center.y = controller.news4.center.y - 20
-                                   
-                               }
-                           }, completion: nil)
-}
-
 }
