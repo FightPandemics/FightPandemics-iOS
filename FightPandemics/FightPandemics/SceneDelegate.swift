@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/2/20.
-//  Copyright © 2020 Fight Pandemics. All rights reserved.
+//  Created by Andreas Ink on 4/28/20.
+//  Copyright © 2020 Andreas Ink. All rights reserved.
 //
 
 import UIKit
