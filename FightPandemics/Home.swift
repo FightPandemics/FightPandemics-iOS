@@ -1,5 +1,5 @@
 //
-//  home.swift
+//  Home.swift
 //  FightPandemics
 //
 //  Created by Andreas Ink on 4/28/20.
