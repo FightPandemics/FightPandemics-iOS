@@ -90,34 +90,6 @@ class ViewController: BaseViewController {
         news2.layer.shadowColor = UIColor.lightGray.cgColor
                                      news2.layer.shadowOpacity = 0.2
                                    //  news1.layer.shadowOffset = .init(width: 10, height: 10)
-         
-        
-        
-        UIView.animate(
-                  withDuration: 0.7, delay: 0.0, options: [],
-                                      animations: { [weak self] in
-                                          if let controller = self {
-                                    
-                                              
-                                              
-                                              
-                                          }
-                                      }, completion: nil)
-           
-        UIView.animate(
-        withDuration: 0.7, delay: 0.2, options: [],
-                            animations: { [weak self] in
-                                if let controller = self {
-                                 
-                                 
-                                 
-                                  
-                                    
-                                    
-                                    
-                                }
-                            }, completion: nil)
-        
     }
     override func viewDidLayoutSubviews() {
           super.viewDidLayoutSubviews()

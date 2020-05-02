@@ -146,9 +146,6 @@ class Menu: UIView {
     init(_ parentVC: BaseViewController) {
         self.parentVC = parentVC
         super.init(frame: CGRect())
-        let defaults = UserDefaults.standard
-        
-       
        
         if !MANUAL_STATE_TEST {
             self.menuItems.append(contentsOf: [
