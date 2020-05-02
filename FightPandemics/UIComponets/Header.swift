@@ -44,7 +44,6 @@ class Header: UIView {
             } else {
                 self.menuIcon.isHidden = true
             }
-
         }
     }
 
@@ -63,6 +62,7 @@ class Header: UIView {
         drawMenuIcon()
         
     }
+    
  private func drawBlob() {
     
     }

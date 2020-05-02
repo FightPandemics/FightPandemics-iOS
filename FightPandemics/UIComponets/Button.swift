@@ -46,8 +46,8 @@ class Button: UIView {
         self.layer.borderWidth = 3
          self.layer.borderColor = UIColor(red: 0.257, green: 0.352, blue: 0.95, alpha: 1).cgColor
         self.layer.cornerRadius = 20
-        var buttonFontSize: CGFloat = screenWidth/15
-        var subtextFontSize: CGFloat = 14
+        let buttonFontSize: CGFloat = screenWidth/15
+        let subtextFontSize: CGFloat = 14
        
         self.text.font = self.text.font.withSize(buttonFontSize)
         self.text.textColor = .black
@@ -73,8 +73,6 @@ class Button: UIView {
         drawText()
     }
 
-  
-
     func drawText() {
         self.text.center.x = self.center.x
         self.text.center.y = self.center.y + self.frame.size.height/2.5
@@ -90,9 +88,6 @@ class Button: UIView {
         self.subtext?.frame.size.height = self.subtext?.contentSize.height ?? 0
         self.subtext?.center.x = self.text.center.x
         self.subtext?.frame.origin.y = self.frame.maxY
-        if let subtext = self.subtext {
-            //parentVC.view.addSubview(subtext)
-        }
         self.subtext?.isSelectable = false
     }
 

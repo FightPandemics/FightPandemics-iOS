@@ -32,8 +32,6 @@ class LargeText: UITextView {
         self.parentVC = parentVC
         super.init(frame: CGRect(), textContainer: nil)
         self.text = text
-        var fontSize: CGFloat = 36
-      
         
         self.font = UIFont.boldSystemFont(ofSize: 16.0)
         self.textColor = UIColor.Primary.Gray
@@ -42,7 +40,6 @@ class LargeText: UITextView {
         self.isEditable = false
         self.backgroundColor = .clear
         self.isSelectable = false
-        // accessibility
         self.accessibilityIdentifier = AccessibilityIdentifier.Content.rawValue
     }
 

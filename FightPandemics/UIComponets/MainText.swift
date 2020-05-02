@@ -33,12 +33,6 @@ class MainText: UITextView {
         self.parentVC = parentVC
         super.init(frame: CGRect(), textContainer: nil)
         self.text = text
-        var fontSize: CGFloat = 18
-        if screenHeight <= 568 {
-            fontSize = 14
-        } else if screenHeight <= 667 {
-            fontSize = 16
-        }
         self.font = UIFont.boldSystemFont(ofSize: 12.0)
         self.textColor = UIColor.Primary.Gray
         self.frame.size.width = contentMaxWidth
@@ -46,8 +40,6 @@ class MainText: UITextView {
         self.isEditable = false
         self.backgroundColor = .clear
         self.isSelectable = false
-        // accessibility
-       
     }
 
     func draw(centerX: CGFloat, originY: CGFloat) {

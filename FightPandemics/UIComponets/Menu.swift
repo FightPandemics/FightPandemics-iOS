@@ -140,15 +140,10 @@ class Menu: UIView {
         }
         
     }
-    
   
-    // swiftlint:disable:next function_body_length
     init(_ parentVC: BaseViewController) {
         self.parentVC = parentVC
         super.init(frame: CGRect())
-        let defaults = UserDefaults.standard
-        
-       
        
         if !MANUAL_STATE_TEST {
             self.menuItems.append(contentsOf: [
@@ -183,8 +178,6 @@ class Menu: UIView {
                              }),
                 
             ])
- 
-        
         }
     }
 
