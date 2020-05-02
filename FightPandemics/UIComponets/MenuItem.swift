@@ -32,7 +32,6 @@ class MenuItem: UIView {
     var linkImg: UIImageView?
     private var _onClick: () -> Void = {return}
 
-    // swiftlint:disable:next function_body_length
     func draw(parentVC: UIViewController, width: CGFloat, centerX: CGFloat, centerY: CGFloat) {
         menuItem1.isUserInteractionEnabled = true
         menuItem1text.isUserInteractionEnabled = true
@@ -91,6 +90,7 @@ class MenuItem: UIView {
             parentVC.view.addSubview(linkImg)
         }
     }
+    
     func toggleShow() {
            menuItem1.isHidden = !menuItem1.isHidden
            menuItem1text.isHidden = !menuItem1text.isHidden
@@ -117,11 +117,8 @@ class MenuItem: UIView {
                                                           options: [],
                                                           animations: { [weak self] in
                                                            if let controller = self {
-                                                            // swiftlint:disable:next line_length
                                                             controller.menuItem1.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1.frame.width/1.14
-                                                            // swiftlint:disable:next line_length
                                                                  controller.menuItem1text.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1text.frame.width/1.14
-                                                               // swiftlint:disable:next line_length
                                                                 controller.linkImg?.frame.origin.x = controller.menuItem1text.frame.origin.x + 210
                                               
                                                            }
@@ -129,6 +126,7 @@ class MenuItem: UIView {
                    }
            
        }
+    
     @objc func onClick() {
         self._onClick()
     }

@@ -91,6 +91,7 @@ class ViewController: BaseViewController {
                                      news2.layer.shadowOpacity = 0.2
                                    //  news1.layer.shadowOffset = .init(width: 10, height: 10)
     }
+    
     override func viewDidLayoutSubviews() {
           super.viewDidLayoutSubviews()
          
@@ -102,10 +103,9 @@ class ViewController: BaseViewController {
                        shade.alpha = 0.0
          super.drawMenuOnTop()
          
-          
-          // swiftlint:disable:next line_length
           NotificationCenter.default.addObserver(self, selector: #selector(self.fade), name: NSNotification.Name(rawValue: "notificationName"), object: nil)
       }
+    
     @objc func fade(_ notification: NSNotification) {
 
                  UIView.animate(
@@ -125,11 +125,6 @@ class ViewController: BaseViewController {
 
     }
     @objc func draggedView2(_ sender:UIPanGestureRecognizer){
-                
-        
-      
-        
-         
            UIView.animate(
             withDuration: 0.7, delay: 0.0, options: [],
                                 animations: { [weak self] in

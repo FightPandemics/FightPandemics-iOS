@@ -40,7 +40,6 @@ class LargeText: UITextView {
         self.isEditable = false
         self.backgroundColor = .clear
         self.isSelectable = false
-        // accessibility
         self.accessibilityIdentifier = AccessibilityIdentifier.Content.rawValue
     }
 

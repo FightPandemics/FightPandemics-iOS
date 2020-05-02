@@ -73,8 +73,6 @@ class Button: UIView {
         drawText()
     }
 
-  
-
     func drawText() {
         self.text.center.x = self.center.x
         self.text.center.y = self.center.y + self.frame.size.height/2.5

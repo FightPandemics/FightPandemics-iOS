@@ -140,9 +140,7 @@ class Menu: UIView {
         }
         
     }
-    
   
-    // swiftlint:disable:next function_body_length
     init(_ parentVC: BaseViewController) {
         self.parentVC = parentVC
         super.init(frame: CGRect())
@@ -180,8 +178,6 @@ class Menu: UIView {
                              }),
                 
             ])
- 
-        
         }
     }
 
