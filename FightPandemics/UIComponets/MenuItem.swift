@@ -90,11 +90,11 @@ class MenuItem: UIView {
             parentVC.view.addSubview(linkImg)
         }
     }
-    
+
     func toggleShow() {
            menuItem1.isHidden = !menuItem1.isHidden
            menuItem1text.isHidden = !menuItem1text.isHidden
-           
+
            if let linkImg = self.linkImg {
                linkImg.isHidden = !linkImg.isHidden
         }
@@ -106,7 +106,7 @@ class MenuItem: UIView {
                                if let controller = self {
                                    controller.menuItem1.center.x =  1000
                                      controller.menuItem1text.center.x =  1000
-                                   
+
                                     controller.linkImg?.frame.origin.x =  controller.menuItem1text.frame.origin.x
                                }
                    }, completion: nil)
@@ -120,13 +120,13 @@ class MenuItem: UIView {
                                                             controller.menuItem1.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1.frame.width/1.14
                                                                  controller.menuItem1text.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1text.frame.width/1.14
                                                                 controller.linkImg?.frame.origin.x = controller.menuItem1text.frame.origin.x + 210
-                                              
+
                                                            }
                                                }, completion: nil)
                    }
-           
+
        }
-    
+
     @objc func onClick() {
         self._onClick()
     }

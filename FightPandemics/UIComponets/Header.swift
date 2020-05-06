@@ -60,11 +60,11 @@ class Header: UIView {
         drawBlob()
         drawLogo()
         drawMenuIcon()
-        
+
     }
-    
+
  private func drawBlob() {
-    
+
     }
     private func drawLogo() {
         logo.frame.size.width = 35

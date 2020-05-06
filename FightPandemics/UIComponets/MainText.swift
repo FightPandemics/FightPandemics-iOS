@@ -28,7 +28,7 @@ import UIKit
 
 class MainText: UITextView {
     weak var parentVC: BaseViewController!
-    
+
     init(_ parentVC: BaseViewController, text: String) {
         self.parentVC = parentVC
         super.init(frame: CGRect(), textContainer: nil)

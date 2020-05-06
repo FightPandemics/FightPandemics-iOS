@@ -32,7 +32,7 @@ class LargeText: UITextView {
         self.parentVC = parentVC
         super.init(frame: CGRect(), textContainer: nil)
         self.text = text
-        
+
         self.font = UIFont.boldSystemFont(ofSize: 16.0)
         self.textColor = UIColor.Primary.Gray
         self.frame.size.width = contentMaxWidth

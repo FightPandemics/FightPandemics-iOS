@@ -48,7 +48,7 @@ class Button: UIView {
         self.layer.cornerRadius = 20
         let buttonFontSize: CGFloat = screenWidth/15
         let subtextFontSize: CGFloat = 14
-       
+
         self.text.font = self.text.font.withSize(buttonFontSize)
         self.text.textColor = .black
         self.text.backgroundColor = .clear
@@ -60,15 +60,14 @@ class Button: UIView {
         // accessibility
         self.text.accessibilityIdentifier = AccessibilityIdentifier.ButtonText.rawValue
         self.subtext?.accessibilityIdentifier = AccessibilityIdentifier.SubText.rawValue
-        
+
         self.img.frame.size.width = self.frame.size.width/1.5
         self.img.frame.size.height = self.frame.size.width/1.5
     }
 
 //    Call this after you set where you want to place your button in the parentVC
     func draw(centerX: CGFloat, centerY: CGFloat) {
-       
-        
+
         parentVC.view.addSubview(self)
         drawText()
     }
@@ -76,12 +75,12 @@ class Button: UIView {
     func drawText() {
         self.text.center.x = self.center.x
         self.text.center.y = self.center.y + self.frame.size.height/2.5
-        
+
         self.img.center.x = self.center.x
                self.img.center.y = self.center.y - 20
 //        Call after the button's container has been laid out in parent ViewController
         self.text.sizeToFit()
-        
+
         parentVC.view.addSubview(self.text)
           parentVC.view.addSubview(self.img)
         self.subtext?.frame.size.width = contentMaxWidth
