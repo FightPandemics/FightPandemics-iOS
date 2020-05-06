@@ -24,9 +24,12 @@
 		2F9EFE86245DFC9F00E86700 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE77245DFC9F00E86700 /* Menu.swift */; };
 		2F9EFE87245DFC9F00E86700 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE78245DFC9F00E86700 /* Button.swift */; };
 		2F9EFE89245DFD7400E86700 /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE88245DFD7400E86700 /* UIResponderExtension.swift */; };
+		5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		2F9EFE4D245DFB1700E86700 /* FightPandemics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightPandemics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9EFE50245DFB1700E86700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F9EFE52245DFB1700E86700 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		2F9EFE77245DFC9F00E86700 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		2F9EFE78245DFC9F00E86700 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		2F9EFE88245DFD7400E86700 /* UIResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
+		4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +57,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033973FDB7BA0D30ACF6F0E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2F9EFE44245DFB1700E86700 = {
 			isa = PBXGroup;
 			children = (
 				2F9EFE4F245DFB1700E86700 /* FightPandemics */,
 				2F9EFE4E245DFB1700E86700 /* Products */,
+				91B98918B2BF3E9F21F244CB /* Pods */,
+				033973FDB7BA0D30ACF6F0E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +131,15 @@
 			path = UIComponets;
 			sourceTree = "<group>";
 		};
+		91B98918B2BF3E9F21F244CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */,
+				1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9EFE61245DFB1900E86700 /* Build configuration list for PBXNativeTarget "FightPandemics" */;
 			buildPhases = (
+				11B0ABB8D9116EAB2D25D89B /* [CP] Check Pods Manifest.lock */,
 				2F9EFE49245DFB1700E86700 /* Sources */,
 				2F9EFE4A245DFB1700E86700 /* Frameworks */,
 				2F9EFE4B245DFB1700E86700 /* Resources */,
+				2F9EFE8E245E251C00E86700 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -181,6 +207,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11B0ABB8D9116EAB2D25D89B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FightPandemics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F9EFE8E245E251C00E86700 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect \"$SRCROOT\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F9EFE49245DFB1700E86700 /* Sources */ = {
@@ -342,6 +411,7 @@
 		};
 		2F9EFE62245DFB1900E86700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -361,6 +431,7 @@
 		};
 		2F9EFE63245DFB1900E86700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

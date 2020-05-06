@@ -8,7 +8,14 @@ iOS app for the [FightPandemics](https://fightpandemics.com/) platform :iphone:
 
 ## Contributing
 
-See the [CONTRIBUTING](https://github.com/FightPandemics/FightPandemics-iOS/blob/develop/CONTRIBUTING.md) file for info on how to get involved.
+See the [CONTRIBUTING](https://github.com/FightPandemics/FightPandemics-iOS/blob/develop/CONTRIBUTING.md) file for guidelines on contributing.
+
+### Getting Started
+
+* Install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html#installation)
+* Run `pod install` in the project directory
+* Open `FightPandemics.xcworkspace` in Xcode (not `FightPandemics.xcodeproj`)
+* Happy coding!
 
 ## Credits
 

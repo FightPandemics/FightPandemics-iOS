@@ -29,7 +29,7 @@ import UIKit
 let MANUAL_STATE_TEST = false
 
 class Menu: UIView {
-    
+
     weak var parentVC: BaseViewController?
     var xIcon = UIImageView(image: UIImage(named: "x-icon"))
     var menuItems: [MenuItem] = []
@@ -42,22 +42,22 @@ class Menu: UIView {
         drawMenuItems()
         drawBottomText()
     }
-    
+
     private func drawMenuBackground() {
-       
+
         self.frame.size.width = 0.8 * screenWidth
         self.frame.size.height = screenHeight
         self.frame.origin.x = screenWidth - self.frame.size.width + 1000
         if let parentVC = self.parentVC {
             self.frame.origin.y = 0
-        
+
         self.backgroundColor = UIColor(red: 0.257, green: 0.352, blue: 0.95, alpha: 1)
         self.isHidden = false
         self.layer.zPosition = 1
         parentVC.view.addSubview(self)
         }
     }
-    
+
     private func drawXIcon() {
         xIcon.frame.size.width = 23
         xIcon.frame.size.height = 23
@@ -71,12 +71,12 @@ class Menu: UIView {
         xIcon.layer.zPosition = 1
         parentVC?.view.addSubview(xIcon)
     }
-    
+
     private func drawMenuItems() {
         let menuItemWidth = (3.0/3.75) * self.frame.size.width
         let firstItemYValue = 160.0 * figmaToiOSVerticalScalingFactor
         let menuItemYGap = 58.0 * figmaToiOSVerticalScalingFactor
-        
+
         var lastYCenter: CGFloat = 0.0
         for (index, item) in self.menuItems.enumerated() {
             var yCenter: CGFloat
@@ -91,7 +91,7 @@ class Menu: UIView {
             }
         }
     }
-    
+
     private func drawBottomText() {
         bottomWaterMark.frame.size.width = screenWidth/2.5
         bottomWaterMark.frame.size.height = screenWidth/5.7
@@ -104,7 +104,7 @@ class Menu: UIView {
     }
     @objc func toggleMenu() {
        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "notificationName"), object: nil)
-        
+
         for menuItem in menuItems {
             menuItem.toggleShow()
         }
@@ -117,34 +117,33 @@ class Menu: UIView {
                     if let controller = self {
                         controller.frame.origin.x =  controller.screenWidth - controller.frame.size.width + 1000
                         controller.xIcon.frame.origin.x = 0.9 * controller.screenWidth + 1000
-                       
-                        
+
                     }
                 }, completion: nil)
         }
         if  hide == false {
 
             UIView.animate(
-                
+
                 withDuration: 0.7, delay: 0.0, options: [],
                 animations: { [weak self] in
                     if let controller = self {
                         controller.frame.origin.x =  controller.screenWidth - controller.frame.size.width
                         controller.xIcon.frame.origin.x = 0.9 * controller.screenWidth
-                        
+
                         controller.bottomWaterMark.center.x = controller.center.x
                         controller.bottomWaterMark.alpha = 1
                     }
                 }, completion: nil)
-            
+
         }
-        
+
     }
-  
+
     init(_ parentVC: BaseViewController) {
         self.parentVC = parentVC
         super.init(frame: CGRect())
-       
+
         if !MANUAL_STATE_TEST {
             self.menuItems.append(contentsOf: [
                 MenuItem( text: "Profile", addLinkImg: false, onClick: {
@@ -175,8 +174,8 @@ class Menu: UIView {
                 }),
                MenuItem(text: "Logout", addLinkImg: false, onClick: {
                                  print("Clicked Terms of Use") // Dummy function for now
-                             }),
-                
+                             })
+
             ])
         }
     }
