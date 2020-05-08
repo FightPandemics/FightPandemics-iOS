@@ -27,26 +27,26 @@
 import Foundation
 
 /**
-A centralized place to store strings for accessibility identifiers for applicaiton and UI testing use.
-These will not be read to the user so don't need to be localized.
+ A centralized place to store strings for accessibility identifiers for applicaiton and UI testing use.
+ These will not be read to the user so don't need to be localized.
  */
 
 enum AccessibilityIdentifier: String {
     case
 
     // MARK: Splash page
-    TitleLogo = "Title",
-    StartButton = "Start",
-    DescriptionText = "Description",
+    titleLogo = "Title",
+    startButton = "Start",
+    descriptionText = "Description",
 
     // MARK: Bluetooth page
-    LargeText = "large-text",
-    MainText = "main-text",
-    AllowButton = "allow-button",
+    largeText = "large-text",
+    mainText = "main-text",
+    allowButton = "allow-button",
 
     // MARK: UI Elements
-    Content = "content",
-    SubText = "sub-text",
-    ButtonText = "button-text"
+    content = "content",
+    subText = "sub-text",
+    buttonText = "button-text"
 
 }

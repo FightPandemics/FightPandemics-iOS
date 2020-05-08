@@ -36,9 +36,9 @@ class BaseViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        Header must be drawn here instead of viewDidLoad(), because it makes use
-//        of view.safeAreaInsets.top which isn't filled out until this point in the
-//        ViewController life cycle.
+        // Header must be drawn here instead of viewDidLoad(), because it makes use
+        // of view.safeAreaInsets.top which isn't filled out until this point in the
+        // ViewController life cycle.
         self.header.draw()
     }
 
