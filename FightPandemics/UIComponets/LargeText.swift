@@ -40,7 +40,7 @@ class LargeText: UITextView {
         self.isEditable = false
         self.backgroundColor = .clear
         self.isSelectable = false
-        self.accessibilityIdentifier = AccessibilityIdentifier.Content.rawValue
+        self.accessibilityIdentifier = AccessibilityIdentifier.content.rawValue
     }
 
     func draw(centerX: CGFloat, centerY: CGFloat) {

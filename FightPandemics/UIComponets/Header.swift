@@ -63,13 +63,13 @@ class Header: UIView {
 
     }
 
- private func drawBlob() {
+    private func drawBlob() {
 
     }
     private func drawLogo() {
         logo.frame.size.width = 35
         logo.frame.size.height = 35
-//        line up logo with the rest of the left hand content
+        // line up logo with the rest of the left hand content
         logo.frame.origin.x = (screenWidth - contentMaxWidth) / 2
         logo.center.y = self.frame.midY
         parentVC.view.addSubview(logo)
@@ -78,7 +78,7 @@ class Header: UIView {
     private func drawMenuIcon() {
         menuIcon.frame.size.width = 36
         menuIcon.frame.size.height = 36
-//        line up menu icon with the rest of the right hand content
+        // line up menu icon with the rest of the right hand content
         menuIcon.center.x = 0.9 * screenWidth
         menuIcon.frame.origin.x = screenWidth - ((screenWidth - contentMaxWidth) / 2) - menuIcon.frame.size.width
         menuIcon.center.y = self.frame.midY

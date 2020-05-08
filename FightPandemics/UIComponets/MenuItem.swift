@@ -32,6 +32,8 @@ class MenuItem: UIView {
     var linkImg: UIImageView?
     private var _onClick: () -> Void = {return}
 
+    // TODO: Refactor
+    // swiftlint:disable:next function_body_length
     func draw(parentVC: UIViewController, width: CGFloat, centerX: CGFloat, centerY: CGFloat) {
         menuItem1.isUserInteractionEnabled = true
         menuItem1text.isUserInteractionEnabled = true
@@ -92,40 +94,40 @@ class MenuItem: UIView {
     }
 
     func toggleShow() {
-           menuItem1.isHidden = !menuItem1.isHidden
-           menuItem1text.isHidden = !menuItem1text.isHidden
+        menuItem1.isHidden = !menuItem1.isHidden
+        menuItem1text.isHidden = !menuItem1text.isHidden
 
-           if let linkImg = self.linkImg {
-               linkImg.isHidden = !linkImg.isHidden
+        if let linkImg = self.linkImg {
+            linkImg.isHidden = !linkImg.isHidden
         }
-               if  menuItem1.isHidden == true {
-                UIView.animate(withDuration: 0.7,
-                   delay: 0.0,
-                              options: [],
-                              animations: { [weak self] in
-                               if let controller = self {
-                                   controller.menuItem1.center.x =  1000
-                                     controller.menuItem1text.center.x =  1000
+        if  menuItem1.isHidden == true {
+            UIView.animate(withDuration: 0.7,
+                           delay: 0.0,
+                           options: [],
+                           animations: { [weak self] in
+                            if let controller = self {
+                                controller.menuItem1.center.x =  1000
+                                controller.menuItem1text.center.x =  1000
 
-                                    controller.linkImg?.frame.origin.x =  controller.menuItem1text.frame.origin.x
-                               }
-                   }, completion: nil)
-                   }
-                if  menuItem1.isHidden == false {
-                    UIView.animate(withDuration: 0.7,
-                                               delay: 0.0,
-                                                          options: [],
-                                                          animations: { [weak self] in
-                                                           if let controller = self {
-                                                            controller.menuItem1.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1.frame.width/1.14
-                                                                 controller.menuItem1text.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1text.frame.width/1.14
-                                                                controller.linkImg?.frame.origin.x = controller.menuItem1text.frame.origin.x + 210
+                                controller.linkImg?.frame.origin.x =  controller.menuItem1text.frame.origin.x
+                            }
+                }, completion: nil)
+        }
+        if  menuItem1.isHidden == false {
+            UIView.animate(withDuration: 0.7,
+                           delay: 0.0,
+                           options: [],
+                           animations: { [weak self] in
+                            if let controller = self {
+                                controller.menuItem1.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1.frame.width/1.14
+                                controller.menuItem1text.frame.origin.x =  0.9 * controller.screenWidth - controller.menuItem1text.frame.width/1.14
+                                controller.linkImg?.frame.origin.x = controller.menuItem1text.frame.origin.x + 210
 
-                                                           }
-                                               }, completion: nil)
-                   }
+                            }
+                }, completion: nil)
+        }
 
-       }
+    }
 
     @objc func onClick() {
         self._onClick()

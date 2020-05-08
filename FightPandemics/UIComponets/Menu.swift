@@ -26,15 +26,13 @@
 
 import UIKit
 
-let MANUAL_STATE_TEST = false
-
 class Menu: UIView {
 
     weak var parentVC: BaseViewController?
     var xIcon = UIImageView(image: UIImage(named: "x-icon"))
     var menuItems: [MenuItem] = []
     var bottomWaterMark = UIImageView(image: UIImage(named: "collab"))
-  var hide = true
+    var hide = true
     func draw() {
 
         drawMenuBackground()
@@ -51,10 +49,10 @@ class Menu: UIView {
         if let parentVC = self.parentVC {
             self.frame.origin.y = 0
 
-        self.backgroundColor = UIColor(red: 0.257, green: 0.352, blue: 0.95, alpha: 1)
-        self.isHidden = false
-        self.layer.zPosition = 1
-        parentVC.view.addSubview(self)
+            self.backgroundColor = UIColor(red: 0.257, green: 0.352, blue: 0.95, alpha: 1)
+            self.isHidden = false
+            self.layer.zPosition = 1
+            parentVC.view.addSubview(self)
         }
     }
 
@@ -100,17 +98,17 @@ class Menu: UIView {
         //bottomWaterMark.isHidden = true
         bottomWaterMark.alpha = 0
         bottomWaterMark.layer.zPosition = 1
-       // parentVC?.view.addSubview(bottomWaterMark)
+        // parentVC?.view.addSubview(bottomWaterMark)
     }
     @objc func toggleMenu() {
-       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "notificationName"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "notificationName"), object: nil)
 
         for menuItem in menuItems {
             menuItem.toggleShow()
         }
-       hide = !hide
+        hide = !hide
         if  hide == true {
-              self.bottomWaterMark.alpha = 0
+            self.bottomWaterMark.alpha = 0
             UIView.animate(
                 withDuration: 0.7, delay: 0.0, options: [],
                 animations: { [weak self] in
@@ -144,40 +142,38 @@ class Menu: UIView {
         self.parentVC = parentVC
         super.init(frame: CGRect())
 
-        if !MANUAL_STATE_TEST {
-            self.menuItems.append(contentsOf: [
-                MenuItem( text: "Profile", addLinkImg: false, onClick: {
-                    if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                        UIApplication.shared.open(settingsURL)
-                    }
-                }),
-                MenuItem( text: "Organization", addLinkImg: false, onClick: {
-                    if let parentVC = self.parentVC {
-                        parentVC.performSegue(withIdentifier: "test", sender: parentVC)
-                    }
-                }),
-                MenuItem( text: "Health Facilities", addLinkImg: false, onClick: {
-                    print("Clicked How does this work?") // Dummy function for now
-                }),
-                MenuItem( text: "Symptom Check", addLinkImg: false, onClick: {
-                    if let url = URL(string: "https://www.covid-watch.org/") {
-                        UIApplication.shared.open(url)
-                    }
-                }),
-                MenuItem( text: "Feed", addLinkImg: false, onClick: {
-                    if let url = URL(string: "https://www.cdc.gov/coronavirus/2019-nCoV/index.html") {
-                        UIApplication.shared.open(url)
-                    }
-                }),
-                MenuItem(text: "Feedback", addLinkImg: false, onClick: {
-                    print("Clicked Terms of Use") // Dummy function for now
-                }),
-               MenuItem(text: "Logout", addLinkImg: false, onClick: {
-                                 print("Clicked Terms of Use") // Dummy function for now
-                             })
+        self.menuItems.append(contentsOf: [
+            MenuItem( text: "Profile", addLinkImg: false, onClick: {
+                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(settingsURL)
+                }
+            }),
+            MenuItem( text: "Organization", addLinkImg: false, onClick: {
+                if let parentVC = self.parentVC {
+                    parentVC.performSegue(withIdentifier: "test", sender: parentVC)
+                }
+            }),
+            MenuItem( text: "Health Facilities", addLinkImg: false, onClick: {
+                print("Clicked How does this work?") // Dummy function for now
+            }),
+            MenuItem( text: "Symptom Check", addLinkImg: false, onClick: {
+                if let url = URL(string: "https://www.covid-watch.org/") {
+                    UIApplication.shared.open(url)
+                }
+            }),
+            MenuItem( text: "Feed", addLinkImg: false, onClick: {
+                if let url = URL(string: "https://www.cdc.gov/coronavirus/2019-nCoV/index.html") {
+                    UIApplication.shared.open(url)
+                }
+            }),
+            MenuItem(text: "Feedback", addLinkImg: false, onClick: {
+                print("Clicked Terms of Use") // Dummy function for now
+            }),
+            MenuItem(text: "Logout", addLinkImg: false, onClick: {
+                print("Clicked Terms of Use") // Dummy function for now
+            })
 
-            ])
-        }
+        ])
     }
 
     required init?(coder: NSCoder) {

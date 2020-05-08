@@ -8,7 +8,7 @@ To start work contributing code, first fork the repository. Branches are made of
 
 ### Finding Code Contributions to Make
 
-* TBD
+Visit the [To Do](https://github.com/FightPandemics/FightPandemics-iOS/projects/1#column-9075564) column on the Projects page or take a look at open [Issues](https://github.com/FightPandemics/FightPandemics-iOS/contribute) identified as `good first issue`.
 
 ## Submitting an Issue or Question
 
