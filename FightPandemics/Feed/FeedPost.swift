@@ -27,5 +27,40 @@
 import UIKit
 
 class FeedPost: UIView {
-    <#code#>
+    var type: String?
+    var title: String?
+    var body: String?
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUp()
+    }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setUp()
+    }
+    init(type: String, title: String, body: String) {
+        self.type = type
+        self.title = title
+        self.body = body
+        super.init(frame: CGRect())
+        setUp()
+    }
+    func setUp () {
+        self.frame.origin.x = 23
+        self.frame.origin.y = 23
+        self.frame.size.width = CGFloat(UIScreen.main.bounds.width - 47)
+        setUpType(type: self.type!)
+        setUpTitle(title: self.title!)
+        setUpBody(body: self.body!)
+    }
+    func setUpType (type: String) {
+        let label = UILabel()
+//        label.
+    }
+    func setUpTitle (title: String) {
+        
+    }
+    func setUpBody (body: String) {
+        
+    }
 }
