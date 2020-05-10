@@ -1,17 +1,20 @@
 os: osx
-osx_image: xcode11.1
+osx_image: xcode11.4
 language: swift
 
 install:
 - pod install
 
 script:
-- xcodebuild build -scheme FightPandemics -workspace FightPandemics.xcworkspace/ -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
+- xcodebuild test -scheme FightPandemics -workspace FightPandemics.xcworkspace/ -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
 
 notifications:
   slack:
     rooms:
       - fightpandemics:AOdNIouF6Ye6DKo1RuaZK7pd
     if: branch = develop
-    on_success: always
+    template:
+    - "Build <%{build_url}|#%{build_number}> *%{result}* in %{duration}"
+    - "<https://github.com/%{repository_slug}|%{repository_slug}>@<https://github.com/%{repository_slug}/tree/%{branch}|%{branch}>: <%{compare_url}|%{commit}> by %{author}"
+    on_success: changes
     on_failure: always
