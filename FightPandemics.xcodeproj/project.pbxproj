@@ -24,8 +24,19 @@
 		2F9EFE86245DFC9F00E86700 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE77245DFC9F00E86700 /* Menu.swift */; };
 		2F9EFE87245DFC9F00E86700 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE78245DFC9F00E86700 /* Button.swift */; };
 		2F9EFE89245DFD7400E86700 /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE88245DFD7400E86700 /* UIResponderExtension.swift */; };
+		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49D0B0B62467BC6E007B3762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F9EFE45245DFB1700E86700 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F9EFE4C245DFB1700E86700;
+			remoteInfo = FightPandemics;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +61,9 @@
 		2F9EFE78245DFC9F00E86700 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		2F9EFE88245DFD7400E86700 /* UIResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
 		4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
+		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D0B0AE2467BC6E007B3762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				2F9EFE4F245DFB1700E86700 /* FightPandemics */,
+				49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */,
 				2F9EFE4E245DFB1700E86700 /* Products */,
 				91B98918B2BF3E9F21F244CB /* Pods */,
 				033973FDB7BA0D30ACF6F0E4 /* Frameworks */,
@@ -86,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2F9EFE4D245DFB1700E86700 /* FightPandemics.app */,
+				49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +154,15 @@
 			path = UIComponets;
 			sourceTree = "<group>";
 		};
+		49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */,
+				49D0B0B52467BC6E007B3762 /* Info.plist */,
+			);
+			path = FightPandemicsUITests;
+			sourceTree = "<group>";
+		};
 		91B98918B2BF3E9F21F244CB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,18 +194,40 @@
 			productReference = 2F9EFE4D245DFB1700E86700 /* FightPandemics.app */;
 			productType = "com.apple.product-type.application";
 		};
+		49D0B0B02467BC6E007B3762 /* FightPandemicsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D0B0BA2467BC6E007B3762 /* Build configuration list for PBXNativeTarget "FightPandemicsUITests" */;
+			buildPhases = (
+				49D0B0AD2467BC6E007B3762 /* Sources */,
+				49D0B0AE2467BC6E007B3762 /* Frameworks */,
+				49D0B0AF2467BC6E007B3762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49D0B0B72467BC6E007B3762 /* PBXTargetDependency */,
+			);
+			name = FightPandemicsUITests;
+			productName = FightPandemicsUITests;
+			productReference = 49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2F9EFE45245DFB1700E86700 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Fight Pandemics";
 				TargetAttributes = {
 					2F9EFE4C245DFB1700E86700 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					49D0B0B02467BC6E007B3762 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 2F9EFE4C245DFB1700E86700;
 					};
 				};
 			};
@@ -191,6 +245,7 @@
 			projectRoot = "";
 			targets = (
 				2F9EFE4C245DFB1700E86700 /* FightPandemics */,
+				49D0B0B02467BC6E007B3762 /* FightPandemicsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +258,13 @@
 				2F9EFE5D245DFB1900E86700 /* LaunchScreen.storyboard in Resources */,
 				2F9EFE5A245DFB1900E86700 /* Assets.xcassets in Resources */,
 				2F9EFE58245DFB1700E86700 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D0B0AF2467BC6E007B3762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +335,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49D0B0AD2467BC6E007B3762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49D0B0B72467BC6E007B3762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F9EFE4C245DFB1700E86700 /* FightPandemics */;
+			targetProxy = 49D0B0B62467BC6E007B3762 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2F9EFE56245DFB1700E86700 /* Main.storyboard */ = {
@@ -449,6 +527,44 @@
 			};
 			name = Release;
 		};
+		49D0B0B82467BC6E007B3762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FightPandemicsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FightPandemicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FightPandemics;
+			};
+			name = Debug;
+		};
+		49D0B0B92467BC6E007B3762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FightPandemicsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FightPandemicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FightPandemics;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -466,6 +582,15 @@
 			buildConfigurations = (
 				2F9EFE62245DFB1900E86700 /* Debug */,
 				2F9EFE63245DFB1900E86700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D0B0BA2467BC6E007B3762 /* Build configuration list for PBXNativeTarget "FightPandemicsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D0B0B82467BC6E007B3762 /* Debug */,
+				49D0B0B92467BC6E007B3762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
