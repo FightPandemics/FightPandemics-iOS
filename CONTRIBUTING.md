@@ -1,6 +1,6 @@
 # Contributing
 
-This document contains information and guidelines about contributing to the [FightPandemics/FightPandemics-iOS](https://github.com/FightPandemics/FightPandemics-iOS/blob/chore/contributing-doc/CONTRIBUTING.md) project. Please read it before you start participating.
+This document contains information and guidelines about contributing to the [FightPandemics/FightPandemics-iOS](https://github.com/FightPandemics/FightPandemics-iOS) project. Please read it before you start participating.
 
 ## Contributing Code
 
