@@ -27,6 +27,9 @@
 import UIKit
 
 class ViewController: BaseViewController {
+
+    var api: API! = MockAPI()
+
     var news1: Button!
     var news2: Button!
     var news3: Button!
@@ -46,6 +49,16 @@ class ViewController: BaseViewController {
         view.addGestureRecognizer(panGesture)
 
         drawScreen()
+
+        // Demo API usage
+        api.getUser(byID: "123") { result in
+            switch result {
+            case .success(let user):
+                print("Hello, \(user.firstName)!")
+            case .failure(let error):
+                print("ERROR: \(error.localizedDescription)")
+            }
+        }
     }
     func drawScreen() {
 

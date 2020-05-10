@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
+		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
+		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
+		2F72CE502468785200750785 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE492468785200750785 /* JSON.swift */; };
+		2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE4A2468785200750785 /* URLSession+Networking.swift */; };
+		2F72CE522468785200750785 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE4B2468785200750785 /* HTTPMethod.swift */; };
+		2F72CE532468785200750785 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE4C2468785200750785 /* HTTPClient.swift */; };
+		2F72CE562468789000750785 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE552468789000750785 /* User.swift */; };
+		2F72CE59246878BF00750785 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE58246878BF00750785 /* API.swift */; };
+		2F72CE5B2468790200750785 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE5A2468790200750785 /* APIError.swift */; };
+		2F72CE5D2468793300750785 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE5C2468793300750785 /* MockAPI.swift */; };
+		2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE5E2468793C00750785 /* FightPandemicsAPI.swift */; };
 		2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE50245DFB1700E86700 /* AppDelegate.swift */; };
 		2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE52245DFB1700E86700 /* SceneDelegate.swift */; };
 		2F9EFE58245DFB1700E86700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9EFE56245DFB1700E86700 /* Main.storyboard */; };
@@ -41,6 +53,18 @@
 /* Begin PBXFileReference section */
 		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
+		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
+		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
+		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		2F72CE492468785200750785 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		2F72CE4A2468785200750785 /* URLSession+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Networking.swift"; sourceTree = "<group>"; };
+		2F72CE4B2468785200750785 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2F72CE4C2468785200750785 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2F72CE552468789000750785 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2F72CE58246878BF00750785 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2F72CE5A2468790200750785 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2F72CE5C2468793300750785 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		2F72CE5E2468793C00750785 /* FightPandemicsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsAPI.swift; sourceTree = "<group>"; };
 		2F9EFE4D245DFB1700E86700 /* FightPandemics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightPandemics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9EFE50245DFB1700E86700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F9EFE52245DFB1700E86700 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +117,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2F72CE452468785200750785 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2F72CE4C2468785200750785 /* HTTPClient.swift */,
+				2F72CE462468785200750785 /* HTTPClientError.swift */,
+				2F72CE4B2468785200750785 /* HTTPMethod.swift */,
+				2F72CE492468785200750785 /* JSON.swift */,
+				2F72CE4A2468785200750785 /* URLSession+Networking.swift */,
+				2F72CE482468785200750785 /* HTTPRequest.swift */,
+				2F72CE472468785200750785 /* HTTPRequestError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2F72CE542468788400750785 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F72CE57246878B900750785 /* API */,
+				2F72CE552468789000750785 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F72CE57246878B900750785 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2F72CE58246878BF00750785 /* API.swift */,
+				2F72CE5A2468790200750785 /* APIError.swift */,
+				2F72CE5E2468793C00750785 /* FightPandemicsAPI.swift */,
+				2F72CE5C2468793300750785 /* MockAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		2F9EFE44245DFB1700E86700 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				2F9EFE71245DFC9F00E86700 /* UIComponets */,
+				2F72CE542468788400750785 /* Models */,
 				2F9EFE68245DFC9F00E86700 /* Utilities */,
 				2F9EFE50245DFB1700E86700 /* AppDelegate.swift */,
 				2F9EFE64245DFC9000E86700 /* Home.swift */,
@@ -133,6 +192,7 @@
 		2F9EFE68245DFC9F00E86700 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2F72CE452468785200750785 /* Networking */,
 				2F9EFE6C245DFC9F00E86700 /* AccessibilityIdentifier.swift */,
 				2F9EFE6A245DFC9F00E86700 /* UIColorExtension.swift */,
 				2F9EFE88245DFD7400E86700 /* UIResponderExtension.swift */,
@@ -321,16 +381,28 @@
 				2F9EFE84245DFC9F00E86700 /* MenuItem.swift in Sources */,
 				2F9EFE83245DFC9F00E86700 /* Header.swift in Sources */,
 				2F9EFE7D245DFC9F00E86700 /* UIViewExtension.swift in Sources */,
+				2F72CE502468785200750785 /* JSON.swift in Sources */,
 				2F9EFE85245DFC9F00E86700 /* LargeText.swift in Sources */,
+				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
+				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
 				2F9EFE67245DFC9700E86700 /* BaseViewController.swift in Sources */,
 				2F9EFE7A245DFC9F00E86700 /* UIColorExtension.swift in Sources */,
+				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
 				2F9EFE7C245DFC9F00E86700 /* AccessibilityIdentifier.swift in Sources */,
+				2F72CE562468789000750785 /* User.swift in Sources */,
+				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
 				2F9EFE81245DFC9F00E86700 /* MainText.swift in Sources */,
 				2F9EFE89245DFD7400E86700 /* UIResponderExtension.swift in Sources */,
 				2F9EFE86245DFC9F00E86700 /* Menu.swift in Sources */,
+				2F72CE59246878BF00750785 /* API.swift in Sources */,
 				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
+				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
 				2F9EFE65245DFC9000E86700 /* Home.swift in Sources */,
+				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
+				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
+				2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
+				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F9EFE87245DFC9F00E86700 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
