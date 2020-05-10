@@ -25,3 +25,7 @@
 //  THE SOFTWARE.
 
 import UIKit
+
+class FeedPostFooter: UIView {
+    
+}

@@ -55,12 +55,43 @@ class FeedPost: UIView {
     }
     func setUpType (type: String) {
         let label = UILabel()
-//        label.
+        label.text = type
+        label.textAlignment = .center
+        label.font = UIFont(name: "System", size: 11)
+        label.numberOfLines = 0
+        label.sizeToFit()
+        label.layoutIfNeeded()
+        label.textColor = UIColor(hexString: "#425AF2")
+        label.backgroundColor = UIColor.clear
+        label.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        label.layer.masksToBounds = true
+        label.clipsToBounds = true
+        label.layer.borderWidth = 1
+        label.layer.cornerRadius = label.frame.height / 2
+        self.addSubview(label)
     }
     func setUpTitle (title: String) {
-        
+          let label = UILabel()
+          label.text = title
+          label.textAlignment = .left
+          label.font = UIFont(name: "System", size: 22)
+          label.numberOfLines = 0
+          label.sizeToFit()
+          label.layoutIfNeeded()
+          label.textColor = UIColor(hexString: "#282828")
+          label.backgroundColor = UIColor.clear
+        self.addSubview(label)
     }
     func setUpBody (body: String) {
-        
+        let label = UILabel()
+        label.text = body
+        label.textAlignment = .left
+        label.font = UIFont(name: "System", size: 14)
+        label.numberOfLines = 0
+        label.sizeToFit()
+        label.layoutIfNeeded()
+        label.textColor = UIColor(hexString: "#282828")
+        label.backgroundColor = UIColor.clear
+        self.addSubview(label)
     }
 }

@@ -29,15 +29,24 @@ import UIKit
 class FeedViewController: UIViewController {
     var avatar: Avatar!
     var avatarView: AvatarView!
+    var postContainer: PostContainer!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.avatar = Avatar(text: "LL")
         self.avatarView = AvatarView(name: "Lily Luke", location: "Manchester, UK", avatar: avatar)
-        self.avatar.frame.origin.x = 23
-        self.avatar.frame.origin.y = 100
-        self.view.addSubview(avatar)
-        self.view.addSubview(avatarView)
+        let body1 = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
+        let body2 = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
+        let body = body1 + body2
+        let title = "Disinfecting clorox wipes needed"
+        self.postContainer = PostContainer(body: body, title: title)
+        self.avatar.frame.origin.x = postContainer.frame.origin.x
+        self.avatar.frame.origin.y = postContainer.frame.origin.y
+        print(postContainer.frame.size.height)
+        self.view.addSubview(postContainer)
+        postContainer.addSubview(avatar)
+//        self.view.addSubview(avatar)
+//        self.view.addSubview(avatarView)
         // Do any additional setup after loading the view.
 }
     override func viewDidLayoutSubviews() {
