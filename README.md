@@ -2,7 +2,7 @@
 [![Swift Version](https://img.shields.io/badge/swift-5.0-orange.svg)](#) 
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/FightPandemics/FightPandemics-iOS/develop/LICENSE) 
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)](#)
-[![Build Status](https://img.shields.io/badge/build-unknown-lightgrey.svg)](#)
+[![Build Status](https://travis-ci.org/FightPandemics/FightPandemics-iOS.svg?branch=develop)](https://travis-ci.com/FightPandemics/FightPandemics-iOS)
 
 iOS app for the [FightPandemics](https://fightpandemics.com/) platform :iphone:
 
