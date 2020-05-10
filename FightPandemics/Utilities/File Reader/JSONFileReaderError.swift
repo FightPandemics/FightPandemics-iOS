@@ -1,8 +1,8 @@
 //
-//  MockAPI.swift
+//  JSONFileReaderError.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/10/20.
+//  Created by Harlan Kellaway on 5/9/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,33 +26,19 @@
 
 import Foundation
 
-final class MockAPI: API {
+enum JSONFileReaderError: Error, LocalizedError {
+    case fileNotFound(fileName: String)
+    case invalidJSON(value: Any)
+    case error(value: Error)
 
-    let jsonFileReader: JSONFileReader
-    let latency: DispatchTimeInterval
-
-    init(jsonFileReader: JSONFileReader = JSONFileReader(),
-         latency: DispatchTimeInterval = .seconds(3)) {
-        self.jsonFileReader = jsonFileReader
-        self.latency = latency
-    }
-
-    func getUser(byID userID: String,
-                 completion: @escaping (Result<User, APIError>) -> Void) {
-        let user = jsonFileReader.read(fileNamed: "User", modelType: User.self)
-        simulateNetworkDelay(then: {
-            switch user {
-            case .success(let user):
-                completion(.success(user))
-            case .failure:
-                completion(.failure(.httpClientError(value: .jsonParsingFailed)))
-            }
-        })
-    }
-
-    private func simulateNetworkDelay(then: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + latency) {
-            then()
+    var errorDescription: String? {
+        switch self {
+        case .fileNotFound(let fileName):
+            return "File not found: \(fileName)"
+        case .invalidJSON(let value):
+            return "Invalid JSON: \(value)"
+        case .error(let error):
+            return error.localizedDescription
         }
     }
 
