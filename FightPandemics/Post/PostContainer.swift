@@ -50,35 +50,36 @@ class PostContainer: UIView {
         setUp()
     }
     func setUp () {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat(UIScreen.main.bounds.width - 47), height: .greatestFiniteMagnitude))
-        label.text = self.body
-        label.font = UIFont(name: "System", size: 14)
-        label.numberOfLines = 0
-        label.sizeToFit()
-        label.layoutIfNeeded()
-        let bodyHeight = label.frame.size.height
-        print(bodyHeight)
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat(UIScreen.main.bounds.width - 47), height: .greatestFiniteMagnitude))
-        titleLabel.text = self.title
-        titleLabel.font = UIFont(name: "System", size: 22)
-        titleLabel.numberOfLines = 0
-        titleLabel.sizeToFit()
-        titleLabel.layoutIfNeeded()
-        let titleHeight = titleLabel.frame.size.height
-        print(titleHeight)
-        let height = CGFloat(bodyHeight + titleHeight + 276)
-        print(height)
-        if self.rect != nil {
-            self.frame.origin.x = (self.rect?.origin.x)!
-            self.frame.origin.y = (self.rect?.origin.y)!
-            self.frame.size.width = (self.rect?.size.width)!
-            self.frame.size.height = (self.rect?.size.height)!
-        } else {
-            self.frame.origin.x = 0
-            self.frame.origin.y = 0
-            self.frame.size.width = UIScreen.main.bounds.width
-            self.frame.size.height = height
-        print(self.frame)
-        }
+//        self.frame = CGRect.zero
+//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat(UIScreen.main.bounds.width - 47), height: .greatestFiniteMagnitude))
+//        label.text = self.body
+//        label.font = UIFont(name: "System", size: 14)
+//        label.numberOfLines = 0
+//        label.sizeToFit()
+//        label.layoutIfNeeded()
+//        let bodyHeight = label.frame.size.height
+//        print(bodyHeight)
+//        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat(UIScreen.main.bounds.width - 47), height: .greatestFiniteMagnitude))
+//        titleLabel.text = self.title
+//        titleLabel.font = UIFont(name: "System", size: 22)
+//        titleLabel.numberOfLines = 0
+//        titleLabel.sizeToFit()
+//        titleLabel.layoutIfNeeded()
+//        let titleHeight = titleLabel.frame.size.height
+//        print(titleHeight)
+//        let height = CGFloat(bodyHeight + titleHeight + 276)
+//        print(height)
+//        if self.rect != nil {
+//            self.frame.origin.x = (self.rect?.origin.x)!
+//            self.frame.origin.y = (self.rect?.origin.y)!
+//            self.frame.size.width = (self.rect?.size.width)!
+//            self.frame.size.height = (self.rect?.size.height)!
+//        } else {
+//            self.frame.origin.x = 0
+//            self.frame.origin.y = 0
+//            self.frame.size.width = UIScreen.main.bounds.width
+//            self.frame.size.height = height
+//        print(self.frame)
+//        }
     }
 }

@@ -27,5 +27,32 @@
 import UIKit
 
 class FeedPostFooter: UIView {
-    
+    var likeNum: Int?
+    var commentNum: Int?
+    var sendNum: Int?
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUp()
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setUp()
+    }
+    init(likeNum: Int, commentNum: Int, sendNum: Int) {
+        super.init(frame: CGRect())
+        self.likeNum = likeNum
+        self.commentNum = commentNum
+        self.sendNum = sendNum
+        setUp()
+    }
+    func setUp () {
+        let likeImgView = UIImageView(image: #imageLiteral(resourceName: <#T##String#>))
+        let likeLbl = UILabel()
+        let commentImgView = UIImageView(image: #imageLiteral(resourceName: <#T##String#>))
+        let commentLabel = UILabel()
+        let sendImgView = UIImageView(image: #imageLiteral(resourceName: <#T##String#>))
+        let sendLbl = UILabel()
+        let hstackView = UIStackView()
+    }
 }

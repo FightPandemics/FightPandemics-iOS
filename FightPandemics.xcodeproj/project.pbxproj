@@ -97,7 +97,7 @@
 		2F9EFE4F245DFB1700E86700 /* FightPandemics */ = {
 			isa = PBXGroup;
 			children = (
-				C0B8D0E62466CC93008B54E7 /* Feed */,
+				C0B8D0E62466CC93008B54E7 /* Post */,
 				2F9EFE71245DFC9F00E86700 /* UIComponets */,
 				2F9EFE68245DFC9F00E86700 /* Utilities */,
 				2F9EFE50245DFB1700E86700 /* AppDelegate.swift */,
@@ -145,7 +145,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C0B8D0E62466CC93008B54E7 /* Feed */ = {
+		C0B8D0E62466CC93008B54E7 /* Post */ = {
 			isa = PBXGroup;
 			children = (
 				C0B8D0EB2466D0A5008B54E7 /* FeedViewController.swift */,
@@ -155,7 +155,7 @@
 				C0B8D0E72466CD20008B54E7 /* Avatar.swift */,
 				C0B8D0E92466CE2C008B54E7 /* AvatarView.swift */,
 			);
-			path = Feed;
+			path = Post;
 			sourceTree = "<group>";
 		};
 		E09891D9F7FCA8C006743E07 /* Frameworks */ = {
