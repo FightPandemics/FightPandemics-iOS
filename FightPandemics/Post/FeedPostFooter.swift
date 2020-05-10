@@ -48,11 +48,29 @@ class FeedPostFooter: UIView {
     }
     func setUp () {
         let likeImgView = UIImageView(image: #imageLiteral(resourceName: <#T##String#>))
+        likeImgView.frame.size.width = 20
+        likeImgView.frame.size.height = 17
         let likeLbl = UILabel()
+        likeLbl.text = "\(self.likeNum)"
+        likeLbl.font = UIFont(name: "System", size: 14)
+        likeLbl.textAlignment = .center
+        likeLbl.textColor = UIColor(hexString: "#939393")
         let commentImgView = UIImageView(image: #imageLiteral(resourceName: <#T##String#>))
-        let commentLabel = UILabel()
+        commentImgView.frame.size.width = 20
+        commentImgView.frame.size.height = 20
+        let commentLbl = UILabel()
+        commentLbl.text = "\(self.commentNum)"
+        commentLbl.font = UIFont(name: "System", size: 14)
+        commentLbl.textAlignment = .center
+        commentLbl.textColor = UIColor(hexString: "#939393")
         let sendImgView = UIImageView(image: #imageLiteral(resourceName: <#T##String#>))
+        sendImgView.frame.size.width = 20
+        sendImgView.frame.size.height = 17
         let sendLbl = UILabel()
-        let hstackView = UIStackView()
+        sendLbl.text = "\(self.sendNum)"
+        sendLbl.font = UIFont(name: "System", size: 14)
+        sendLbl.textAlignment = .center
+        sendLbl.textColor = UIColor(hexString: "#939393")
+        let firstStackView = UIStackView()
     }
 }

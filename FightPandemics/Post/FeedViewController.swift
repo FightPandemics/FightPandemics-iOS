@@ -42,19 +42,10 @@ class FeedViewController: UIViewController {
         let title = "Disinfecting clorox wipes needed"
         self.postContainer = PostContainer(body: body, title: title)
         self.postContainer.frame.origin.y = 100
-//        self.avatar.frame.origin.x = postContainer.frame.origin.x
-//        self.avatar.frame.origin.y = postContainer.frame.origin.y
-//        print(postContainer.frame.size.height)
         self.view.addSubview(postContainer)
         self.feedPost = FeedPost(type: "  Medical Supplies .", title: title, body: body)
         postContainer.addSubview(avatar)
         postContainer.addSubview(feedPost)
-//        feedPost.translatesAutoresizingMaskIntoConstraints = false
-//        let hConstraint = NSLayoutConstraint(item: feedPost!, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
-//        let vConstraint = NSLayoutConstraint(item: feedPost!, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
-//        self.view.addConstraints([hConstraint, vConstraint])
-//        self.view.addSubview(avatar)
-//        self.view.addSubview(avatarView)
         // Do any additional setup after loading the view.
 }
     override func viewDidLayoutSubviews() {
