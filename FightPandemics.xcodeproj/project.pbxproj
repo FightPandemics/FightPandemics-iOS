@@ -29,7 +29,6 @@
 		C0B8D0EA2466CE2C008B54E7 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0E92466CE2C008B54E7 /* AvatarView.swift */; };
 		C0B8D0EC2466D0A5008B54E7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0EB2466D0A5008B54E7 /* FeedViewController.swift */; };
 		C0B8D0F0246740C7008B54E7 /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0EF246740C7008B54E7 /* FeedPost.swift */; };
-		C0B8D0F2246740D6008B54E7 /* FeedPostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0F1246740D6008B54E7 /* FeedPostFooter.swift */; };
 		C0B8D0F424674F1B008B54E7 /* PostContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0F324674F1B008B54E7 /* PostContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		C0B8D0E92466CE2C008B54E7 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		C0B8D0EB2466D0A5008B54E7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		C0B8D0EF246740C7008B54E7 /* FeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
-		C0B8D0F1246740D6008B54E7 /* FeedPostFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostFooter.swift; sourceTree = "<group>"; };
 		C0B8D0F324674F1B008B54E7 /* PostContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +149,6 @@
 				C0B8D0EB2466D0A5008B54E7 /* FeedViewController.swift */,
 				C0B8D0F324674F1B008B54E7 /* PostContainer.swift */,
 				C0B8D0EF246740C7008B54E7 /* FeedPost.swift */,
-				C0B8D0F1246740D6008B54E7 /* FeedPostFooter.swift */,
 				C0B8D0E72466CD20008B54E7 /* Avatar.swift */,
 				C0B8D0E92466CE2C008B54E7 /* AvatarView.swift */,
 			);
@@ -286,7 +283,6 @@
 				2F9EFE83245DFC9F00E86700 /* Header.swift in Sources */,
 				2F9EFE7D245DFC9F00E86700 /* UIViewExtension.swift in Sources */,
 				C0B8D0E82466CD20008B54E7 /* Avatar.swift in Sources */,
-				C0B8D0F2246740D6008B54E7 /* FeedPostFooter.swift in Sources */,
 				2F9EFE85245DFC9F00E86700 /* LargeText.swift in Sources */,
 				C0B8D0EA2466CE2C008B54E7 /* AvatarView.swift in Sources */,
 				C0B8D0F424674F1B008B54E7 /* PostContainer.swift in Sources */,

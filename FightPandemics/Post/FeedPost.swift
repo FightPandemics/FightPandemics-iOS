@@ -46,12 +46,6 @@ class FeedPost: UIView {
         setUp()
     }
     func setUp () {
-//        self.frame = CGRect.zero
-//        self.frame.origin.x = 23
-//        self.frame.origin.y = 23
-//        self.frame.size.width = CGFloat(UIScreen.main.bounds.width - 47)
-        // it has a fixed height which I don't know ; or it shoudl be calculated the sme way
-//        self.frame.size.height = 300
         // UI Components
         let label = UILabel()
         label.text = self.type
@@ -121,11 +115,8 @@ class FeedPost: UIView {
                 NSLayoutConstraint(item: bodyLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 9).isActive = true
                 NSLayoutConstraint(item: bodyLabel, attribute: .bottom, relatedBy: .equal, toItem: moreButton, attribute: .top, multiplier: 1, constant: 16).isActive = true
                 moreButton.translatesAutoresizingMaskIntoConstraints = false
-        //        NSLayoutConstraint(item: moreButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100).isActive = true
-        //        NSLayoutConstraint(item: moreButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 22).isActive = true
                 NSLayoutConstraint(item: moreButton, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 24).isActive = true
                 NSLayoutConstraint(item: moreButton, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 24).isActive = true
                 NSLayoutConstraint(item: moreButton, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        //        NSLayoutConstraint(item: moreButton, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
     }
 }

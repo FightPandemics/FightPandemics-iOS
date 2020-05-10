@@ -58,7 +58,6 @@ class PostContainer: UIView {
         label.sizeToFit()
         label.layoutIfNeeded()
         let bodyHeight = label.frame.size.height
-        print(bodyHeight)
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat(UIScreen.main.bounds.width - 47), height: .greatestFiniteMagnitude))
         titleLabel.text = self.title
         titleLabel.font = UIFont(name: "System", size: 22)
@@ -66,9 +65,7 @@ class PostContainer: UIView {
         titleLabel.sizeToFit()
         titleLabel.layoutIfNeeded()
         let titleHeight = titleLabel.frame.size.height
-        print(titleHeight)
         let height = CGFloat(bodyHeight + titleHeight + 276)
-        print(height)
         if self.rect != nil {
             self.frame.origin.x = (self.rect?.origin.x)!
             self.frame.origin.y = (self.rect?.origin.y)!
@@ -79,7 +76,6 @@ class PostContainer: UIView {
             self.frame.origin.y = 0
             self.frame.size.width = UIScreen.main.bounds.width
             self.frame.size.height = height
-        print(self.frame)
         }
     }
 }

@@ -46,20 +46,5 @@ class FeedViewController: UIViewController {
         self.feedPost = FeedPost(type: "  Medical Supplies .", title: title, body: body)
         postContainer.addSubview(avatar)
         postContainer.addSubview(feedPost)
-        // Do any additional setup after loading the view.
 }
-    override func viewDidLayoutSubviews() {
-//        avatar.draw(CGRect.zero)
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
