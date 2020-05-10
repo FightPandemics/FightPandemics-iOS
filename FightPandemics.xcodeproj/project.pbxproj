@@ -41,6 +41,14 @@
 		2F9EFE89245DFD7400E86700 /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE88245DFD7400E86700 /* UIResponderExtension.swift */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */; };
+		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
+		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
+		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
+		DDDB550A2468AEA7008EA75A /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55092468AEA7008EA75A /* Poppins-Regular.otf */; };
+		DDDB550C2468AF92008EA75A /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550B2468AF92008EA75A /* Poppins-Medium.otf */; };
+		DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */; };
+		DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */; };
+		DDDB55122468B2E3008EA75A /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +102,14 @@
 		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
+		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		DDDB55092468AEA7008EA75A /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		DDDB550B2468AF92008EA75A /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +214,7 @@
 		2F9EFE4F245DFB1700E86700 /* FightPandemics */ = {
 			isa = PBXGroup;
 			children = (
+				DDDB55012468ACAC008EA75A /* Resources */,
 				2F9EFE71245DFC9F00E86700 /* UIComponets */,
 				2F72CE542468788400750785 /* Models */,
 				2F9EFE68245DFC9F00E86700 /* Utilities */,
@@ -255,6 +272,29 @@
 				1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DDDB55012468ACAC008EA75A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDDB55022468ACC3008EA75A /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DDDB55022468ACC3008EA75A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */,
+				DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */,
+				DDDB55092468AEA7008EA75A /* Poppins-Regular.otf */,
+				DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */,
+				DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */,
+				DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */,
+				DDDB550B2468AF92008EA75A /* Poppins-Medium.otf */,
+				DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,10 +380,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */,
+				DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */,
 				2F72CE6724687CD100750785 /* User.json in Resources */,
+				DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */,
+				DDDB550A2468AEA7008EA75A /* Poppins-Regular.otf in Resources */,
 				2F9EFE5D245DFB1900E86700 /* LaunchScreen.storyboard in Resources */,
+				DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */,
+				DDDB55122468B2E3008EA75A /* DMSans-Bold.ttf in Resources */,
 				2F9EFE5A245DFB1900E86700 /* Assets.xcassets in Resources */,
 				2F9EFE58245DFB1700E86700 /* Main.storyboard in Resources */,
+				DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */,
+				DDDB550C2468AF92008EA75A /* Poppins-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
