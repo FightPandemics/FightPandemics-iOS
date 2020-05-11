@@ -27,9 +27,11 @@
 		2F9EFE5A245DFB1900E86700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9EFE59245DFB1900E86700 /* Assets.xcassets */; };
 		2FB341E92468F838007E397F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341E82468F838007E397F /* Fonts.swift */; };
 		2FB341EC2468F841007E397F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341EB2468F841007E397F /* UIColorExtension.swift */; };
-		2FB341F02468F8E6007E397F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341EF2468F8E6007E397F /* ViewController.swift */; };
+		2FB341F02468F8E6007E397F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341EF2468F8E6007E397F /* HomeViewController.swift */; };
 		2FB341F62468F984007E397F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB341F22468F984007E397F /* Main.storyboard */; };
 		2FB341F72468F984007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB341F42468F984007E397F /* LaunchScreen.storyboard */; };
+		2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341F82468F9F0007E397F /* RootTabBarController.swift */; };
+		2FB341FB2468FA56007E397F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB341FA2468FA56007E397F /* Home.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */; };
 		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
@@ -77,9 +79,11 @@
 		2F9EFE5E245DFB1900E86700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FB341E82468F838007E397F /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		2FB341EB2468F841007E397F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		2FB341EF2468F8E6007E397F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2FB341EF2468F8E6007E397F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FB341F32468F984007E397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FightPandemics/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		2FB341F52468F984007E397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FightPandemics/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		2FB341F82468F9F0007E397F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		2FB341FA2468FA56007E397F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
@@ -246,7 +250,8 @@
 		2FB341EE2468F8BA007E397F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2FB341EF2468F8E6007E397F /* ViewController.swift */,
+				2FB341FA2468FA56007E397F /* Home.storyboard */,
+				2FB341EF2468F8E6007E397F /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -254,8 +259,9 @@
 		2FB341F12468F975007E397F /* Nav */ = {
 			isa = PBXGroup;
 			children = (
-				2FB341F22468F984007E397F /* Main.storyboard */,
 				2FB341F42468F984007E397F /* LaunchScreen.storyboard */,
+				2FB341F22468F984007E397F /* Main.storyboard */,
+				2FB341F82468F9F0007E397F /* RootTabBarController.swift */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			files = (
 				DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */,
 				DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */,
+				2FB341FB2468FA56007E397F /* Home.storyboard in Resources */,
 				2F72CE6724687CD100750785 /* User.json in Resources */,
 				DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */,
 				DDDB550A2468AEA7008EA75A /* Poppins-Regular.otf in Resources */,
@@ -458,7 +465,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
-				2FB341F02468F8E6007E397F /* ViewController.swift in Sources */,
+				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
+				2FB341F02468F8E6007E397F /* HomeViewController.swift in Sources */,
 				2F72CE6224687C7100750785 /* JSONFileReader.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
 				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
