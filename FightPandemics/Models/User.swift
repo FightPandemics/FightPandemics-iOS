@@ -31,4 +31,17 @@ struct User: Decodable {
     let firstName: String
     let lastName: String
     let email: String
+    let location: String?
+
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
+
+    var initials: String? {
+        guard !(firstName.isEmpty || lastName.isEmpty) else {
+            return nil
+        }
+        return "\(firstName.first!)\(lastName.first!)".uppercased()
+    }
+
 }

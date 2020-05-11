@@ -27,43 +27,22 @@
 import UIKit
 
 class Avatar: UIView {
-    var image: UIImage?
-    var text: String?
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUp()
-    }
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUp()
-    }
-    init(text: String) {
-        super.init(frame: CGRect())
-        self.text = text
-        setUp()
-    }
-    init(image: UIImage) {
-        super.init(frame: CGRect())
-        self.image = image
-        setUp()
-    }
-    func setUp () {
-        if self.text != nil {
-            setUpWithText(txt: self.text!)
-        } else if self.image != nil {
-            setUpWithImage(image: self.image!)
+    func setUp(user: User, image: UIImage? = nil) {
+        if let image = image {
+            setUpWithImage(image: image)
+        } else {
+            setUpWithInitials(initials: user.initials)
         }
     }
-    func setUpWithText (txt: String) {
+
+    private func setUpWithInitials(initials: String?) {
         self.frame.origin.x = 23
         self.frame.origin.y = 23
         self.frame.size.width = 35
         self.frame.size.height = 35
         let label = UILabel()
-        //both the letters should be capitalized; this only capitalize first one
-        let capLetters = txt.uppercased()
-        label.text = capLetters
+        label.text = initials
         label.textAlignment = .center
         label.backgroundColor = .blue
         label.frame.size.width = self.frame.size.width
@@ -78,7 +57,8 @@ class Avatar: UIView {
         label.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         self.addSubview(label)
     }
-    func setUpWithImage (image: UIImage) {
+
+    private func setUpWithImage(image: UIImage) {
         self.frame.origin.x = 23
         self.frame.origin.y = 23
         self.frame.size.width = 35
@@ -92,4 +72,5 @@ class Avatar: UIView {
         imageView.layer.cornerRadius = self.frame.size.height / 2
         self.addSubview(imageView)
     }
+
 }

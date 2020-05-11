@@ -27,36 +27,42 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-    var avatar: Avatar!
-    var avatarView: AvatarView!
-//    var postContainer: PostContainer!
-    var feedPost: FeedPost!
-    var postFooter: PostFooter!
+
+    var mockUser = User(id: "123", firstName: "Lily", lastName: "Luke", email: "lily@luke.co", location: "Manchester, UK")
+
+    private var avatar = Avatar()
+    private var avatarView = AvatarView()
+    private var feedPost = FeedPost()
+    private var postFooter = PostFooter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupUI()
+    }
+
+    private func setupUI() {
         self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        self.avatar = Avatar(text: "LL")
-        self.avatarView = AvatarView(name: "Lily Luke", location: "Manchester, UK", avatar: avatar)
-        let body1 = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
-        let body2 = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
-        let body = body1 + body2
+
+        self.avatar.setUp(user: mockUser, image: nil)
+        self.avatarView = AvatarView()
+        self.avatarView.setUp(user: mockUser, avatar: self.avatar)
+
+        let body = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
         let title = "Disinfecting clorox wipes needed"
-//        self.postContainer = PostContainer(body: body, title: title)
-//        self.postContainer.frame.origin.y = 100
-//        self.view.addSubview(postContainer)
-        self.feedPost = FeedPost(type: "  Medical Supplies .", title: title, body: body)
-        self.postFooter = PostFooter(likeNum: 12, commentNum: 13, sendNum: 14)
+
+        self.feedPost.setUp(title: title, body: body + body, type: "Medical Supplies")
+        self.postFooter.setUp(likeNum: 12, commentNum: 13, sendNum: 14)
+
         let firstView = UIView()
         firstView.frame = CGRect(x: 0, y: 100, width: (UIScreen.main.bounds.width - 47), height: 400)
         self.view.addSubview(firstView)
         firstView.addSubview(avatar)
         firstView.addSubview(feedPost)
+
         let secondView = UIView()
         secondView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
         self.view.addSubview(secondView)
-        secondView.addSubview(postFooter)
-//        self.view.addSubview(avatar)
-//        self.view.addSubview(feedPost)
-//        self.view.addSubview(postFooter)
-}
+    }
+
 }
