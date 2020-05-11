@@ -41,11 +41,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // swiftlint:disable:next unused_optional_binding
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        //swiftlint:disable:next force_cast
+        //swiftlint:disable force_cast
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        //swiftlint:disable:next force_cast
+        let homeNavigationController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        rootTabBarController.viewControllers = [homeViewController]
+        //swiftlint:enable force_cast
+
+        homeNavigationController.pushViewController(homeViewController, animated: false)
+        homeNavigationController.tabBarItem.title = "Home"
+        rootTabBarController.viewControllers = [homeNavigationController]
         window?.rootViewController = rootTabBarController
         window?.makeKeyAndVisible()
     }

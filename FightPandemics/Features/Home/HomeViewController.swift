@@ -31,8 +31,11 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // TODO: Localization https://github.com/FightPandemics/FightPandemics-iOS/issues/28
-        tabBarItem.title = "Home"
+        setupUI()
+    }
+
+    private func setupUI() {
+        navigationController?.isNavigationBarHidden = true
     }
 
 }
