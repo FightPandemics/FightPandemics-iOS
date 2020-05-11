@@ -51,18 +51,23 @@ final class Navigator {
     }
 
     private func rootTabBarController() -> RootTabBarController {
-        let rootTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        rootTabBarController.viewControllers = [homeNavController()]
+        let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
+        let homeTab = rootNavController(from: HomeViewController.self, storyboardName: "Home", localizedTabBarTitleKey: "Home")
+        self.homeNavigationController = homeTab
+        rootTabBarController.viewControllers = [homeTab]
         return rootTabBarController
     }
 
-    private func homeNavController() -> UINavigationController {
-        let homeNavigationController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
-        let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        homeNavigationController.pushViewController(homeViewController, animated: false)
-        homeNavigationController.tabBarItem.title = NSLocalizedString("HomeTabBarTitle", comment: "")
-        self.homeNavigationController = homeNavigationController
-        return homeNavigationController
+    private func rootNavController<T: UIViewController>(from: T.Type,
+                                                        storyboardName: String,
+                                                        localizedTabBarTitleKey: String) -> UINavigationController {
+        let identifier = String(describing: T.self)
+        let navigationController = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: "\(storyboardName)NavigationController") as! UINavigationController
+        let controller = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: identifier) as! T
+        navigationController.pushViewController(controller, animated: false)
+        navigationController.tabBarItem.title = NSLocalizedString(localizedTabBarTitleKey, comment: "")
+        return navigationController
     }
 
 }

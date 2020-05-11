@@ -1,5 +1,5 @@
 //
-//  StyleGuide.swift
+//  Fonts.swift
 //  FightPandemics
 //
 //  Created by Onyekachi Ezeoke on 11/05/2020.
@@ -26,7 +26,7 @@
 
 import UIKit
 
-enum Style {
+enum Fonts {
 
     // Regular
 
