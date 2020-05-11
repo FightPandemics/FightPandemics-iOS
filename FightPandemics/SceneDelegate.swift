@@ -40,6 +40,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // (see `application:configurationForConnectingSceneSession` instead).
         // swiftlint:disable:next unused_optional_binding
         guard let _ = (scene as? UIWindowScene) else { return }
+
+        //swiftlint:disable:next force_cast
+        let rootTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
+        //swiftlint:disable:next force_cast
+        let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        rootTabBarController.viewControllers = [homeViewController]
+        window?.rootViewController = rootTabBarController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

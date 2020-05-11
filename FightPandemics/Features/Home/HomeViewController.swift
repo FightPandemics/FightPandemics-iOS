@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  FightPandemics
 //
 //  Created by Harlan Kellaway on 5/10/20.
@@ -26,6 +26,13 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class HomeViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // TODO: Localization https://github.com/FightPandemics/FightPandemics-iOS/issues/28
+        tabBarItem.title = "Home"
+    }
 
 }
