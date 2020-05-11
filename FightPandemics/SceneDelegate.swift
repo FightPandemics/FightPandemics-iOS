@@ -29,6 +29,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private(set) var navigator: Navigator!
 
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
@@ -41,17 +42,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // swiftlint:disable:next unused_optional_binding
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        //swiftlint:disable force_cast
-        let rootTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        let homeNavigationController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
-        let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        //swiftlint:enable force_cast
-
-        homeNavigationController.pushViewController(homeViewController, animated: false)
-        homeNavigationController.tabBarItem.title = NSLocalizedString("HomeTabBarTitle", comment: "")
-        rootTabBarController.viewControllers = [homeNavigationController]
-        window?.rootViewController = rootTabBarController
-        window?.makeKeyAndVisible()
+        self.navigator = Navigator(rootWindow: window)
+        self.navigator.installRootView()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
