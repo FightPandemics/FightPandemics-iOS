@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0420F6246A0E71005FB1D0 /* Feed.storyboard */; };
+		2F0420F9246A0E7E005FB1D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0420F8246A0E7E005FB1D0 /* FeedViewController.swift */; };
+		2F04210C246A1021005FB1D0 /* PostHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042107246A1021005FB1D0 /* PostHeight.swift */; };
+		2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042108246A1021005FB1D0 /* Avatar.swift */; };
+		2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042109246A1021005FB1D0 /* FeedPost.swift */; };
+		2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04210A246A1021005FB1D0 /* AvatarView.swift */; };
+		2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04210B246A1021005FB1D0 /* PostFooter.swift */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -59,6 +66,13 @@
 /* Begin PBXFileReference section */
 		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
+		2F0420F6246A0E71005FB1D0 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		2F0420F8246A0E7E005FB1D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2F042107246A1021005FB1D0 /* PostHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeight.swift; sourceTree = "<group>"; };
+		2F042108246A1021005FB1D0 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		2F042109246A1021005FB1D0 /* FeedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
+		2F04210A246A1021005FB1D0 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		2F04210B246A1021005FB1D0 /* PostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFooter.swift; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -127,6 +141,28 @@
 				1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F0420F5246A0D0D005FB1D0 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2F0420F6246A0E71005FB1D0 /* Feed.storyboard */,
+				2F0420FA246A0EBA005FB1D0 /* FeedPost */,
+				2F0420F8246A0E7E005FB1D0 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		2F0420FA246A0EBA005FB1D0 /* FeedPost */ = {
+			isa = PBXGroup;
+			children = (
+				2F042108246A1021005FB1D0 /* Avatar.swift */,
+				2F04210A246A1021005FB1D0 /* AvatarView.swift */,
+				2F042109246A1021005FB1D0 /* FeedPost.swift */,
+				2F04210B246A1021005FB1D0 /* PostFooter.swift */,
+				2F042107246A1021005FB1D0 /* PostHeight.swift */,
+			);
+			path = FeedPost;
 			sourceTree = "<group>";
 		};
 		2F72CE452468785200750785 /* Networking */ = {
@@ -247,6 +283,7 @@
 		2FB341ED2468F8BA007E397F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				2F0420F5246A0D0D005FB1D0 /* Feed */,
 				2FB341EE2468F8BA007E397F /* Home */,
 				2FB341F12468F975007E397F /* Tab Bar */,
 			);
@@ -410,6 +447,7 @@
 				2FB341FB2468FA56007E397F /* Home.storyboard in Resources */,
 				2FB341FF2468FED8007E397F /* Localizable.strings in Resources */,
 				2F72CE6724687CD100750785 /* User.json in Resources */,
+				2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */,
 				DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */,
 				DDDB550A2468AEA7008EA75A /* Poppins-Regular.otf in Resources */,
 				2FB341F62468F984007E397F /* Main.storyboard in Resources */,
@@ -485,18 +523,24 @@
 				2F72CE6224687C7100750785 /* JSONFileReader.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
 				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
+				2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */,
 				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
+				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
 				2FB341EC2468F841007E397F /* UIColorExtension.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
 				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
 				2FB341E92468F838007E397F /* Fonts.swift in Sources */,
+				2F04210C246A1021005FB1D0 /* PostHeight.swift in Sources */,
 				2F72CE59246878BF00750785 /* API.swift in Sources */,
 				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
 				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
+				2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */,
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
 				2F72CE6424687C9A00750785 /* JSONFileReaderError.swift in Sources */,
+				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
+				2F0420F9246A0E7E005FB1D0 /* FeedViewController.swift in Sources */,
 				2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
