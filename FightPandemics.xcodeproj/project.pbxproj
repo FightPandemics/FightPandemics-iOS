@@ -217,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDB55012468ACAC008EA75A /* Resources */,
-				2F9EFE71245DFC9F00E86700 /* UIComponets */,
+				2F9EFE71245DFC9F00E86700 /* UIComponents */,
 				2F72CE542468788400750785 /* Models */,
 				2F9EFE68245DFC9F00E86700 /* Utilities */,
 				2F9EFE50245DFB1700E86700 /* AppDelegate.swift */,
@@ -246,7 +246,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		2F9EFE71245DFC9F00E86700 /* UIComponets */ = {
+		2F9EFE71245DFC9F00E86700 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
 				2F9EFE74245DFC9F00E86700 /* Header.swift */,
@@ -256,7 +256,7 @@
 				2F9EFE77245DFC9F00E86700 /* Menu.swift */,
 				2F9EFE75245DFC9F00E86700 /* MenuItem.swift */,
 			);
-			path = UIComponets;
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */ = {
