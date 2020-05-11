@@ -1,8 +1,8 @@
 //
-//  UIResponderExtension.swift
+//  ViewController.swift
 //  FightPandemics
 //
-//  Created by Andreas Ink on 4/28/20.
+//  Created by Harlan Kellaway on 5/10/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,36 +26,6 @@
 
 import UIKit
 
-extension UIResponder {
-    var screenWidth: CGFloat {
-        return UIScreen.main.bounds.width
-    }
-    var screenHeight: CGFloat {
-        return UIScreen.main.bounds.height
-    }
-    var figmaScreenWidth: CGFloat {
-        return 375.0
-    }
-    var figmaScreenHeight: CGFloat {
-        return 812.0
-    }
-    var figmaToiOSVerticalScalingFactor: CGFloat {
-        return screenHeight/figmaScreenHeight
-    }
-    var figmaToiOSHorizontalScalingFactor: CGFloat {
-        return screenWidth/figmaScreenWidth
-    }
-    var contentMaxWidth: CGFloat {
-        // 321 is the contentMaxWidth in Figma (px)
-        return 321.0 * figmaToiOSHorizontalScalingFactor
-    }
-    var mainLogoWidth: CGFloat {
-        return 264.0 * figmaToiOSHorizontalScalingFactor
-    }
-    var mainLogoHeight: CGFloat {
-        return 164.0 * figmaToiOSVerticalScalingFactor
-    }
-    var buttonHeight: CGFloat {
-        return 58.0 * figmaToiOSVerticalScalingFactor
-    }
+final class ViewController: UIViewController {
+
 }
