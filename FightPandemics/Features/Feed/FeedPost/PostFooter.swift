@@ -27,63 +27,47 @@
 import UIKit
 
 class PostFooter: UIView {
-    var likeNum: Int?
-    var commentNum: Int?
-    var sendNum: Int?
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUp()
-    }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUp()
-    }
-    init(likeNum: Int, commentNum: Int, sendNum: Int) {
-        super.init(frame: CGRect())
-        self.likeNum = likeNum
-        self.commentNum = commentNum
-        self.sendNum = sendNum
-        setUp()
-    }
-    func setUp () {
+
+    private var likeImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
+    private var likeLbl = UILabel()
+    private var commentImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
+    private var commentLbl = UILabel()
+    private var sendImg = UIImageView(image: #imageLiteral(resourceName: "send_24px"))
+    private var sendLbl = UILabel()
+    private var cmtTextField = UITextField()
+
+    func setUp(likeNum: Int, commentNum: Int, sendNum: Int) {
         // like image
-        let likeImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
         likeImg.frame.size.width = 20
         likeImg.frame.size.height = 18
         self.addSubview(likeImg)
         // like label
-        let likeLbl = UILabel()
-        likeLbl.text = "\(self.likeNum!)"
+        likeLbl.text = "\(likeNum)"
         likeLbl.textAlignment = .left
         likeLbl.textColor = UIColor(hexString: "#939393")
         likeLbl.font = UIFont(name: "System", size: 14)
         self.addSubview(likeLbl)
         // comment image
-        let commentImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
         commentImg.frame.size.width = 20
         commentImg.frame.size.height = 20
         self.addSubview(commentImg)
         // comment label
-        let commentLbl = UILabel()
-        commentLbl.text = "\(self.commentNum!)"
+        commentLbl.text = "\(commentNum)"
         commentLbl.textAlignment = .left
         commentLbl.textColor = UIColor(hexString: "#939393")
         commentLbl.font = UIFont(name: "System", size: 14)
         self.addSubview(commentLbl)
         // send image
-        let sendImg = UIImageView(image: #imageLiteral(resourceName: "send_24px"))
         sendImg.frame.size.width = 20
         sendImg.frame.size.height = 17
         self.addSubview(sendImg)
         // send label
-        let sendLbl = UILabel()
-        sendLbl.text = "\(self.sendNum!)"
+        sendLbl.text = "\(sendNum)"
         sendLbl.textAlignment = .left
         sendLbl.textColor = UIColor(hexString: "#939393")
         sendLbl.font = UIFont(name: "System", size: 14)
         self.addSubview(sendLbl)
         // comment text field
-        let cmtTextField = UITextField()
         cmtTextField.frame.size.width = CGFloat(UIScreen.main.bounds.width - 47)
         cmtTextField.frame.size.height = 46
         cmtTextField.font = UIFont(name: "System", size: 14)
@@ -93,10 +77,10 @@ class PostFooter: UIView {
         cmtTextField.layer.borderWidth = 0
         cmtTextField.backgroundColor = UIColor(hexString: "#F6F7FB")
         self.addSubview(cmtTextField)
-        // constraints
-        makeConstraints(likeImg: likeImg, likeLbl: likeLbl, commentImg: commentImg, commentLbl: commentLbl, sendImg: sendImg, sendLbl: sendLbl, cmtTextField: cmtTextField)
-}
-    func makeConstraints (likeImg: UIImageView, likeLbl: UILabel, commentImg: UIImageView, commentLbl: UILabel, sendImg: UIImageView, sendLbl: UILabel, cmtTextField: UITextField) {
+        makeConstraints()
+    }
+
+    private func makeConstraints () {
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
         NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 140).isActive = true
@@ -124,4 +108,5 @@ class PostFooter: UIView {
         NSLayoutConstraint(item: cmtTextField, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 70).isActive = true
         NSLayoutConstraint(item: cmtTextField, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 25).isActive = true
     }
+
 }

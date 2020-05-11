@@ -8,6 +8,10 @@
 
 // MARK: - Features
 
+// MARK: Feed
+
+"FeedPostViewMoreCTA" = "View More";
+
 // MARK: Home
 
 "HomeTabBarTitle" = "Home";

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0420F6246A0E71005FB1D0 /* Feed.storyboard */; };
 		2F0420F9246A0E7E005FB1D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0420F8246A0E7E005FB1D0 /* FeedViewController.swift */; };
-		2F04210C246A1021005FB1D0 /* PostHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042107246A1021005FB1D0 /* PostHeight.swift */; };
 		2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042108246A1021005FB1D0 /* Avatar.swift */; };
 		2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042109246A1021005FB1D0 /* FeedPost.swift */; };
 		2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04210A246A1021005FB1D0 /* AvatarView.swift */; };
@@ -68,7 +67,6 @@
 		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		2F0420F6246A0E71005FB1D0 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		2F0420F8246A0E7E005FB1D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		2F042107246A1021005FB1D0 /* PostHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeight.swift; sourceTree = "<group>"; };
 		2F042108246A1021005FB1D0 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		2F042109246A1021005FB1D0 /* FeedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
 		2F04210A246A1021005FB1D0 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				2F04210A246A1021005FB1D0 /* AvatarView.swift */,
 				2F042109246A1021005FB1D0 /* FeedPost.swift */,
 				2F04210B246A1021005FB1D0 /* PostFooter.swift */,
-				2F042107246A1021005FB1D0 /* PostHeight.swift */,
 			);
 			path = FeedPost;
 			sourceTree = "<group>";
@@ -530,7 +527,6 @@
 				2F72CE562468789000750785 /* User.swift in Sources */,
 				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
 				2FB341E92468F838007E397F /* Fonts.swift in Sources */,
-				2F04210C246A1021005FB1D0 /* PostHeight.swift in Sources */,
 				2F72CE59246878BF00750785 /* API.swift in Sources */,
 				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
 				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
