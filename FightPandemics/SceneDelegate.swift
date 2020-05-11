@@ -48,7 +48,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //swiftlint:enable force_cast
 
         homeNavigationController.pushViewController(homeViewController, animated: false)
-        homeNavigationController.tabBarItem.title = "Home"
+        homeNavigationController.tabBarItem.title = NSLocalizedString("HomeTabBarTitle", comment: "")
         rootTabBarController.viewControllers = [homeNavigationController]
         window?.rootViewController = rootTabBarController
         window?.makeKeyAndVisible()

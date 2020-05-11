@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  FightPandemics
+
+  Created by Harlan Kellaway on 5/10/20.
+  Copyright © 2020 Fight Pandemics. All rights reserved.
+*/
+
+// MARK: - Features
+
+// MARK: Home
+
+"HomeTabBarTitle" = "Home";
