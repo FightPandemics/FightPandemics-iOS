@@ -30,46 +30,39 @@ enum Style {
 
     // Regular
 
-    case dmSansRegular18
-    case openSansRegular18
-    case poppinsRegular11
+    case dmSansRegular
+    case openSansRegular
+    case poppinsRegular
 
     // Medium
 
-    case dmSansMedium16
-    case poppinsMedium18
+    case dmSansMedium
+    case poppinsMedium
 
     // Bold
 
-    case dmSansBold12
-    case openSansBold13
-    case poppinsBold18
-    case poppinsBold22
+    case dmSansBold
+    case openSansBold
+    case poppinsBold
 
-    var font: UIFont {
-        customFont()
-    }
-
-    func customFont() -> UIFont {
+    func customFont(size: CGFloat) -> UIFont {
         switch self {
-        case .dmSansRegular18:
-            return .dmSansRegular(size: 18)
-        case .openSansRegular18:
-            return .openSansRegular(size: 18)
-        case .poppinsRegular11:
-            return .poppinsRegular(size: 11)
-        case .dmSansMedium16:
-            return .dmSansMedium(size: 16)
-        case .poppinsMedium18:
-            return .poppinsMedium(size: 18)
-        case .dmSansBold12:
-            return .dmSansBold(size: 12)
-        case .openSansBold13:
-            return .openSansBold(size: 13)
-        case .poppinsBold18:
-            return .poppinsBold(size: 18)
-        case .poppinsBold22:
-            return .poppinsBold(size: 22)
+        case .dmSansRegular:
+            return .dmSansRegular(size: size)
+        case .openSansRegular:
+            return .openSansRegular(size: size)
+        case .poppinsRegular:
+            return .poppinsRegular(size: size)
+        case .dmSansMedium:
+            return .dmSansMedium(size: size)
+        case .poppinsMedium:
+            return .poppinsMedium(size: size)
+        case .dmSansBold:
+            return .dmSansBold(size: size)
+        case .openSansBold:
+            return .openSansBold(size: size)
+        case .poppinsBold:
+            return .poppinsBold(size: size)
         }
     }
 }
