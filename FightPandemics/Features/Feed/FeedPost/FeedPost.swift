@@ -67,7 +67,7 @@ class FeedPost: UIView {
         bodyLabel.backgroundColor = UIColor.clear
         self.addSubview(bodyLabel)
         // more button
-        moreButton.setTitle(NSLocalizedString("FeedPostViewMoreCTA", comment: ""), for: .normal)
+        moreButton.setTitle("FeedPostViewMoreCTA".localized, for: .normal)
         moreButton.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
         moreButton.titleLabel?.font = UIFont(name: "System", size: 16)
         moreButton.contentHorizontalAlignment = .left
