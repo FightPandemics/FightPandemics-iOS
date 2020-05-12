@@ -53,21 +53,16 @@ final class Navigator {
     private func rootTabBarController() -> RootTabBarController {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        let homeTab = rootNavController(from: HomeViewController.self, storyboardName: "Home", localizedTabBarTitleKey: "Home")
-        self.homeNavigationController = homeTab
-        rootTabBarController.viewControllers = [homeTab]
+        let homeNavigationController = rootTabBarController.viewControllers![0] as! UINavigationController
+        self.homeNavigationController = homeNavigationController
+        homeNavigationController.pushViewController(homeViewController(), animated: false)
         return rootTabBarController
     }
 
-    private func rootNavController<T: UIViewController>(from: T.Type,
-                                                        storyboardName: String,
-                                                        localizedTabBarTitleKey: String) -> UINavigationController {
-        let identifier = String(describing: T.self)
-        let navigationController = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: "\(storyboardName)NavigationController") as! UINavigationController
-        let controller = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: identifier) as! T
-        navigationController.pushViewController(controller, animated: false)
-        navigationController.tabBarItem.title = NSLocalizedString(localizedTabBarTitleKey, comment: "")
-        return navigationController
+    private func homeViewController() -> HomeViewController {
+        let homeViewController = UIStoryboard(name: "Home", bundle: nil)
+            .instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        return homeViewController
     }
 
 }
