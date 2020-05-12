@@ -197,9 +197,9 @@
 			children = (
 				2F72CE6524687CC500750785 /* Mocks */,
 				2F72CE58246878BF00750785 /* API.swift */,
-				2F72CE5A2468790200750785 /* APIError.swift */,
 				2F72CE5E2468793C00750785 /* FightPandemicsAPI.swift */,
 				2F72CE5C2468793300750785 /* MockAPI.swift */,
+				2F72CE5A2468790200750785 /* APIError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";

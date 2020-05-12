@@ -28,15 +28,12 @@ import Foundation
 
 enum JSONFileReaderError: Error, LocalizedError {
     case fileNotFound(fileName: String)
-    case invalidJSON(value: Any)
     case error(value: Error)
 
     var errorDescription: String? {
         switch self {
         case .fileNotFound(let fileName):
             return "File not found: \(fileName)"
-        case .invalidJSON(let value):
-            return "Invalid JSON: \(value)"
         case .error(let error):
             return error.localizedDescription
         }

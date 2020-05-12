@@ -43,7 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
 
         self.navigator = Navigator(rootWindow: window)
-        self.navigator.installRootView()
+        self.navigator.installRootTabBar()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
