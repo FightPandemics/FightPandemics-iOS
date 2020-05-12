@@ -2,10 +2,15 @@ os: osx
 osx_image: xcode11.4
 language: swift
 
+before_install:
+  - chmod +x ./scripts/install_swiftlint.sh
+
 install:
+- ./scripts/install_swiftlint.sh
 - travis_wait 30 pod install
 
 script:
+- swiftlint
 - xcodebuild test -scheme FightPandemics -workspace FightPandemics.xcworkspace/ -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11'
 
 notifications:
