@@ -73,8 +73,10 @@
 		2F04210B246A1021005FB1D0 /* PostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFooter.swift; sourceTree = "<group>"; };
 		2F04212E246A25CF005FB1D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2F042130246A25EC005FB1D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../../es.lproj/Main.strings; sourceTree = "<group>"; };
-		2F042131246A25EC005FB1D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2F042132246A25EC005FB1D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2F042139246A2AA8005FB1D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../en.lproj/Main.strings; sourceTree = "<group>"; };
+		2F04213B246A2C2D005FB1D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2F04213D246A2C72005FB1D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -580,6 +582,7 @@
 			children = (
 				2FB341F32468F984007E397F /* Base */,
 				2F042130246A25EC005FB1D0 /* es */,
+				2F042139246A2AA8005FB1D0 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -588,7 +591,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				2FB34206246901DA007E397F /* Base */,
-				2F042131246A25EC005FB1D0 /* es */,
+				2F04213B246A2C2D005FB1D0 /* en */,
+				2F04213D246A2C72005FB1D0 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
