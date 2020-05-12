@@ -5,9 +5,16 @@ If this is your first time, please read our contributor guidelines: https://gith
 
 **What this PR does**:
 
+### Checklist
+
+[] Compiler warnings resolved
+[] Linter warnings resolved
+[] User-facing strings in Localizable.strings file
+[] Unused code, print statements, and comments removed
+
 **Which issue(s) this PR fixes**:
 
-Fixes #
+Resolves #
 
 **Special notes for reviewers**:
 

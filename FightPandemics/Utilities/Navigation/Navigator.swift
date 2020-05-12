@@ -46,7 +46,7 @@ final class Navigator {
 
     // MARK: - Instance methods
 
-    func installRootView() {
+    func installRootTabBar() {
         rootWindow?.rootViewController = rootTabBarController()
     }
 
