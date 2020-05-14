@@ -33,9 +33,9 @@ final class Navigator {
 
     // MARK: - Properties
 
-    /// Root window of application.
-    private(set) var rootWindow: UIWindow?
+    private let sessionManager: SessionManager
 
+    private(set) var rootWindow: UIWindow?
     private var rootTabBar: RootTabBarController?
     private var logInNavigationController: UINavigationController?
     private var feedNavigationController: UINavigationController?
@@ -44,8 +44,9 @@ final class Navigator {
 
     // MARK: - Init/Deinit
 
-    init(rootWindow: UIWindow?) {
+    init(rootWindow: UIWindow?, sessionManager: SessionManager) {
         self.rootWindow = rootWindow
+        self.sessionManager = sessionManager
     }
 
     // MARK: - Instance methods
@@ -55,7 +56,12 @@ final class Navigator {
     }
 
     func navigateToLogIn() {
-        rootTabBar?.present(logInNavController(), animated: true, completion: nil)
+        // Can be displayed at launch; slignt delay to give initial UI time to setup
+        let logIn = logInNavController()
+        logIn.modalPresentationStyle = .overFullScreen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.rootTabBar?.present(logIn, animated: true, completion: nil)
+        }
     }
 
     func dismissLogIn() {
@@ -70,6 +76,8 @@ final class Navigator {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
         self.rootTabBar = rootTabBarController
+        rootTabBarController.navigator = self
+        rootTabBarController.sessionManager = sessionManager
         let feedNavigationController = rootTabBarController.navController(.feed)
         self.feedNavigationController = feedNavigationController
         feedNavigationController?.pushViewController(feedViewController(), animated: false)

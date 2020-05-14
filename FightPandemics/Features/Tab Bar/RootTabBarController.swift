@@ -36,10 +36,34 @@ final class RootTabBarController: UITabBarController {
         case profile
     }
 
+    // MARK: - Properties
+
+    var navigator: Navigator!
+    var sessionManager: SessionManager!
+
+    // MARK: - Overrides
+
+    // MARK: View life-cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        navigateToLoginIfNeed()
+    }
+
     // MARK: - Instance methods
 
     func navController(_ tab: Tab) -> UINavigationController? {
         return viewControllers?[tab.rawValue] as? UINavigationController
+    }
+
+    // MARK: Private instance methods
+
+    private func navigateToLoginIfNeed() {
+        guard case .guest = sessionManager.authState else {
+            return
+        }
+        navigator.navigateToLogIn()
     }
 
 }

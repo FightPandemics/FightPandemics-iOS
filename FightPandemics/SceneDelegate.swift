@@ -26,10 +26,18 @@
 
 import UIKit
 
+enum Environment {
+    case production
+    case staging
+    case mock
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private(set) var currentEnvironment: Environment!
     private(set) var navigator: Navigator!
+    private(set) var sessionManager: SessionManager!
 
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
@@ -42,12 +50,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // swiftlint:disable:next unused_optional_binding
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        self.navigator = Navigator(rootWindow: window)
-        self.navigator.installRootTabBar()
+        #if RELEASE
+        self.currentEnvironment = .production
+        #else
+        self.currentEnvironment = .mock
+        #endif
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-            self?.navigator.navigateToLogIn()
+        let api: API
+        switch self.currentEnvironment! {
+        case .production:
+            api = FightPandemicsAPI(baseURL: "https://api.fightpandemics.com", httpClient: HTTPClient())
+        case .staging:
+            api = FightPandemicsAPI(baseURL: "https://staging-api.fightpandemics.com", httpClient: HTTPClient())
+        case .mock:
+            api = MockAPI()
         }
+
+        self.sessionManager = SessionManager(api: api, authState: .guest)
+        self.navigator = Navigator(rootWindow: window, sessionManager: sessionManager)
+        self.navigator.installRootTabBar()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
