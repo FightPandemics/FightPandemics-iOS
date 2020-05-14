@@ -30,10 +30,17 @@ import Sentry
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var dsnKey: String {
+        guard let path = Bundle.main.path(forResource: "Keys", ofType: "plist"),
+            let dict = NSDictionary(contentsOfFile: path) else { return "" }
+        let dsnKey = dict["dsnkey"] as? String
+        return dsnKey ?? ""
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         SentrySDK.start(options: [
-            "dsn": "https://7de2fbee9f2345e5a2f74893b54e625a@o392028.ingest.sentry.io/5240756",
+            "dsn": dsnKey,
             "debug": true
         ])
         return true
