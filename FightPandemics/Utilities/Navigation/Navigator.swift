@@ -37,6 +37,8 @@ final class Navigator {
     private(set) var rootWindow: UIWindow?
 
     private var feedNavigationController: UINavigationController?
+    private var searchNavigationController: UINavigationController?
+    private var profileNavigationController: UINavigationController?
 
     // MARK: - Init/Deinit
 
@@ -53,9 +55,15 @@ final class Navigator {
     private func rootTabBarController() -> RootTabBarController {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        let feedNavigationController = rootTabBarController.viewControllers![0] as! UINavigationController
+        let feedNavigationController = rootTabBarController.navController(.feed)
         self.feedNavigationController = feedNavigationController
-        feedNavigationController.pushViewController(feedViewController(), animated: false)
+        feedNavigationController?.pushViewController(feedViewController(), animated: false)
+        let searchNavigationController = rootTabBarController.navController(.search)
+        self.searchNavigationController = searchNavigationController
+        searchNavigationController?.pushViewController(searchViewController(), animated: false)
+        let profileNavigationController = rootTabBarController.navController(.profile)
+        self.profileNavigationController = profileNavigationController
+        profileNavigationController?.pushViewController(profileViewController(), animated: false)
         return rootTabBarController
     }
 
@@ -63,6 +71,18 @@ final class Navigator {
         let feedViewController = UIStoryboard(name: "Feed", bundle: nil)
             .instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         return feedViewController
+    }
+
+    private func searchViewController() -> SearchViewController {
+        let searchViewController = UIStoryboard(name: "Search", bundle: nil)
+            .instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        return searchViewController
+    }
+
+    private func profileViewController() -> ProfileViewController {
+        let profileViewController = UIStoryboard(name: "Profile", bundle: nil)
+            .instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        return profileViewController
     }
 
 }
