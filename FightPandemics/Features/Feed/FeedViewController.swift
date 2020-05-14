@@ -37,6 +37,7 @@ class FeedViewController: UIViewController {
     private var createPostHeader = CreatePostHeader()
     private var createPostBody = CreatePostBody()
     private var createPostFooter = CreatePostFooter()
+    private var searchBar = SearchBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,7 @@ class FeedViewController: UIViewController {
         self.avatarView.setUp(user: mockUser, avatar: self.avatar)
         self.createPostBody.setUp()
         self.createPostFooter.setUp()
+        self.searchBar.setUp(placeHolder: "Search any thing")
 
         let body = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
         let title = "Disinfecting clorox wipes needed"
@@ -64,8 +66,6 @@ class FeedViewController: UIViewController {
         firstView.frame = CGRect(x: 0, y: 80, width: (UIScreen.main.bounds.width - 47), height: 400)
         self.view.addSubview(firstView)
         firstView.addSubview(createPostHeader)
-//        firstView.addSubview(avatar)
-//        firstView.addSubview(feedPost)
 
         let secondView = UIView()
         secondView.frame = CGRect(x: 0, y: 243, width: (UIScreen.main.bounds.width - 47), height: 300)
