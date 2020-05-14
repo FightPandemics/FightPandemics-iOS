@@ -44,9 +44,14 @@ final class FightPandemicsAPI: API {
 
     // MARK: FightPandemicsAPI
 
-    func getUser(byID userID: String, completion: @escaping (Result<User, APIError>) -> Void) {
+    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void) {
         assertionFailure("API not implemented yet")
-        completion(.failure(.unimplemented(endpoint: "/users/:userId")))
+        completion(.failure(.unimplemented(endpoint: "/login")))
+    }
+
+    func logOut(completion: @escaping (Result<Success, APIError>) -> Void) {
+        assertionFailure("API not implemented yet")
+        completion(.failure(.unimplemented(endpoint: "/logout")))
     }
 
 }

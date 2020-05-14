@@ -22,6 +22,9 @@
 		2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042193246CD022005FB1D0 /* SearchViewController.swift */; };
 		2F042197246CE4A7005FB1D0 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F042196246CE4A7005FB1D0 /* Auth.storyboard */; };
 		2F042199246CE4B3005FB1D0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042198246CE4B3005FB1D0 /* LogInViewController.swift */; };
+		2F04219C246CE921005FB1D0 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04219B246CE921005FB1D0 /* SessionManager.swift */; };
+		2F04219E246CE99C005FB1D0 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04219D246CE99C005FB1D0 /* Success.swift */; };
+		2F0421A0246CEAB5005FB1D0 /* SessionManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04219F246CEAB5005FB1D0 /* SessionManagerError.swift */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -91,6 +94,9 @@
 		2F042193246CD022005FB1D0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2F042196246CE4A7005FB1D0 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		2F042198246CE4B3005FB1D0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		2F04219B246CE921005FB1D0 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		2F04219D246CE99C005FB1D0 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
+		2F04219F246CEAB5005FB1D0 /* SessionManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerError.swift; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -207,6 +213,15 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		2F04219A246CE914005FB1D0 /* Session Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2F04219B246CE921005FB1D0 /* SessionManager.swift */,
+				2F04219F246CEAB5005FB1D0 /* SessionManagerError.swift */,
+			);
+			path = "Session Manager";
+			sourceTree = "<group>";
+		};
 		2F72CE452468785200750785 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +241,7 @@
 			children = (
 				2F72CE57246878B900750785 /* API */,
 				2F72CE552468789000750785 /* User.swift */,
+				2F04219D246CE99C005FB1D0 /* Success.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +317,7 @@
 				2F72CE6024687C6700750785 /* File Reader */,
 				2FB342022468FFC3007E397F /* Navigation */,
 				2F72CE452468785200750785 /* Networking */,
+				2F04219A246CE914005FB1D0 /* Session Manager */,
 				2FB341E72468F838007E397F /* Style Guide */,
 			);
 			path = Utilities;
@@ -557,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
+				2F04219E246CE99C005FB1D0 /* Success.swift in Sources */,
 				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
 				2F72CE6224687C7100750785 /* JSONFileReader.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
@@ -569,6 +587,7 @@
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
 				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
+				2F0421A0246CEAB5005FB1D0 /* SessionManagerError.swift in Sources */,
 				2FB341E92468F838007E397F /* Fonts.swift in Sources */,
 				2F72CE59246878BF00750785 /* API.swift in Sources */,
 				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
@@ -576,6 +595,7 @@
 				2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */,
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F042190246CCD4A005FB1D0 /* ProfileViewController.swift in Sources */,
+				2F04219C246CE921005FB1D0 /* SessionManager.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
 				2F72CE6424687C9A00750785 /* JSONFileReaderError.swift in Sources */,
