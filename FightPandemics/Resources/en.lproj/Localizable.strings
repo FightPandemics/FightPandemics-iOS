@@ -8,8 +8,10 @@
 
 // MARK: - Features
 
+// MARK: Auth
+
+"LogInCTA" = "Log In";
+
 // MARK: Feed
 
 "FeedPostViewMoreCTA" = "View More";
-
-// MARK: Home

@@ -111,6 +111,7 @@ final class Navigator {
     private func logInViewController() -> LogInViewController {
         let logInViewController = UIStoryboard(name: "Auth", bundle: nil)
             .instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
+        logInViewController.navigator = self
         return logInViewController
     }
 
