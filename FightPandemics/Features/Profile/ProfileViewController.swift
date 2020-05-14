@@ -28,4 +28,35 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
 
+    // MARK: - Properties
+
+    var navigator: Navigator!
+    var sessionManager: SessionManager!
+
+    // MARK: - Overrides
+
+    // MARK: View life-cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupUI()
+    }
+
+    // MARK: - Instance methods
+
+    // MARK: Private instance methods
+
+    private func setupUI() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(logOut))
+    }
+
+    @objc private func logOut() {
+        sessionManager.logOut()
+        navigator.navigateToLogIn()
+    }
+
 }

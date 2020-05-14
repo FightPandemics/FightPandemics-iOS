@@ -35,7 +35,7 @@ final class Navigator {
 
     private let sessionManager: SessionManager
 
-    private(set) var rootWindow: UIWindow?
+    private var rootWindow: UIWindow?
     private var rootTabBar: RootTabBarController?
     private var logInNavigationController: UINavigationController?
     private var feedNavigationController: UINavigationController?
@@ -61,6 +61,7 @@ final class Navigator {
         logIn.modalPresentationStyle = .overFullScreen
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
             self?.rootTabBar?.present(logIn, animated: true, completion: nil)
+            self?.rootTabBar?.selectTab(.feed)
         }
     }
 
@@ -105,6 +106,8 @@ final class Navigator {
     private func profileViewController() -> ProfileViewController {
         let profileViewController = UIStoryboard(name: "Profile", bundle: nil)
             .instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        profileViewController.navigator = self
+        profileViewController.sessionManager = sessionManager
         return profileViewController
     }
 

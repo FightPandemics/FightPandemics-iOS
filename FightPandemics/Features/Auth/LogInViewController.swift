@@ -51,6 +51,8 @@ final class LogInViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(logIn))
+        title = "Tap Log In >>>"
+        view.backgroundColor = .systemTeal
     }
 
     @objc private func logIn() {

@@ -15,3 +15,7 @@
 // MARK: Feed
 
 "FeedPostViewMoreCTA" = "View More";
+
+// MARK: Profile
+
+"LogOutCTA" = "Log Out";
