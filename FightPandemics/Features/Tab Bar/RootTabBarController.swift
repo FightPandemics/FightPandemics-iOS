@@ -53,6 +53,10 @@ final class RootTabBarController: UITabBarController {
 
     // MARK: - Instance methods
 
+    func selectTab(_ tab: Tab) {
+        selectedIndex = tab.rawValue
+    }
+
     func navController(_ tab: Tab) -> UINavigationController? {
         return viewControllers?[tab.rawValue] as? UINavigationController
     }
