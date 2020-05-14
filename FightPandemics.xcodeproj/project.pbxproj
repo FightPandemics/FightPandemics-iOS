@@ -7,396 +7,404 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0420F6246A0E71005FB1D0 /* Feed.storyboard */; };
-		2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0420F8246A0E7E005FB1D0 /* FeedPrototypeViewController.swift */; };
-		2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042108246A1021005FB1D0 /* Avatar.swift */; };
-		2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042109246A1021005FB1D0 /* FeedPost.swift */; };
-		2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04210A246A1021005FB1D0 /* AvatarView.swift */; };
-		2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04210B246A1021005FB1D0 /* PostFooter.swift */; };
-		2F04212D246A25CF005FB1D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F04212F246A25CF005FB1D0 /* Localizable.strings */; };
-		2F04213F246A2CCD005FB1D0 /* String+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04213E246A2CCD005FB1D0 /* String+FightPandemics.swift */; };
-		2F04218A246CCBFA005FB1D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042189246CCBFA005FB1D0 /* FeedViewController.swift */; };
-		2F04218E246CCD40005FB1D0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F04218D246CCD40005FB1D0 /* Profile.storyboard */; };
-		2F042190246CCD4A005FB1D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04218F246CCD4A005FB1D0 /* ProfileViewController.swift */; };
-		2F042192246CD017005FB1D0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F042191246CD017005FB1D0 /* Search.storyboard */; };
-		2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042193246CD022005FB1D0 /* SearchViewController.swift */; };
-		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
-		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
-		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
-		2F72CE502468785200750785 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE492468785200750785 /* JSON.swift */; };
-		2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE4A2468785200750785 /* URLSession+Networking.swift */; };
-		2F72CE522468785200750785 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE4B2468785200750785 /* HTTPMethod.swift */; };
-		2F72CE532468785200750785 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE4C2468785200750785 /* HTTPClient.swift */; };
-		2F72CE562468789000750785 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE552468789000750785 /* User.swift */; };
-		2F72CE59246878BF00750785 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE58246878BF00750785 /* API.swift */; };
-		2F72CE5B2468790200750785 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE5A2468790200750785 /* APIError.swift */; };
-		2F72CE5D2468793300750785 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE5C2468793300750785 /* MockAPI.swift */; };
-		2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE5E2468793C00750785 /* FightPandemicsAPI.swift */; };
-		2F72CE6224687C7100750785 /* JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE6124687C7100750785 /* JSONFileReader.swift */; };
-		2F72CE6424687C9A00750785 /* JSONFileReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE6324687C9A00750785 /* JSONFileReaderError.swift */; };
-		2F72CE6724687CD100750785 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F72CE6624687CD100750785 /* User.json */; };
-		2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE50245DFB1700E86700 /* AppDelegate.swift */; };
-		2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EFE52245DFB1700E86700 /* SceneDelegate.swift */; };
-		2F9EFE5A245DFB1900E86700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9EFE59245DFB1900E86700 /* Assets.xcassets */; };
-		2FB341E92468F838007E397F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341E82468F838007E397F /* Fonts.swift */; };
-		2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341EB2468F841007E397F /* UIColor+FightPandemics.swift */; };
-		2FB341F62468F984007E397F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB341F22468F984007E397F /* Main.storyboard */; };
-		2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341F82468F9F0007E397F /* RootTabBarController.swift */; };
-		2FB342042468FFCC007E397F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB342032468FFCC007E397F /* Navigator.swift */; };
-		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
-		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
-		5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */; };
-		DDB568A3246DD49B00745010 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDB568A2246DD49B00745010 /* Keys.plist */; };
-		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
-		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
-		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
-		DDDB550A2468AEA7008EA75A /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55092468AEA7008EA75A /* Poppins-Regular.otf */; };
-		DDDB550C2468AF92008EA75A /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550B2468AF92008EA75A /* Poppins-Medium.otf */; };
-		DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */; };
-		DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */; };
-		DDDB55122468B2E3008EA75A /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */; };
+		00550CD5BD91C184C4A72522C1C3750E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7498F60C17A164EF002B632CF83396E7 /* Search.storyboard */; };
+		043528A7A654231C93B1ACDF9257EDD8 /* FightPandemicsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA3B467767340DF0265AAC1D48FC70 /* FightPandemicsAPI.swift */; };
+		045D4653C8C3EA8EBD8560FFF62651FA /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 344CE742A8FBDE1E6ABCC0C686AEC36E /* DMSans-Bold.ttf */; };
+		06D72B2B5D5B76100760A7D47CC1F224 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F4A87DD883942BD4376BB003F390 /* Keys.plist */; };
+		0B8D413EFA75024266B43671869C103E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47152647FEBCF7A41A9A5983CC449011 /* Fonts.swift */; };
+		0EA025628DD92C89C6B0109BF0CD89EA /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */; };
+		255D9FE46E9ADED5F9568A83CA27A6E1 /* JSONFileReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE156B3938C4AD8116402E1C5082F2E6 /* JSONFileReaderError.swift */; };
+		3C7543831F7B945E78093A5B69652EF8 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B902A84FD6A085FA2AA8630EC245A76B /* Poppins-Regular.otf */; };
+		3E043CAD3BDEC00BB20A559014DFCA57 /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937BF7AB87EA682CF19FFA4A056BD28 /* FeedPost.swift */; };
+		408F0399D3A10FCD3C56201CA3877D39 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5200725599A0EAC7AE0A91AFB3E1AED8 /* Poppins-Medium.otf */; };
+		40F6CAEE4EB6101388D98815678D9EEB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0370BF85EE67AA85239223DE3ABF845 /* API.swift */; };
+		4BC61C898B8D49032BAECC5C2292BBD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9C844592B874251B1635611851558 /* Localizable.strings */; };
+		50AD8DA8ABC985062FF8A2AAE65FA128 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59CC5C242F1533795EAE85582BBA8D1 /* HTTPRequest.swift */; };
+		51CDF6A0F6A777D8BF46992C8E8C3456 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D072DFFD35B53FC1E44EFDD88F841F6 /* Feed.storyboard */; };
+		521DDD3615B17E8D0812AF7016A6BDCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A771D2C653A2AA381076F70E185BAF4 /* Main.storyboard */; };
+		557A93E5C53526CDCC2B5978C003DA2E /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0794BBFCDA637EE92DEA8A28E0794140 /* Poppins-Bold.otf */; };
+		59060704324440BE0F5E1ECA5D8A1F6C /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6802AFAA5047F266F47A113452CA7 /* JSON.swift */; };
+		5F513DDA38B22A24A4BD53FEF14898A6 /* PostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B98158509319444FB0CCE31725F20 /* PostFooter.swift */; };
+		5FC76E16C154AD83B5A8743A8E6F00DC /* String+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C7EEA5B4D9D1C5BEA86306FAD2E3 /* String+FightPandemics.swift */; };
+		5FEFDA5358D667F5B48E7CC864538DA5 /* FeedPrototypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608EA9CB73E9E22D5275937EFBAAD76 /* FeedPrototypeViewController.swift */; };
+		618CB9C827D9CE219910F58EB67A6995 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4570064F52F7E2C687D6554584A4EC5A /* HTTPMethod.swift */; };
+		6562B5E7D2DEA0D8152D15297BF7D0F0 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F8941BC100518AE7246BB4105FF7C /* FightPandemicsUITests.swift */; };
+		67BEFD1623F3F50076C7E17EC5E35DE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0391F0DC9A1E09844B06950D4ED01B0 /* SceneDelegate.swift */; };
+		69685EFD70D2268D4C5947DA160DC1E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3502B6ABA794C3F32996541AE4310 /* SearchViewController.swift */; };
+		6E7ECD294F7E6601ADE41EBFFAECFF22 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA40CE38018A677302E12F541C0FF4 /* Navigator.swift */; };
+		887E8203BE08B3A0C8C6AE7E039DCB1A /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9641D5453FC13AFFD5B05948B3588EC /* MockAPI.swift */; };
+		8C1E9FC24D2C54788F282C7649D27071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532FBCD9FCBDD6DD67645C734340C9E /* AppDelegate.swift */; };
+		928B8775DAF4A0FF5B3C7F63FA890D76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C748C1C7A9A9EB3F3A3EEF91D82B3F97 /* User.swift */; };
+		959119A01A7477AAC5891EB61A67718F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4BDD56C2885A150E6E797F64DB1C1F /* Assets.xcassets */; };
+		9611808CDF51725AB1ACFEE2E4C08AA3 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FF8CB6FE5A7E0850C394CEFB96F8B0 /* Avatar.swift */; };
+		99BD09DB117B7105D2D08D0D07FAD276 /* UIColor+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221DABE9AF64FDC894F635A8E9923F02 /* UIColor+FightPandemics.swift */; };
+		A209D42677AEF71D8C7564C2245C5601 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F187D499E98B2EB70F0A99C0BEF3F /* ProfileViewController.swift */; };
+		A5DEB0E773EBCF50EA3C3CBD0A79B5AF /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73F75B432F8479598CD0EBC3CF30F929 /* DMSans-Regular.ttf */; };
+		AAF5D51561BDEC73E6560BAD45DE7F37 /* JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F825DA42CB88D027973F0721FD105A4 /* JSONFileReader.swift */; };
+		AC5157D1530E0B97BACAD2368F7C855F /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D337CCE4040C2AB35AB9EB5F39085C64 /* HTTPRequestError.swift */; };
+		AD89B5BB8881497C977635AED9173532 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE4821CDB3D0843BDDA75608959054 /* HTTPClientError.swift */; };
+		AE4A9BEBEA46273626D6FA8592A0E766 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB780C014A18714CA0BED119548F5BA /* LaunchScreen.storyboard */; };
+		AF19FC23F2FA463A415B9A1105194DE5 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3EA1A94EABD42F4B2F9EF2FBA7818 /* DMSans-Medium.ttf */; };
+		B5A7880AE550B5BE4F8D9B6B5E7C7D6A /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D834E35FAE24787F54BFA67B95A4B795 /* RootTabBarController.swift */; };
+		B9C43BBA6A475B1B9427658B57501976 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8941311036D8DDC24FA75A52F6826C /* HTTPClient.swift */; };
+		C3E5F31C977B9FE0EDFD5C41F4DAC015 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC37CB1D06DC2222A4AD77C6749D1C /* APIError.swift */; };
+		C4BCB77C6AB56CBF562F32966F2B4375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B2C96A723840E7C8E4F3111E4DC50F /* Profile.storyboard */; };
+		D98E69A99C2EE6B09FC4FB20A5F35258 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB1CF0C1792DDDBA060354143DA6B7F1 /* OpenSans-Bold.ttf */; };
+		DA0813FF3431AC1E2DDF61001E78B8EA /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB6E862B56D6CA9590DFCDA17C156F /* AvatarView.swift */; };
+		EA031B48041A0BC7EFBB81CC2D85D813 /* URLSession+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EC65316BD1AB95F6FB3ABA98336A5 /* URLSession+Networking.swift */; };
+		EC988C25C0CD212C6F10723566D4A159 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816C32335909A5214AB9969D83061E3 /* FeedViewController.swift */; };
+		F62B19BE4A49CD52F6BE1BAAE2F10529 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = CABA2A2427C2CFC23B6CE5CD1280BE7C /* User.json */; };
+		FA171FBC464DAD728F3307C48C8F374F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C00911D02B1B35303254DFCA8A45B3D /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		49D0B0B62467BC6E007B3762 /* PBXContainerItemProxy */ = {
+		561B3D6965A7BC1D43DFC9A504B22DF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2F9EFE45245DFB1700E86700 /* Project object */;
+			containerPortal = 4256DC2AA08493A338F6830062FE7A23 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2F9EFE4C245DFB1700E86700;
+			remoteGlobalIDString = C3646292211A7C252C97726A182FFB42;
 			remoteInfo = FightPandemics;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
-		2F0420F6246A0E71005FB1D0 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
-		2F0420F8246A0E7E005FB1D0 /* FeedPrototypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPrototypeViewController.swift; sourceTree = "<group>"; };
-		2F042108246A1021005FB1D0 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
-		2F042109246A1021005FB1D0 /* FeedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
-		2F04210A246A1021005FB1D0 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
-		2F04210B246A1021005FB1D0 /* PostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFooter.swift; sourceTree = "<group>"; };
-		2F04212E246A25CF005FB1D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2F042130246A25EC005FB1D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../../es.lproj/Main.strings; sourceTree = "<group>"; };
-		2F042132246A25EC005FB1D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2F042139246A2AA8005FB1D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../en.lproj/Main.strings; sourceTree = "<group>"; };
-		2F04213B246A2C2D005FB1D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		2F04213D246A2C72005FB1D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		2F04213E246A2CCD005FB1D0 /* String+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FightPandemics.swift"; sourceTree = "<group>"; };
-		2F042189246CCBFA005FB1D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		2F04218D246CCD40005FB1D0 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		2F04218F246CCD4A005FB1D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		2F042191246CD017005FB1D0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		2F042193246CD022005FB1D0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
-		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
-		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
-		2F72CE492468785200750785 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		2F72CE4A2468785200750785 /* URLSession+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Networking.swift"; sourceTree = "<group>"; };
-		2F72CE4B2468785200750785 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		2F72CE4C2468785200750785 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		2F72CE552468789000750785 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2F72CE58246878BF00750785 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		2F72CE5A2468790200750785 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		2F72CE5C2468793300750785 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
-		2F72CE5E2468793C00750785 /* FightPandemicsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsAPI.swift; sourceTree = "<group>"; };
-		2F72CE6124687C7100750785 /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
-		2F72CE6324687C9A00750785 /* JSONFileReaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReaderError.swift; sourceTree = "<group>"; };
-		2F72CE6624687CD100750785 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
-		2F9EFE4D245DFB1700E86700 /* FightPandemics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightPandemics.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F9EFE50245DFB1700E86700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F9EFE52245DFB1700E86700 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2F9EFE59245DFB1900E86700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F9EFE5E245DFB1900E86700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FB341E82468F838007E397F /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		2FB341EB2468F841007E397F /* UIColor+FightPandemics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FightPandemics.swift"; sourceTree = "<group>"; };
-		2FB341F32468F984007E397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FightPandemics/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		2FB341F82468F9F0007E397F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
-		2FB342032468FFCC007E397F /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
-		2FB34206246901DA007E397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
-		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
-		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDB568A2246DD49B00745010 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
-		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
-		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
-		DDDB55092468AEA7008EA75A /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
-		DDDB550B2468AF92008EA75A /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
-		DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		0794BBFCDA637EE92DEA8A28E0794140 /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
+		0A2F187D499E98B2EB70F0A99C0BEF3F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0D8941311036D8DDC24FA75A52F6826C /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		1F4B98158509319444FB0CCE31725F20 /* PostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFooter.swift; sourceTree = "<group>"; };
+		221DABE9AF64FDC894F635A8E9923F02 /* UIColor+FightPandemics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FightPandemics.swift"; sourceTree = "<group>"; };
+		23EA40CE38018A677302E12F541C0FF4 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		2A0F550E47C1EB99E975D8900BB30669 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../../es.lproj/Main.strings; sourceTree = "<group>"; };
+		2D072DFFD35B53FC1E44EFDD88F841F6 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		2EB9BFD2C993F3E0E3B51C5DE13D47DA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		344CE742A8FBDE1E6ABCC0C686AEC36E /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		34EA3B467767340DF0265AAC1D48FC70 /* FightPandemicsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsAPI.swift; sourceTree = "<group>"; };
+		3816C32335909A5214AB9969D83061E3 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3FC3502B6ABA794C3F32996541AE4310 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		424EC65316BD1AB95F6FB3ABA98336A5 /* URLSession+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Networking.swift"; sourceTree = "<group>"; };
+		42794AC42EEDCCB506D7107B04F1E672 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../en.lproj/Main.strings; sourceTree = "<group>"; };
+		4506B073A078D2D99C4122E91F97F448 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4570064F52F7E2C687D6554584A4EC5A /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		47152647FEBCF7A41A9A5983CC449011 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		5200725599A0EAC7AE0A91AFB3E1AED8 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		5322E6266EFE638692A511C75696A30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FightPandemics/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		54B2C96A723840E7C8E4F3111E4DC50F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5601066A7F3CB13757AFF2BD733C27FD /* FightPandemics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightPandemics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C00911D02B1B35303254DFCA8A45B3D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		5F825DA42CB88D027973F0721FD105A4 /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
+		603B181D7296A8C3E71F996187CFBC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73F75B432F8479598CD0EBC3CF30F929 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		7498F60C17A164EF002B632CF83396E7 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		7532FBCD9FCBDD6DD67645C734340C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78FF8CB6FE5A7E0850C394CEFB96F8B0 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		7ED3EA1A94EABD42F4B2F9EF2FBA7818 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		87DC37CB1D06DC2222A4AD77C6749D1C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9AE891AF1CBC75386446C4F5392994DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9C21C7EEA5B4D9D1C5BEA86306FAD2E3 /* String+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FightPandemics.swift"; sourceTree = "<group>"; };
+		A632E79ED574321D7F50D07B89ACA23A /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
+		A78F8941BC100518AE7246BB4105FF7C /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
+		AE156B3938C4AD8116402E1C5082F2E6 /* JSONFileReaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReaderError.swift; sourceTree = "<group>"; };
+		B59CC5C242F1533795EAE85582BBA8D1 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		B902A84FD6A085FA2AA8630EC245A76B /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		B937BF7AB87EA682CF19FFA4A056BD28 /* FeedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
+		BC2EC0F1E7FF56429E632DC61EE8B739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC4BDD56C2885A150E6E797F64DB1C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCDE4821CDB3D0843BDDA75608959054 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
+		BFF4F4A87DD883942BD4376BB003F390 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		C0370BF85EE67AA85239223DE3ABF845 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C608EA9CB73E9E22D5275937EFBAAD76 /* FeedPrototypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPrototypeViewController.swift; sourceTree = "<group>"; };
+		C636546AB51D5168EF83C0993228BB35 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C748C1C7A9A9EB3F3A3EEF91D82B3F97 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C8FB6E862B56D6CA9590DFCDA17C156F /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		C9641D5453FC13AFFD5B05948B3588EC /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		CABA2A2427C2CFC23B6CE5CD1280BE7C /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		D1E6802AFAA5047F266F47A113452CA7 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		D337CCE4040C2AB35AB9EB5F39085C64 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
+		D834E35FAE24787F54BFA67B95A4B795 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		DB1CF0C1792DDDBA060354143DA6B7F1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E0391F0DC9A1E09844B06950D4ED01B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E20DEAE817CE7EFBEA18CF75A940913E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E3C977CEDFED5859E9A112CF42E09AC8 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		E561E5C280E3EE315232BFAA2A1EDD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F9EFE4A245DFB1700E86700 /* Frameworks */ = {
+		1933B72FB604B45B0323BA2C529D3BCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49D0B0AE2467BC6E007B3762 /* Frameworks */ = {
+		A2299B8593009516CB645CA058AEC55A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA025628DD92C89C6B0109BF0CD89EA /* Pods_FightPandemics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		033973FDB7BA0D30ACF6F0E4 /* Frameworks */ = {
+		08A1C7B7404FBA2D84DA842EA3BA94A0 /* FightPandemics */ = {
 			isa = PBXGroup;
 			children = (
-				1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2F0420F5246A0D0D005FB1D0 /* Feed */ = {
-			isa = PBXGroup;
-			children = (
-				2F0420F6246A0E71005FB1D0 /* Feed.storyboard */,
-				2F0420FA246A0EBA005FB1D0 /* FeedPost */,
-				2F042189246CCBFA005FB1D0 /* FeedViewController.swift */,
-				2F0420F8246A0E7E005FB1D0 /* FeedPrototypeViewController.swift */,
-			);
-			path = Feed;
-			sourceTree = "<group>";
-		};
-		2F0420FA246A0EBA005FB1D0 /* FeedPost */ = {
-			isa = PBXGroup;
-			children = (
-				2F042108246A1021005FB1D0 /* Avatar.swift */,
-				2F04210A246A1021005FB1D0 /* AvatarView.swift */,
-				2F042109246A1021005FB1D0 /* FeedPost.swift */,
-				2F04210B246A1021005FB1D0 /* PostFooter.swift */,
-			);
-			path = FeedPost;
-			sourceTree = "<group>";
-		};
-		2F04218B246CCD36005FB1D0 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				2F042191246CD017005FB1D0 /* Search.storyboard */,
-				2F042193246CD022005FB1D0 /* SearchViewController.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		2F04218C246CCD36005FB1D0 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				2F04218D246CCD40005FB1D0 /* Profile.storyboard */,
-				2F04218F246CCD4A005FB1D0 /* ProfileViewController.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		2F72CE452468785200750785 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				2F72CE4C2468785200750785 /* HTTPClient.swift */,
-				2F72CE462468785200750785 /* HTTPClientError.swift */,
-				2F72CE4B2468785200750785 /* HTTPMethod.swift */,
-				2F72CE492468785200750785 /* JSON.swift */,
-				2F72CE4A2468785200750785 /* URLSession+Networking.swift */,
-				2F72CE482468785200750785 /* HTTPRequest.swift */,
-				2F72CE472468785200750785 /* HTTPRequestError.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		2F72CE542468788400750785 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2F72CE57246878B900750785 /* API */,
-				2F72CE552468789000750785 /* User.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		2F72CE57246878B900750785 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				2F72CE6524687CC500750785 /* Mocks */,
-				2F72CE58246878BF00750785 /* API.swift */,
-				2F72CE5E2468793C00750785 /* FightPandemicsAPI.swift */,
-				2F72CE5C2468793300750785 /* MockAPI.swift */,
-				2F72CE5A2468790200750785 /* APIError.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		2F72CE6024687C6700750785 /* File Reader */ = {
-			isa = PBXGroup;
-			children = (
-				2F72CE6124687C7100750785 /* JSONFileReader.swift */,
-				2F72CE6324687C9A00750785 /* JSONFileReaderError.swift */,
-			);
-			path = "File Reader";
-			sourceTree = "<group>";
-		};
-		2F72CE6524687CC500750785 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				2F72CE6624687CD100750785 /* User.json */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		2F9EFE44245DFB1700E86700 = {
-			isa = PBXGroup;
-			children = (
-				2F9EFE4F245DFB1700E86700 /* FightPandemics */,
-				49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */,
-				2F9EFE4E245DFB1700E86700 /* Products */,
-				91B98918B2BF3E9F21F244CB /* Pods */,
-				033973FDB7BA0D30ACF6F0E4 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		2F9EFE4E245DFB1700E86700 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2F9EFE4D245DFB1700E86700 /* FightPandemics.app */,
-				49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2F9EFE4F245DFB1700E86700 /* FightPandemics */ = {
-			isa = PBXGroup;
-			children = (
-				2F9EFE50245DFB1700E86700 /* AppDelegate.swift */,
-				2F9EFE52245DFB1700E86700 /* SceneDelegate.swift */,
-				2FB341ED2468F8BA007E397F /* Features */,
-				2F72CE542468788400750785 /* Models */,
-				2F9EFE68245DFC9F00E86700 /* Utilities */,
-				DDDB55012468ACAC008EA75A /* Resources */,
-				2FB34205246901DA007E397F /* LaunchScreen.storyboard */,
-				2F9EFE5E245DFB1900E86700 /* Info.plist */,
-				DDB568A2246DD49B00745010 /* Keys.plist */,
+				DDB568A5246DDD8200745010 /* Configuration */,
+				70C86C9FBA520A397056803E9A23129C /* Features */,
+				9578B6A034527EB74C17C5108AD6291F /* Models */,
+				846D89FFEFACCB887172FB5691FF27C4 /* Resources */,
+				5C1863B60FD998B2F493CB9F60B870F8 /* Utilities */,
+				7532FBCD9FCBDD6DD67645C734340C9E /* AppDelegate.swift */,
+				BC2EC0F1E7FF56429E632DC61EE8B739 /* Info.plist */,
+				EAB780C014A18714CA0BED119548F5BA /* LaunchScreen.storyboard */,
+				E0391F0DC9A1E09844B06950D4ED01B0 /* SceneDelegate.swift */,
 			);
 			path = FightPandemics;
 			sourceTree = "<group>";
 		};
-		2F9EFE68245DFC9F00E86700 /* Utilities */ = {
+		09296C91BCADDC179D495728F050E673 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				2FB341EA2468F841007E397F /* Extensions */,
-				2F72CE6024687C6700750785 /* File Reader */,
-				2FB342022468FFC3007E397F /* Navigation */,
-				2F72CE452468785200750785 /* Networking */,
-				2FB341E72468F838007E397F /* Style Guide */,
+				6B68637A63B1855A53101648A4090AE7 /* FeedPost */,
+				2D072DFFD35B53FC1E44EFDD88F841F6 /* Feed.storyboard */,
+				C608EA9CB73E9E22D5275937EFBAAD76 /* FeedPrototypeViewController.swift */,
+				3816C32335909A5214AB9969D83061E3 /* FeedViewController.swift */,
 			);
-			path = Utilities;
+			path = Feed;
 			sourceTree = "<group>";
 		};
-		2FB341E72468F838007E397F /* Style Guide */ = {
+		0CDB81B7124F0486FA1DB2D25F5B5A10 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				2FB341E82468F838007E397F /* Fonts.swift */,
+				CABA2A2427C2CFC23B6CE5CD1280BE7C /* User.json */,
 			);
-			path = "Style Guide";
+			path = Mocks;
 			sourceTree = "<group>";
 		};
-		2FB341EA2468F841007E397F /* Extensions */ = {
+		47BF1242AEF16A90569C2E7F9B0C7E91 /* FightPandemicsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2F04213E246A2CCD005FB1D0 /* String+FightPandemics.swift */,
-				2FB341EB2468F841007E397F /* UIColor+FightPandemics.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2FB341ED2468F8BA007E397F /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				2F0420F5246A0D0D005FB1D0 /* Feed */,
-				2F04218C246CCD36005FB1D0 /* Profile */,
-				2F04218B246CCD36005FB1D0 /* Search */,
-				2FB341F12468F975007E397F /* Tab Bar */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		2FB341F12468F975007E397F /* Tab Bar */ = {
-			isa = PBXGroup;
-			children = (
-				2FB341F22468F984007E397F /* Main.storyboard */,
-				2FB341F82468F9F0007E397F /* RootTabBarController.swift */,
-			);
-			path = "Tab Bar";
-			sourceTree = "<group>";
-		};
-		2FB342022468FFC3007E397F /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				2FB342032468FFCC007E397F /* Navigator.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */,
-				49D0B0B52467BC6E007B3762 /* Info.plist */,
+				A78F8941BC100518AE7246BB4105FF7C /* FightPandemicsUITests.swift */,
+				E561E5C280E3EE315232BFAA2A1EDD42 /* Info.plist */,
 			);
 			path = FightPandemicsUITests;
 			sourceTree = "<group>";
 		};
-		91B98918B2BF3E9F21F244CB /* Pods */ = {
+		4D9D1A6C7F9F68DBF452FA1E8458A57E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */,
-				1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */,
+				69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */,
 			);
-			path = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DDDB55012468ACAC008EA75A /* Resources */ = {
+		52369F717B2D4B46CAEE6A4EFE53F60D = {
 			isa = PBXGroup;
 			children = (
-				DDDB55022468ACC3008EA75A /* Fonts */,
-				2F9EFE59245DFB1900E86700 /* Assets.xcassets */,
-				2F04212F246A25CF005FB1D0 /* Localizable.strings */,
+				08A1C7B7404FBA2D84DA842EA3BA94A0 /* FightPandemics */,
+				47BF1242AEF16A90569C2E7F9B0C7E91 /* FightPandemicsUITests */,
+				4D9D1A6C7F9F68DBF452FA1E8458A57E /* Frameworks */,
+				9676DC981BC20511ED3D313F7CDEEB71 /* Pods */,
+				96AE1598FAB89184B7608B65FAB66446 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C1863B60FD998B2F493CB9F60B870F8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D10AEBB0BBF5AA6697EF765B687575B8 /* Extensions */,
+				680184157471874CF4E01370EDF9232B /* File Reader */,
+				8640EB2EC681E4D2642F25EBC370EFD5 /* Navigation */,
+				991BDC1BBBD6CC38D9C3B2D87C5B7725 /* Networking */,
+				B6B1DA5E760A5EF6D7BCDA6966F48B35 /* Style Guide */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		61392988F7015505925811352B5234F1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7498F60C17A164EF002B632CF83396E7 /* Search.storyboard */,
+				3FC3502B6ABA794C3F32996541AE4310 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		680184157471874CF4E01370EDF9232B /* File Reader */ = {
+			isa = PBXGroup;
+			children = (
+				5F825DA42CB88D027973F0721FD105A4 /* JSONFileReader.swift */,
+				AE156B3938C4AD8116402E1C5082F2E6 /* JSONFileReaderError.swift */,
+			);
+			path = "File Reader";
+			sourceTree = "<group>";
+		};
+		6B68637A63B1855A53101648A4090AE7 /* FeedPost */ = {
+			isa = PBXGroup;
+			children = (
+				78FF8CB6FE5A7E0850C394CEFB96F8B0 /* Avatar.swift */,
+				C8FB6E862B56D6CA9590DFCDA17C156F /* AvatarView.swift */,
+				B937BF7AB87EA682CF19FFA4A056BD28 /* FeedPost.swift */,
+				1F4B98158509319444FB0CCE31725F20 /* PostFooter.swift */,
+			);
+			path = FeedPost;
+			sourceTree = "<group>";
+		};
+		70C86C9FBA520A397056803E9A23129C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				09296C91BCADDC179D495728F050E673 /* Feed */,
+				7D1B8C8195D640E01257E1E681502650 /* Profile */,
+				61392988F7015505925811352B5234F1 /* Search */,
+				9CD5D18DF8E208B8C40D374C9EDD381F /* Tab Bar */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7D1B8C8195D640E01257E1E681502650 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				54B2C96A723840E7C8E4F3111E4DC50F /* Profile.storyboard */,
+				0A2F187D499E98B2EB70F0A99C0BEF3F /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		81D760B9EAE27639C3831C9B03A2DC19 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0CDB81B7124F0486FA1DB2D25F5B5A10 /* Mocks */,
+				C0370BF85EE67AA85239223DE3ABF845 /* API.swift */,
+				87DC37CB1D06DC2222A4AD77C6749D1C /* APIError.swift */,
+				34EA3B467767340DF0265AAC1D48FC70 /* FightPandemicsAPI.swift */,
+				C9641D5453FC13AFFD5B05948B3588EC /* MockAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		846D89FFEFACCB887172FB5691FF27C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D813931BC6D0F8287367D1198551556E /* Fonts */,
+				BC4BDD56C2885A150E6E797F64DB1C1F /* Assets.xcassets */,
+				3FE9C844592B874251B1635611851558 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DDDB55022468ACC3008EA75A /* Fonts */ = {
+		8640EB2EC681E4D2642F25EBC370EFD5 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */,
-				DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */,
-				DDDB55092468AEA7008EA75A /* Poppins-Regular.otf */,
-				DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */,
-				DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */,
-				DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */,
-				DDDB550B2468AF92008EA75A /* Poppins-Medium.otf */,
-				DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */,
+				23EA40CE38018A677302E12F541C0FF4 /* Navigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		9578B6A034527EB74C17C5108AD6291F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81D760B9EAE27639C3831C9B03A2DC19 /* API */,
+				C748C1C7A9A9EB3F3A3EEF91D82B3F97 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9676DC981BC20511ED3D313F7CDEEB71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3C977CEDFED5859E9A112CF42E09AC8 /* Pods-FightPandemics.debug.xcconfig */,
+				A632E79ED574321D7F50D07B89ACA23A /* Pods-FightPandemics.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		96AE1598FAB89184B7608B65FAB66446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5601066A7F3CB13757AFF2BD733C27FD /* FightPandemics.app */,
+				4506B073A078D2D99C4122E91F97F448 /* FightPandemicsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		991BDC1BBBD6CC38D9C3B2D87C5B7725 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0D8941311036D8DDC24FA75A52F6826C /* HTTPClient.swift */,
+				BCDE4821CDB3D0843BDDA75608959054 /* HTTPClientError.swift */,
+				4570064F52F7E2C687D6554584A4EC5A /* HTTPMethod.swift */,
+				B59CC5C242F1533795EAE85582BBA8D1 /* HTTPRequest.swift */,
+				D337CCE4040C2AB35AB9EB5F39085C64 /* HTTPRequestError.swift */,
+				D1E6802AFAA5047F266F47A113452CA7 /* JSON.swift */,
+				424EC65316BD1AB95F6FB3ABA98336A5 /* URLSession+Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9CD5D18DF8E208B8C40D374C9EDD381F /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				0A771D2C653A2AA381076F70E185BAF4 /* Main.storyboard */,
+				D834E35FAE24787F54BFA67B95A4B795 /* RootTabBarController.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		B6B1DA5E760A5EF6D7BCDA6966F48B35 /* Style Guide */ = {
+			isa = PBXGroup;
+			children = (
+				47152647FEBCF7A41A9A5983CC449011 /* Fonts.swift */,
+			);
+			path = "Style Guide";
+			sourceTree = "<group>";
+		};
+		D10AEBB0BBF5AA6697EF765B687575B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C21C7EEA5B4D9D1C5BEA86306FAD2E3 /* String+FightPandemics.swift */,
+				221DABE9AF64FDC894F635A8E9923F02 /* UIColor+FightPandemics.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D813931BC6D0F8287367D1198551556E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				344CE742A8FBDE1E6ABCC0C686AEC36E /* DMSans-Bold.ttf */,
+				7ED3EA1A94EABD42F4B2F9EF2FBA7818 /* DMSans-Medium.ttf */,
+				73F75B432F8479598CD0EBC3CF30F929 /* DMSans-Regular.ttf */,
+				DB1CF0C1792DDDBA060354143DA6B7F1 /* OpenSans-Bold.ttf */,
+				5C00911D02B1B35303254DFCA8A45B3D /* OpenSans-Regular.ttf */,
+				0794BBFCDA637EE92DEA8A28E0794140 /* Poppins-Bold.otf */,
+				5200725599A0EAC7AE0A91AFB3E1AED8 /* Poppins-Medium.otf */,
+				B902A84FD6A085FA2AA8630EC245A76B /* Poppins-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DDB568A5246DDD8200745010 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BFF4F4A87DD883942BD4376BB003F390 /* Keys.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F9EFE4C245DFB1700E86700 /* FightPandemics */ = {
+		C3646292211A7C252C97726A182FFB42 /* FightPandemics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F9EFE61245DFB1900E86700 /* Build configuration list for PBXNativeTarget "FightPandemics" */;
+			buildConfigurationList = 5182303A75271771F1F766E93D2EEFD4 /* Build configuration list for PBXNativeTarget "FightPandemics" */;
 			buildPhases = (
-				11B0ABB8D9116EAB2D25D89B /* [CP] Check Pods Manifest.lock */,
-				2F9EFE49245DFB1700E86700 /* Sources */,
-				2F9EFE4A245DFB1700E86700 /* Frameworks */,
-				2F9EFE4B245DFB1700E86700 /* Resources */,
-				2F9EFE8E245E251C00E86700 /* SwiftLint */,
-				9F240630283CB55E41832B9F /* [CP] Embed Pods Frameworks */,
+				FBAC815C1E15AACC7F8366A5CE585B9E /* [CP] Check Pods Manifest.lock */,
+				1DFE023D8669E335CB5678FF821175AC /* Sources */,
+				A2299B8593009516CB645CA058AEC55A /* Frameworks */,
+				E079C60406D65C1D042CC090449137FC /* Resources */,
+				C2E4E778CF7EE2DD3914F2A3B76A3C18 /* SwiftLint */,
+				86011EED2BD9A58815EE41720E8A4923 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -404,47 +412,47 @@
 			);
 			name = FightPandemics;
 			productName = FightPandemics;
-			productReference = 2F9EFE4D245DFB1700E86700 /* FightPandemics.app */;
+			productReference = 5601066A7F3CB13757AFF2BD733C27FD /* FightPandemics.app */;
 			productType = "com.apple.product-type.application";
 		};
-		49D0B0B02467BC6E007B3762 /* FightPandemicsUITests */ = {
+		E93E5FFF51D9A3B92C4B254C03AF11E8 /* FightPandemicsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49D0B0BA2467BC6E007B3762 /* Build configuration list for PBXNativeTarget "FightPandemicsUITests" */;
+			buildConfigurationList = 2CD8AE28E03A67EEE35850C6F7206E64 /* Build configuration list for PBXNativeTarget "FightPandemicsUITests" */;
 			buildPhases = (
-				49D0B0AD2467BC6E007B3762 /* Sources */,
-				49D0B0AE2467BC6E007B3762 /* Frameworks */,
-				49D0B0AF2467BC6E007B3762 /* Resources */,
+				462547ABE06491E08F01B59604B57756 /* Sources */,
+				1933B72FB604B45B0323BA2C529D3BCD /* Frameworks */,
+				68EBC8ABA1FBF80502C7A67F3F69E90F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				49D0B0B72467BC6E007B3762 /* PBXTargetDependency */,
+				B1E9F928929CEAE2324FCCA81866172F /* PBXTargetDependency */,
 			);
 			name = FightPandemicsUITests;
 			productName = FightPandemicsUITests;
-			productReference = 49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */;
+			productReference = 4506B073A078D2D99C4122E91F97F448 /* FightPandemicsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2F9EFE45245DFB1700E86700 /* Project object */ = {
+		4256DC2AA08493A338F6830062FE7A23 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Fight Pandemics";
 				TargetAttributes = {
-					2F9EFE4C245DFB1700E86700 = {
+					C3646292211A7C252C97726A182FFB42 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					49D0B0B02467BC6E007B3762 = {
+					E93E5FFF51D9A3B92C4B254C03AF11E8 = {
 						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = 2F9EFE4C245DFB1700E86700;
+						TestTargetID = C3646292211A7C252C97726A182FFB42;
 					};
 				};
 			};
-			buildConfigurationList = 2F9EFE48245DFB1700E86700 /* Build configuration list for PBXProject "FightPandemics" */;
+			buildConfigurationList = A6053ED91016480BBC90389AF4C4ED5A /* Build configuration list for PBXProject "FightPandemics" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -453,53 +461,88 @@
 				Base,
 				es,
 			);
-			mainGroup = 2F9EFE44245DFB1700E86700;
-			productRefGroup = 2F9EFE4E245DFB1700E86700 /* Products */;
+			mainGroup = 52369F717B2D4B46CAEE6A4EFE53F60D;
+			productRefGroup = 96AE1598FAB89184B7608B65FAB66446 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F9EFE4C245DFB1700E86700 /* FightPandemics */,
-				49D0B0B02467BC6E007B3762 /* FightPandemicsUITests */,
+				C3646292211A7C252C97726A182FFB42 /* FightPandemics */,
+				E93E5FFF51D9A3B92C4B254C03AF11E8 /* FightPandemicsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2F9EFE4B245DFB1700E86700 /* Resources */ = {
+		68EBC8ABA1FBF80502C7A67F3F69E90F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */,
-				DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */,
-				2F04212D246A25CF005FB1D0 /* Localizable.strings in Resources */,
-				2F72CE6724687CD100750785 /* User.json in Resources */,
-				2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */,
-				DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */,
-				DDDB550A2468AEA7008EA75A /* Poppins-Regular.otf in Resources */,
-				2FB341F62468F984007E397F /* Main.storyboard in Resources */,
-				DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */,
-				DDDB55122468B2E3008EA75A /* DMSans-Bold.ttf in Resources */,
-				2F9EFE5A245DFB1900E86700 /* Assets.xcassets in Resources */,
-				2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */,
-				DDB568A3246DD49B00745010 /* Keys.plist in Resources */,
-				2F04218E246CCD40005FB1D0 /* Profile.storyboard in Resources */,
-				DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */,
-				2F042192246CD017005FB1D0 /* Search.storyboard in Resources */,
-				DDDB550C2468AF92008EA75A /* Poppins-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49D0B0AF2467BC6E007B3762 /* Resources */ = {
+		E079C60406D65C1D042CC090449137FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959119A01A7477AAC5891EB61A67718F /* Assets.xcassets in Resources */,
+				045D4653C8C3EA8EBD8560FFF62651FA /* DMSans-Bold.ttf in Resources */,
+				AF19FC23F2FA463A415B9A1105194DE5 /* DMSans-Medium.ttf in Resources */,
+				A5DEB0E773EBCF50EA3C3CBD0A79B5AF /* DMSans-Regular.ttf in Resources */,
+				51CDF6A0F6A777D8BF46992C8E8C3456 /* Feed.storyboard in Resources */,
+				06D72B2B5D5B76100760A7D47CC1F224 /* Keys.plist in Resources */,
+				AE4A9BEBEA46273626D6FA8592A0E766 /* LaunchScreen.storyboard in Resources */,
+				4BC61C898B8D49032BAECC5C2292BBD7 /* Localizable.strings in Resources */,
+				521DDD3615B17E8D0812AF7016A6BDCE /* Main.storyboard in Resources */,
+				D98E69A99C2EE6B09FC4FB20A5F35258 /* OpenSans-Bold.ttf in Resources */,
+				FA171FBC464DAD728F3307C48C8F374F /* OpenSans-Regular.ttf in Resources */,
+				557A93E5C53526CDCC2B5978C003DA2E /* Poppins-Bold.otf in Resources */,
+				408F0399D3A10FCD3C56201CA3877D39 /* Poppins-Medium.otf in Resources */,
+				3C7543831F7B945E78093A5B69652EF8 /* Poppins-Regular.otf in Resources */,
+				C4BCB77C6AB56CBF562F32966F2B4375 /* Profile.storyboard in Resources */,
+				00550CD5BD91C184C4A72522C1C3750E /* Search.storyboard in Resources */,
+				F62B19BE4A49CD52F6BE1BAAE2F10529 /* User.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11B0ABB8D9116EAB2D25D89B /* [CP] Check Pods Manifest.lock */ = {
+		86011EED2BD9A58815EE41720E8A4923 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FightPandemics/Pods-FightPandemics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FightPandemics/Pods-FightPandemics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FightPandemics/Pods-FightPandemics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2E4E778CF7EE2DD3914F2A3B76A3C18 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		FBAC815C1E15AACC7F8366A5CE585B9E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,124 +564,89 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F9EFE8E245E251C00E86700 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		9F240630283CB55E41832B9F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightPandemics/Pods-FightPandemics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightPandemics/Pods-FightPandemics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FightPandemics/Pods-FightPandemics-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2F9EFE49245DFB1700E86700 /* Sources */ = {
+		1DFE023D8669E335CB5678FF821175AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F72CE502468785200750785 /* JSON.swift in Sources */,
-				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
-				2F72CE6224687C7100750785 /* JSONFileReader.swift in Sources */,
-				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
-				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
-				2F04218A246CCBFA005FB1D0 /* FeedViewController.swift in Sources */,
-				2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */,
-				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
-				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
-				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
-				2F72CE562468789000750785 /* User.swift in Sources */,
-				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
-				2FB341E92468F838007E397F /* Fonts.swift in Sources */,
-				2F72CE59246878BF00750785 /* API.swift in Sources */,
-				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
-				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
-				2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */,
-				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
-				2F042190246CCD4A005FB1D0 /* ProfileViewController.swift in Sources */,
-				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
-				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
-				2F72CE6424687C9A00750785 /* JSONFileReaderError.swift in Sources */,
-				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
-				2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */,
-				2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */,
-				2F04213F246A2CCD005FB1D0 /* String+FightPandemics.swift in Sources */,
-				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
-				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
-				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,
+				40F6CAEE4EB6101388D98815678D9EEB /* API.swift in Sources */,
+				C3E5F31C977B9FE0EDFD5C41F4DAC015 /* APIError.swift in Sources */,
+				8C1E9FC24D2C54788F282C7649D27071 /* AppDelegate.swift in Sources */,
+				9611808CDF51725AB1ACFEE2E4C08AA3 /* Avatar.swift in Sources */,
+				DA0813FF3431AC1E2DDF61001E78B8EA /* AvatarView.swift in Sources */,
+				3E043CAD3BDEC00BB20A559014DFCA57 /* FeedPost.swift in Sources */,
+				5FEFDA5358D667F5B48E7CC864538DA5 /* FeedPrototypeViewController.swift in Sources */,
+				EC988C25C0CD212C6F10723566D4A159 /* FeedViewController.swift in Sources */,
+				043528A7A654231C93B1ACDF9257EDD8 /* FightPandemicsAPI.swift in Sources */,
+				0B8D413EFA75024266B43671869C103E /* Fonts.swift in Sources */,
+				B9C43BBA6A475B1B9427658B57501976 /* HTTPClient.swift in Sources */,
+				AD89B5BB8881497C977635AED9173532 /* HTTPClientError.swift in Sources */,
+				618CB9C827D9CE219910F58EB67A6995 /* HTTPMethod.swift in Sources */,
+				50AD8DA8ABC985062FF8A2AAE65FA128 /* HTTPRequest.swift in Sources */,
+				AC5157D1530E0B97BACAD2368F7C855F /* HTTPRequestError.swift in Sources */,
+				59060704324440BE0F5E1ECA5D8A1F6C /* JSON.swift in Sources */,
+				AAF5D51561BDEC73E6560BAD45DE7F37 /* JSONFileReader.swift in Sources */,
+				255D9FE46E9ADED5F9568A83CA27A6E1 /* JSONFileReaderError.swift in Sources */,
+				887E8203BE08B3A0C8C6AE7E039DCB1A /* MockAPI.swift in Sources */,
+				6E7ECD294F7E6601ADE41EBFFAECFF22 /* Navigator.swift in Sources */,
+				5F513DDA38B22A24A4BD53FEF14898A6 /* PostFooter.swift in Sources */,
+				A209D42677AEF71D8C7564C2245C5601 /* ProfileViewController.swift in Sources */,
+				B5A7880AE550B5BE4F8D9B6B5E7C7D6A /* RootTabBarController.swift in Sources */,
+				67BEFD1623F3F50076C7E17EC5E35DE3 /* SceneDelegate.swift in Sources */,
+				69685EFD70D2268D4C5947DA160DC1E4 /* SearchViewController.swift in Sources */,
+				5FC76E16C154AD83B5A8743A8E6F00DC /* String+FightPandemics.swift in Sources */,
+				99BD09DB117B7105D2D08D0D07FAD276 /* UIColor+FightPandemics.swift in Sources */,
+				EA031B48041A0BC7EFBB81CC2D85D813 /* URLSession+Networking.swift in Sources */,
+				928B8775DAF4A0FF5B3C7F63FA890D76 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49D0B0AD2467BC6E007B3762 /* Sources */ = {
+		462547ABE06491E08F01B59604B57756 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */,
+				6562B5E7D2DEA0D8152D15297BF7D0F0 /* FightPandemicsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		49D0B0B72467BC6E007B3762 /* PBXTargetDependency */ = {
+		B1E9F928929CEAE2324FCCA81866172F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2F9EFE4C245DFB1700E86700 /* FightPandemics */;
-			targetProxy = 49D0B0B62467BC6E007B3762 /* PBXContainerItemProxy */;
+			target = C3646292211A7C252C97726A182FFB42 /* FightPandemics */;
+			targetProxy = 561B3D6965A7BC1D43DFC9A504B22DF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2F04212F246A25CF005FB1D0 /* Localizable.strings */ = {
+		0A771D2C653A2AA381076F70E185BAF4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2F04212E246A25CF005FB1D0 /* en */,
-				2F042132246A25EC005FB1D0 /* es */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		2FB341F22468F984007E397F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2FB341F32468F984007E397F /* Base */,
-				2F042130246A25EC005FB1D0 /* es */,
-				2F042139246A2AA8005FB1D0 /* en */,
+				5322E6266EFE638692A511C75696A30A /* Base */,
+				42794AC42EEDCCB506D7107B04F1E672 /* en */,
+				2A0F550E47C1EB99E975D8900BB30669 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2FB34205246901DA007E397F /* LaunchScreen.storyboard */ = {
+		3FE9C844592B874251B1635611851558 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2FB34206246901DA007E397F /* Base */,
-				2F04213B246A2C2D005FB1D0 /* en */,
-				2F04213D246A2C72005FB1D0 /* es */,
+				E20DEAE817CE7EFBEA18CF75A940913E /* en */,
+				C636546AB51D5168EF83C0993228BB35 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EAB780C014A18714CA0BED119548F5BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				603B181D7296A8C3E71F996187CFBC52 /* Base */,
+				9AE891AF1CBC75386446C4F5392994DA /* en */,
+				2EB9BFD2C993F3E0E3B51C5DE13D47DA /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -646,7 +654,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2F9EFE5F245DFB1900E86700 /* Debug */ = {
+		24816854866287C74791BE1440EF1A41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -707,7 +715,47 @@
 			};
 			name = Debug;
 		};
-		2F9EFE60245DFB1900E86700 /* Release */ = {
+		3D49D4D9D5693C5E4008151A1DCE1958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A632E79ED574321D7F50D07B89ACA23A /* Pods-FightPandemics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G58XPAD97M;
+				INFOPLIST_FILE = FightPandemics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fightpandemics.FightPandemics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4644752C18B05D5E70A7997E6E52193C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FightPandemicsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FightPandemicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FightPandemics;
+			};
+			name = Debug;
+		};
+		5B7593B8CFEA8EE509F890DE4E66E4CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -762,9 +810,28 @@
 			};
 			name = Release;
 		};
-		2F9EFE62245DFB1900E86700 /* Debug */ = {
+		7038523FABD26ABA688028997BA99DFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FightPandemicsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FightPandemicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FightPandemics;
+			};
+			name = Release;
+		};
+		7326CC2AF5261E0E216851B22E12C22C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3C977CEDFED5859E9A112CF42E09AC8 /* Pods-FightPandemics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -784,96 +851,37 @@
 			};
 			name = Debug;
 		};
-		2F9EFE63245DFB1900E86700 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G58XPAD97M;
-				INFOPLIST_FILE = FightPandemics/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fightpandemics.FightPandemics;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		49D0B0B82467BC6E007B3762 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FightPandemicsUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.FightPandemicsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FightPandemics;
-			};
-			name = Debug;
-		};
-		49D0B0B92467BC6E007B3762 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FightPandemicsUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.FightPandemicsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FightPandemics;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F9EFE48245DFB1700E86700 /* Build configuration list for PBXProject "FightPandemics" */ = {
+		2CD8AE28E03A67EEE35850C6F7206E64 /* Build configuration list for PBXNativeTarget "FightPandemicsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F9EFE5F245DFB1900E86700 /* Debug */,
-				2F9EFE60245DFB1900E86700 /* Release */,
+				4644752C18B05D5E70A7997E6E52193C /* Debug */,
+				7038523FABD26ABA688028997BA99DFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F9EFE61245DFB1900E86700 /* Build configuration list for PBXNativeTarget "FightPandemics" */ = {
+		5182303A75271771F1F766E93D2EEFD4 /* Build configuration list for PBXNativeTarget "FightPandemics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F9EFE62245DFB1900E86700 /* Debug */,
-				2F9EFE63245DFB1900E86700 /* Release */,
+				7326CC2AF5261E0E216851B22E12C22C /* Debug */,
+				3D49D4D9D5693C5E4008151A1DCE1958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49D0B0BA2467BC6E007B3762 /* Build configuration list for PBXNativeTarget "FightPandemicsUITests" */ = {
+		A6053ED91016480BBC90389AF4C4ED5A /* Build configuration list for PBXProject "FightPandemics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				49D0B0B82467BC6E007B3762 /* Debug */,
-				49D0B0B92467BC6E007B3762 /* Release */,
+				24816854866287C74791BE1440EF1A41 /* Debug */,
+				5B7593B8CFEA8EE509F890DE4E66E4CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2F9EFE45245DFB1700E86700 /* Project object */;
+	rootObject = 4256DC2AA08493A338F6830062FE7A23 /* Project object */;
 }

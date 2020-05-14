@@ -31,7 +31,8 @@ DerivedData/
 *.dSYM
 
 ## Sentry dsn key
-FightPandemics/Keys.plist
+**FightPandemics/Configuration/
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
