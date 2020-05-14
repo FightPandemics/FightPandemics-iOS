@@ -31,6 +31,9 @@ final class LogInViewController: UIViewController {
     // MARK: - Properties
 
     var navigator: Navigator!
+    var sessionManager: SessionManager!
+
+    private var loadingSpinner = UIActivityIndicatorView()
 
     // MARK: - Overrides
 
@@ -53,10 +56,39 @@ final class LogInViewController: UIViewController {
                                                             action: #selector(logIn))
         title = "Tap Log In >>>"
         view.backgroundColor = .systemTeal
+
+        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
+        loadingSpinner.color = .white
+        view.addSubview(loadingSpinner)
+        NSLayoutConstraint.activate([
+            loadingSpinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingSpinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 
     @objc private func logIn() {
-        navigator.dismissLogIn()
+        loadingSpinner.startAnimating()
+        disableForm()
+        sessionManager.logIn(email: "lily@luke.co", password: "Pass123") { [weak self] result in
+            self?.loadingSpinner.stopAnimating()
+            self?.enableForm()
+
+            switch result {
+            case .success:
+                self?.navigator.dismissLogIn()
+            case .failure(let error):
+                // TODO: Error handling
+                print(error)
+            }
+        }
+    }
+
+    private func enableForm() {
+         navigationItem.rightBarButtonItem?.isEnabled = true
+    }
+
+    private func disableForm() {
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
 
 }

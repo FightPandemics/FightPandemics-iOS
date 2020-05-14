@@ -26,18 +26,11 @@
 
 import UIKit
 
-enum Environment {
-    case production
-    case staging
-    case mock
-}
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     private(set) var currentEnvironment: Environment!
     private(set) var navigator: Navigator!
-    private(set) var sessionManager: SessionManager!
 
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
@@ -56,6 +49,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.currentEnvironment = .mock
         #endif
 
+        setupDependencies()
+        self.navigator.installRootTabBar()
+    }
+
+    private func setupDependencies() {
         let api: API
         switch self.currentEnvironment! {
         case .production:
@@ -66,9 +64,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             api = MockAPI()
         }
 
-        self.sessionManager = SessionManager(api: api, authState: .guest)
-        self.navigator = Navigator(rootWindow: window, sessionManager: sessionManager)
-        self.navigator.installRootTabBar()
+        let autoLoginFakeLaunchScreen = AutoLoginFakeLaunchScreen(rootWindow: window)
+        let sessionManager = SessionManager(api: api, authState: .guest)
+        self.navigator = Navigator(rootWindow: window,
+                                   autoLoginFakeLaunchScreen: autoLoginFakeLaunchScreen,
+                                   sessionManager: sessionManager)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

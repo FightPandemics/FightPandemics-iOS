@@ -1,8 +1,8 @@
 //
-//  FightPandemicsAPI.swift
+//  Environment.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/10/20.
+//  Created by Harlan Kellaway on 5/14/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,32 +26,9 @@
 
 import Foundation
 
-final class FightPandemicsAPI: API {
-
-    // MARK: - Properties
-
-    let baseURL: String
-    let httpClient: HTTPClient
-
-    // MARK: - Init/Deinit
-
-    init( baseURL: String, httpClient: HTTPClient) {
-        self.baseURL = baseURL
-        self.httpClient = httpClient
-    }
-
-    // MARK: - Protocol conformance
-
-    // MARK: API
-
-    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void) {
-        assertionFailure("API not implemented yet")
-        completion(.failure(.unimplemented(endpoint: "/login")))
-    }
-
-    func logOut(completion: @escaping (Result<Success, APIError>) -> Void) {
-        assertionFailure("API not implemented yet")
-        completion(.failure(.unimplemented(endpoint: "/logout")))
-    }
-
+/// API environment.
+enum Environment {
+    case production
+    case staging
+    case mock
 }

@@ -38,6 +38,7 @@ final class RootTabBarController: UITabBarController {
 
     // MARK: - Properties
 
+    var autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen!
     var navigator: Navigator!
     var sessionManager: SessionManager!
 
@@ -45,10 +46,10 @@ final class RootTabBarController: UITabBarController {
 
     // MARK: View life-cycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-        navigateToLoginIfNeed()
+        attemptAutoLogIn()
     }
 
     // MARK: - Instance methods
@@ -63,11 +64,14 @@ final class RootTabBarController: UITabBarController {
 
     // MARK: Private instance methods
 
-    private func navigateToLoginIfNeed() {
-        guard case .guest = sessionManager.authState else {
-            return
+    private func attemptAutoLogIn() {
+        autoLoginFakeLaunchScreen.show()
+        sessionManager.autoLogIn { [weak self] result in
+            self?.autoLoginFakeLaunchScreen.dismiss()
+            if !(result == .success) {
+                self?.navigator.navigateToLogIn()
+            }
         }
-        navigator.navigateToLogIn()
     }
 
 }

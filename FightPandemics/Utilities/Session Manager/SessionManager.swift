@@ -26,6 +26,8 @@
 
 import Foundation
 
+import UIKit
+
 final class SessionManager {
 
     // MARK: - Types
@@ -35,19 +37,44 @@ final class SessionManager {
         case guest
     }
 
+    enum AutoLogInResult {
+        case noStoredCredentials
+        case success
+        case forceLogOut
+    }
+
     // MARK: - Properties
 
     private(set) var authState: AuthState!
     let api: API
+    let jsonFileReader: JSONFileReader
 
     // MARK: - Init/Deinit
 
-    init(api: API, authState: AuthState) {
+    init(api: API, authState: AuthState, jsonFileReader: JSONFileReader = JSONFileReader()) {
         self.api = api
         self.authState = authState
+        self.jsonFileReader = jsonFileReader
     }
 
     // MARK: - Instance methods
+
+    func autoLogIn(completion: @escaping (AutoLogInResult) -> Void) {
+        guard let credentials = restoreCredentials() else {
+            completion(.noStoredCredentials)
+            return
+        }
+
+        logIn(email: credentials.email, password: credentials.password) { [weak self] result in
+            switch result {
+            case .success:
+                completion(.success)
+            case .failure:
+                self?.logOut()
+                completion(.forceLogOut)
+            }
+        }
+    }
 
     func logIn(email: String, password: String, completion: @escaping (Result<Success, SessionManagerError>) -> Void) {
         api.logIn(email: email, password: password) { [weak self] result in
@@ -67,6 +94,25 @@ final class SessionManager {
             // still enact a front-end logout by clearing application state
         }
         authState = .guest
+        clearCredentials()
+    }
+
+    // MARK: Private instance methods
+
+    private func storeCredentials(_ credentials: AuthCredentials) {
+        // Store credentials in keychain
+    }
+
+    private func restoreCredentials() -> AuthCredentials? {
+        // TODO: Auto-login https://github.com/FightPandemics/FightPandemics-iOS/issues/52
+        guard case let .success(mockUser) = jsonFileReader.read(fileNamed: "User", modelType: User.self) else {
+            return nil
+        }
+        return AuthCredentials(email: mockUser.email, password: "Pass123")
+    }
+
+    private func clearCredentials() {
+        // Clear credentials from keychain
     }
 
 }
