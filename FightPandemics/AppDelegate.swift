@@ -25,12 +25,17 @@
 //  THE SOFTWARE.
 
 import UIKit
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        SentrySDK.start(options: [
+            "dsn": "https://7de2fbee9f2345e5a2f74893b54e625a@o392028.ingest.sentry.io/5240756",
+            "debug": true
+        ])
         return true
     }
 

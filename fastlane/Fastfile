@@ -1,0 +1,39 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Download and upload dSYMs to Sentry"
+ 
+#  Uncomment for downloading and uploading of dSYMs for a build submitted to iTunesConnect
+#   lane :upload_symbols do
+#    download_dsyms
+#    upload_symbols_to_sentry(
+#       auth_token: '52923982d18d4afe8acb46d01c81d18759c189346bac44849db8b996e81e8df3',
+#       org_slug: 'fightpandemics',
+#       project_slug: 'fightpandemics-ios',
+#    )
+#   end
+
+  lane :build do
+    gym
+    upload_symbols_to_sentry(
+       auth_token: '52923982d18d4afe8acb46d01c81d18759c189346bac44849db8b996e81e8df3',
+       org_slug: 'fightpandemics',
+       project_slug: 'fightpandemics-ios',
+    )
+  end
+end
