@@ -100,7 +100,6 @@ class CreatePostHeader: UIView {
         NSLayoutConstraint(item: cancelButton, attribute: .left, relatedBy: .equal, toItem: createPostTitle, attribute: .right, multiplier: 1, constant: 100).isActive = true //70 proportional sizes
         NSLayoutConstraint(item: cancelButton, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 33).isActive = true
         NSLayoutConstraint(item: cancelButton, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: (UIScreen.main.bounds.width - 48)).isActive = true
-        print(UIScreen.main.bounds.width)
     }
     func setUpMidConstraints () {
         questionLbl.translatesAutoresizingMaskIntoConstraints = false
