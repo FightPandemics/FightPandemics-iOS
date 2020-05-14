@@ -28,8 +28,33 @@ import UIKit
 
 final class LogInViewController: UIViewController {
 
-    deinit {
-        print("here")
+    // MARK: - Properties
+
+    var navigator: Navigator!
+
+    // MARK: - Overrides
+
+    // MARK: View life-cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupUI()
+    }
+
+    // MARK: - Instance methods
+
+    // MARK: Private instance methods
+
+    private func setupUI() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogInCTA".localized,
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(logIn))
+    }
+
+    @objc private func logIn() {
+        navigator.dismissLogIn()
     }
 
 }

@@ -44,6 +44,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.navigator = Navigator(rootWindow: window)
         self.navigator.installRootTabBar()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.navigator.navigateToLogIn()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
