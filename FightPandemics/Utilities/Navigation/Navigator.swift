@@ -73,6 +73,14 @@ final class Navigator {
         }
     }
 
+    func navigateToCreatePost() {
+        rootTabBar?.present(createPostViewController(), animated: true, completion: nil)
+    }
+
+    func dismissCreatePost() {
+        rootTabBar?.dismiss(animated: true, completion: nil)
+    }
+
     // MARK: Private instance methods
 
     private func rootTabBarController() -> RootTabBarController {
@@ -106,12 +114,23 @@ final class Navigator {
         return searchViewController
     }
 
+    private func createPostViewController() -> CreatePostViewController {
+        let createPostViewController = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostViewController") as! CreatePostViewController
+        return createPostViewController
+    }
+
     private func profileViewController() -> ProfileViewController {
         let profileViewController = UIStoryboard(name: "Profile", bundle: nil)
             .instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         profileViewController.navigator = self
         profileViewController.sessionManager = sessionManager
         return profileViewController
+    }
+
+    private func menuViewController() -> MenuViewController {
+        let menuViewController = UIStoryboard(name: "Menu", bundle: nil)
+            .instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        return menuViewController
     }
 
     private func logInNavController() -> UINavigationController {

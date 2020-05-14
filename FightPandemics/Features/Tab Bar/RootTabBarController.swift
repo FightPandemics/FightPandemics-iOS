@@ -30,10 +30,12 @@ final class RootTabBarController: UITabBarController {
 
     // MARK: - Types
 
-    enum Tab: Int {
-        case feed
-        case search
-        case profile
+    enum Tab: Int, CaseIterable {
+        case feed = 0
+        case search = 1
+        case post = -1 // Post tab not indexed through `viewControllers` array
+        case profile = 2
+        case menu = 3
     }
 
     // MARK: - Properties
@@ -46,6 +48,13 @@ final class RootTabBarController: UITabBarController {
 
     // MARK: View life-cycle
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.delegate = self
+        customizeTabBar()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -55,14 +64,59 @@ final class RootTabBarController: UITabBarController {
     // MARK: - Instance methods
 
     func selectTab(_ tab: Tab) {
-        selectedIndex = tab.rawValue
+        switch tab {
+        case .feed, .search, .profile:
+            selectedIndex = tab.rawValue
+        case .post:
+            selectPostTab()
+        case .menu:
+            return
+        }
+    }
+
+    func tabBarItem(_ tab: Tab) -> UITabBarItem? {
+        assert(tab.rawValue >= 0 && tab.rawValue <= Tab.allCases.count - 2, "Invalid Tab index")
+        return tabBar.items?[tab.rawValue]
     }
 
     func navController(_ tab: Tab) -> UINavigationController? {
+        assert(tab.rawValue >= 0 && tab.rawValue <= Tab.allCases.count - 2, "Invalid Tab index")
         return viewControllers?[tab.rawValue] as? UINavigationController
     }
 
     // MARK: Private instance methods
+
+    private func customizeTabBar() {
+        guard let feedTabBarItem = tabBarItem(.feed),
+            let searchTabBarItem = tabBarItem(.search),
+            let profileTabBarItem = tabBarItem(.profile),
+            let menuTabBarItem = tabBarItem(.menu) else {
+            return
+        }
+
+        feedTabBarItem.image = UIImage(named: "logo")
+        searchTabBarItem.image = UIImage(named: "logo")
+        profileTabBarItem.image = UIImage(named: "logo")
+        menuTabBarItem.image = UIImage(named: "logo")
+
+        feedTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -15, vertical: 0)
+        searchTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -20, vertical: 0)
+        profileTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 20, vertical: 0)
+        menuTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
+
+        let postButton = UIButton()
+        postButton.frame.size = CGSize(width: 44, height: 44)
+        postButton.backgroundColor = UIColor(hexString: "#425AF2")
+        postButton.layer.cornerRadius = 22
+        postButton.layer.masksToBounds = true
+        postButton.center = CGPoint(x: tabBar.frame.width / 2, y: 24)
+        tabBar.addSubview(postButton)
+        postButton.addTarget(self, action: #selector(selectPostTab), for: .touchUpInside)
+    }
+
+    @objc private func selectPostTab() {
+        navigator.navigateToCreatePost()
+    }
 
     private func attemptAutoLogIn() {
         autoLoginFakeLaunchScreen.show()
@@ -72,6 +126,21 @@ final class RootTabBarController: UITabBarController {
                 self?.navigator.navigateToLogIn()
             }
         }
+    }
+
+}
+
+// MARK: - Protocol conformance
+
+// MARK: UITabBarControllerDelegate
+
+extension RootTabBarController: UITabBarControllerDelegate {
+
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController is MenuViewController {
+            return false
+        }
+        return true
     }
 
 }
