@@ -10,7 +10,6 @@
 		00550CD5BD91C184C4A72522C1C3750E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7498F60C17A164EF002B632CF83396E7 /* Search.storyboard */; };
 		043528A7A654231C93B1ACDF9257EDD8 /* FightPandemicsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA3B467767340DF0265AAC1D48FC70 /* FightPandemicsAPI.swift */; };
 		045D4653C8C3EA8EBD8560FFF62651FA /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 344CE742A8FBDE1E6ABCC0C686AEC36E /* DMSans-Bold.ttf */; };
-		06D72B2B5D5B76100760A7D47CC1F224 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F4A87DD883942BD4376BB003F390 /* Keys.plist */; };
 		0B8D413EFA75024266B43671869C103E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47152647FEBCF7A41A9A5983CC449011 /* Fonts.swift */; };
 		0EA025628DD92C89C6B0109BF0CD89EA /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */; };
 		255D9FE46E9ADED5F9568A83CA27A6E1 /* JSONFileReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE156B3938C4AD8116402E1C5082F2E6 /* JSONFileReaderError.swift */; };
@@ -51,6 +50,7 @@
 		C4BCB77C6AB56CBF562F32966F2B4375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B2C96A723840E7C8E4F3111E4DC50F /* Profile.storyboard */; };
 		D98E69A99C2EE6B09FC4FB20A5F35258 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB1CF0C1792DDDBA060354143DA6B7F1 /* OpenSans-Bold.ttf */; };
 		DA0813FF3431AC1E2DDF61001E78B8EA /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB6E862B56D6CA9590DFCDA17C156F /* AvatarView.swift */; };
+		E254C4A2687AAEEE95B5CC8F1DD15CAD /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69254F0E7385A9352B6FBE751D7514A0 /* Keys.plist */; };
 		EA031B48041A0BC7EFBB81CC2D85D813 /* URLSession+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EC65316BD1AB95F6FB3ABA98336A5 /* URLSession+Networking.swift */; };
 		EC988C25C0CD212C6F10723566D4A159 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816C32335909A5214AB9969D83061E3 /* FeedViewController.swift */; };
 		F62B19BE4A49CD52F6BE1BAAE2F10529 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = CABA2A2427C2CFC23B6CE5CD1280BE7C /* User.json */; };
@@ -93,6 +93,7 @@
 		5C00911D02B1B35303254DFCA8A45B3D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		5F825DA42CB88D027973F0721FD105A4 /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
 		603B181D7296A8C3E71F996187CFBC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69254F0E7385A9352B6FBE751D7514A0 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F75B432F8479598CD0EBC3CF30F929 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		7498F60C17A164EF002B632CF83396E7 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		BC2EC0F1E7FF56429E632DC61EE8B739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC4BDD56C2885A150E6E797F64DB1C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCDE4821CDB3D0843BDDA75608959054 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
-		BFF4F4A87DD883942BD4376BB003F390 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		C0370BF85EE67AA85239223DE3ABF845 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C608EA9CB73E9E22D5275937EFBAAD76 /* FeedPrototypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPrototypeViewController.swift; sourceTree = "<group>"; };
 		C636546AB51D5168EF83C0993228BB35 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		08A1C7B7404FBA2D84DA842EA3BA94A0 /* FightPandemics */ = {
 			isa = PBXGroup;
 			children = (
-				DDB568A5246DDD8200745010 /* Configuration */,
+				45E80136E4BD00CEC6F18CE7E2353FEB /* Configuration */,
 				70C86C9FBA520A397056803E9A23129C /* Features */,
 				9578B6A034527EB74C17C5108AD6291F /* Models */,
 				846D89FFEFACCB887172FB5691FF27C4 /* Resources */,
@@ -384,10 +384,10 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		DDB568A5246DDD8200745010 /* Configuration */ = {
+		45E80136E4BD00CEC6F18CE7E2353FEB /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				BFF4F4A87DD883942BD4376BB003F390 /* Keys.plist */,
+				69254F0E7385A9352B6FBE751D7514A0 /* Keys.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -489,7 +489,7 @@
 				AF19FC23F2FA463A415B9A1105194DE5 /* DMSans-Medium.ttf in Resources */,
 				A5DEB0E773EBCF50EA3C3CBD0A79B5AF /* DMSans-Regular.ttf in Resources */,
 				51CDF6A0F6A777D8BF46992C8E8C3456 /* Feed.storyboard in Resources */,
-				06D72B2B5D5B76100760A7D47CC1F224 /* Keys.plist in Resources */,
+				E254C4A2687AAEEE95B5CC8F1DD15CAD /* Keys.plist in Resources */,
 				AE4A9BEBEA46273626D6FA8592A0E766 /* LaunchScreen.storyboard in Resources */,
 				4BC61C898B8D49032BAECC5C2292BBD7 /* Localizable.strings in Resources */,
 				521DDD3615B17E8D0812AF7016A6BDCE /* Main.storyboard in Resources */,

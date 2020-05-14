@@ -22,7 +22,7 @@ platform :ios do
 #   lane :upload_symbols do
 #    download_dsyms
 #    upload_symbols_to_sentry(
-#       auth_token: '52923982d18d4afe8acb46d01c81d18759c189346bac44849db8b996e81e8df3',
+#       auth_token: 'Auth Token',
 #       org_slug: 'fightpandemics',
 #       project_slug: 'fightpandemics-ios',
 #    )
@@ -31,7 +31,7 @@ platform :ios do
   lane :build do
     gym
     upload_symbols_to_sentry(
-       auth_token: '52923982d18d4afe8acb46d01c81d18759c189346bac44849db8b996e81e8df3',
+       auth_token: 'Auth Token',
        org_slug: 'fightpandemics',
        project_slug: 'fightpandemics-ios',
     )
