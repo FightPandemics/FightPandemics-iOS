@@ -32,16 +32,21 @@ final class MockAPI: API {
     let latency: DispatchTimeInterval
 
     init(jsonFileReader: JSONFileReader = JSONFileReader(),
-         latency: DispatchTimeInterval = .seconds(3)) {
+         latency: DispatchTimeInterval = .seconds(2)) {
         self.jsonFileReader = jsonFileReader
         self.latency = latency
     }
 
     func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void) {
         let user = jsonFileReader.read(fileNamed: "User", modelType: User.self)
+
         simulateNetworkDelay(then: {
             switch user {
             case .success(let user):
+                guard email == user.email else {
+                    completion(.failure(.httpClientError(value: .httpRequestError(error: .responseError(error: NSError(domain: "com.fp.fp", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid credentials"]))))))
+                    return
+                }
                 completion(.success(user))
             case .failure:
                 completion(.failure(.httpClientError(value: .jsonParsingFailed)))

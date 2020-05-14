@@ -33,19 +33,20 @@ final class Navigator {
 
     // MARK: - Properties
 
-    private let sessionManager: SessionManager
-
     private var rootWindow: UIWindow?
     private var rootTabBar: RootTabBarController?
     private var logInNavigationController: UINavigationController?
     private var feedNavigationController: UINavigationController?
     private var searchNavigationController: UINavigationController?
     private var profileNavigationController: UINavigationController?
+    private let autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen
+    private let sessionManager: SessionManager
 
     // MARK: - Init/Deinit
 
-    init(rootWindow: UIWindow?, sessionManager: SessionManager) {
+    init(rootWindow: UIWindow?, autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen, sessionManager: SessionManager) {
         self.rootWindow = rootWindow
+        self.autoLoginFakeLaunchScreen = autoLoginFakeLaunchScreen
         self.sessionManager = sessionManager
     }
 
@@ -56,9 +57,10 @@ final class Navigator {
     }
 
     func navigateToLogIn() {
-        // Can be displayed at launch; slignt delay to give initial UI time to setup
         let logIn = logInNavController()
         logIn.modalPresentationStyle = .overFullScreen
+
+        // Slight delay to give initial UI time to setup in the event Log In presented right at launch
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
             self?.rootTabBar?.present(logIn, animated: true, completion: nil)
             self?.rootTabBar?.selectTab(.feed)
@@ -77,6 +79,7 @@ final class Navigator {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
         self.rootTabBar = rootTabBarController
+        rootTabBarController.autoLoginFakeLaunchScreen = autoLoginFakeLaunchScreen
         rootTabBarController.navigator = self
         rootTabBarController.sessionManager = sessionManager
         let feedNavigationController = rootTabBarController.navController(.feed)
@@ -123,6 +126,7 @@ final class Navigator {
         let logInViewController = UIStoryboard(name: "Auth", bundle: nil)
             .instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
         logInViewController.navigator = self
+        logInViewController.sessionManager = sessionManager
         return logInViewController
     }
 
