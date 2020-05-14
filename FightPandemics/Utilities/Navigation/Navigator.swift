@@ -36,7 +36,7 @@ final class Navigator {
     /// Root window of application.
     private(set) var rootWindow: UIWindow?
 
-    private var homeNavigationController: UINavigationController?
+    private var feedNavigationController: UINavigationController?
 
     // MARK: - Init/Deinit
 
@@ -53,16 +53,16 @@ final class Navigator {
     private func rootTabBarController() -> RootTabBarController {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        let homeNavigationController = rootTabBarController.viewControllers![0] as! UINavigationController
-        self.homeNavigationController = homeNavigationController
-        homeNavigationController.pushViewController(homeViewController(), animated: false)
+        let feedNavigationController = rootTabBarController.viewControllers![0] as! UINavigationController
+        self.feedNavigationController = feedNavigationController
+        feedNavigationController.pushViewController(feedViewController(), animated: false)
         return rootTabBarController
     }
 
-    private func homeViewController() -> HomeViewController {
-        let homeViewController = UIStoryboard(name: "Home", bundle: nil)
-            .instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        return homeViewController
+    private func feedViewController() -> FeedViewController {
+        let feedViewController = UIStoryboard(name: "Feed", bundle: nil)
+            .instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+        return feedViewController
     }
 
 }
