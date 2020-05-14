@@ -36,6 +36,8 @@ final class Navigator {
     /// Root window of application.
     private(set) var rootWindow: UIWindow?
 
+    private var rootTabBar: RootTabBarController?
+    private var logInNavigationController: UINavigationController?
     private var feedNavigationController: UINavigationController?
     private var searchNavigationController: UINavigationController?
     private var profileNavigationController: UINavigationController?
@@ -52,9 +54,22 @@ final class Navigator {
         rootWindow?.rootViewController = rootTabBarController()
     }
 
+    func navigateToLogIn() {
+        rootTabBar?.present(logInNavController(), animated: true, completion: nil)
+    }
+
+    func dismissLogIn() {
+        rootTabBar?.dismiss(animated: true) { [weak self] in
+            self?.logInNavigationController = nil
+        }
+    }
+
+    // MARK: Private instance methods
+
     private func rootTabBarController() -> RootTabBarController {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
+        self.rootTabBar = rootTabBarController
         let feedNavigationController = rootTabBarController.navController(.feed)
         self.feedNavigationController = feedNavigationController
         feedNavigationController?.pushViewController(feedViewController(), animated: false)
@@ -83,6 +98,20 @@ final class Navigator {
         let profileViewController = UIStoryboard(name: "Profile", bundle: nil)
             .instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         return profileViewController
+    }
+
+    private func logInNavController() -> UINavigationController {
+        let logInNavigationController = UIStoryboard(name: "Auth", bundle: nil)
+            .instantiateViewController(withIdentifier: "LogInNavigationController") as! UINavigationController
+        self.logInNavigationController = logInNavigationController
+        logInNavigationController.pushViewController(logInViewController(), animated: false)
+        return logInNavigationController
+    }
+
+    private func logInViewController() -> LogInViewController {
+        let logInViewController = UIStoryboard(name: "Auth", bundle: nil)
+            .instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
+        return logInViewController
     }
 
 }
