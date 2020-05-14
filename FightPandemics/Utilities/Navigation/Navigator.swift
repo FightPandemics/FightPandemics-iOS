@@ -59,9 +59,15 @@ final class Navigator {
         return rootTabBarController
     }
 
-    private func homeViewController() -> HomeViewController {
-        let homeViewController = UIStoryboard(name: "Home", bundle: nil)
-            .instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+//    private func homeViewController() -> HomeViewController {
+//        let homeViewController = UIStoryboard(name: "Home", bundle: nil)
+//            .instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+//        return homeViewController
+//    }
+
+    private func homeViewController() -> FeedViewController {
+        let homeViewController = UIStoryboard(name: "Feed", bundle: nil)
+            .instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         return homeViewController
     }
 

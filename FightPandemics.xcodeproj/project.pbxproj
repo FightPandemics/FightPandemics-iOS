@@ -42,7 +42,9 @@
 		2FB342042468FFCC007E397F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB342032468FFCC007E397F /* Navigator.swift */; };
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
-		5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */; };
+		C013ACBD246B43AA00F22BE7 /* CreatePostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACBC246B43AA00F22BE7 /* CreatePostHeader.swift */; };
+		C013ACBF246B43F300F22BE7 /* CreatePostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACBE246B43F300F22BE7 /* CreatePostBody.swift */; };
+		C013ACC1246B440500F22BE7 /* CreatePostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACC0246B440500F22BE7 /* CreatePostFooter.swift */; };
 		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
 		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
 		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
@@ -51,6 +53,7 @@
 		DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */; };
 		DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */; };
 		DDDB55122468B2E3008EA75A /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */; };
+		E4A01D2D8215571B66CEFEE8 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDC91695D8A5BFE59B88BFB /* Pods_FightPandemics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
+		0FDC91695D8A5BFE59B88BFB /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0420F6246A0E71005FB1D0 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		2F0420F8246A0E7E005FB1D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2F042108246A1021005FB1D0 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
@@ -107,10 +109,14 @@
 		2FB341FA2468FA56007E397F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2FB342032468FFCC007E397F /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		2FB34206246901DA007E397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ACE50E1D8A99BB7DF61EC01 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		63B79EE4A97CB02475B77C15 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
+		C013ACBC246B43AA00F22BE7 /* CreatePostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostHeader.swift; sourceTree = "<group>"; };
+		C013ACBE246B43F300F22BE7 /* CreatePostBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostBody.swift; sourceTree = "<group>"; };
+		C013ACC0246B440500F22BE7 /* CreatePostFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostFooter.swift; sourceTree = "<group>"; };
 		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
 		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -126,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */,
+				E4A01D2D8215571B66CEFEE8 /* Pods_FightPandemics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +146,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		033973FDB7BA0D30ACF6F0E4 /* Frameworks */ = {
+		223D7643D1C5933B3D9AE186 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */,
+				0FDC91695D8A5BFE59B88BFB /* Pods_FightPandemics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 		2F0420F5246A0D0D005FB1D0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				C013ACBB246B40D400F22BE7 /* CreatePost */,
 				2F0420F6246A0E71005FB1D0 /* Feed.storyboard */,
 				2F0420FA246A0EBA005FB1D0 /* FeedPost */,
 				2F0420F8246A0E7E005FB1D0 /* FeedViewController.swift */,
@@ -228,7 +235,7 @@
 				49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */,
 				2F9EFE4E245DFB1700E86700 /* Products */,
 				91B98918B2BF3E9F21F244CB /* Pods */,
-				033973FDB7BA0D30ACF6F0E4 /* Frameworks */,
+				223D7643D1C5933B3D9AE186 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -333,10 +340,20 @@
 		91B98918B2BF3E9F21F244CB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */,
-				1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */,
+				5ACE50E1D8A99BB7DF61EC01 /* Pods-FightPandemics.debug.xcconfig */,
+				63B79EE4A97CB02475B77C15 /* Pods-FightPandemics.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C013ACBB246B40D400F22BE7 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				C013ACBC246B43AA00F22BE7 /* CreatePostHeader.swift */,
+				C013ACBE246B43F300F22BE7 /* CreatePostBody.swift */,
+				C013ACC0246B440500F22BE7 /* CreatePostFooter.swift */,
+			);
+			path = CreatePost;
 			sourceTree = "<group>";
 		};
 		DDDB55012468ACAC008EA75A /* Resources */ = {
@@ -371,7 +388,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9EFE61245DFB1900E86700 /* Build configuration list for PBXNativeTarget "FightPandemics" */;
 			buildPhases = (
-				11B0ABB8D9116EAB2D25D89B /* [CP] Check Pods Manifest.lock */,
+				310A1B71848B1FD11EB5032E /* [CP] Check Pods Manifest.lock */,
 				2F9EFE49245DFB1700E86700 /* Sources */,
 				2F9EFE4A245DFB1700E86700 /* Frameworks */,
 				2F9EFE4B245DFB1700E86700 /* Resources */,
@@ -476,7 +493,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11B0ABB8D9116EAB2D25D89B /* [CP] Check Pods Manifest.lock */ = {
+		2F9EFE8E245E251C00E86700 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		310A1B71848B1FD11EB5032E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -498,24 +533,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F9EFE8E245E251C00E86700 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -525,10 +542,12 @@
 			files = (
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
 				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
+				C013ACC1246B440500F22BE7 /* CreatePostFooter.swift in Sources */,
 				2FB341F02468F8E6007E397F /* HomeViewController.swift in Sources */,
 				2F72CE6224687C7100750785 /* JSONFileReader.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
 				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
+				C013ACBF246B43F300F22BE7 /* CreatePostBody.swift in Sources */,
 				2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */,
 				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
@@ -543,6 +562,7 @@
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
+				C013ACBD246B43AA00F22BE7 /* CreatePostHeader.swift in Sources */,
 				2F72CE6424687C9A00750785 /* JSONFileReaderError.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
 				2F0420F9246A0E7E005FB1D0 /* FeedViewController.swift in Sources */,
@@ -722,7 +742,7 @@
 		};
 		2F9EFE62245DFB1900E86700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4184C424BE796BB8EDADA5E9 /* Pods-FightPandemics.debug.xcconfig */;
+			baseConfigurationReference = 5ACE50E1D8A99BB7DF61EC01 /* Pods-FightPandemics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -743,7 +763,7 @@
 		};
 		2F9EFE63245DFB1900E86700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */;
+			baseConfigurationReference = 63B79EE4A97CB02475B77C15 /* Pods-FightPandemics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
