@@ -1,8 +1,8 @@
 //
-//  MockAPI.swift
+//  SessionManager.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/10/20.
+//  Created by Harlan Kellaway on 5/13/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,39 +26,47 @@
 
 import Foundation
 
-final class MockAPI: API {
+final class SessionManager {
 
-    let jsonFileReader: JSONFileReader
-    let latency: DispatchTimeInterval
+    // MARK: - Types
 
-    init(jsonFileReader: JSONFileReader = JSONFileReader(),
-         latency: DispatchTimeInterval = .seconds(3)) {
-        self.jsonFileReader = jsonFileReader
-        self.latency = latency
+    enum AuthState {
+        case loggedIn(user: User)
+        case guest
     }
 
-    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void) {
-        let user = jsonFileReader.read(fileNamed: "User", modelType: User.self)
-        simulateNetworkDelay(then: {
-            switch user {
+    // MARK: - Properties
+
+    private(set) var authState: AuthState!
+    let api: API
+
+    // MARK: - Init/Deinit
+
+    init(api: API, authState: AuthState) {
+        self.api = api
+        self.authState = authState
+    }
+
+    // MARK: - Instance methods
+    
+    func logIn(email: String, password: String, completion: @escaping (Result<Success, SessionManagerError>) -> Void) {
+        api.logIn(email: email, password: password) { [weak self] result in
+            switch result {
             case .success(let user):
-                completion(.success(user))
-            case .failure:
-                completion(.failure(.httpClientError(value: .jsonParsingFailed)))
+                self?.authState = .loggedIn(user: user)
+                completion(.success(Success()))
+            case .failure(let error):
+                completion(.failure(.apiError(value: error)))
             }
-        })
-    }
-
-    func logOut(completion: @escaping (Result<Success, APIError>) -> Void) {
-        simulateNetworkDelay(then: {
-            completion(.success(Success()))
-        })
-    }
-
-    private func simulateNetworkDelay(then: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + latency) {
-            then()
         }
+    }
+    
+    func logOut() {
+        api.logOut { _ in
+            // Regardless of whether backend is successful cleaning up session,
+            // still enact a front-end logout by clearing application state
+        }
+        authState = .guest
     }
 
 }

@@ -1,8 +1,8 @@
 //
-//  MockAPI.swift
+//  SessionManagerError.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/10/20.
+//  Created by Harlan Kellaway on 5/13/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,38 +26,13 @@
 
 import Foundation
 
-final class MockAPI: API {
+enum SessionManagerError: Error, LocalizedError {
+    case apiError(value: APIError)
 
-    let jsonFileReader: JSONFileReader
-    let latency: DispatchTimeInterval
-
-    init(jsonFileReader: JSONFileReader = JSONFileReader(),
-         latency: DispatchTimeInterval = .seconds(3)) {
-        self.jsonFileReader = jsonFileReader
-        self.latency = latency
-    }
-
-    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void) {
-        let user = jsonFileReader.read(fileNamed: "User", modelType: User.self)
-        simulateNetworkDelay(then: {
-            switch user {
-            case .success(let user):
-                completion(.success(user))
-            case .failure:
-                completion(.failure(.httpClientError(value: .jsonParsingFailed)))
-            }
-        })
-    }
-
-    func logOut(completion: @escaping (Result<Success, APIError>) -> Void) {
-        simulateNetworkDelay(then: {
-            completion(.success(Success()))
-        })
-    }
-
-    private func simulateNetworkDelay(then: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + latency) {
-            then()
+    var errorDescription: String? {
+        switch self {
+        case .apiError(let error):
+            return error.localizedDescription
         }
     }
 
