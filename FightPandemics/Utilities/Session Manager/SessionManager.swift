@@ -48,7 +48,7 @@ final class SessionManager {
     }
 
     // MARK: - Instance methods
-    
+
     func logIn(email: String, password: String, completion: @escaping (Result<Success, SessionManagerError>) -> Void) {
         api.logIn(email: email, password: password) { [weak self] result in
             switch result {
@@ -60,7 +60,7 @@ final class SessionManager {
             }
         }
     }
-    
+
     func logOut() {
         api.logOut { _ in
             // Regardless of whether backend is successful cleaning up session,
