@@ -1,8 +1,8 @@
 //
-//  RootTabBarController.swift
+//  ProfileViewController.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/10/20.
+//  Created by Harlan Kellaway on 5/13/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,20 +26,6 @@
 
 import UIKit
 
-final class RootTabBarController: UITabBarController {
-
-    // MARK: - Types
-
-    enum Tab: Int {
-        case feed
-        case search
-        case profile
-    }
-
-    // MARK: - Instance methods
-
-    func navController(_ tab: Tab) -> UINavigationController? {
-        return viewControllers?[tab.rawValue] as? UINavigationController
-    }
+final class ProfileViewController: UIViewController {
 
 }
