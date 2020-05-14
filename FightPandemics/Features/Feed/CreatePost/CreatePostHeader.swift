@@ -38,8 +38,7 @@ class CreatePostHeader: UIView {
         setUpConstraints()
     }
     func setUpUpper () {
-        //  header title
-        createPostTitle.text = "Create a post"
+        createPostTitle.text = "CreatePostHeaderCreateAPostCTA".localized
         createPostTitle.textAlignment = .left
         createPostTitle.textColor = UIColor.black
         createPostTitle.frame.size.height = 27
@@ -47,7 +46,6 @@ class CreatePostHeader: UIView {
         createPostTitle.font = Fonts.poppinsBold.customFont(size: 22)
         createPostTitle.numberOfLines = 0
         self.addSubview(createPostTitle)
-        //  close button
         cancelButton.setImage(#imageLiteral(resourceName: "x"), for: .normal)
         cancelButton.frame.size.width = 24
         cancelButton.frame.size.height = 24
@@ -55,15 +53,13 @@ class CreatePostHeader: UIView {
         self.addSubview(cancelButton)
     }
     func setUpMiddle () {
-        // question label
-        questionLbl.text = "Are you offering or requesting help?"
+        questionLbl.text = "CreatePostHeaderOfferingOrRequestingCTA".localized
         questionLbl.textAlignment = .left
         questionLbl.font = Fonts.dmSansRegular.customFont(size: 13)
         questionLbl.frame.size.height = 22
         questionLbl.frame.size.width = 229
         self.addSubview(questionLbl)
-        //  selection button
-        selectionBtn.setTitle(" Make a selection ", for: .normal)
+        selectionBtn.setTitle("CreatePostHeaderMakeASelectionCTA".localized, for: .normal)
         selectionBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
         selectionBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
         selectionBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)

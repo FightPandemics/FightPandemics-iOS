@@ -46,6 +46,7 @@
 		C013ACBF246B43F300F22BE7 /* CreatePostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACBE246B43F300F22BE7 /* CreatePostBody.swift */; };
 		C013ACC1246B440500F22BE7 /* CreatePostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACC0246B440500F22BE7 /* CreatePostFooter.swift */; };
 		C013ACC4246D88F100F22BE7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACC3246D88F100F22BE7 /* SearchBar.swift */; };
+		C013ACC7246DD56200F22BE7 /* InidividualOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACC6246DD56200F22BE7 /* InidividualOrg.swift */; };
 		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
 		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
 		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
@@ -119,6 +120,7 @@
 		C013ACBE246B43F300F22BE7 /* CreatePostBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostBody.swift; sourceTree = "<group>"; };
 		C013ACC0246B440500F22BE7 /* CreatePostFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostFooter.swift; sourceTree = "<group>"; };
 		C013ACC3246D88F100F22BE7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C013ACC6246DD56200F22BE7 /* InidividualOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InidividualOrg.swift; sourceTree = "<group>"; };
 		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
 		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		C013ACBB246B40D400F22BE7 /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
+				C013ACC5246DD4FA00F22BE7 /* Individual-org */,
 				C013ACBC246B43AA00F22BE7 /* CreatePostHeader.swift */,
 				C013ACBE246B43F300F22BE7 /* CreatePostBody.swift */,
 				C013ACC0246B440500F22BE7 /* CreatePostFooter.swift */,
@@ -365,6 +368,14 @@
 				C013ACC3246D88F100F22BE7 /* SearchBar.swift */,
 			);
 			path = "Search Bar";
+			sourceTree = "<group>";
+		};
+		C013ACC5246DD4FA00F22BE7 /* Individual-org */ = {
+			isa = PBXGroup;
+			children = (
+				C013ACC6246DD56200F22BE7 /* InidividualOrg.swift */,
+			);
+			path = "Individual-org";
 			sourceTree = "<group>";
 		};
 		DDDB55012468ACAC008EA75A /* Resources */ = {
@@ -560,6 +571,7 @@
 				C013ACC4246D88F100F22BE7 /* SearchBar.swift in Sources */,
 				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
 				C013ACBF246B43F300F22BE7 /* CreatePostBody.swift in Sources */,
+				C013ACC7246DD56200F22BE7 /* InidividualOrg.swift in Sources */,
 				2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */,
 				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,

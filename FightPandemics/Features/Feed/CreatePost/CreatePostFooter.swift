@@ -39,12 +39,10 @@ class CreatePostFooter: UIView {
         setUpLower()
     }
     func setUpUpper () {
-        // seperator line
         sepLine.backgroundColor = UIColor(hexString: "#D7D7D7")
         sepLine.frame.size.width = UIScreen.main.bounds.width
         sepLine.frame.size.height = 2
         self.addSubview(sepLine)
-        // first question label
         questionLbl.text = "Who can see this post and for how long?"
         questionLbl.textAlignment = .left
         questionLbl.frame.size.width = UIScreen.main.bounds.width - 47
@@ -52,7 +50,6 @@ class CreatePostFooter: UIView {
         questionLbl.font = Fonts.poppinsBold.customFont(size: 16)
         questionLbl.numberOfLines = 0
         self.addSubview(questionLbl)
-        // share button
         shareBtn.setTitle("Share with anyone", for: .normal)
         shareBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
         shareBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
@@ -66,7 +63,6 @@ class CreatePostFooter: UIView {
         shareBtn.semanticContentAttribute = .forceRightToLeft
         shareBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
         self.addSubview(shareBtn)
-        // duration button
         durationBtn.setTitle("Duration of post", for: .normal)
         durationBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
         durationBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
@@ -86,15 +82,14 @@ class CreatePostFooter: UIView {
     }
     func setUpLower () {
         // tags label
-        tagsLbl.text = "Add tags to help boost your visibility."
+        tagsLbl.text = "CreatePostBodyAddTagsToHelpBoostCTA".localized
         tagsLbl.textAlignment = .left
         tagsLbl.frame.size.width = UIScreen.main.bounds.width - 47
         tagsLbl.frame.size.height = 22
         tagsLbl.font = Fonts.poppinsBold.customFont(size: 16)
         tagsLbl.numberOfLines = 0
         self.addSubview(tagsLbl)
-        // tags button
-        tagsBtn.setTitle("Add a tag", for: .normal)
+        tagsBtn.setTitle("CreatePostBodyAddATagCTA".localized, for: .normal)
         tagsBtn.setImage(#imageLiteral(resourceName: "tag"), for: .normal)
         tagsBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
         tagsBtn.clipsToBounds = true
@@ -109,8 +104,7 @@ class CreatePostFooter: UIView {
         tagsBtn.semanticContentAttribute = .forceLeftToRight
         tagsBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
         self.addSubview(tagsBtn)
-        //  post button
-        postBtn.setTitle("Post", for: .normal)
+        postBtn.setTitle("CreatePostBodyPostCTA".localized, for: .normal)
         postBtn.setTitleColor(UIColor.white, for: .normal)
         postBtn.titleLabel?.font = Fonts.poppinsBold.customFont(size: 18)
         postBtn.clipsToBounds = true

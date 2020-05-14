@@ -30,16 +30,14 @@ class CreatePostBody: UIView {
     private var title = UITextField()
     private var body = UITextView()
     func setUp () {
-        // set Up Title
-        title.placeholder = "Title"
+        title.placeholder = "CreatePostBodyTitleCTA".localized
         title.attributedPlaceholder = NSAttributedString(string: "Title", attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#939393")])
         title.backgroundColor = UIColor.clear
         title.layer.backgroundColor = UIColor.clear.cgColor
         title.layer.borderWidth = 0
         title.layer.borderColor = UIColor.clear.cgColor
         self.addSubview(title)
-        // set up body
-        body.text = "Description of your post."
+        body.text = "CreatePostBodyDescriptionOfYourPostCTA".localized
         body.textAlignment = .left
         body.textColor = UIColor(hexString: "#939393")
         body.font = Fonts.poppinsRegular.customFont(size: 14)

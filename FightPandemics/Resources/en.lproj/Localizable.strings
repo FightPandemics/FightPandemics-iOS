@@ -11,5 +11,13 @@
 // MARK: Feed
 
 "FeedPostViewMoreCTA" = "View More";
+"CreatePostHeaderCreateAPostCTA" = "Create a post";
+"CreatePostHeaderOfferingOrRequestingCTA" = "Are you offering or requesting help?";
+"CreatePostHeaderMakeASelectionCTA" = "Make a selection";
+"CreatePostBodyTitleCTA" = "Title";
+"CreatePostBodyDescriptionOfYourPostCTA" = "Description of your post.";
+"CreatePostBodyAddTagsToHelpBoostCTA" = "Add tags to help boost your visibility.";
+"CreatePostBodyAddATagCTA" = "Add a tag"
+"CreatePostBodyPostCTA" = "Post"
 
 // MARK: Home
