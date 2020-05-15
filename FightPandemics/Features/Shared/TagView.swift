@@ -1,5 +1,5 @@
 //
-//  ReusableTagUI.swift
+//  TagView.swift
 //  FightPandemics
 //
 //  Created by Moazzam Tahir on 15/05/2020.
@@ -31,13 +31,13 @@ class TagView: UIView {
 
     var title: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont(name: "DMSans-Medium", size: .infinity)
+        label.numberOfLines = 1
+        label.font = Fonts.dmSansRegular.customFont(size: 12)
         label.textColor = UIColor(named: "DarkGrayTextColor")
+        label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.adjustsFontForContentSizeCategory = true
         label.translatesAutoresizingMaskIntoConstraints = false
-
         return label
     }()
 
@@ -93,10 +93,11 @@ class TagView: UIView {
 
     func addAutoLayout() {
         NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor),
-            title.trailingAnchor.constraint(equalTo: self.layoutMarginsGuide.trailingAnchor),
-            title.bottomAnchor.constraint(equalTo: self.layoutMarginsGuide.bottomAnchor),
-            title.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor)
+            title.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            title.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            title.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            title.topAnchor.constraint(equalTo: self.topAnchor),
+            title.heightAnchor.constraint(equalToConstant: 22)
         ])
     }
 }
