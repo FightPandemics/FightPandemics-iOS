@@ -249,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0B5159246E008400BE42BC /* Post.storyboard */,
-				2F0B5162246E0DF200BE42BC /* Create Post */,
+				2F0B5162246E0DF200BE42BC /* CreatePost */,
 				2F0B515B246E009400BE42BC /* CreatePostViewController.swift */,
 			);
 			path = Post;
@@ -264,23 +264,23 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
-		2F0B5162246E0DF200BE42BC /* Create Post */ = {
+		2F0B5162246E0DF200BE42BC /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
-				2F0B5169246E15AD00BE42BC /* Individual Org */,
+				2F0B5169246E15AD00BE42BC /* IndividualOrg */,
 				2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */,
 				2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */,
 				2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */,
 			);
-			path = "Create Post";
+			path = CreatePost;
 			sourceTree = "<group>";
 		};
-		2F0B5169246E15AD00BE42BC /* Individual Org */ = {
+		2F0B5169246E15AD00BE42BC /* IndividualOrg */ = {
 			isa = PBXGroup;
 			children = (
 				2F0B516A246E15B400BE42BC /* IndividualOrg.swift */,
 			);
-			path = "Individual Org";
+			path = IndividualOrg;
 			sourceTree = "<group>";
 		};
 		2F72CE452468785200750785 /* Networking */ = {
@@ -412,18 +412,18 @@
 				2F0B5158246E007C00BE42BC /* Post */,
 				2F04218C246CCD36005FB1D0 /* Profile */,
 				2F04218B246CCD36005FB1D0 /* Search */,
-				2FB341F12468F975007E397F /* Tab Bar */,
+				2FB341F12468F975007E397F /* TabBar */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		2FB341F12468F975007E397F /* Tab Bar */ = {
+		2FB341F12468F975007E397F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				2FB341F22468F984007E397F /* Main.storyboard */,
 				2FB341F82468F9F0007E397F /* RootTabBarController.swift */,
 			);
-			path = "Tab Bar";
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		2FB342022468FFC3007E397F /* Navigation */ = {
