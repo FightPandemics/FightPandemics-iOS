@@ -16,7 +16,7 @@
 
 "FeedPostViewMoreCTA" = "View More";
 
-// MARK: POST
+// MARK: Post
 
 "CreatePostFormTitle" = "Create a post";
 "CreatePostFormSubtitle" = "Are you offering or requesting help?";
@@ -29,9 +29,6 @@
 "CreatePostAddTagsCTA" = "Add tags to help boost your visibility.";
 "CreatePostTagPlaceholder" = "Add a tag";
 "CreatePostCTAButtonCTA" = "Post";
-
-// MARK: INDIVIDUAL-ORGANIZATION
-
 "IndividualOrgTitle" = "Create a post";
 "IndividualOrgDescriptiveText" = "Before you can create a post, are you posting on behalf of an organization?";
 "IndividualOrgIndividualButton" = "Individual";
