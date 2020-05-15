@@ -34,6 +34,7 @@ class FeedPrototypeViewController: UIViewController {
     private var avatarView = AvatarView()
     private var feedPost = FeedPost()
     private var postFooter = PostFooter()
+    private var offerReq = OfferReq()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,7 @@ class FeedPrototypeViewController: UIViewController {
         self.avatar.setUp(user: mockUser, image: nil)
         self.avatarView = AvatarView()
         self.avatarView.setUp(user: mockUser, avatar: self.avatar)
+        self.offerReq.setUp()
 
         let body = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
         let title = "Disinfecting clorox wipes needed"
@@ -57,8 +59,9 @@ class FeedPrototypeViewController: UIViewController {
         let firstView = UIView()
         firstView.frame = CGRect(x: 0, y: 100, width: (UIScreen.main.bounds.width - 47), height: 400)
         self.view.addSubview(firstView)
-        firstView.addSubview(avatar)
-        firstView.addSubview(feedPost)
+        firstView.addSubview(offerReq)
+//        firstView.addSubview(avatar)
+//        firstView.addSubview(feedPost)
 
         let secondView = UIView()
         secondView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)

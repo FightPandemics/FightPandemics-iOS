@@ -62,6 +62,7 @@
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		5C34D471C7D4E75902BC4CE4 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */; };
+		C013ACCA246ED84E00F22BE7 /* OfferReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACC9246ED84E00F22BE7 /* OfferReq.swift */; };
 		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
 		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
 		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
@@ -149,6 +150,7 @@
 		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C013ACC9246ED84E00F22BE7 /* OfferReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfferReq.swift; path = ../../../../../../../OfferReq.swift; sourceTree = "<group>"; };
 		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
 		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 		2F0B5162246E0DF200BE42BC /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
+				C013ACC8246ED81900F22BE7 /* OfferReq */,
 				2F0B5169246E15AD00BE42BC /* IndividualOrg */,
 				2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */,
 				2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */,
@@ -450,6 +453,14 @@
 				1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C013ACC8246ED81900F22BE7 /* OfferReq */ = {
+			isa = PBXGroup;
+			children = (
+				C013ACC9246ED84E00F22BE7 /* OfferReq.swift */,
+			);
+			path = OfferReq;
 			sourceTree = "<group>";
 		};
 		DDDB55012468ACAC008EA75A /* Resources */ = {
@@ -653,6 +664,7 @@
 				2F042199246CE4B3005FB1D0 /* LogInViewController.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
+				C013ACCA246ED84E00F22BE7 /* OfferReq.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
 				2F0421A6246D0D39005FB1D0 /* Environment.swift in Sources */,
 				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,

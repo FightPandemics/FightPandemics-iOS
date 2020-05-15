@@ -74,7 +74,8 @@ final class Navigator {
     }
 
     func navigateToCreatePost() {
-        rootTabBar?.present(createPostViewController(), animated: true, completion: nil)
+//        rootTabBar?.present(createPostViewController(), animated: true, completion: nil)
+        rootTabBar?.present(FeedPrototypeViewController(), animated: true, completion: nil)
     }
 
     func dismissCreatePost() {
