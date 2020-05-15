@@ -129,7 +129,7 @@ class CreatePostFooter: UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         sepLine.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: sepLine, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width).isActive = true
-        NSLayoutConstraint(item: sepLine, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 2).isActive = true
+        NSLayoutConstraint(item: sepLine, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1).isActive = true
         NSLayoutConstraint(item: sepLine, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: sepLine, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0).isActive = true
         questionLbl.translatesAutoresizingMaskIntoConstraints = false
