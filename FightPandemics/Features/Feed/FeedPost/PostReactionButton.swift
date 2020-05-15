@@ -33,6 +33,7 @@ enum PostReactionButtonType {
 }
 
 class PostReactionButton: UIButton {
+
     private var type: PostReactionButtonType
 
     init(_ type: PostReactionButtonType) {
@@ -53,9 +54,14 @@ class PostReactionButton: UIButton {
         }
     }
 
+    @objc func tap() {
+        self.isSelected = !self.isSelected
+    }
+
     private func configureButton() {
         translatesAutoresizingMaskIntoConstraints = false
         let rightPadding: CGFloat
+        imageView?.contentMode = .scaleAspectFit
         switch type {
         case .like:
             rightPadding = 9.8
@@ -71,5 +77,7 @@ class PostReactionButton: UIButton {
         imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: rightPadding)
         titleLabel?.font = Fonts.poppinsRegular.customFont(size: 14)
         setTitleColor(#colorLiteral(red: 0.5764705882, green: 0.5764705882, blue: 0.5764705882, alpha: 1), for: .normal)
+        addTarget(self, action: #selector(tap), for: .touchUpInside)
     }
+
 }
