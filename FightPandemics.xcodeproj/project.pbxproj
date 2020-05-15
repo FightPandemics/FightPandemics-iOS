@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0322FA13246E23D0009507D7 /* ReusableTagUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0322FA12246E23D0009507D7 /* ReusableTagUI.swift */; };
+		0322FA13246E23D0009507D7 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0322FA12246E23D0009507D7 /* TagView.swift */; };
 		2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0420F6246A0E71005FB1D0 /* Feed.storyboard */; };
 		2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0420F8246A0E7E005FB1D0 /* FeedPrototypeViewController.swift */; };
 		2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042108246A1021005FB1D0 /* Avatar.swift */; };
@@ -84,7 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0322FA12246E23D0009507D7 /* ReusableTagUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTagUI.swift; sourceTree = "<group>"; };
+		0322FA12246E23D0009507D7 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		2F0420F6246A0E71005FB1D0 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		0322FA11246E23BC009507D7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0322FA12246E23D0009507D7 /* ReusableTagUI.swift */,
+				0322FA12246E23D0009507D7 /* TagView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -673,7 +673,7 @@
 				2F72CE59246878BF00750785 /* API.swift in Sources */,
 				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
 				2F0B5167246E0DF200BE42BC /* CreatePostHeader.swift in Sources */,
-				0322FA13246E23D0009507D7 /* ReusableTagUI.swift in Sources */,
+				0322FA13246E23D0009507D7 /* TagView.swift in Sources */,
 				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
 				2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */,
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
