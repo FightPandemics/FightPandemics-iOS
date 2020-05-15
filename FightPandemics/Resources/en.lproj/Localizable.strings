@@ -16,6 +16,20 @@
 
 "FeedPostViewMoreCTA" = "View More";
 
+// MARK: POST
+
+"CreatePostFormTitle" = "Create a post";
+"CreatePostFormSubtitle" = "Are you offering or requesting help?";
+"CreatePostTypeSelectionCTA" = "Make a selection";
+"CreatePostFormBodyTitlePlaceholder" = "Title";
+"CreatePostFormBodyContentPlaceholder" = "Description of your post";
+"CreatePostAudienceQuestion" = "Who can see this post and for how long?";
+"CreatePostAudienceSelectionAnyone" = "Share with anyone";
+"CreatePostAudienceDuration" = "Duration of post";
+"CreatePostAddTagsCTA" = "Add tags to help boost your visibility.";
+"CreatePostTagPlaceholder" = "Add a tag";
+"CreatePostCTAButtonCTA" = "Post";
+
 // MARK: Profile
 
 "LogOutCTA" = "Log Out";
