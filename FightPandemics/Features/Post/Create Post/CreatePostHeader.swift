@@ -27,6 +27,9 @@
 import UIKit
 
 class CreatePostHeader: UIView {
+
+    var closeAction: (() -> Void)?
+
     private var createPostTitle = UILabel()
     private var cancelButton = UIButton()
     private var selectionBtn = UIButton()
@@ -39,7 +42,7 @@ class CreatePostHeader: UIView {
     }
     func setUpUpper () {
         //  header title
-        createPostTitle.text = "Create a post"
+        createPostTitle.text = "CreatePostFormTitle".localized
         createPostTitle.textAlignment = .left
         createPostTitle.textColor = UIColor.black
         createPostTitle.frame.size.height = 27
@@ -49,21 +52,19 @@ class CreatePostHeader: UIView {
         self.addSubview(createPostTitle)
         //  close button
         cancelButton.setImage(#imageLiteral(resourceName: "x"), for: .normal)
-        cancelButton.frame.size.width = 24
-        cancelButton.frame.size.height = 24
-        cancelButton.backgroundColor = UIColor.clear
+        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         self.addSubview(cancelButton)
     }
     func setUpMiddle () {
         // question label
-        questionLbl.text = "Are you offering or requesting help?"
+        questionLbl.text = "CreatePostFormSubtitle".localized
         questionLbl.textAlignment = .left
         questionLbl.font = Fonts.dmSansRegular.customFont(size: 13)
         questionLbl.frame.size.height = 22
         questionLbl.frame.size.width = 229
         self.addSubview(questionLbl)
         //  selection button
-        selectionBtn.setTitle(" Make a selection ", for: .normal)
+        selectionBtn.setTitle("CreatePostTypeSelectionCTA".localized, for: .normal)
         selectionBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
         selectionBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
         selectionBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
@@ -95,8 +96,8 @@ class CreatePostHeader: UIView {
         NSLayoutConstraint(item: createPostTitle, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 32).isActive = true
         NSLayoutConstraint(item: createPostTitle, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: cancelButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: cancelButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 24).isActive = true
+        NSLayoutConstraint(item: cancelButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 44).isActive = true
+        NSLayoutConstraint(item: cancelButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 44).isActive = true
         NSLayoutConstraint(item: cancelButton, attribute: .left, relatedBy: .equal, toItem: createPostTitle, attribute: .right, multiplier: 1, constant: 100).isActive = true //70 proportional sizes
         NSLayoutConstraint(item: cancelButton, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 33).isActive = true
         NSLayoutConstraint(item: cancelButton, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: (UIScreen.main.bounds.width - 48)).isActive = true
@@ -118,4 +119,9 @@ class CreatePostHeader: UIView {
         NSLayoutConstraint(item: sepLine, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: sepLine, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 162).isActive = true
     }
+
+    @objc private func cancelButtonTapped() {
+        closeAction?()
+    }
+
 }

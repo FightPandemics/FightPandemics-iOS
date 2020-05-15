@@ -116,6 +116,7 @@ final class Navigator {
 
     private func createPostViewController() -> CreatePostViewController {
         let createPostViewController = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostViewController") as! CreatePostViewController
+        createPostViewController.navigator = self
         return createPostViewController
     }
 
