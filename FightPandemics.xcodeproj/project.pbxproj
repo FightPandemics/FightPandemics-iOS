@@ -35,6 +35,7 @@
 		2F0B5166246E0DF200BE42BC /* CreatePostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */; };
 		2F0B5167246E0DF200BE42BC /* CreatePostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */; };
 		2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */; };
+		2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B516A246E15B400BE42BC /* IndividualOrg.swift */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -117,6 +118,7 @@
 		2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostFooter.swift; sourceTree = "<group>"; };
 		2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostHeader.swift; sourceTree = "<group>"; };
 		2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostBody.swift; sourceTree = "<group>"; };
+		2F0B516A246E15B400BE42BC /* IndividualOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualOrg.swift; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -265,11 +267,20 @@
 		2F0B5162246E0DF200BE42BC /* Create Post */ = {
 			isa = PBXGroup;
 			children = (
+				2F0B5169246E15AD00BE42BC /* Individual Org */,
 				2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */,
 				2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */,
 				2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */,
 			);
 			path = "Create Post";
+			sourceTree = "<group>";
+		};
+		2F0B5169246E15AD00BE42BC /* Individual Org */ = {
+			isa = PBXGroup;
+			children = (
+				2F0B516A246E15B400BE42BC /* IndividualOrg.swift */,
+			);
+			path = "Individual Org";
 			sourceTree = "<group>";
 		};
 		2F72CE452468785200750785 /* Networking */ = {
@@ -660,6 +671,7 @@
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
+				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
 				2F72CE6424687C9A00750785 /* JSONFileReaderError.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
 				2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */,
