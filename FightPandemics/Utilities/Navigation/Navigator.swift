@@ -77,6 +77,10 @@ final class Navigator {
         rootTabBar?.present(createPostViewController(), animated: true, completion: nil)
     }
 
+    func navigateToFeedPrototype() {
+        rootTabBar?.present(FeedPrototypeViewController(), animated: true, completion: nil)
+    }
+
     func dismissCreatePost() {
         rootTabBar?.dismiss(animated: true, completion: nil)
     }
