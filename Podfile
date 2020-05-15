@@ -4,6 +4,9 @@ platform :ios, '13.0'
 target 'FightPandemics' do
   use_frameworks!
 
+# Ignore all warnings from pods
+inhibit_all_warnings!
+
   pod 'SwiftLint'
   pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '5.0.2'
 

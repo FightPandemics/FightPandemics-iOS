@@ -11,7 +11,6 @@
 		043528A7A654231C93B1ACDF9257EDD8 /* FightPandemicsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA3B467767340DF0265AAC1D48FC70 /* FightPandemicsAPI.swift */; };
 		045D4653C8C3EA8EBD8560FFF62651FA /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 344CE742A8FBDE1E6ABCC0C686AEC36E /* DMSans-Bold.ttf */; };
 		0B8D413EFA75024266B43671869C103E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47152647FEBCF7A41A9A5983CC449011 /* Fonts.swift */; };
-		0EA025628DD92C89C6B0109BF0CD89EA /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */; };
 		255D9FE46E9ADED5F9568A83CA27A6E1 /* JSONFileReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE156B3938C4AD8116402E1C5082F2E6 /* JSONFileReaderError.swift */; };
 		3C7543831F7B945E78093A5B69652EF8 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B902A84FD6A085FA2AA8630EC245A76B /* Poppins-Regular.otf */; };
 		3E043CAD3BDEC00BB20A559014DFCA57 /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937BF7AB87EA682CF19FFA4A056BD28 /* FeedPost.swift */; };
@@ -50,6 +49,7 @@
 		C4BCB77C6AB56CBF562F32966F2B4375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B2C96A723840E7C8E4F3111E4DC50F /* Profile.storyboard */; };
 		D98E69A99C2EE6B09FC4FB20A5F35258 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB1CF0C1792DDDBA060354143DA6B7F1 /* OpenSans-Bold.ttf */; };
 		DA0813FF3431AC1E2DDF61001E78B8EA /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FB6E862B56D6CA9590DFCDA17C156F /* AvatarView.swift */; };
+		DF58676FCD41A3FC7A57A978 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF1A21FD20F800DC63795D5 /* Pods_FightPandemics.framework */; };
 		E254C4A2687AAEEE95B5CC8F1DD15CAD /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69254F0E7385A9352B6FBE751D7514A0 /* Keys.plist */; };
 		EA031B48041A0BC7EFBB81CC2D85D813 /* URLSession+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EC65316BD1AB95F6FB3ABA98336A5 /* URLSession+Networking.swift */; };
 		EC988C25C0CD212C6F10723566D4A159 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816C32335909A5214AB9969D83061E3 /* FeedViewController.swift */; };
@@ -74,6 +74,7 @@
 		1F4B98158509319444FB0CCE31725F20 /* PostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFooter.swift; sourceTree = "<group>"; };
 		221DABE9AF64FDC894F635A8E9923F02 /* UIColor+FightPandemics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FightPandemics.swift"; sourceTree = "<group>"; };
 		23EA40CE38018A677302E12F541C0FF4 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		2982D25FFE41A5710A389CDA /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		2A0F550E47C1EB99E975D8900BB30669 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../../es.lproj/Main.strings; sourceTree = "<group>"; };
 		2D072DFFD35B53FC1E44EFDD88F841F6 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		2EB9BFD2C993F3E0E3B51C5DE13D47DA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -94,16 +95,16 @@
 		5F825DA42CB88D027973F0721FD105A4 /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
 		603B181D7296A8C3E71F996187CFBC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69254F0E7385A9352B6FBE751D7514A0 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F75B432F8479598CD0EBC3CF30F929 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		7498F60C17A164EF002B632CF83396E7 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		7532FBCD9FCBDD6DD67645C734340C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78FF8CB6FE5A7E0850C394CEFB96F8B0 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		7ED3EA1A94EABD42F4B2F9EF2FBA7818 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		83B623BD6A4EE886A72B7ADF /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		87DC37CB1D06DC2222A4AD77C6749D1C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		8FF1A21FD20F800DC63795D5 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE891AF1CBC75386446C4F5392994DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C21C7EEA5B4D9D1C5BEA86306FAD2E3 /* String+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FightPandemics.swift"; sourceTree = "<group>"; };
-		A632E79ED574321D7F50D07B89ACA23A /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		A78F8941BC100518AE7246BB4105FF7C /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		AE156B3938C4AD8116402E1C5082F2E6 /* JSONFileReaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReaderError.swift; sourceTree = "<group>"; };
 		B59CC5C242F1533795EAE85582BBA8D1 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		DB1CF0C1792DDDBA060354143DA6B7F1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		E0391F0DC9A1E09844B06950D4ED01B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E20DEAE817CE7EFBEA18CF75A940913E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E3C977CEDFED5859E9A112CF42E09AC8 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		E561E5C280E3EE315232BFAA2A1EDD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,13 +141,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EA025628DD92C89C6B0109BF0CD89EA /* Pods_FightPandemics.framework in Frameworks */,
+				DF58676FCD41A3FC7A57A978 /* Pods_FightPandemics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C155CA1CD86E35A3420AE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FF1A21FD20F800DC63795D5 /* Pods_FightPandemics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		08A1C7B7404FBA2D84DA842EA3BA94A0 /* FightPandemics */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +191,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		45E80136E4BD00CEC6F18CE7E2353FEB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				69254F0E7385A9352B6FBE751D7514A0 /* Keys.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		47BF1242AEF16A90569C2E7F9B0C7E91 /* FightPandemicsUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,22 +208,14 @@
 			path = FightPandemicsUITests;
 			sourceTree = "<group>";
 		};
-		4D9D1A6C7F9F68DBF452FA1E8458A57E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				69C4CC32DD960CAB53F31EB3B1239E16 /* Pods_FightPandemics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		52369F717B2D4B46CAEE6A4EFE53F60D = {
 			isa = PBXGroup;
 			children = (
 				08A1C7B7404FBA2D84DA842EA3BA94A0 /* FightPandemics */,
 				47BF1242AEF16A90569C2E7F9B0C7E91 /* FightPandemicsUITests */,
-				4D9D1A6C7F9F68DBF452FA1E8458A57E /* Frameworks */,
 				9676DC981BC20511ED3D313F7CDEEB71 /* Pods */,
 				96AE1598FAB89184B7608B65FAB66446 /* Products */,
+				03C155CA1CD86E35A3420AE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -314,8 +322,8 @@
 		9676DC981BC20511ED3D313F7CDEEB71 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E3C977CEDFED5859E9A112CF42E09AC8 /* Pods-FightPandemics.debug.xcconfig */,
-				A632E79ED574321D7F50D07B89ACA23A /* Pods-FightPandemics.release.xcconfig */,
+				83B623BD6A4EE886A72B7ADF /* Pods-FightPandemics.debug.xcconfig */,
+				2982D25FFE41A5710A389CDA /* Pods-FightPandemics.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -384,14 +392,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		45E80136E4BD00CEC6F18CE7E2353FEB /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				69254F0E7385A9352B6FBE751D7514A0 /* Keys.plist */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,12 +399,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5182303A75271771F1F766E93D2EEFD4 /* Build configuration list for PBXNativeTarget "FightPandemics" */;
 			buildPhases = (
-				FBAC815C1E15AACC7F8366A5CE585B9E /* [CP] Check Pods Manifest.lock */,
+				FBCC594C349F157DF4D2E7BD /* [CP] Check Pods Manifest.lock */,
 				1DFE023D8669E335CB5678FF821175AC /* Sources */,
 				A2299B8593009516CB645CA058AEC55A /* Frameworks */,
 				E079C60406D65C1D042CC090449137FC /* Resources */,
 				C2E4E778CF7EE2DD3914F2A3B76A3C18 /* SwiftLint */,
-				86011EED2BD9A58815EE41720E8A4923 /* [CP] Embed Pods Frameworks */,
+				51730F0B11A73CB6DD034724 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -507,7 +507,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		86011EED2BD9A58815EE41720E8A4923 /* [CP] Embed Pods Frameworks */ = {
+		51730F0B11A73CB6DD034724 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -542,7 +542,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		FBAC815C1E15AACC7F8366A5CE585B9E /* [CP] Check Pods Manifest.lock */ = {
+		FBCC594C349F157DF4D2E7BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -717,7 +717,7 @@
 		};
 		3D49D4D9D5693C5E4008151A1DCE1958 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A632E79ED574321D7F50D07B89ACA23A /* Pods-FightPandemics.release.xcconfig */;
+			baseConfigurationReference = 2982D25FFE41A5710A389CDA /* Pods-FightPandemics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -831,7 +831,7 @@
 		};
 		7326CC2AF5261E0E216851B22E12C22C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3C977CEDFED5859E9A112CF42E09AC8 /* Pods-FightPandemics.debug.xcconfig */;
+			baseConfigurationReference = 83B623BD6A4EE886A72B7ADF /* Pods-FightPandemics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
