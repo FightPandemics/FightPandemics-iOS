@@ -1,4 +1,5 @@
 excluded:
+ - FightPandemics/Configuration
  - Pods
 file_length:
   warning: 1000
