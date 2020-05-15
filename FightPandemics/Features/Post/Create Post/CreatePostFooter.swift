@@ -107,7 +107,7 @@ class CreatePostFooter: UIView {
         tagsBtn.sizeToFit()
         tagsBtn.layoutIfNeeded()
         tagsBtn.semanticContentAttribute = .forceLeftToRight
-        tagsBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
+        tagsBtn.setTitleColor(UIColor.black, for: .normal)
         self.addSubview(tagsBtn)
         //  post button
         postBtn.setTitle("CreatePostCTAButtonCTA".localized, for: .normal)
