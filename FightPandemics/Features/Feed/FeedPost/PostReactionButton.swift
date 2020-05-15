@@ -26,16 +26,16 @@
 
 import UIKit
 
-enum FPButtonType {
+enum PostReactionButtonType {
     case like
     case message
     case send
 }
 
-class FPPostButton: UIButton {
-    private var type: FPButtonType
+class PostReactionButton: UIButton {
+    private var type: PostReactionButtonType
 
-    init(_ type: FPButtonType) {
+    init(_ type: PostReactionButtonType) {
         self.type = type
         super.init(frame: .zero)
         configureButton()
