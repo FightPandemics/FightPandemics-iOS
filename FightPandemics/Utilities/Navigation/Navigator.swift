@@ -75,24 +75,26 @@ final class Navigator {
         }
     }
 
-    func navigateToCreatePostOrgTypeModal() {
+    func navigateToCreatePostEntityTypeModal() {
         guard let rootTabBar = rootTabBar else { return }
 
-        let bottomModal = BottomModal(body: createPostOrgTypeModal(),
+        let bottomModal = BottomModal(body: createPostEntityTypeModal(),
                                       height: 332)
         self.presentedBottomModal = bottomModal
         bottomModal.show(on: rootTabBar)
     }
 
-    func dismissCreatePostOrgTypeModal(then: @escaping () -> Void) {
+    func dismissCreatePostEntityTypeModal(then: @escaping () -> Void) {
         presentedBottomModal?.dismiss { [weak self] in
             then()
             self?.presentedBottomModal = nil
         }
     }
 
-    func navigateToCreatePost() {
-        rootTabBar?.present(createPostViewController(), animated: true, completion: nil)
+    func navigateToCreatePost(postingEntity: Entity) {
+        rootTabBar?.present(createPostViewController(postingEntity: postingEntity),
+                            animated: true,
+                            completion: nil)
     }
 
     func dismissCreatePost() {
@@ -132,14 +134,15 @@ final class Navigator {
         return searchViewController
     }
 
-    private func createPostOrgTypeModal() -> CreatePostOrgTypeModal {
-        let createPostModal = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostOrgTypeModal") as! CreatePostOrgTypeModal
+    private func createPostEntityTypeModal() -> CreatePostEntityTypeModal {
+        let createPostModal = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostEntityTypeModal") as! CreatePostEntityTypeModal
         createPostModal.navigator = self
         return createPostModal
     }
 
-    private func createPostViewController() -> CreatePostViewController {
+    private func createPostViewController(postingEntity: Entity) -> CreatePostViewController {
         let createPostViewController = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostViewController") as! CreatePostViewController
+        createPostViewController.postingEntity = postingEntity
         createPostViewController.navigator = self
         return createPostViewController
     }

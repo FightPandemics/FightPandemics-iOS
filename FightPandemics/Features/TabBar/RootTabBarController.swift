@@ -115,7 +115,7 @@ final class RootTabBarController: UITabBarController {
     }
 
     @objc private func selectPostTab() {
-        navigator.navigateToCreatePostOrgTypeModal()
+        navigator.navigateToCreatePostEntityTypeModal()
     }
 
     private func attemptAutoLogIn() {
