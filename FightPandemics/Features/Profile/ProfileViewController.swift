@@ -27,7 +27,6 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
-
     // MARK: - Properties
 
     var navigator: Navigator!
@@ -58,5 +57,4 @@ final class ProfileViewController: UIViewController {
         sessionManager.logOut()
         navigator.navigateToLogIn()
     }
-
 }

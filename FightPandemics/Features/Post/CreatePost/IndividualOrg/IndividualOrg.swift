@@ -34,32 +34,34 @@ class IndividualOrg: UIView {
     private var organizationBtn = UIButton()
     private var closeBtn = UIButton()
     private var confirmBtn = UIButton()
-    func setUp () {
+    func setUp() {
         setUpUpper()
         setUpLower()
         makeConstraints()
     }
-    func setUpUpper () {
-       topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
+
+    func setUpUpper() {
+        topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
         topLine.frame.size.width = 116
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
         topLine.layer.masksToBounds = true
         topLine.layer.cornerRadius = 2
-        self.addSubview(topLine)
+        addSubview(topLine)
         createLbl.text = "IndividualOrgTitle".localized
         createLbl.font = Fonts.poppinsBold.customFont(size: 16)
         createLbl.textAlignment = .center
         createLbl.frame.size.width = 111
         createLbl.frame.size.height = 22
-        self.addSubview(createLbl)
+        addSubview(createLbl)
         descriptiveLbl.text = "IndividualOrgDescriptiveText".localized
         descriptiveLbl.font = Fonts.dmSansRegular.customFont(size: 13)
         descriptiveLbl.textAlignment = .center
         descriptiveLbl.numberOfLines = 0
-        self.addSubview(descriptiveLbl)
+        addSubview(descriptiveLbl)
     }
-    func setUpLower () {
+
+    func setUpLower() {
         individualBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgIndividualButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         individualBtn.frame.size.height = 45
         individualBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -67,7 +69,7 @@ class IndividualOrg: UIView {
         individualBtn.clipsToBounds = true
         individualBtn.layer.masksToBounds = true
         individualBtn.layer.cornerRadius = 4
-        self.addSubview(individualBtn)
+        addSubview(individualBtn)
         organizationBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgOrganizationButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         organizationBtn.frame.size.height = 45
         organizationBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -75,7 +77,7 @@ class IndividualOrg: UIView {
         organizationBtn.clipsToBounds = true
         organizationBtn.layer.masksToBounds = true
         organizationBtn.layer.cornerRadius = 4
-        self.addSubview(organizationBtn)
+        addSubview(organizationBtn)
         closeBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgCloseButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         closeBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         closeBtn.frame.size.height = 45
@@ -85,7 +87,7 @@ class IndividualOrg: UIView {
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
         closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         closeBtn.layer.borderWidth = 1
-        self.addSubview(closeBtn)
+        addSubview(closeBtn)
         confirmBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         confirmBtn.frame.size.height = 45
@@ -95,14 +97,16 @@ class IndividualOrg: UIView {
         confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
         confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         confirmBtn.layer.borderWidth = 1
-        self.addSubview(confirmBtn)
+        addSubview(confirmBtn)
     }
-    func makeConstraints () {
+
+    func makeConstraints() {
         makeUpperConstraints()
         makeLowerConstraints()
     }
-    func makeUpperConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
+
+    func makeUpperConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
         topLine.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: topLine, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 23).isActive = true
         NSLayoutConstraint(item: topLine, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 12).isActive = true
@@ -118,30 +122,31 @@ class IndividualOrg: UIView {
         NSLayoutConstraint(item: descriptiveLbl, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 80).isActive = true
         NSLayoutConstraint(item: descriptiveLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
         NSLayoutConstraint(item: descriptiveLbl, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: descriptiveLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 46)).isActive = true
+        NSLayoutConstraint(item: descriptiveLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 46).isActive = true
     }
-    func makeLowerConstraints () {
+
+    func makeLowerConstraints() {
         individualBtn.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: individualBtn, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: individualBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 137).isActive = true
         NSLayoutConstraint(item: individualBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
         NSLayoutConstraint(item: individualBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: individualBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 46)).isActive = true
+        NSLayoutConstraint(item: individualBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 46).isActive = true
         NSLayoutConstraint(item: individualBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
         organizationBtn.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: organizationBtn, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: organizationBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 194).isActive = true
         NSLayoutConstraint(item: organizationBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
         NSLayoutConstraint(item: organizationBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: organizationBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 46)).isActive = true
+        NSLayoutConstraint(item: organizationBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 46).isActive = true
         NSLayoutConstraint(item: organizationBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
         closeBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: closeBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: ((UIScreen.main.bounds.width - 63) / 2)).isActive = true
+        NSLayoutConstraint(item: closeBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 63) / 2).isActive = true
         NSLayoutConstraint(item: closeBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
         NSLayoutConstraint(item: closeBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 272).isActive = true
         NSLayoutConstraint(item: closeBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 22).isActive = true
         confirmBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: confirmBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: ((UIScreen.main.bounds.width - 63) / 2)).isActive = true
+        NSLayoutConstraint(item: confirmBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 63) / 2).isActive = true
         NSLayoutConstraint(item: confirmBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
         NSLayoutConstraint(item: confirmBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 272).isActive = true
         NSLayoutConstraint(item: confirmBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 22).isActive = true

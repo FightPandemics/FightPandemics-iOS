@@ -27,4 +27,4 @@
 import Foundation
 
 /// Represents success value with no associated data.
-struct Success { }
+struct Success {}

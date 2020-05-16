@@ -27,7 +27,6 @@
 import UIKit
 
 final class RootTabBarController: UITabBarController {
-
     // MARK: - Types
 
     enum Tab: Int, CaseIterable {
@@ -51,7 +50,7 @@ final class RootTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.delegate = self
+        delegate = self
         customizeTabBar()
     }
 
@@ -127,7 +126,6 @@ final class RootTabBarController: UITabBarController {
             }
         }
     }
-
 }
 
 // MARK: - Protocol conformance
@@ -135,12 +133,10 @@ final class RootTabBarController: UITabBarController {
 // MARK: UITabBarControllerDelegate
 
 extension RootTabBarController: UITabBarControllerDelegate {
-
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+    func tabBarController(_: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController is MenuViewController {
             return false
         }
         return true
     }
-
 }

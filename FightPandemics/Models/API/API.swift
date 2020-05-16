@@ -27,10 +27,8 @@
 import Foundation
 
 protocol API {
-
     // MARK: - Auth
 
     func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void)
     func logOut(completion: @escaping (Result<Success, APIError>) -> Void)
-
 }

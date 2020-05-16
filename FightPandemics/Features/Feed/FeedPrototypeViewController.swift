@@ -27,7 +27,6 @@
 import UIKit
 
 class FeedPrototypeViewController: UIViewController {
-
     var mockUser = User(id: "123", firstName: "Lily", lastName: "Luke", email: "lily@luke.co", location: "Manchester, UK")
 
     private var avatar = Avatar()
@@ -43,28 +42,27 @@ class FeedPrototypeViewController: UIViewController {
     }
 
     private func setupUI() {
-        self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
-        self.avatar.setUp(user: mockUser, image: nil)
-        self.avatarView = AvatarView()
-        self.avatarView.setUp(user: mockUser, avatar: self.avatar)
-        self.indivOrg.setUp()
+        avatar.setUp(user: mockUser, image: nil)
+        avatarView = AvatarView()
+        avatarView.setUp(user: mockUser, avatar: avatar)
+        indivOrg.setUp()
 
         let body = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
         let title = "Disinfecting clorox wipes needed"
 
-        self.feedPost.setUp(title: title, body: body + body, type: "Medical Supplies")
-        self.postFooter.setUp(likeNum: 12, commentNum: 13, sendNum: 14)
+        feedPost.setUp(title: title, body: body + body, type: "Medical Supplies")
+        postFooter.setUp(likeNum: 12, commentNum: 13, sendNum: 14)
 
         let firstView = UIView()
-        firstView.frame = CGRect(x: 0, y: 100, width: (UIScreen.main.bounds.width), height: 400)
-        self.view.addSubview(firstView)
+        firstView.frame = CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 400)
+        view.addSubview(firstView)
         firstView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         firstView.addSubview(indivOrg)
 
         let secondView = UIView()
-        secondView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
-        self.view.addSubview(secondView)
+        secondView.frame = CGRect(x: 0, y: 530, width: UIScreen.main.bounds.width - 47, height: 300)
+        view.addSubview(secondView)
     }
-
 }

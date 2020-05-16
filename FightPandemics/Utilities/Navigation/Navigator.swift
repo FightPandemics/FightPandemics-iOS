@@ -30,7 +30,6 @@ import UIKit
 
 /// Performs all navigation between screens.
 final class Navigator {
-
     // MARK: - Properties
 
     private var rootWindow: UIWindow?
@@ -86,7 +85,7 @@ final class Navigator {
     private func rootTabBarController() -> RootTabBarController {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        self.rootTabBar = rootTabBarController
+        rootTabBar = rootTabBarController
         rootTabBarController.autoLoginFakeLaunchScreen = autoLoginFakeLaunchScreen
         rootTabBarController.navigator = self
         rootTabBarController.sessionManager = sessionManager
@@ -149,5 +148,4 @@ final class Navigator {
         logInViewController.sessionManager = sessionManager
         return logInViewController
     }
-
 }

@@ -26,6 +26,4 @@
 
 import UIKit
 
-final class MenuViewController: UIViewController {
-
-}
+final class MenuViewController: UIViewController {}

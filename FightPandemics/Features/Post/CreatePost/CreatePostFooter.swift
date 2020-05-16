@@ -34,16 +34,17 @@ class CreatePostFooter: UIView {
     private var tagsLbl = UILabel()
     private var tagsBtn = UIButton()
     private var postBtn = UIButton()
-    func setUp () {
+    func setUp() {
         setUpUpper()
         setUpLower()
     }
-    func setUpUpper () {
+
+    func setUpUpper() {
         // seperator line
         sepLine.backgroundColor = UIColor(hexString: "#D7D7D7")
         sepLine.frame.size.width = UIScreen.main.bounds.width
         sepLine.frame.size.height = 2
-        self.addSubview(sepLine)
+        addSubview(sepLine)
         // first question label
         questionLbl.text = "CreatePostAudienceQuestion".localized
         questionLbl.textAlignment = .left
@@ -51,7 +52,7 @@ class CreatePostFooter: UIView {
         questionLbl.frame.size.height = 22
         questionLbl.font = Fonts.poppinsBold.customFont(size: 16)
         questionLbl.numberOfLines = 0
-        self.addSubview(questionLbl)
+        addSubview(questionLbl)
         // share button
         shareBtn.setTitle("CreatePostAudienceSelectionAnyone".localized, for: .normal)
         shareBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
@@ -65,7 +66,7 @@ class CreatePostFooter: UIView {
         shareBtn.layer.cornerRadius = 4
         shareBtn.semanticContentAttribute = .forceRightToLeft
         shareBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
-        self.addSubview(shareBtn)
+        addSubview(shareBtn)
         // duration button
         durationBtn.setTitle("CreatePostAudienceDuration".localized, for: .normal)
         durationBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
@@ -81,10 +82,11 @@ class CreatePostFooter: UIView {
         durationBtn.layoutIfNeeded()
         durationBtn.semanticContentAttribute = .forceRightToLeft
         durationBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
-        self.addSubview(durationBtn)
+        addSubview(durationBtn)
         setUpUpperConstraints()
     }
-    func setUpLower () {
+
+    func setUpLower() {
         // tags label
         tagsLbl.text = "CreatePostAddTagsCTA".localized
         tagsLbl.textAlignment = .left
@@ -92,7 +94,7 @@ class CreatePostFooter: UIView {
         tagsLbl.frame.size.height = 22
         tagsLbl.font = Fonts.poppinsBold.customFont(size: 16)
         tagsLbl.numberOfLines = 0
-        self.addSubview(tagsLbl)
+        addSubview(tagsLbl)
         // tags button
         tagsBtn.setTitle("CreatePostTagPlaceholder".localized, for: .normal)
         tagsBtn.setImage(#imageLiteral(resourceName: "tag"), for: .normal)
@@ -108,7 +110,7 @@ class CreatePostFooter: UIView {
         tagsBtn.layoutIfNeeded()
         tagsBtn.semanticContentAttribute = .forceLeftToRight
         tagsBtn.setTitleColor(UIColor.black, for: .normal)
-        self.addSubview(tagsBtn)
+        addSubview(tagsBtn)
         //  post button
         postBtn.setTitle("CreatePostCTAButtonCTA".localized, for: .normal)
         postBtn.setTitleColor(UIColor.white, for: .normal)
@@ -122,18 +124,19 @@ class CreatePostFooter: UIView {
         postBtn.layer.cornerRadius = postBtn.frame.size.height / 2
         postBtn.sizeToFit()
         postBtn.layoutIfNeeded()
-        self.addSubview(postBtn)
+        addSubview(postBtn)
         setUpLowerConstraints()
     }
-    func setUpUpperConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
+
+    func setUpUpperConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
         sepLine.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: sepLine, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width).isActive = true
         NSLayoutConstraint(item: sepLine, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1).isActive = true
         NSLayoutConstraint(item: sepLine, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: sepLine, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0).isActive = true
         questionLbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: questionLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
+        NSLayoutConstraint(item: questionLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 47).isActive = true
         NSLayoutConstraint(item: questionLbl, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 22).isActive = true
         NSLayoutConstraint(item: questionLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
         NSLayoutConstraint(item: questionLbl, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 24).isActive = true
@@ -150,9 +153,10 @@ class CreatePostFooter: UIView {
         NSLayoutConstraint(item: durationBtn, attribute: .left, relatedBy: .equal, toItem: shareBtn, attribute: .right, multiplier: 1, constant: 8).isActive = true
         NSLayoutConstraint(item: durationBtn, attribute: .top, relatedBy: .equal, toItem: questionLbl, attribute: .bottom, multiplier: 1, constant: 16).isActive = true
     }
-    func setUpLowerConstraints () {
+
+    func setUpLowerConstraints() {
         tagsLbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: tagsLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
+        NSLayoutConstraint(item: tagsLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 47).isActive = true
         NSLayoutConstraint(item: tagsLbl, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 22).isActive = true
         NSLayoutConstraint(item: tagsLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
         NSLayoutConstraint(item: tagsLbl, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 24).isActive = true
@@ -163,7 +167,7 @@ class CreatePostFooter: UIView {
         NSLayoutConstraint(item: tagsBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
         NSLayoutConstraint(item: tagsBtn, attribute: .top, relatedBy: .equal, toItem: tagsLbl, attribute: .bottom, multiplier: 1, constant: 16).isActive = true
         postBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: postBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
+        NSLayoutConstraint(item: postBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 47).isActive = true
         NSLayoutConstraint(item: postBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 54).isActive = true
         NSLayoutConstraint(item: postBtn, attribute: .top, relatedBy: .equal, toItem: tagsBtn, attribute: .bottom, multiplier: 1, constant: 24).isActive = true
         NSLayoutConstraint(item: postBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true

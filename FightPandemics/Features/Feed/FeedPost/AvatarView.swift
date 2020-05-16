@@ -27,27 +27,25 @@
 import UIKit
 
 class AvatarView: UIView {
-
     func setUp(user: User, avatar: Avatar) {
-        self.frame.origin.x = (avatar.frame.origin.x)
-        self.frame.origin.y = (avatar.frame.origin.y)
-        self.frame.size.width = 230
-        self.frame.size.height = 35
+        frame.origin.x = avatar.frame.origin.x
+        frame.origin.y = avatar.frame.origin.y
+        frame.size.width = 230
+        frame.size.height = 35
         let xOrigin = CGFloat(avatar.frame.width)
-        let label = UILabel(frame: CGRect(x: (9 + xOrigin), y: 0, width: 167, height: 20))
+        let label = UILabel(frame: CGRect(x: 9 + xOrigin, y: 0, width: 167, height: 20))
         label.textColor = UIColor(hexString: "#282828")
         label.textAlignment = .left
         label.font = UIFont(name: "System", size: 14)
-        let imageView = UIImageView(frame: CGRect(x: (9 + xOrigin), y: 25, width: 6, height: 6))
+        let imageView = UIImageView(frame: CGRect(x: 9 + xOrigin, y: 25, width: 6, height: 6))
         imageView.image = #imageLiteral(resourceName: "logo")
         avatar.addSubview(imageView)
         // wireframe version's width was 113 which was too small
-        let locLable = UILabel(frame: CGRect(x: (22 + xOrigin), y: 21, width: 153, height: 14))
+        let locLable = UILabel(frame: CGRect(x: 22 + xOrigin, y: 21, width: 153, height: 14))
         locLable.text = user.location
         locLable.textColor = UIColor(hexString: "#939393")
         locLable.textAlignment = .left
         locLable.font = UIFont(name: "System", size: 11)
         avatar.addSubview(locLable)
     }
-
 }

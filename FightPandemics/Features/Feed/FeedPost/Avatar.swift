@@ -27,7 +27,6 @@
 import UIKit
 
 class Avatar: UIView {
-
     func setUp(user: User, image: UIImage? = nil) {
         if let image = image {
             setUpWithImage(image: image)
@@ -37,40 +36,39 @@ class Avatar: UIView {
     }
 
     private func setUpWithInitials(initials: String?) {
-        self.frame.origin.x = 23
-        self.frame.origin.y = 23
-        self.frame.size.width = 35
-        self.frame.size.height = 35
+        frame.origin.x = 23
+        frame.origin.y = 23
+        frame.size.width = 35
+        frame.size.height = 35
         let label = UILabel()
         label.text = initials
         label.textAlignment = .center
         label.backgroundColor = .blue
-        label.frame.size.width = self.frame.size.width
-        label.frame.size.height = self.frame.size.height
+        label.frame.size.width = frame.size.width
+        label.frame.size.height = frame.size.height
         label.clipsToBounds = true
         label.layer.masksToBounds = true
-        label.layer.cornerRadius = self.frame.size.height / 2
+        label.layer.cornerRadius = frame.size.height / 2
         label.font = UIFont(name: "System", size: 18)
         label.textColor = UIColor(hexString: "#425AF2")
         label.backgroundColor = UIColor(hexString: "#F3F4FE")
         label.layer.borderWidth = 1
         label.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
-        self.addSubview(label)
+        addSubview(label)
     }
 
     private func setUpWithImage(image: UIImage) {
-        self.frame.origin.x = 23
-        self.frame.origin.y = 23
-        self.frame.size.width = 35
-        self.frame.size.height = 35
+        frame.origin.x = 23
+        frame.origin.y = 23
+        frame.size.width = 35
+        frame.size.height = 35
         let imageView = UIImageView()
         imageView.image = image
-        imageView.frame.size.width = self.frame.size.width
-        imageView.frame.size.height = self.frame.size.height
+        imageView.frame.size.width = frame.size.width
+        imageView.frame.size.height = frame.size.height
         imageView.clipsToBounds = true
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = self.frame.size.height / 2
-        self.addSubview(imageView)
+        imageView.layer.cornerRadius = frame.size.height / 2
+        addSubview(imageView)
     }
-
 }

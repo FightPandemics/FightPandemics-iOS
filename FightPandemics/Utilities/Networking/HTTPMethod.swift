@@ -27,7 +27,7 @@
 import Foundation
 
 /// HTTP method.
- enum HTTPMethod: String {
+enum HTTPMethod: String {
     case GET
     case POST
     case PUT

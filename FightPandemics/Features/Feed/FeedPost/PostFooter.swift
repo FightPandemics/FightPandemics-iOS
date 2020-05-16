@@ -27,7 +27,6 @@
 import UIKit
 
 class PostFooter: UIView {
-
     private var likeImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
     private var likeLbl = UILabel()
     private var commentImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
@@ -40,33 +39,33 @@ class PostFooter: UIView {
         // like image
         likeImg.frame.size.width = 20
         likeImg.frame.size.height = 18
-        self.addSubview(likeImg)
+        addSubview(likeImg)
         // like label
         likeLbl.text = "\(likeNum)"
         likeLbl.textAlignment = .left
         likeLbl.textColor = UIColor(hexString: "#939393")
         likeLbl.font = UIFont(name: "System", size: 14)
-        self.addSubview(likeLbl)
+        addSubview(likeLbl)
         // comment image
         commentImg.frame.size.width = 20
         commentImg.frame.size.height = 20
-        self.addSubview(commentImg)
+        addSubview(commentImg)
         // comment label
         commentLbl.text = "\(commentNum)"
         commentLbl.textAlignment = .left
         commentLbl.textColor = UIColor(hexString: "#939393")
         commentLbl.font = UIFont(name: "System", size: 14)
-        self.addSubview(commentLbl)
+        addSubview(commentLbl)
         // send image
         sendImg.frame.size.width = 20
         sendImg.frame.size.height = 17
-        self.addSubview(sendImg)
+        addSubview(sendImg)
         // send label
         sendLbl.text = "\(sendNum)"
         sendLbl.textAlignment = .left
         sendLbl.textColor = UIColor(hexString: "#939393")
         sendLbl.font = UIFont(name: "System", size: 14)
-        self.addSubview(sendLbl)
+        addSubview(sendLbl)
         // comment text field
         cmtTextField.frame.size.width = CGFloat(UIScreen.main.bounds.width - 47)
         cmtTextField.frame.size.height = 46
@@ -76,13 +75,13 @@ class PostFooter: UIView {
         cmtTextField.layer.masksToBounds = true
         cmtTextField.layer.borderWidth = 0
         cmtTextField.backgroundColor = UIColor(hexString: "#F6F7FB")
-        self.addSubview(cmtTextField)
+        addSubview(cmtTextField)
         makeConstraints()
     }
 
-    private func makeConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
+    private func makeConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 47).isActive = true
         NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 140).isActive = true
         likeImg.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: likeImg, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
@@ -103,10 +102,9 @@ class PostFooter: UIView {
         NSLayoutConstraint(item: sendLbl, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
         NSLayoutConstraint(item: sendLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 225).isActive = true
         cmtTextField.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: cmtTextField, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
+        NSLayoutConstraint(item: cmtTextField, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 47).isActive = true
         NSLayoutConstraint(item: cmtTextField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 46).isActive = true
         NSLayoutConstraint(item: cmtTextField, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 70).isActive = true
         NSLayoutConstraint(item: cmtTextField, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 25).isActive = true
     }
-
 }
