@@ -39,6 +39,8 @@ final class Navigator {
     private var feedNavigationController: UINavigationController?
     private var searchNavigationController: UINavigationController?
     private var profileNavigationController: UINavigationController?
+    private var presentedBottomModal: BottomModal?
+
     private let autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen
     private let sessionManager: SessionManager
 
@@ -70,6 +72,22 @@ final class Navigator {
     func dismissLogIn() {
         rootTabBar?.dismiss(animated: true) { [weak self] in
             self?.logInNavigationController = nil
+        }
+    }
+
+    func navigateToCreatePostOrgTypeModal() {
+        guard let rootTabBar = rootTabBar else { return }
+
+        let bottomModal = BottomModal(body: createPostOrgTypeModal(),
+                                      height: 332)
+        self.presentedBottomModal = bottomModal
+        bottomModal.show(on: rootTabBar)
+    }
+
+    func dismissCreatePostOrgTypeModal(then: @escaping () -> Void) {
+        presentedBottomModal?.dismiss { [weak self] in
+            then()
+            self?.presentedBottomModal = nil
         }
     }
 
@@ -112,6 +130,12 @@ final class Navigator {
         let searchViewController = UIStoryboard(name: "Search", bundle: nil)
             .instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         return searchViewController
+    }
+
+    private func createPostOrgTypeModal() -> CreatePostOrgTypeModal {
+        let createPostModal = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostOrgTypeModal") as! CreatePostOrgTypeModal
+        createPostModal.navigator = self
+        return createPostModal
     }
 
     private func createPostViewController() -> CreatePostViewController {

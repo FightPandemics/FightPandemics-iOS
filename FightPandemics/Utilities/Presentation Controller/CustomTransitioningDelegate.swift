@@ -42,9 +42,16 @@ import UIKit
 // present(viewControllerToPresent, animated: true, completion: nil)
 
 class CustomTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
+
+    let height: CGFloat
+
+    init(height: CGFloat) {
+        self.height = height
+    }
+
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         FPPresentationController(presentedViewController: presented,
                                  presenting: presenting,
-                                 height: 300)
+                                 height: height)
     }
 }
