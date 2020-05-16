@@ -36,6 +36,8 @@
 		2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */; };
 		2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B516A246E15B400BE42BC /* IndividualOrg.swift */; };
 		2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C43246F51BA0002B384 /* PostReactionButton.swift */; };
+		2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C3F246ECA5C0002B384 /* Constraints+FightPandemics.swift */; };
+		2F0C3C42246ECA660002B384 /* ConstrainableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C41246ECA660002B384 /* ConstrainableView.swift */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -125,6 +127,8 @@
 		2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostBody.swift; sourceTree = "<group>"; };
 		2F0B516A246E15B400BE42BC /* IndividualOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualOrg.swift; sourceTree = "<group>"; };
 		2F0C3C43246F51BA0002B384 /* PostReactionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostReactionButton.swift; sourceTree = "<group>"; };
+		2F0C3C3F246ECA5C0002B384 /* Constraints+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+FightPandemics.swift"; sourceTree = "<group>"; };
+		2F0C3C41246ECA660002B384 /* ConstrainableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrainableView.swift; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -293,6 +297,15 @@
 			path = IndividualOrg;
 			sourceTree = "<group>";
 		};
+		2F0C3C3E246ECA460002B384 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				2F0C3C41246ECA660002B384 /* ConstrainableView.swift */,
+				2F0C3C3F246ECA5C0002B384 /* Constraints+FightPandemics.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
 		2F72CE452468785200750785 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +392,7 @@
 		2F9EFE68245DFC9F00E86700 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2F0C3C3E246ECA460002B384 /* Constraints */,
 				2FB341EA2468F841007E397F /* Extensions */,
 				DC807E67247027C700046D67 /* FileReader */,
 				2FB342022468FFC3007E397F /* Navigation */,
@@ -717,6 +731,8 @@
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
+				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
+				2F72CE6424687C9A00750785 /* JSONFileReaderError.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
 				DC807E64246FB37000046D67 /* BottomModalTransitionDelegate.swift in Sources */,
 				2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */,
@@ -729,6 +745,7 @@
 				DC807E5B246FB02300046D67 /* Entity.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,
+				2F0C3C42246ECA660002B384 /* ConstrainableView.swift in Sources */,
 				2F0B5166246E0DF200BE42BC /* CreatePostFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
