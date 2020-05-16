@@ -38,8 +38,8 @@ class BottomModal {
         self.height = height
     }
 
-    func show(on presentingViewController: UIViewController) {
-        let transitioningDelegate = CustomTransitioningDelegate(height: height)
+    func present(on presentingViewController: UIViewController) {
+        let transitioningDelegate = BottomModalTransitionDelegate(height: height)
         body.view.backgroundColor = .white
         body.transitioningDelegate = transitioningDelegate
         body.modalPresentationStyle = .custom

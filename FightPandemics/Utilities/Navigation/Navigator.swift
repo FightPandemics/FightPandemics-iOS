@@ -75,16 +75,16 @@ final class Navigator {
         }
     }
 
-    func navigateToCreatePostEntityTypeModal() {
+    func navigateToCreatePostEntitySelectionModal() {
         guard let rootTabBar = rootTabBar else { return }
 
-        let bottomModal = BottomModal(body: createPostEntityTypeModal(),
+        let bottomModal = BottomModal(body: createPostEntitySelectionModal(),
                                       height: 332)
         self.presentedBottomModal = bottomModal
-        bottomModal.show(on: rootTabBar)
+        bottomModal.present(on: rootTabBar)
     }
 
-    func dismissCreatePostEntityTypeModal(then: @escaping () -> Void) {
+    func dismissCreatePostEntitySelectionModal(then: @escaping () -> Void) {
         presentedBottomModal?.dismiss { [weak self] in
             then()
             self?.presentedBottomModal = nil
@@ -134,8 +134,8 @@ final class Navigator {
         return searchViewController
     }
 
-    private func createPostEntityTypeModal() -> CreatePostEntityTypeModal {
-        let createPostModal = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostEntityTypeModal") as! CreatePostEntityTypeModal
+    private func createPostEntitySelectionModal() -> CreatePostEntitySelectionModal {
+        let createPostModal = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostEntitySelectionModal") as! CreatePostEntitySelectionModal
         createPostModal.navigator = self
         return createPostModal
     }

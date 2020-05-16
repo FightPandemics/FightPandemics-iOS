@@ -1,5 +1,5 @@
 //
-//  CreatePostEntityTypeModal.swift
+//  CreatePostEntitySelectionModal.swift
 //  FightPandemics
 //
 //  Created by Harlan Kellaway on 5/16/20.
@@ -26,7 +26,7 @@
 
 import UIKit
 
-final class CreatePostEntityTypeModal: UIViewController {
+final class CreatePostEntitySelectionModal: UIViewController {
 
     // MARK: - Properties
 
@@ -65,7 +65,7 @@ final class CreatePostEntityTypeModal: UIViewController {
 
     @objc private func confirmTapped() {
         let mockOrganization = Organization(id: "123", name: "FightPandemics")
-        navigator.dismissCreatePostEntityTypeModal { [weak self] in
+        navigator.dismissCreatePostEntitySelectionModal { [weak self] in
             self?.navigator.navigateToCreatePost(postingEntity: .organization(value: mockOrganization))
         }
     }
