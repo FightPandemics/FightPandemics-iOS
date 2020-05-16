@@ -43,6 +43,11 @@
 "VisibilityAnyoneBtn" = "Anyone";
 "VisibilityCloseBtn" = "Close";
 "VisibilityConfirmBtn" = "Confirm";
+"OfferRequestTitle" = "Are you offering or requesting help?";
+"OfferRequestOfferBtn" = "Offering";
+"OfferRequestRequestBtn" = "Requesting";
+"OfferRequestCloseBtn" = "Close";
+"OfferRequestConfirmBtn" = "Confirm";
 
 // MARK: Profile
 

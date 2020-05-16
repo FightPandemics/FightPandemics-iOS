@@ -42,6 +42,7 @@
 		2F0C3C672471DE660002B384 /* UINavigationBar+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C662471DE660002B384 /* UINavigationBar+FightPandemics.swift */; };
 		2F0C3C6A2471E0F70002B384 /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C3C692471E0F70002B384 /* Filters.storyboard */; };
 		2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C6B2471E1130002B384 /* FiltersModal.swift */; };
+		2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -64,9 +65,10 @@
 		2FB342042468FFCC007E397F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB342032468FFCC007E397F /* Navigator.swift */; };
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
-		952518F4C140E274521647CA /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0241A239AD091AEB67AA14AA /* Pods_FightPandemics.framework */; };
 		C0E5EDF824705CC200F42319 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */; };
 		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
+		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
+		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
 		DC807E5F246FB1C000046D67 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5E246FB1C000046D67 /* Organization.swift */; };
@@ -99,7 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0241A239AD091AEB67AA14AA /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0143E4265A08346123861FE9 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		0322FA12246E23D0009507D7 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		2F0420F6246A0E71005FB1D0 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		2F0420F8246A0E7E005FB1D0 /* FeedPrototypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPrototypeViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		2F0C3C662471DE660002B384 /* UINavigationBar+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+FightPandemics.swift"; sourceTree = "<group>"; };
 		2F0C3C692471E0F70002B384 /* Filters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filters.storyboard; sourceTree = "<group>"; };
 		2F0C3C6B2471E1130002B384 /* FiltersModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModal.swift; sourceTree = "<group>"; };
+		2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -163,11 +166,12 @@
 		2FB341F82468F9F0007E397F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		2FB342032468FFCC007E397F /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		2FB34206246901DA007E397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4182C329E58C44CB321B8325 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		973DF0168A1EA70D560708ED /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
@@ -196,7 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				952518F4C140E274521647CA /* Pods_FightPandemics.framework in Frameworks */,
+				7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,14 +221,6 @@
 				0322FA12246E23D0009507D7 /* TagView.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		2B76496875DA3C962BDB501B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0241A239AD091AEB67AA14AA /* Pods_FightPandemics.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2F0420F5246A0D0D005FB1D0 /* Feed */ = {
@@ -302,7 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				C0E5EDF92470AA2D00F42319 /* Duration */,
-				C0E5EDF424705C4E00F42319 /* Visibility */,
+				2F426B3A2472C2A3007A4796 /* Visibility */,
+				C013ACD8246FF3C500F22BE7 /* OfferRequest */,
 				2F0B5169246E15AD00BE42BC /* IndividualOrg */,
 				2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */,
 				2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */,
@@ -335,6 +332,22 @@
 				2F0C3C6B2471E1130002B384 /* FiltersModal.swift */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		2F426B392472C272007A4796 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		2F426B3A2472C2A3007A4796 /* Visibility */ = {
+			isa = PBXGroup;
+			children = (
+				2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */,
+			);
+			path = Visibility;
 			sourceTree = "<group>";
 		};
 		2F72CE452468785200750785 /* Networking */ = {
@@ -392,7 +405,8 @@
 				49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */,
 				2F9EFE4E245DFB1700E86700 /* Products */,
 				91B98918B2BF3E9F21F244CB /* Pods */,
-				2B76496875DA3C962BDB501B /* Frameworks */,
+				81F89510A3033D41BCEBDA7A /* Frameworks */,
+				2F426B392472C272007A4796 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -487,21 +501,29 @@
 			path = FightPandemicsUITests;
 			sourceTree = "<group>";
 		};
+		81F89510A3033D41BCEBDA7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		91B98918B2BF3E9F21F244CB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				973DF0168A1EA70D560708ED /* Pods-FightPandemics.debug.xcconfig */,
-				4182C329E58C44CB321B8325 /* Pods-FightPandemics.release.xcconfig */,
+				74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */,
+				0143E4265A08346123861FE9 /* Pods-FightPandemics.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C0E5EDF424705C4E00F42319 /* Visibility */ = {
+		C013ACD8246FF3C500F22BE7 /* OfferRequest */ = {
 			isa = PBXGroup;
 			children = (
-				C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */,
+				C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */,
 			);
-			path = Visibility;
+			path = OfferRequest;
 			sourceTree = "<group>";
 		};
 		C0E5EDF92470AA2D00F42319 /* Duration */ = {
@@ -580,7 +602,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9EFE61245DFB1900E86700 /* Build configuration list for PBXNativeTarget "FightPandemics" */;
 			buildPhases = (
-				849A9B5AE95A1623184DA166 /* [CP] Check Pods Manifest.lock */,
+				7B36C1FC9B93A09FE337CAB7 /* [CP] Check Pods Manifest.lock */,
 				2F9EFE49245DFB1700E86700 /* Sources */,
 				2F9EFE4A245DFB1700E86700 /* Frameworks */,
 				2F9EFE4B245DFB1700E86700 /* Resources */,
@@ -708,7 +730,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		849A9B5AE95A1623184DA166 /* [CP] Check Pods Manifest.lock */ = {
+		7B36C1FC9B93A09FE337CAB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -755,6 +777,7 @@
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
 				DC807E6F247027CF00046D67 /* SessionManager.swift in Sources */,
+				C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */,
 				2F0421A6246D0D39005FB1D0 /* Environment.swift in Sources */,
 				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
 				DC807E5F246FB1C000046D67 /* Organization.swift in Sources */,
@@ -776,7 +799,6 @@
 				C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
-				C0E5EDF824705CC200F42319 /* PostVisibilitySelectionView.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
@@ -790,6 +812,7 @@
 				DC807E66246FB37000046D67 /* BottomModalPresentationController.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
 				DC807E5B246FB02300046D67 /* Entity.swift in Sources */,
+				2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,
 				2F0C3C42246ECA660002B384 /* ConstrainableView.swift in Sources */,
@@ -966,7 +989,7 @@
 		};
 		2F9EFE62245DFB1900E86700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 973DF0168A1EA70D560708ED /* Pods-FightPandemics.debug.xcconfig */;
+			baseConfigurationReference = 74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -987,7 +1010,7 @@
 		};
 		2F9EFE63245DFB1900E86700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4182C329E58C44CB321B8325 /* Pods-FightPandemics.release.xcconfig */;
+			baseConfigurationReference = 0143E4265A08346123861FE9 /* Pods-FightPandemics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
