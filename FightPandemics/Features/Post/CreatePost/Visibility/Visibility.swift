@@ -35,9 +35,6 @@ class Visibility: UIView {
     private var anyoneBtn = UIButton()
     private var closeBtn = UIButton()
     private var confirmBtn = UIButton()
-    private var firstVSV = UIStackView()
-    private var firstHSV = UIStackView()
-    private var finalVSV = UIStackView()
     func setUp () {
         setUpUpper()
         setUpButtons()
@@ -52,14 +49,14 @@ class Visibility: UIView {
         topLine.layer.masksToBounds = true
         topLine.layer.cornerRadius = topLine.frame.size.height / 2
         self.addSubview(topLine)
-        questionLbl.text = "OfferRequestTitle".localized
+        questionLbl.text = "VisibilityTitle".localized
         questionLbl.font = Fonts.poppinsBold.customFont(size: 16)
         questionLbl.textAlignment = .center
         questionLbl.numberOfLines = 0
         self.addSubview(questionLbl)
     }
     func setUpButtons () {
-        neighborBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestOfferBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        neighborBtn.setAttributedTitle(NSAttributedString(string: "VisibilityNeighborBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         neighborBtn.setTitleColor(UIColor.white, for: .selected)
         neighborBtn.frame.size.height = 45
         neighborBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -68,7 +65,7 @@ class Visibility: UIView {
         neighborBtn.layer.masksToBounds = true
         neighborBtn.layer.cornerRadius = 4
         self.addSubview(neighborBtn)
-        cityBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestRequestBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        cityBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCityBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         cityBtn.setTitleColor(UIColor.white, for: .selected)
         cityBtn.frame.size.height = 45
         cityBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -77,7 +74,7 @@ class Visibility: UIView {
         cityBtn.layer.masksToBounds = true
         cityBtn.layer.cornerRadius = 4
         self.addSubview(cityBtn)
-        countryBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestRequestBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        countryBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCountryBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         countryBtn.setTitleColor(UIColor.white, for: .selected)
         countryBtn.frame.size.height = 45
         countryBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -86,7 +83,7 @@ class Visibility: UIView {
         countryBtn.layer.masksToBounds = true
         countryBtn.layer.cornerRadius = 4
         self.addSubview(countryBtn)
-        anyoneBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestRequestBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        anyoneBtn.setAttributedTitle(NSAttributedString(string: "VisibilityAnyoneBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         anyoneBtn.setTitleColor(UIColor.white, for: .selected)
         anyoneBtn.frame.size.height = 45
         anyoneBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -97,7 +94,7 @@ class Visibility: UIView {
         self.addSubview(anyoneBtn)
     }
     func setUpLower () {
-        closeBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestCloseBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+        closeBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCloseBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         closeBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         closeBtn.frame.size.height = 45
         closeBtn.clipsToBounds = true
@@ -107,7 +104,7 @@ class Visibility: UIView {
         closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         closeBtn.layer.borderWidth = 1
         self.addSubview(closeBtn)
-        confirmBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+        confirmBtn.setAttributedTitle(NSAttributedString(string: "VisibilityConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         confirmBtn.frame.size.height = 45
         confirmBtn.clipsToBounds = true
@@ -125,59 +122,66 @@ class Visibility: UIView {
     }
     func setUpUpperConstraints () {
         self.translatesAutoresizingMaskIntoConstraints = false
-        topLine.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: topLine, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: topLine, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 12).isActive = true
-        NSLayoutConstraint(item: topLine, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 116).isActive = true
-        NSLayoutConstraint(item: topLine, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 4).isActive = true
-        questionLbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: questionLbl, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: questionLbl, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 37).isActive = true
-        NSLayoutConstraint(item: questionLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 294).isActive = true
-        NSLayoutConstraint(item: questionLbl, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 22).isActive = true
+        topLine.makeSubview(of: self)
+            .width(116)
+            .height(4)
+            .top(to: \.topAnchor, constant: 12)
+            .centerX(to: \.centerXAnchor, constant: 23)
+
+        questionLbl.makeSubview(of: self)
+            .centerX(to: \.centerXAnchor, constant: 23)
+            .top(to: \.topAnchor, constant: 37)
+            .width(294)
+            .height(22)
     }
     func setUpButtonsConstraints () {
-        neighborBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: neighborBtn, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: neighborBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 86).isActive = true
-        NSLayoutConstraint(item: neighborBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: neighborBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: neighborBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 46)).isActive = true
-        NSLayoutConstraint(item: neighborBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
-        cityBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: cityBtn, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: cityBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 143).isActive = true
-        NSLayoutConstraint(item: cityBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: cityBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: cityBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 46)).isActive = true
-        NSLayoutConstraint(item: cityBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
-        countryBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: countryBtn, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: countryBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 143).isActive = true
-        NSLayoutConstraint(item: countryBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: countryBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: countryBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 46)).isActive = true
-        NSLayoutConstraint(item: countryBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
-        anyoneBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: anyoneBtn, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: anyoneBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 143).isActive = true
-        NSLayoutConstraint(item: anyoneBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: anyoneBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: anyoneBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 46)).isActive = true
-        NSLayoutConstraint(item: anyoneBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
+
+        neighborBtn.makeSubview(of: self)
+            .centerX(to: \.centerXAnchor, constant: 0)
+            .top(to: \.topAnchor, constant: 86)
+            .left(to: \.leftAnchor, constant: 23)
+            .right(to: \.rightAnchor, constant: 23)
+            .width((UIScreen.main.bounds.width - 46))
+            .height(45)
+
+        cityBtn.makeSubview(of: self)
+            .centerX(to: \.centerXAnchor, constant: 0)
+            .top(to: \.topAnchor, constant: 143)
+            .left(to: \.leftAnchor, constant: 23)
+            .right(to: \.rightAnchor, constant: 23)
+            .width((UIScreen.main.bounds.width - 46))
+            .height(45)
+
+        countryBtn.makeSubview(of: self)
+            .centerX(to: \.centerXAnchor, constant: 0)
+            .top(to: \.topAnchor, constant: 200)
+            .left(to: \.leftAnchor, constant: 23)
+            .right(to: \.rightAnchor, constant: 23)
+            .width((UIScreen.main.bounds.width - 46))
+            .height(45)
+
+        anyoneBtn.makeSubview(of: self)
+            .centerX(to: \.centerXAnchor, constant: 0)
+            .top(to: \.topAnchor, constant: 257)
+            .left(to: \.leftAnchor, constant: 23)
+            .right(to: \.rightAnchor, constant: 23)
+            .width((UIScreen.main.bounds.width - 46))
+            .height(45)
+
     }
     func setUpLowerConstraints () {
-        closeBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: closeBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: ((UIScreen.main.bounds.width - 63) / 2)).isActive = true
-        NSLayoutConstraint(item: closeBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
-        NSLayoutConstraint(item: closeBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 221).isActive = true
-        NSLayoutConstraint(item: closeBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 22).isActive = true
-        confirmBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: confirmBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: ((UIScreen.main.bounds.width - 63) / 2)).isActive = true
-        NSLayoutConstraint(item: confirmBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45).isActive = true
-        NSLayoutConstraint(item: confirmBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 221).isActive = true
-        NSLayoutConstraint(item: confirmBtn, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 22).isActive = true
+
+        closeBtn.makeSubview(of: self)
+            .width(((UIScreen.main.bounds.width - 63) / 2))
+            .height(45)
+            .top(to: \.topAnchor, constant: 335)
+            .left(to: \.leftAnchor, constant: 22)
+
+        confirmBtn.makeSubview(of: self)
+            .width(((UIScreen.main.bounds.width - 63) / 2))
+            .height(45)
+            .top(to: \.topAnchor, constant: 335)
+            .right(to: \.rightAnchor, constant: 22)
+
     }
 }
-
-
