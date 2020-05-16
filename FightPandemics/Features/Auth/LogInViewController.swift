@@ -57,13 +57,9 @@ final class LogInViewController: UIViewController {
         title = "Tap Log In >>>"
         view.backgroundColor = .systemTeal
 
-        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
         loadingSpinner.color = .white
-        view.addSubview(loadingSpinner)
-        NSLayoutConstraint.activate([
-            loadingSpinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingSpinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        loadingSpinner.makeSubview(of: view)
+            .center()
     }
 
     @objc private func logIn() {

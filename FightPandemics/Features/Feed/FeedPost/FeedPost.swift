@@ -45,7 +45,6 @@ class FeedPost: UIView {
         typeLabel.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         typeLabel.layer.borderWidth = 1
         typeLabel.layer.cornerRadius = typeLabel.frame.size.height / 2
-        self.addSubview(typeLabel)
         // title label
         titleLabel.text = title
         titleLabel.textAlignment = .left
@@ -55,7 +54,6 @@ class FeedPost: UIView {
         titleLabel.layoutIfNeeded()
         titleLabel.textColor = UIColor(hexString: "#282828")
         titleLabel.backgroundColor = UIColor.clear
-        self.addSubview(titleLabel)
         // body label
         bodyLabel.text = body
         bodyLabel.textAlignment = .left
@@ -65,37 +63,34 @@ class FeedPost: UIView {
         bodyLabel.layoutIfNeeded()
         bodyLabel.textColor = UIColor(hexString: "#282828")
         bodyLabel.backgroundColor = UIColor.clear
-        self.addSubview(bodyLabel)
         // more button
         moreButton.setTitle("FeedPostViewMoreCTA".localized, for: .normal)
         moreButton.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
         moreButton.titleLabel?.font = UIFont(name: "System", size: 16)
         moreButton.contentHorizontalAlignment = .left
         moreButton.backgroundColor = UIColor.clear
-        self.addSubview(moreButton)
         makeConstraints()
     }
 
     private func makeConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        typeLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: typeLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: typeLabel, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 74).isActive = true
-        NSLayoutConstraint(item: typeLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 24).isActive = true
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width).isActive = true
-        NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: typeLabel, attribute: .bottom, multiplier: 1, constant: 9).isActive = true
-        bodyLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: bodyLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width - 47).isActive = true
-        NSLayoutConstraint(item: bodyLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: bodyLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: bodyLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 9).isActive = true
-        moreButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: moreButton, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: moreButton, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: moreButton, attribute: .top, relatedBy: .equal, toItem: bodyLabel, attribute: .bottom, multiplier: 1, constant: 16).isActive = true
-        NSLayoutConstraint(item: moreButton, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+        typeLabel.makeSubview(of: self)
+            .leading(to: \.leadingAnchor, constant: 23)
+            .top(to: \.topAnchor, constant: 74)
+            .height(24)
+        titleLabel.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width)
+            .leading(to: \.leadingAnchor, constant: 24)
+            .trailing(to: \.trailingAnchor, constant: 23)
+            .top(to: \.topAnchor, constant: 9)
+        bodyLabel.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width - 47)
+            .leading(to: \.leadingAnchor, constant: 24)
+            .trailing(to: \.trailingAnchor, constant: 23)
+            .top(to: \.topAnchor, of: titleLabel, constant: 9)
+        moreButton.makeSubview(of: self)
+            .leading(to: \.leadingAnchor, constant: 24)
+            .trailing(to: \.trailingAnchor, constant: 24)
+            .top(to: \.topAnchor, of: bodyLabel, constant: 16)
+            .bottom(to: \.bottomAnchor)
     }
 }
