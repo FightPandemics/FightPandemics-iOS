@@ -76,6 +76,7 @@ class FPPresentationController: UIPresentationController {
 
     override func containerViewWillLayoutSubviews() {
         presentedView?.frame = frameOfPresentedViewInContainerView
+        presentedView?.layer.cornerRadius = 10
     }
 
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
