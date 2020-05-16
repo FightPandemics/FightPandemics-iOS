@@ -28,6 +28,7 @@ import UIKit
 
 class CreatePostViewController: UIViewController {
 
+    var postingEntity: Entity!
     var navigator: Navigator!
 
     private var feedPost = FeedPost()
