@@ -35,6 +35,13 @@
 "IndividualOrgOrganizationButton" = "Organization";
 "IndividualOrgCloseButton" = "Close";
 "IndividualOrgConfirmButton" = "Confirm";
+"VisibilityTitle" = "Who can see this post?";
+"VisibilityNeighborBtn" = "My neighborhood";
+"VisibilityCityBtn" = "My city";
+"VisibilityCountryBtn" = "My country";
+"VisibilityAnyoneBtn" = "Anyone";
+"VisibilityCloseBtn" = "Close";
+"VisibilityConfirmBtn" = "Confirm";
 
 // MARK: Profile
 
