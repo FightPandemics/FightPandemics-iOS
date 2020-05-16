@@ -37,7 +37,6 @@ class TagView: UIView {
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.adjustsFontForContentSizeCategory = true
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -64,12 +63,11 @@ class TagView: UIView {
     }
 
     func initializeUI() {
-        self.addSubview(title)
-        addAutoLayout()
+        title.makeSubview(of: self)
+            .pinToEdges().height(22)
         addTapGesture()
 
         self.backgroundColor = UIColor(named: "TagBackgroundGrayColor")
-        self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = 5
     }
 
@@ -91,13 +89,4 @@ class TagView: UIView {
         }
     }
 
-    func addAutoLayout() {
-        NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            title.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            title.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            title.topAnchor.constraint(equalTo: self.topAnchor),
-            title.heightAnchor.constraint(equalToConstant: 22)
-        ])
-    }
 }

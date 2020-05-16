@@ -44,23 +44,13 @@ final class AutoLoginFakeLaunchScreen {
 
         // TODO: UI should match Launch screen https://github.com/FightPandemics/FightPandemics-iOS/issues/52
         containerView.backgroundColor = .white
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        rootView.addSubview(containerView)
-        NSLayoutConstraint.activate([
-            containerView.leadingAnchor.constraint(equalTo: rootView.leadingAnchor),
-            containerView.topAnchor.constraint(equalTo: rootView.topAnchor),
-            containerView.trailingAnchor.constraint(equalTo: rootView.trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: rootView.bottomAnchor)
-        ])
+        containerView.makeSubview(of: rootView)
+            .pinToEdges()
 
         loadingSpinner.color = .darkGray
         loadingSpinner.startAnimating()
-        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
-        containerView.addSubview(loadingSpinner)
-        NSLayoutConstraint.activate([
-            loadingSpinner.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            loadingSpinner.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
-        ])
+        loadingSpinner.makeSubview(of: containerView)
+            .center()
     }
 
     func dismiss() {
