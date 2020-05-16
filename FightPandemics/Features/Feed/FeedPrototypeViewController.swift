@@ -62,13 +62,13 @@ class FeedPrototypeViewController: UIViewController {
         let firstView = UIView()
         firstView.frame = CGRect(x: 0, y: 50, width: (UIScreen.main.bounds.width), height: 600)
         self.view.addSubview(firstView)
-//        firstView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-//        firstView.addSubview(indivOrg)
-//        firstView.addSubview(self.visibility)
+        firstView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        firstView.addSubview(indivOrg)
+        firstView.addSubview(self.visibility)
 
-//        let secondView = UIView()
-//        secondView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
-//        self.view.addSubview(secondView)
+        let secondView = UIView()
+        secondView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
+        self.view.addSubview(secondView)
     }
 
 }
