@@ -64,6 +64,8 @@
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		BC9C355419D099D8F02AB586 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509CB25DE53FFD09A77D9731 /* Pods_FightPandemics.framework */; };
+		DD2F9391246F61870099898F /* FPPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F9390246F61870099898F /* FPPresentationController.swift */; };
+		DD2F9393246F64DD0099898F /* CustomTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F9392246F64DD0099898F /* CustomTransitioningDelegate.swift */; };
 		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
 		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
 		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
@@ -86,8 +88,6 @@
 
 /* Begin PBXFileReference section */
 		0322FA12246E23D0009507D7 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
-		1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E355787FFC962848DBBB507 /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		2F0420F6246A0E71005FB1D0 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		2F0420F8246A0E7E005FB1D0 /* FeedPrototypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPrototypeViewController.swift; sourceTree = "<group>"; };
 		2F042108246A1021005FB1D0 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
@@ -155,6 +155,8 @@
 		50426013C634BFF8C5D6357F /* Pods-FightPandemics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.release.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.release.xcconfig"; sourceTree = "<group>"; };
 		509CB25DE53FFD09A77D9731 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59F3D9AC9195CDAAD7D372E /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		DD2F9390246F61870099898F /* FPPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPresentationController.swift; sourceTree = "<group>"; };
+		DD2F9392246F64DD0099898F /* CustomTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitioningDelegate.swift; sourceTree = "<group>"; };
 		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
 		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -190,14 +192,6 @@
 				0322FA12246E23D0009507D7 /* TagView.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		033973FDB7BA0D30ACF6F0E4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1B2D26DC438B7D306CA2A965 /* Pods_FightPandemics.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2F0420F5246A0D0D005FB1D0 /* Feed */ = {
@@ -391,6 +385,7 @@
 		2F9EFE68245DFC9F00E86700 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DD2F938F246F611A0099898F /* Presentation Controller */,
 				2FB341EA2468F841007E397F /* Extensions */,
 				2F72CE6024687C6700750785 /* File Reader */,
 				2FB342022468FFC3007E397F /* Navigation */,
@@ -474,6 +469,15 @@
 				509CB25DE53FFD09A77D9731 /* Pods_FightPandemics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD2F938F246F611A0099898F /* Presentation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD2F9390246F61870099898F /* FPPresentationController.swift */,
+				DD2F9392246F64DD0099898F /* CustomTransitioningDelegate.swift */,
+			);
+			path = "Presentation Controller";
 			sourceTree = "<group>";
 		};
 		DDDB55012468ACAC008EA75A /* Resources */ = {
@@ -678,6 +682,7 @@
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
+				DD2F9391246F61870099898F /* FPPresentationController.swift in Sources */,
 				2F0421A6246D0D39005FB1D0 /* Environment.swift in Sources */,
 				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
 				2F0421A2246CF27B005FB1D0 /* AuthCredentials.swift in Sources */,
@@ -705,6 +710,7 @@
 				2F0B5161246E084D00BE42BC /* MenuViewController.swift in Sources */,
 				2F04213F246A2CCD005FB1D0 /* String+FightPandemics.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
+				DD2F9393246F64DD0099898F /* CustomTransitioningDelegate.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,
 				2F0B5166246E0DF200BE42BC /* CreatePostFooter.swift in Sources */,
