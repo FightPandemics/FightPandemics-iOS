@@ -21,6 +21,8 @@ See the [CONTRIBUTING](https://github.com/FightPandemics/FightPandemics-iOS/blob
 
 Special thanks to all [contributors](https://github.com/FightPandemics/FightPandemics-iOS/contributors) :purple_heart:
 
+See [CREDITS](https://github.com/FightPandemics/FightPandemics-iOS/blob/develop/CREDITS.md) for a list of service providers and OSS used to power the app :rocket:
+
 ## License
 
 FightPandemics is available under the MIT license. See the [LICENSE](https://raw.githubusercontent.com/FightPandemics/FightPandemics-iOS/develop/LICENSE) file for more info.
