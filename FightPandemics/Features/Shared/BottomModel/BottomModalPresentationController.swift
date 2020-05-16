@@ -1,5 +1,5 @@
 //
-//  FPPresentationController.swift
+//  BottomModalPresentationController.swift
 //  FightPandemics
 //
 //  Created by Onyekachi Ezeoke on 16/05/2020.
@@ -26,7 +26,7 @@
 
 import UIKit
 
-class FPPresentationController: UIPresentationController {
+class BottomModalPresentationController: UIPresentationController {
     private let dimmingView = UIView()
     private var height: CGFloat
 
@@ -93,7 +93,7 @@ class FPPresentationController: UIPresentationController {
     }
 }
 
-extension FPPresentationController {
+extension BottomModalPresentationController {
     func configureViews() {
         dimmingView.translatesAutoresizingMaskIntoConstraints = false
         dimmingView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2952696918)

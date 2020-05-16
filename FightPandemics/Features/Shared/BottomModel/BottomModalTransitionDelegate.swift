@@ -1,5 +1,5 @@
 //
-//  FPPresentationControllerTransitioningDelegate.swift
+//  BottomModalTransitionDelegate.swift
 //  FightPandemics
 //
 //  Created by Onyekachi Ezeoke on 16/05/2020.
@@ -41,7 +41,7 @@ import UIKit
 // viewControllerToPresent.modalPresentationStyle = .custom
 // present(viewControllerToPresent, animated: true, completion: nil)
 
-class CustomTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
+class BottomModalTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
 
     let height: CGFloat
 
@@ -50,7 +50,7 @@ class CustomTransitioningDelegate: NSObject, UIViewControllerTransitioningDelega
     }
 
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        FPPresentationController(presentedViewController: presented,
+        BottomModalPresentationController(presentedViewController: presented,
                                  presenting: presenting,
                                  height: height)
     }
