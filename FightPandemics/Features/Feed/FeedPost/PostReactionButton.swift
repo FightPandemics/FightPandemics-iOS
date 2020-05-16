@@ -55,7 +55,7 @@ class PostReactionButton: UIButton {
     }
 
     @objc func tap() {
-        self.isSelected = !self.isSelected
+        self.isSelected.toggle()
     }
 
     private func configureButton() {
