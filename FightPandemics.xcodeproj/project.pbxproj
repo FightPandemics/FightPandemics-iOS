@@ -40,6 +40,8 @@
 		2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C43246F51BA0002B384 /* PostReactionButton.swift */; };
 		2F0C3C652471DB2D0002B384 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C642471DB2D0002B384 /* RootNavigationController.swift */; };
 		2F0C3C672471DE660002B384 /* UINavigationBar+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C662471DE660002B384 /* UINavigationBar+FightPandemics.swift */; };
+		2F0C3C6A2471E0F70002B384 /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C3C692471E0F70002B384 /* Filters.storyboard */; };
+		2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C6B2471E1130002B384 /* FiltersModal.swift */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -135,6 +137,8 @@
 		2F0C3C43246F51BA0002B384 /* PostReactionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostReactionButton.swift; sourceTree = "<group>"; };
 		2F0C3C642471DB2D0002B384 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		2F0C3C662471DE660002B384 /* UINavigationBar+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+FightPandemics.swift"; sourceTree = "<group>"; };
+		2F0C3C692471E0F70002B384 /* Filters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filters.storyboard; sourceTree = "<group>"; };
+		2F0C3C6B2471E1130002B384 /* FiltersModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModal.swift; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -321,6 +325,15 @@
 			path = Constraints;
 			sourceTree = "<group>";
 		};
+		2F0C3C682471E0EF0002B384 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				2F0C3C692471E0F70002B384 /* Filters.storyboard */,
+				2F0C3C6B2471E1130002B384 /* FiltersModal.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		2F72CE452468785200750785 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +447,7 @@
 				0322FA11246E23BC009507D7 /* Shared */,
 				2F042195246CE49E005FB1D0 /* Auth */,
 				2F0420F5246A0D0D005FB1D0 /* Feed */,
+				2F0C3C682471E0EF0002B384 /* Filters */,
 				2F0B515D246E083D00BE42BC /* Menu */,
 				2F0B5158246E007C00BE42BC /* Post */,
 				2F04218C246CCD36005FB1D0 /* Profile */,
@@ -650,6 +664,7 @@
 				2F04218E246CCD40005FB1D0 /* Profile.storyboard in Resources */,
 				DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */,
 				2F042192246CD017005FB1D0 /* Search.storyboard in Resources */,
+				2F0C3C6A2471E0F70002B384 /* Filters.storyboard in Resources */,
 				DDDB550C2468AF92008EA75A /* Poppins-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +729,7 @@
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
 				2F04219E246CE99C005FB1D0 /* Success.swift in Sources */,
 				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
+				2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
 				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
 				DC807E65246FB37000046D67 /* BottomModal.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  RootNavigationController.swift
+//  FiltersModal.swift
 //  FightPandemics
 //
 //  Created by Harlan Kellaway on 5/17/20.
@@ -26,15 +26,9 @@
 
 import UIKit
 
-final class RootNavigationController: UINavigationController {
-
-    // MARK: - Properties
+final class FiltersModal: UIViewController {
 
     var navigator: Navigator!
-
-    // MARK: - Overrides
-
-    // MARK: View life-cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,31 +36,15 @@ final class RootNavigationController: UINavigationController {
         setupUI()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        addFilterButton()
-    }
-
-    // MARK: - Instance methods
-
-    // MARK: Private instance methods
-
     private func setupUI() {
-        navigationBar.removeHairline()
-    }
-
-    private func addFilterButton() {
-        viewControllers.first?.navigationItem
-            .rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon-nav-filter"),
-                                                  style: .plain,
-                                                  target: self,
-                                                  action: #selector(filterButtonTapped))
-        navigationBar.tintColor = UIColor(hexString: "#425AF2")
-    }
-
-    @objc private func filterButtonTapped() {
-        navigator.navigateToFiltersModal()
+        let button = UIButton()
+        button.makeSubview(of: view)
+            .center()
+            .width(250)
+            .height(50)
+        button.backgroundColor = .systemBlue
+        button.setTitle("Request Location Permission", for: .normal)
+        button.setTitleColor(.white, for: .normal)
     }
 
 }
