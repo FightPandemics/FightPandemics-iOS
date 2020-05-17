@@ -75,6 +75,21 @@ final class Navigator {
         }
     }
 
+    func navigateToFiltersModal() {
+        guard let rootTabBar = rootTabBar else { return }
+
+        let bottomModal = BottomModal(body: filtersModal(),
+                                      height: 307)
+        self.presentedBottomModal = bottomModal
+        bottomModal.present(on: rootTabBar)
+    }
+
+    func dismissFiltersModal() {
+        presentedBottomModal?.dismiss { [weak self] in
+            self?.presentedBottomModal = nil
+        }
+    }
+
     func navigateToCreatePostEntitySelectionModal() {
         guard let rootTabBar = rootTabBar else { return }
 
@@ -112,14 +127,23 @@ final class Navigator {
         rootTabBarController.sessionManager = sessionManager
         let feedNavigationController = rootTabBarController.navController(.feed)
         self.feedNavigationController = feedNavigationController
+        feedNavigationController?.navigator = self
         feedNavigationController?.pushViewController(feedViewController(), animated: false)
         let searchNavigationController = rootTabBarController.navController(.search)
         self.searchNavigationController = searchNavigationController
+        searchNavigationController?.navigator = self
         searchNavigationController?.pushViewController(searchViewController(), animated: false)
         let profileNavigationController = rootTabBarController.navController(.profile)
         self.profileNavigationController = profileNavigationController
+        profileNavigationController?.navigator = self
         profileNavigationController?.pushViewController(profileViewController(), animated: false)
         return rootTabBarController
+    }
+
+    private func filtersModal() -> FiltersModal {
+        let filtersModal = UIStoryboard(name: "Filters", bundle: nil).instantiateViewController(withIdentifier: "FiltersModal") as! FiltersModal
+        filtersModal.navigator = self
+        return filtersModal
     }
 
     private func feedViewController() -> FeedViewController {
