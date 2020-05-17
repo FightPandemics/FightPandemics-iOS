@@ -32,7 +32,7 @@ final class MockAPI: API {
     let latency: DispatchTimeInterval
 
     init(jsonFileReader: JSONFileReader = JSONFileReader(),
-         latency: DispatchTimeInterval = .seconds(2)) {
+         latency: DispatchTimeInterval = .seconds(1)) {
         self.jsonFileReader = jsonFileReader
         self.latency = latency
     }

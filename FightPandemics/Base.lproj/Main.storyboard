@@ -31,7 +31,7 @@
         <!--Item-->
         <scene sceneID="thr-5J-oPI">
             <objects>
-                <viewController storyboardIdentifier="FeedNavigationController" id="xep-JU-Yok" customClass="UINavigationController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedNavigationController" id="xep-JU-Yok" customClass="RootNavigationController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="myJ-HL-zwK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
         <!--Item-->
         <scene sceneID="k0h-U9-chT">
             <objects>
-                <viewController storyboardIdentifier="ProfileNavigationController" id="5hA-s4-0UP" customClass="UINavigationController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileNavigationController" id="5hA-s4-0UP" customClass="RootNavigationController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ial-8c-L3p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
         <!--Item-->
         <scene sceneID="ikl-8H-Vye">
             <objects>
-                <viewController storyboardIdentifier="SearchNavigationController" id="Vi6-M6-BIO" customClass="UINavigationController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchNavigationController" id="Vi6-M6-BIO" customClass="RootNavigationController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6n-aC-y37">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
