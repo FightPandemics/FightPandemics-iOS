@@ -1,5 +1,5 @@
 //
-//  Visibility.swift
+//  PostVisibilitySelectionView.swift
 //  FightPandemics
 //
 //  Created by ehsan sat on 5/16/20.
@@ -26,7 +26,7 @@
 
 import UIKit
 
-class Visibility: UIView {
+class PostVisibilitySelectionView: UIView {
     private var topLine = UIView()
     private var questionLbl = UILabel()
     private var neighborBtn = UIButton()

@@ -61,7 +61,7 @@
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		952518F4C140E274521647CA /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0241A239AD091AEB67AA14AA /* Pods_FightPandemics.framework */; };
-		C0E5EDF824705CC200F42319 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDF724705CC200F42319 /* Visibility.swift */; };
+		C0E5EDF824705CC200F42319 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
 		DC807E5F246FB1C000046D67 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5E246FB1C000046D67 /* Organization.swift */; };
@@ -159,7 +159,7 @@
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973DF0168A1EA70D560708ED /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
-		C0E5EDF724705CC200F42319 /* Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
 		DC807E5A246FB02300046D67 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		DC807E5E246FB1C000046D67 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
@@ -476,7 +476,7 @@
 		C0E5EDF424705C4E00F42319 /* Visibility */ = {
 			isa = PBXGroup;
 			children = (
-				C0E5EDF724705CC200F42319 /* Visibility.swift */,
+				C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */,
 			);
 			path = Visibility;
 			sourceTree = "<group>";
@@ -740,7 +740,7 @@
 				2F0421A4246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
-				C0E5EDF824705CC200F42319 /* Visibility.swift in Sources */,
+				C0E5EDF824705CC200F42319 /* PostVisibilitySelectionView.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
