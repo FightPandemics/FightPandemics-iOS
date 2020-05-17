@@ -35,7 +35,7 @@ class FeedPrototypeViewController: UIViewController {
     private var feedPost = FeedPost()
     private var postFooter = PostFooter()
     private var indivOrg = IndividualOrg()
-    private var visibility = Visibility()
+    private var visibility = PostVisibilitySelectionView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,6 @@ class FeedPrototypeViewController: UIViewController {
         self.avatarView.setUp(user: mockUser, avatar: self.avatar)
         self.indivOrg.setUp()
         self.visibility.setUp()
-        self.visibility.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
 
         let body = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
         let title = "Disinfecting clorox wipes needed"
@@ -62,9 +61,7 @@ class FeedPrototypeViewController: UIViewController {
         let firstView = UIView()
         firstView.frame = CGRect(x: 0, y: 50, width: (UIScreen.main.bounds.width), height: 600)
         self.view.addSubview(firstView)
-        firstView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-        firstView.addSubview(indivOrg)
-        firstView.addSubview(self.visibility)
+        firstView.addSubview(visibility)
 
         let secondView = UIView()
         secondView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
