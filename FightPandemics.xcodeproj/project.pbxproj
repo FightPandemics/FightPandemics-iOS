@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0322FA13246E23D0009507D7 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0322FA12246E23D0009507D7 /* TagView.swift */; };
+		09765EE1F4B52A3610F5CC4D /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7317E350D3CA32F358C44A17 /* Pods_FightPandemics.framework */; };
 		2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0420F6246A0E71005FB1D0 /* Feed.storyboard */; };
 		2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0420F8246A0E7E005FB1D0 /* FeedPrototypeViewController.swift */; };
 		2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F042108246A1021005FB1D0 /* Avatar.swift */; };
@@ -27,14 +28,8 @@
 		2F0421A2246CF27B005FB1D0 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0421A1246CF27B005FB1D0 /* AuthCredentials.swift */; };
 		2F0421A4246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0421A3246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift */; };
 		2F0421A6246D0D39005FB1D0 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0421A5246D0D39005FB1D0 /* Environment.swift */; };
-		2F0B515A246E008400BE42BC /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0B5159246E008400BE42BC /* Post.storyboard */; };
-		2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B515B246E009400BE42BC /* CreatePostViewController.swift */; };
 		2F0B515F246E084400BE42BC /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0B515E246E084400BE42BC /* Menu.storyboard */; };
 		2F0B5161246E084D00BE42BC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5160246E084D00BE42BC /* MenuViewController.swift */; };
-		2F0B5166246E0DF200BE42BC /* CreatePostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */; };
-		2F0B5167246E0DF200BE42BC /* CreatePostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */; };
-		2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */; };
-		2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B516A246E15B400BE42BC /* IndividualOrg.swift */; };
 		2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C3F246ECA5C0002B384 /* Constraints+FightPandemics.swift */; };
 		2F0C3C42246ECA660002B384 /* ConstrainableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C41246ECA660002B384 /* ConstrainableView.swift */; };
 		2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C43246F51BA0002B384 /* PostReactionButton.swift */; };
@@ -42,7 +37,17 @@
 		2F0C3C672471DE660002B384 /* UINavigationBar+FightPandemics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C662471DE660002B384 /* UINavigationBar+FightPandemics.swift */; };
 		2F0C3C6A2471E0F70002B384 /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C3C692471E0F70002B384 /* Filters.storyboard */; };
 		2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C6B2471E1130002B384 /* FiltersModal.swift */; };
-		2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */; };
+		2F426B642472CA09007A4796 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B562472CA09007A4796 /* Visibility.swift */; };
+		2F426B652472CA09007A4796 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B572472CA09007A4796 /* PostVisibilitySelectionView.swift */; };
+		2F426B662472CA09007A4796 /* CreatePostFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B582472CA09007A4796 /* CreatePostFooter.swift */; };
+		2F426B672472CA09007A4796 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B5A2472CA09007A4796 /* OfferRequest.swift */; };
+		2F426B682472CA09007A4796 /* IndividualOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B5C2472CA09007A4796 /* IndividualOrg.swift */; };
+		2F426B692472CA09007A4796 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B5E2472CA09007A4796 /* Duration.swift */; };
+		2F426B6A2472CA09007A4796 /* CreatePostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B5F2472CA09007A4796 /* CreatePostHeader.swift */; };
+		2F426B6B2472CA09007A4796 /* CreatePostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B602472CA09007A4796 /* CreatePostBody.swift */; };
+		2F426B6C2472CA09007A4796 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B612472CA09007A4796 /* CreatePostViewController.swift */; };
+		2F426B6D2472CA09007A4796 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B622472CA09007A4796 /* CreatePostEntitySelectionModal.swift */; };
+		2F426B6E2472CA09007A4796 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F426B632472CA09007A4796 /* Post.storyboard */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -65,11 +70,11 @@
 		2FB342042468FFCC007E397F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB342032468FFCC007E397F /* Navigator.swift */; };
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
-		C0E5EDF824705CC200F42319 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */; };
-		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
-		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
-		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
-		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
+		A6EB00E62470841500A0140B /* RegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EB00E52470841500A0140B /* RegularButton.swift */; };
+		A6EB00E82470887400A0140B /* BoldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EB00E72470887400A0140B /* BoldButton.swift */; };
+		A6EB00EA24708C5B00A0140B /* InactiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EB00E924708C5B00A0140B /* InactiveButton.swift */; };
+		A6EB00EC24708C6F00A0140B /* OutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EB00EB24708C6F00A0140B /* OutlineButton.swift */; };
+		A6EB00EE24708D8A00A0140B /* ButtonPrototypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EB00ED24708D8A00A0140B /* ButtonPrototypeController.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
 		DC807E5F246FB1C000046D67 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5E246FB1C000046D67 /* Organization.swift */; };
 		DC807E64246FB37000046D67 /* BottomModalTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E61246FB36F00046D67 /* BottomModalTransitionDelegate.swift */; };
@@ -127,14 +132,8 @@
 		2F0421A1246CF27B005FB1D0 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 		2F0421A3246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLogInFakeLaunchScreen.swift; sourceTree = "<group>"; };
 		2F0421A5246D0D39005FB1D0 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		2F0B5159246E008400BE42BC /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
-		2F0B515B246E009400BE42BC /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		2F0B515E246E084400BE42BC /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		2F0B5160246E084D00BE42BC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostFooter.swift; sourceTree = "<group>"; };
-		2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostHeader.swift; sourceTree = "<group>"; };
-		2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostBody.swift; sourceTree = "<group>"; };
-		2F0B516A246E15B400BE42BC /* IndividualOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualOrg.swift; sourceTree = "<group>"; };
 		2F0C3C3F246ECA5C0002B384 /* Constraints+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+FightPandemics.swift"; sourceTree = "<group>"; };
 		2F0C3C41246ECA660002B384 /* ConstrainableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrainableView.swift; sourceTree = "<group>"; };
 		2F0C3C43246F51BA0002B384 /* PostReactionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostReactionButton.swift; sourceTree = "<group>"; };
@@ -142,7 +141,17 @@
 		2F0C3C662471DE660002B384 /* UINavigationBar+FightPandemics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+FightPandemics.swift"; sourceTree = "<group>"; };
 		2F0C3C692471E0F70002B384 /* Filters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filters.storyboard; sourceTree = "<group>"; };
 		2F0C3C6B2471E1130002B384 /* FiltersModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModal.swift; sourceTree = "<group>"; };
-		2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
+		2F426B562472CA09007A4796 /* Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		2F426B572472CA09007A4796 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
+		2F426B582472CA09007A4796 /* CreatePostFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostFooter.swift; sourceTree = "<group>"; };
+		2F426B5A2472CA09007A4796 /* OfferRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
+		2F426B5C2472CA09007A4796 /* IndividualOrg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualOrg.swift; sourceTree = "<group>"; };
+		2F426B5E2472CA09007A4796 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		2F426B5F2472CA09007A4796 /* CreatePostHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostHeader.swift; sourceTree = "<group>"; };
+		2F426B602472CA09007A4796 /* CreatePostBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostBody.swift; sourceTree = "<group>"; };
+		2F426B612472CA09007A4796 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		2F426B622472CA09007A4796 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
+		2F426B632472CA09007A4796 /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -169,12 +178,13 @@
 		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7317E350D3CA32F358C44A17 /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
-		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
-		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
-		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
-		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
+		A6EB00E52470841500A0140B /* RegularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularButton.swift; sourceTree = "<group>"; };
+		A6EB00E72470887400A0140B /* BoldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldButton.swift; sourceTree = "<group>"; };
+		A6EB00E924708C5B00A0140B /* InactiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveButton.swift; sourceTree = "<group>"; };
+		A6EB00EB24708C6F00A0140B /* OutlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineButton.swift; sourceTree = "<group>"; };
+		A6EB00ED24708D8A00A0140B /* ButtonPrototypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPrototypeController.swift; sourceTree = "<group>"; };
 		DC807E5A246FB02300046D67 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		DC807E5E246FB1C000046D67 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		DC807E61246FB36F00046D67 /* BottomModalTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomModalTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -200,7 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */,
+				09765EE1F4B52A3610F5CC4D /* Pods_FightPandemics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +227,7 @@
 		0322FA11246E23BC009507D7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A6EB00E4247083E500A0140B /* Buttons */,
 				DC807E60246FB36F00046D67 /* BottomModel */,
 				0322FA12246E23D0009507D7 /* TagView.swift */,
 			);
@@ -274,17 +285,6 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		2F0B5158246E007C00BE42BC /* Post */ = {
-			isa = PBXGroup;
-			children = (
-				2F0B5159246E008400BE42BC /* Post.storyboard */,
-				2F0B5162246E0DF200BE42BC /* CreatePost */,
-				2F0B515B246E009400BE42BC /* CreatePostViewController.swift */,
-				DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */,
-			);
-			path = Post;
-			sourceTree = "<group>";
-		};
 		2F0B515D246E083D00BE42BC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,28 +292,6 @@
 				2F0B5160246E084D00BE42BC /* MenuViewController.swift */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		2F0B5162246E0DF200BE42BC /* CreatePost */ = {
-			isa = PBXGroup;
-			children = (
-				C0E5EDF92470AA2D00F42319 /* Duration */,
-				2F426B3A2472C2A3007A4796 /* Visibility */,
-				C013ACD8246FF3C500F22BE7 /* OfferRequest */,
-				2F0B5169246E15AD00BE42BC /* IndividualOrg */,
-				2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */,
-				2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */,
-				2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */,
-			);
-			path = CreatePost;
-			sourceTree = "<group>";
-		};
-		2F0B5169246E15AD00BE42BC /* IndividualOrg */ = {
-			isa = PBXGroup;
-			children = (
-				2F0B516A246E15B400BE42BC /* IndividualOrg.swift */,
-			);
-			path = IndividualOrg;
 			sourceTree = "<group>";
 		};
 		2F0C3C3E246ECA460002B384 /* Constraints */ = {
@@ -334,20 +312,62 @@
 			path = Filters;
 			sourceTree = "<group>";
 		};
-		2F426B392472C272007A4796 /* Recovered References */ = {
+		2F426B532472CA08007A4796 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */,
+				2F426B542472CA08007A4796 /* CreatePost */,
+				2F426B612472CA09007A4796 /* CreatePostViewController.swift */,
+				2F426B622472CA09007A4796 /* CreatePostEntitySelectionModal.swift */,
+				2F426B632472CA09007A4796 /* Post.storyboard */,
 			);
-			name = "Recovered References";
+			path = Post;
 			sourceTree = "<group>";
 		};
-		2F426B3A2472C2A3007A4796 /* Visibility */ = {
+		2F426B542472CA08007A4796 /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
-				2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */,
+				2F426B552472CA08007A4796 /* Visibility */,
+				2F426B582472CA09007A4796 /* CreatePostFooter.swift */,
+				2F426B592472CA09007A4796 /* OfferRequest */,
+				2F426B5B2472CA09007A4796 /* IndividualOrg */,
+				2F426B5D2472CA09007A4796 /* Duration */,
+				2F426B5F2472CA09007A4796 /* CreatePostHeader.swift */,
+				2F426B602472CA09007A4796 /* CreatePostBody.swift */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		2F426B552472CA08007A4796 /* Visibility */ = {
+			isa = PBXGroup;
+			children = (
+				2F426B562472CA09007A4796 /* Visibility.swift */,
+				2F426B572472CA09007A4796 /* PostVisibilitySelectionView.swift */,
 			);
 			path = Visibility;
+			sourceTree = "<group>";
+		};
+		2F426B592472CA09007A4796 /* OfferRequest */ = {
+			isa = PBXGroup;
+			children = (
+				2F426B5A2472CA09007A4796 /* OfferRequest.swift */,
+			);
+			path = OfferRequest;
+			sourceTree = "<group>";
+		};
+		2F426B5B2472CA09007A4796 /* IndividualOrg */ = {
+			isa = PBXGroup;
+			children = (
+				2F426B5C2472CA09007A4796 /* IndividualOrg.swift */,
+			);
+			path = IndividualOrg;
+			sourceTree = "<group>";
+		};
+		2F426B5D2472CA09007A4796 /* Duration */ = {
+			isa = PBXGroup;
+			children = (
+				2F426B5E2472CA09007A4796 /* Duration.swift */,
+			);
+			path = Duration;
 			sourceTree = "<group>";
 		};
 		2F72CE452468785200750785 /* Networking */ = {
@@ -405,8 +425,7 @@
 				49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */,
 				2F9EFE4E245DFB1700E86700 /* Products */,
 				91B98918B2BF3E9F21F244CB /* Pods */,
-				81F89510A3033D41BCEBDA7A /* Frameworks */,
-				2F426B392472C272007A4796 /* Recovered References */,
+				A66C79CC02F8132DB8AB10FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -466,7 +485,7 @@
 				2F0420F5246A0D0D005FB1D0 /* Feed */,
 				2F0C3C682471E0EF0002B384 /* Filters */,
 				2F0B515D246E083D00BE42BC /* Menu */,
-				2F0B5158246E007C00BE42BC /* Post */,
+				2F426B532472CA08007A4796 /* Post */,
 				2F04218C246CCD36005FB1D0 /* Profile */,
 				2F04218B246CCD36005FB1D0 /* Search */,
 				2FB341F12468F975007E397F /* TabBar */,
@@ -501,14 +520,6 @@
 			path = FightPandemicsUITests;
 			sourceTree = "<group>";
 		};
-		81F89510A3033D41BCEBDA7A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		91B98918B2BF3E9F21F244CB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,20 +529,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C013ACD8246FF3C500F22BE7 /* OfferRequest */ = {
+		A66C79CC02F8132DB8AB10FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */,
+				7317E350D3CA32F358C44A17 /* Pods_FightPandemics.framework */,
 			);
-			path = OfferRequest;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C0E5EDF92470AA2D00F42319 /* Duration */ = {
+		A6EB00E4247083E500A0140B /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				C0E5EDFA2470AA4E00F42319 /* Duration.swift */,
+				A6EB00E52470841500A0140B /* RegularButton.swift */,
+				A6EB00E72470887400A0140B /* BoldButton.swift */,
+				A6EB00E924708C5B00A0140B /* InactiveButton.swift */,
+				A6EB00EB24708C6F00A0140B /* OutlineButton.swift */,
+				A6EB00ED24708D8A00A0140B /* ButtonPrototypeController.swift */,
 			);
-			path = Duration;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		DC807E60246FB36F00046D67 /* BottomModel */ = {
@@ -684,7 +699,6 @@
 				DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */,
 				2F04212D246A25CF005FB1D0 /* Localizable.strings in Resources */,
 				2F72CE6724687CD100750785 /* User.json in Resources */,
-				2F0B515A246E008400BE42BC /* Post.storyboard in Resources */,
 				2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */,
 				2F042197246CE4A7005FB1D0 /* Auth.storyboard in Resources */,
 				DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */,
@@ -698,6 +712,7 @@
 				DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */,
 				2F042192246CD017005FB1D0 /* Search.storyboard in Resources */,
 				2F0C3C6A2471E0F70002B384 /* Filters.storyboard in Resources */,
+				2F426B6E2472CA09007A4796 /* Post.storyboard in Resources */,
 				DDDB550C2468AF92008EA75A /* Poppins-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,34 +774,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6EB00EA24708C5B00A0140B /* InactiveButton.swift in Sources */,
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
 				2F04219E246CE99C005FB1D0 /* Success.swift in Sources */,
 				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
 				2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
+				A6EB00E82470887400A0140B /* BoldButton.swift in Sources */,
 				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
 				DC807E65246FB37000046D67 /* BottomModal.swift in Sources */,
 				DC807E73247027D800046D67 /* Fonts.swift in Sources */,
 				2F04218A246CCBFA005FB1D0 /* FeedViewController.swift in Sources */,
 				2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */,
 				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
-				2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */,
 				DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */,
+				2F426B672472CA09007A4796 /* OfferRequest.swift in Sources */,
 				2F042199246CE4B3005FB1D0 /* LogInViewController.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
+				2F426B6A2472CA09007A4796 /* CreatePostHeader.swift in Sources */,
+				2F426B642472CA09007A4796 /* Visibility.swift in Sources */,
+				A6EB00EE24708D8A00A0140B /* ButtonPrototypeController.swift in Sources */,
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
 				DC807E6F247027CF00046D67 /* SessionManager.swift in Sources */,
-				C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */,
 				2F0421A6246D0D39005FB1D0 /* Environment.swift in Sources */,
 				2F72CE512468785200750785 /* URLSession+Networking.swift in Sources */,
 				DC807E5F246FB1C000046D67 /* Organization.swift in Sources */,
+				2F426B6D2472CA09007A4796 /* CreatePostEntitySelectionModal.swift in Sources */,
 				2F0421A2246CF27B005FB1D0 /* AuthCredentials.swift in Sources */,
 				2F72CE59246878BF00750785 /* API.swift in Sources */,
 				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
-				2F0B5167246E0DF200BE42BC /* CreatePostHeader.swift in Sources */,
-				DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */,
+				2F426B6C2472CA09007A4796 /* CreatePostViewController.swift in Sources */,
+				2F426B692472CA09007A4796 /* Duration.swift in Sources */,
 				2F0C3C672471DE660002B384 /* UINavigationBar+FightPandemics.swift in Sources */,
+				2F426B6B2472CA09007A4796 /* CreatePostBody.swift in Sources */,
 				0322FA13246E23D0009507D7 /* TagView.swift in Sources */,
 				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
 				DC807E6A247027C700046D67 /* JSONFileReader.swift in Sources */,
@@ -795,28 +816,28 @@
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */,
 				2F042190246CCD4A005FB1D0 /* ProfileViewController.swift in Sources */,
+				2F426B652472CA09007A4796 /* PostVisibilitySelectionView.swift in Sources */,
 				2F0421A4246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift in Sources */,
-				C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
-				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
-				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
+				2F426B682472CA09007A4796 /* IndividualOrg.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
 				DC807E64246FB37000046D67 /* BottomModalTransitionDelegate.swift in Sources */,
 				2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */,
 				2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */,
 				2F0B5161246E084D00BE42BC /* MenuViewController.swift in Sources */,
 				2F04213F246A2CCD005FB1D0 /* String+FightPandemics.swift in Sources */,
+				A6EB00E62470841500A0140B /* RegularButton.swift in Sources */,
 				DC807E6B247027C700046D67 /* JSONFileReaderError.swift in Sources */,
 				DC807E66246FB37000046D67 /* BottomModalPresentationController.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
+				A6EB00EC24708C6F00A0140B /* OutlineButton.swift in Sources */,
 				DC807E5B246FB02300046D67 /* Entity.swift in Sources */,
-				2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */,
+				2F426B662472CA09007A4796 /* CreatePostFooter.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,
 				2F0C3C42246ECA660002B384 /* ConstrainableView.swift in Sources */,
-				2F0B5166246E0DF200BE42BC /* CreatePostFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

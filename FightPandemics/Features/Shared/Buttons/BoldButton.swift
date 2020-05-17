@@ -1,8 +1,8 @@
 //
-//  ProfileViewController.swift
+//  BoldButton.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/13/20.
+//  Created by Luciano Schillagi on 5/16/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,39 +26,34 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+class BoldButton: UIButton {
 
-    // MARK: - Properties
-
-    var navigator: Navigator!
-    var sessionManager: SessionManager!
-
-    // MARK: - Overrides
-
-    // MARK: View life-cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupUI()
+    // MARK: Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupBoldButton()
     }
 
-    // MARK: - Instance methods
-
-    // MARK: Private instance methods
-
-    private func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(logOut))
-
-        print("HOAA")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupBoldButton()
     }
 
-    @objc private func logOut() {
-        sessionManager.logOut()
-        navigator.navigateToLogIn()
+    // MARK: User Action Methods
+    @objc func boldButtonTapped() {
+        print("Bold Button Tapped!")
+    }
+
+    // MARK: Setup UI Methods
+    func setupBoldButton() {
+        setTitle("Post", for: .normal)
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
+        backgroundColor = .blue
+        layer.cornerRadius = 25
+        addTarget(self,
+                  action: #selector(self.boldButtonTapped),
+                  for: .touchUpInside)
     }
 
 }

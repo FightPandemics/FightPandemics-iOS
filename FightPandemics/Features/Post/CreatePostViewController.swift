@@ -65,6 +65,8 @@ class CreatePostViewController: UIViewController {
         thirdView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
         self.view.addSubview(thirdView)
         thirdView.addSubview(createPostFooter)
+
+         print("HOLA")
     }
 
 }

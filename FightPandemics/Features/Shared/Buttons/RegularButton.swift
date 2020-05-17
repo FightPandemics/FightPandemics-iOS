@@ -1,8 +1,8 @@
 //
-//  ProfileViewController.swift
+//  RegularButton.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/13/20.
+//  Created by Luciano Schillagi on 5/16/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,39 +26,34 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+class RegularButton: UIButton {
 
-    // MARK: - Properties
-
-    var navigator: Navigator!
-    var sessionManager: SessionManager!
-
-    // MARK: - Overrides
-
-    // MARK: View life-cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupUI()
+    // MARK: Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupRegularButton()
     }
 
-    // MARK: - Instance methods
-
-    // MARK: Private instance methods
-
-    private func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(logOut))
-
-        print("HOAA")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupRegularButton()
     }
 
-    @objc private func logOut() {
-        sessionManager.logOut()
-        navigator.navigateToLogIn()
+    // MARK: User Action Methods
+    @objc func regularButtonTapped() {
+        print("Regular Button Tapped!")
+    }
+
+    // MARK: Setup UI Methods
+    func setupRegularButton() {
+//      setTitle("Setting the title here", for: .normal)
+        setTitleColor(.white, for: .normal)
+        backgroundColor = .blue
+        titleLabel?.font = UIFont(name: "DMSans-Regular", size: 18)
+        layer.cornerRadius = 25
+        addTarget(self,
+                  action: #selector(self.regularButtonTapped),
+                  for: .touchUpInside)
     }
 
 }

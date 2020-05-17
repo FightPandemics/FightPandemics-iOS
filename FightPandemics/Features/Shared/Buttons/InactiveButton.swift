@@ -1,8 +1,8 @@
 //
-//  ProfileViewController.swift
+//  InactiveButton.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/13/20.
+//  Created by Luciano Schillagi on 5/16/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,39 +26,28 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+class InactiveButton: UIButton {
 
-    // MARK: - Properties
-
-    var navigator: Navigator!
-    var sessionManager: SessionManager!
-
-    // MARK: - Overrides
-
-    // MARK: View life-cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupUI()
+    // MARK: Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupInactiveButton()
     }
 
-    // MARK: - Instance methods
-
-    // MARK: Private instance methods
-
-    private func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(logOut))
-
-        print("HOAA")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupInactiveButton()
     }
 
-    @objc private func logOut() {
-        sessionManager.logOut()
-        navigator.navigateToLogIn()
+    // MARK: Setup UI Methods
+    func setupInactiveButton() {
+        setTitle("Apply filters", for: .normal)
+        isEnabled = false
+        setTitleColor(.white, for: .normal)
+        backgroundColor = .blue
+        alpha = 0.5
+        titleLabel?.font = UIFont(name: "DMSans-Regular", size: 18)
+        layer.cornerRadius = 25
     }
 
 }

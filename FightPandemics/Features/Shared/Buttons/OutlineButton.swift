@@ -1,8 +1,8 @@
 //
-//  ProfileViewController.swift
+//  OutlineButton.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/13/20.
+//  Created by Luciano Schillagi on 5/16/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,39 +26,35 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+class OutlineButton: UIButton {
 
-    // MARK: - Properties
-
-    var navigator: Navigator!
-    var sessionManager: SessionManager!
-
-    // MARK: - Overrides
-
-    // MARK: View life-cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupUI()
+    // MARK: Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupOutlineButton()
     }
 
-    // MARK: - Instance methods
-
-    // MARK: Private instance methods
-
-    private func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(logOut))
-
-        print("HOAA")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupOutlineButton()
     }
 
-    @objc private func logOut() {
-        sessionManager.logOut()
-        navigator.navigateToLogIn()
+    // MARK: User Action Methods
+    @objc func outlineButtonTapped() {
+        print("Outline Button Tapped!")
     }
 
+    // MARK: Setup UI Methods
+    func setupOutlineButton() {
+        setTitle("Close", for: .normal)
+        setTitleColor(.blue, for: .normal)
+        backgroundColor = .clear
+        titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        layer.cornerRadius = 25
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.blue.cgColor
+        addTarget(self,
+                  action: #selector(self.outlineButtonTapped),
+                  for: .touchUpInside)
+    }
 }

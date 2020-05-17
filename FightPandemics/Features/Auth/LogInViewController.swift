@@ -60,6 +60,7 @@ final class LogInViewController: UIViewController {
         loadingSpinner.color = .white
         loadingSpinner.makeSubview(of: view)
             .center()
+
     }
 
     @objc private func logIn() {
