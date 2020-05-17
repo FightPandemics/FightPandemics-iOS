@@ -58,10 +58,11 @@ final class RootNavigationController: UINavigationController {
                                                   style: .plain,
                                                   target: self,
                                                   action: #selector(filterButtonTapped))
+        navigationBar.tintColor = UIColor(hexString: "#425AF2")
     }
 
     @objc private func filterButtonTapped() {
-        // TODO: Naigate to Filters: https://github.com/FightPandemics/FightPandemics-iOS/issues/89
+        // TODO: Navigate to Filters: https://github.com/FightPandemics/FightPandemics-iOS/issues/89
         print("TBD")
     }
 
