@@ -36,9 +36,9 @@ final class Navigator {
     private var rootWindow: UIWindow?
     private var rootTabBar: RootTabBarController?
     private var logInNavigationController: UINavigationController?
-    private var feedNavigationController: UINavigationController?
-    private var searchNavigationController: UINavigationController?
-    private var profileNavigationController: UINavigationController?
+    private var feedNavigationController: RootNavigationController?
+    private var searchNavigationController: RootNavigationController?
+    private var profileNavigationController: RootNavigationController?
     private var presentedBottomModal: BottomModal?
 
     private let autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen

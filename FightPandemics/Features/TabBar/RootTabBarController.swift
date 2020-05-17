@@ -79,9 +79,9 @@ final class RootTabBarController: UITabBarController {
         return tabBar.items?[tab.rawValue]
     }
 
-    func navController(_ tab: Tab) -> UINavigationController? {
+    func navController(_ tab: Tab) -> RootNavigationController? {
         assert(tab.rawValue >= 0 && tab.rawValue <= Tab.allCases.count - 2, "Invalid Tab index")
-        return viewControllers?[tab.rawValue] as? UINavigationController
+        return viewControllers?[tab.rawValue] as? RootNavigationController
     }
 
     // MARK: Private instance methods
