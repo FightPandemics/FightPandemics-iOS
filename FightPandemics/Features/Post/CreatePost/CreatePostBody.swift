@@ -27,8 +27,10 @@
 import UIKit
 
 class CreatePostBody: UIView {
+
     private var title = UITextField()
     private var body = UITextView()
+
     func setUp () {
         // set Up Title
         title.attributedPlaceholder = NSAttributedString(string: "CreatePostFormBodyTitlePlaceholder".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#939393")])
@@ -36,25 +38,21 @@ class CreatePostBody: UIView {
         title.layer.backgroundColor = UIColor.clear.cgColor
         title.layer.borderWidth = 0
         title.layer.borderColor = UIColor.clear.cgColor
-        self.addSubview(title)
+        title.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width - 50)
+            .height(34)
+            .leading(to: \.leadingAnchor, constant: 25)
+            .top(to: \.topAnchor, constant: 26)
         // set up body
         body.text = "CreatePostFormBodyContentPlaceholder".localized
         body.textAlignment = .left
         body.textColor = UIColor(hexString: "#939393")
         body.font = Fonts.poppinsRegular.customFont(size: 14)
-        self.addSubview(body)
-        makeConstraints()
+        body.makeSubview(of: self)
+            .width(310)
+            .height(235)
+            .leading(to: \.leadingAnchor, constant: 25)
+            .top(to: \.bottomAnchor, of: title, constant: 15)
     }
-    func makeConstraints () {
-        title.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: title, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 50)).isActive = true
-        NSLayoutConstraint(item: title, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 34).isActive = true
-        NSLayoutConstraint(item: title, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 25).isActive = true
-        NSLayoutConstraint(item: title, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 26).isActive = true
-        body.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: body, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 310).isActive = true
-        NSLayoutConstraint(item: body, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 235).isActive = true
-        NSLayoutConstraint(item: body, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 25).isActive = true
-        NSLayoutConstraint(item: body, attribute: .top, relatedBy: .equal, toItem: title, attribute: .bottom, multiplier: 1, constant: 15).isActive = true
-    }
+
 }

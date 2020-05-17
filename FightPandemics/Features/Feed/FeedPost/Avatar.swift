@@ -55,7 +55,7 @@ class Avatar: UIView {
         label.backgroundColor = UIColor(hexString: "#F3F4FE")
         label.layer.borderWidth = 1
         label.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
-        self.addSubview(label)
+        label.makeSubview(of: self)
     }
 
     private func setUpWithImage(image: UIImage) {
@@ -70,7 +70,7 @@ class Avatar: UIView {
         imageView.clipsToBounds = true
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = self.frame.size.height / 2
-        self.addSubview(imageView)
+        imageView.makeSubview(of: self)
     }
 
 }

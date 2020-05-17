@@ -60,12 +60,12 @@ class FeedPrototypeViewController: UIViewController {
 
         let firstView = UIView()
         firstView.frame = CGRect(x: 0, y: 50, width: (UIScreen.main.bounds.width), height: 600)
-        self.view.addSubview(firstView)
-        firstView.addSubview(visibility)
+        firstView.makeSubview(of: view)
+        visibility.makeSubview(of: firstView)
 
         let secondView = UIView()
         secondView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
-        self.view.addSubview(secondView)
+        secondView.makeSubview(of: view)
     }
 
 }

@@ -40,73 +40,66 @@ class PostFooter: UIView {
         // like image
         likeImg.frame.size.width = 20
         likeImg.frame.size.height = 18
-        self.addSubview(likeImg)
         // like label
         likeLbl.text = "\(likeNum)"
         likeLbl.textAlignment = .left
         likeLbl.textColor = UIColor(hexString: "#939393")
         likeLbl.font = UIFont(name: "System", size: 14)
-        self.addSubview(likeLbl)
         // comment image
         commentImg.frame.size.width = 20
         commentImg.frame.size.height = 20
-        self.addSubview(commentImg)
         // comment label
         commentLbl.text = "\(commentNum)"
         commentLbl.textAlignment = .left
         commentLbl.textColor = UIColor(hexString: "#939393")
         commentLbl.font = UIFont(name: "System", size: 14)
-        self.addSubview(commentLbl)
         // send image
         sendImg.frame.size.width = 20
         sendImg.frame.size.height = 17
-        self.addSubview(sendImg)
         // send label
         sendLbl.text = "\(sendNum)"
         sendLbl.textAlignment = .left
         sendLbl.textColor = UIColor(hexString: "#939393")
         sendLbl.font = UIFont(name: "System", size: 14)
-        self.addSubview(sendLbl)
         // comment text field
         cmtTextField.frame.size.width = CGFloat(UIScreen.main.bounds.width - 47)
         cmtTextField.frame.size.height = 46
         cmtTextField.font = UIFont(name: "System", size: 14)
-        cmtTextField.placeholder = "        Write a comment      "
+        cmtTextField.placeholder = "FeedPostWriteCommentCTA".localized
         cmtTextField.layer.cornerRadius = cmtTextField.frame.size.height / 2
         cmtTextField.layer.masksToBounds = true
         cmtTextField.layer.borderWidth = 0
         cmtTextField.backgroundColor = UIColor(hexString: "#F6F7FB")
-        self.addSubview(cmtTextField)
         makeConstraints()
     }
 
     private func makeConstraints () {
         self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
-        NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 140).isActive = true
-        likeImg.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: likeImg, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: likeImg, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 25).isActive = true
-        likeLbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: likeLbl, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: likeLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 55).isActive = true
-        commentImg.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: commentImg, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: commentImg, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 117).isActive = true
-        commentLbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: commentLbl, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: commentLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 147).isActive = true
-        sendImg.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: sendImg, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: sendImg, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 199).isActive = true
-        sendLbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: sendLbl, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 24).isActive = true
-        NSLayoutConstraint(item: sendLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 225).isActive = true
-        cmtTextField.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: cmtTextField, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: (UIScreen.main.bounds.width - 47)).isActive = true
-        NSLayoutConstraint(item: cmtTextField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 46).isActive = true
-        NSLayoutConstraint(item: cmtTextField, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 70).isActive = true
-        NSLayoutConstraint(item: cmtTextField, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 25).isActive = true
+        addWidthConstraint(UIScreen.main.bounds.width - 47)
+        addHeightConstraint(140)
+        likeImg.makeSubview(of: self)
+            .top(to: \.topAnchor, constant: 24)
+            .leading(to: \.leadingAnchor, constant: 25)
+        likeLbl.makeSubview(of: self)
+            .top(to: \.topAnchor, constant: 24)
+            .leading(to: \.leadingAnchor, constant: 55)
+        commentImg.makeSubview(of: self)
+            .top(to: \.topAnchor, constant: 24)
+            .leading(to: \.leadingAnchor, constant: 117)
+        commentLbl.makeSubview(of: self)
+            .top(to: \.topAnchor, constant: 24)
+            .leading(to: \.leadingAnchor, constant: 147)
+        sendImg.makeSubview(of: self)
+            .top(to: \.topAnchor, constant: 24)
+            .leading(to: \.leadingAnchor, constant: 199)
+        sendLbl.makeSubview(of: self)
+            .top(to: \.topAnchor, constant: 24)
+            .leading(to: \.leadingAnchor, constant: 225)
+        cmtTextField.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width - 47)
+            .height(46)
+            .top(to: \.topAnchor, constant: 70)
+            .leading(to: \.leadingAnchor, constant: 25)
     }
 
 }
