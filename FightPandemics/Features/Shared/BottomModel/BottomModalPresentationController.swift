@@ -38,14 +38,10 @@ class BottomModalPresentationController: UIPresentationController {
 
     override func presentationTransitionWillBegin() {
         guard let containerView = containerView else { return }
-        containerView.insertSubview(dimmingView, at: 0)
-        let constraints = [
-            dimmingView.topAnchor.constraint(equalTo: containerView.topAnchor),
-            dimmingView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            dimmingView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            dimmingView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
+
+        dimmingView.makeSubview(of: containerView)
+            .pinToEdges()
+        containerView.sendSubviewToBack(dimmingView)
 
         guard let coordinator = presentedViewController.transitionCoordinator else {
             dimmingView.alpha = 1.0
@@ -95,7 +91,6 @@ class BottomModalPresentationController: UIPresentationController {
 
 extension BottomModalPresentationController {
     func configureViews() {
-        dimmingView.translatesAutoresizingMaskIntoConstraints = false
         dimmingView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2952696918)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismiss))
         dimmingView.addGestureRecognizer(recognizer)

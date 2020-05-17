@@ -49,17 +49,13 @@ final class CreatePostEntitySelectionModal: UIViewController {
     // MARK: Private instance methods
 
     private func setupUI() {
-        confirmButton.translatesAutoresizingMaskIntoConstraints = false
         confirmButton.backgroundColor = UIColor(hexString: "#425AF2")
         confirmButton.setTitle("IndividualOrgConfirmButton".localized, for: .normal)
         confirmButton.setTitleColor(.white, for: .normal)
-        view.addSubview(confirmButton)
-        NSLayoutConstraint.activate([
-            confirmButton.widthAnchor.constraint(equalToConstant: 158),
-            confirmButton.heightAnchor.constraint(equalToConstant: 44),
-            confirmButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            confirmButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        confirmButton.makeSubview(of: view)
+            .width(158)
+            .height(44)
+            .center()
         confirmButton.addTarget(self, action: #selector(confirmTapped), for: .touchUpInside)
     }
 

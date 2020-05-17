@@ -31,8 +31,6 @@ class CreatePostViewController: UIViewController {
     var postingEntity: Entity!
     var navigator: Navigator!
 
-    private var feedPost = FeedPost()
-    private var postFooter = PostFooter()
     private var createPostHeader = CreatePostHeader()
     private var createPostBody = CreatePostBody()
     private var createPostFooter = CreatePostFooter()

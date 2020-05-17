@@ -35,12 +35,8 @@ class CreatePostHeader: UIView {
     private var selectionBtn = UIButton()
     private var questionLbl = UILabel()
     private var sepLine = UIView()
+
     func setUp () {
-        setUpUpper()
-        setUpMiddle()
-        setUpConstraints()
-    }
-    func setUpUpper () {
         //  header title
         createPostTitle.text = "CreatePostFormTitle".localized
         createPostTitle.textAlignment = .left
@@ -49,20 +45,15 @@ class CreatePostHeader: UIView {
         createPostTitle.frame.size.width = 154
         createPostTitle.font = Fonts.poppinsBold.customFont(size: 22)
         createPostTitle.numberOfLines = 0
-        self.addSubview(createPostTitle)
         //  close button
         cancelButton.setImage(#imageLiteral(resourceName: "x"), for: .normal)
         cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
-        self.addSubview(cancelButton)
-    }
-    func setUpMiddle () {
         // question label
         questionLbl.text = "CreatePostFormSubtitle".localized
         questionLbl.textAlignment = .left
         questionLbl.font = Fonts.dmSansRegular.customFont(size: 13)
         questionLbl.frame.size.height = 22
         questionLbl.frame.size.width = 229
-        self.addSubview(questionLbl)
         //  selection button
         selectionBtn.setTitle("CreatePostTypeSelectionCTA".localized, for: .normal)
         selectionBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
@@ -78,46 +69,40 @@ class CreatePostHeader: UIView {
         selectionBtn.sizeToFit()
         selectionBtn.layoutIfNeeded()
         selectionBtn.semanticContentAttribute = .forceRightToLeft
-        self.addSubview(selectionBtn)
         sepLine.backgroundColor = UIColor(hexString: "#D7D7D7")
         sepLine.frame.size.width = UIScreen.main.bounds.width
         sepLine.frame.size.height = 1
-        self.addSubview(sepLine)
+        setUpConstraints()
     }
-    func setUpConstraints () {
-        setUpUpperConstraints()
-        setUpMidConstraints()
-    }
-    func setUpUpperConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        createPostTitle.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: createPostTitle, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 154).isActive = true //240
-        NSLayoutConstraint(item: createPostTitle, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 27).isActive = true
-        NSLayoutConstraint(item: createPostTitle, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 32).isActive = true
-        NSLayoutConstraint(item: createPostTitle, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
-        cancelButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: cancelButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 44).isActive = true
-        NSLayoutConstraint(item: cancelButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 44).isActive = true
-        NSLayoutConstraint(item: cancelButton, attribute: .left, relatedBy: .equal, toItem: createPostTitle, attribute: .right, multiplier: 1, constant: 100).isActive = true //70 proportional sizes
-        NSLayoutConstraint(item: cancelButton, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 33).isActive = true
-        NSLayoutConstraint(item: cancelButton, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: (UIScreen.main.bounds.width - 48)).isActive = true
-    }
-    func setUpMidConstraints () {
-        questionLbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: questionLbl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 229).isActive = true
-        NSLayoutConstraint(item: questionLbl, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 22).isActive = true
-        NSLayoutConstraint(item: questionLbl, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: questionLbl, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 79).isActive = true
-        selectionBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: selectionBtn, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 131).isActive = true
-        NSLayoutConstraint(item: selectionBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 28).isActive = true
-        NSLayoutConstraint(item: selectionBtn, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 23).isActive = true
-        NSLayoutConstraint(item: selectionBtn, attribute: .top, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 113).isActive = true
-        sepLine.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: sepLine, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIScreen.main.bounds.width).isActive = true
-        NSLayoutConstraint(item: sepLine, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1).isActive = true
-        NSLayoutConstraint(item: sepLine, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: sepLine, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 162).isActive = true
+
+    private func setUpConstraints () {
+        createPostTitle.makeSubview(of: self)
+            .width(154)
+            .height(27)
+            .top(to: \.topAnchor, constant: 32)
+            .leading(to: \.leadingAnchor, constant: 23)
+        cancelButton.makeSubview(of: self)
+            .width(44)
+            .height(44)
+            .leading(to: \.trailingAnchor, constant: 100)
+            .leading(to: \.trailingAnchor, of: createPostTitle, constant: 100)
+            .top(to: \.topAnchor, constant: 33)
+            .leading(to: \.leadingAnchor, constant: UIScreen.main.bounds.width - 48)
+        questionLbl.makeSubview(of: self)
+            .width(229)
+            .height(22)
+            .leading(to: \.leadingAnchor, constant: 23)
+            .top(to: \.topAnchor, constant: 79)
+        selectionBtn.makeSubview(of: self)
+            .width(131)
+            .height(28)
+            .leading(to: \.leadingAnchor, constant: 23)
+            .top(to: \.bottomAnchor, constant: 113)
+        sepLine.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width)
+            .height(1)
+            .leading(to: \.leadingAnchor)
+            .top(to: \.topAnchor, constant: 162)
     }
 
     @objc private func cancelButtonTapped() {
