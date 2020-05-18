@@ -88,6 +88,8 @@
 		DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */; };
 		DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */; };
 		DDDB55122468B2E3008EA75A /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */; };
+		DDF9290A2471814700973488 /* PostCreationTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF929092471814700973488 /* PostCreationTagView.swift */; };
+		DDF9290C2472055600973488 /* PostTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF9290B2472055600973488 /* PostTagCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +195,8 @@
 		DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		DDF929092471814700973488 /* PostCreationTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreationTagView.swift; sourceTree = "<group>"; };
+		DDF9290B2472055600973488 /* PostTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTagCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,8 @@
 				2F0B5163246E0DF200BE42BC /* CreatePostFooter.swift */,
 				2F0B5164246E0DF200BE42BC /* CreatePostHeader.swift */,
 				2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */,
+				DDF929092471814700973488 /* PostCreationTagView.swift */,
+				DDF9290B2472055600973488 /* PostTagCell.swift */,
 			);
 			path = CreatePost;
 			sourceTree = "<group>";
@@ -809,7 +815,9 @@
 				2F0B5161246E084D00BE42BC /* MenuViewController.swift in Sources */,
 				2F04213F246A2CCD005FB1D0 /* String+FightPandemics.swift in Sources */,
 				DC807E6B247027C700046D67 /* JSONFileReaderError.swift in Sources */,
+				DDF9290A2471814700973488 /* PostCreationTagView.swift in Sources */,
 				DC807E66246FB37000046D67 /* BottomModalPresentationController.swift in Sources */,
+				DDF9290C2472055600973488 /* PostTagCell.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
 				DC807E5B246FB02300046D67 /* Entity.swift in Sources */,
 				2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */,
