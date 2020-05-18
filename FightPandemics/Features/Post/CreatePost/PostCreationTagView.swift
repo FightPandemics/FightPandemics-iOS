@@ -59,12 +59,11 @@ class PostCreationTagView: UIView {
     private lazy var addTagButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(hexString: "#425AF2")
-        button.layer.borderWidth = 1
         button.layer.cornerRadius = Dimension.buttonHeight / 2
         button.layer.masksToBounds = true
         button.setTitle(addTagButtonTitle, for: .normal)
         button.titleLabel?.font = Fonts.poppinsRegular.customFont(size: 15)
-        button.titleLabel?.textColor = .white
+        button.setTitleColor(.white, for: .normal)
         return button
     }()
 
