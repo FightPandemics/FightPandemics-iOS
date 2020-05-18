@@ -65,10 +65,10 @@
 		2FB342042468FFCC007E397F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB342032468FFCC007E397F /* Navigator.swift */; };
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
-		C0E5EDF824705CC200F42319 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */; };
-		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
+		C018DD782472EF2900EEB3FC /* TabBarUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD772472EF2900EEB3FC /* TabBarUI.swift */; };
+		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
 		DC807E5F246FB1C000046D67 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5E246FB1C000046D67 /* Organization.swift */; };
@@ -172,6 +172,7 @@
 		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
+		C018DD772472EF2900EEB3FC /* TabBarUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarUI.swift; sourceTree = "<group>"; };
 		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
@@ -297,6 +298,7 @@
 		2F0B5162246E0DF200BE42BC /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
+				C018DD762472EE0800EEB3FC /* TabBarUI */,
 				C0E5EDF92470AA2D00F42319 /* Duration */,
 				2F426B3A2472C2A3007A4796 /* Visibility */,
 				C013ACD8246FF3C500F22BE7 /* OfferRequest */,
@@ -524,6 +526,14 @@
 				C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */,
 			);
 			path = OfferRequest;
+			sourceTree = "<group>";
+		};
+		C018DD762472EE0800EEB3FC /* TabBarUI */ = {
+			isa = PBXGroup;
+			children = (
+				C018DD772472EF2900EEB3FC /* TabBarUI.swift */,
+			);
+			path = TabBarUI;
 			sourceTree = "<group>";
 		};
 		C0E5EDF92470AA2D00F42319 /* Duration */ = {
@@ -787,6 +797,7 @@
 				2F0B5167246E0DF200BE42BC /* CreatePostHeader.swift in Sources */,
 				DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */,
 				2F0C3C672471DE660002B384 /* UINavigationBar+FightPandemics.swift in Sources */,
+				C018DD782472EF2900EEB3FC /* TabBarUI.swift in Sources */,
 				0322FA13246E23D0009507D7 /* TagView.swift in Sources */,
 				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
 				DC807E6A247027C700046D67 /* JSONFileReader.swift in Sources */,
