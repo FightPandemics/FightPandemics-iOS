@@ -48,10 +48,18 @@
 "OfferRequestRequestBtn" = "Requesting";
 "OfferRequestCloseBtn" = "Close";
 "OfferRequestConfirmBtn" = "Confirm";
+
 "TabBarUIFeedBtn" = "Feed";
 "TabBarUISearchBtn" = "Search";
 "TabBarUIInboxBtn" = "Inbox";
 "TabBarUIProfileBtn" = "Profile";
+
+"Close-Button-Text" = "Close";
+"Tag-Button-With-Unselected-Tag" = "Add Tag";
+"Tag-Btn-With-One-Selected-Tag" = "Add 1 Tag";
+"Tag-Btn-With-Many-Selected-Tags" = "Add %@ Tags";
+"Choose-Tags-Title" = "Choose Tags";
+
 
 // MARK: Profile
 
