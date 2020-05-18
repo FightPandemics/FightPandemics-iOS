@@ -39,7 +39,7 @@ class CreatePostFooter: UIView {
     func setUp () {
         setUpUpper()
         setUpLower()
-        makeConsraints()
+        makeConstraints()
     }
 
     private func setUpUpper () {
@@ -122,7 +122,7 @@ class CreatePostFooter: UIView {
         postBtn.layoutIfNeeded()
     }
 
-    private func makeConsraints() {
+    private func makeConstraints() {
         self.translatesAutoresizingMaskIntoConstraints = false
         sepLine.makeSubview(of: self)
             .width(UIScreen.main.bounds.width)
