@@ -75,13 +75,13 @@ class TabBarUI: UIView {
         profileBtn.tintColor = (selected.rawValue == 5) ? .black : UIColor(hexString: "#979797")
         profileBtn.imageView?.contentMode = .scaleAspectFit
         self.addSubview(profileBtn)
-        feedLbl.attributedText = NSAttributedString(string: "Feed", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
+        feedLbl.attributedText = NSAttributedString(string: "TabBarUIFeedBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
         self.addSubview(feedLbl)
-        searchLbl.attributedText = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
+        searchLbl.attributedText = NSAttributedString(string: "TabBarUISearchBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
         self.addSubview(searchLbl)
-        inboxLbl.attributedText = NSAttributedString(string: "Inbox", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
+        inboxLbl.attributedText = NSAttributedString(string: "TabBarUIInboxBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
         self.addSubview(inboxLbl)
-        profileLbl.attributedText = NSAttributedString(string: "Profile", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
+        profileLbl.attributedText = NSAttributedString(string: "TabBarUIProfileBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
         self.addSubview(profileLbl)
         setUpStacks(selected: selected)
     }
