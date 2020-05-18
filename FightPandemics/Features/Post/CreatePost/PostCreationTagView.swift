@@ -41,32 +41,28 @@ class PostCreationTagView: UIView {
 
     private var tagCount: Int? {
         didSet {
-            if let tagCount = tagCount {
-                let localizedString = String.localizedStringWithFormat(stringFormat, String(tagCount))
-                addTagButton.setTitle(localizedString, for: .normal)
-            }
+             addTagButton.setTitle(addTagButtonTitle, for: .normal)
         }
     }
 
-    private var stringFormat: String {
+    private var addTagButtonTitle: String {
         let tagCount = self.tagCount ?? 0
         if tagCount == 0 {
-            return "Tag-Button-With-Unselected-Tag".localized
+            return "Tag-Button-With-Unselected-Tag".localized(formattedWith: String(tagCount))
         } else if tagCount == 1 {
-            return "Tag-Btn-With-One-Selected-Tag".localized
+            return "Tag-Btn-With-One-Selected-Tag".localized(formattedWith: String(tagCount))
         } else {
-            return "Tag-Btn-With-Many-Selected-Tags".localized
+            return "Tag-Btn-With-Many-Selected-Tags".localized(formattedWith: String(tagCount))
         }
     }
 
     private lazy var addTagButton: UIButton = {
         let button = UIButton()
-        let localizedString = String.localizedStringWithFormat(stringFormat, 0)
         button.backgroundColor = UIColor(hexString: "#425AF2")
         button.layer.borderWidth = 1
         button.layer.cornerRadius = Dimension.buttonHeight / 2
         button.layer.masksToBounds = true
-        button.setTitle(localizedString, for: .normal)
+        button.setTitle(addTagButtonTitle, for: .normal)
         button.titleLabel?.font = Fonts.poppinsRegular.customFont(size: 15)
         button.titleLabel?.textColor = .white
         return button
