@@ -43,7 +43,7 @@ class CreatePostFooter: UIView {
     }
 
     private func setUpUpper () {
-        // seperator line
+        // separator line
         sepLine.backgroundColor = UIColor(hexString: "#D7D7D7")
         sepLine.frame.size.width = UIScreen.main.bounds.width
         sepLine.frame.size.height = 2
