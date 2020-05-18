@@ -48,6 +48,10 @@
 "OfferRequestRequestBtn" = "Requesting";
 "OfferRequestCloseBtn" = "Close";
 "OfferRequestConfirmBtn" = "Confirm";
+"TabBarUIFeedBtn" = "Feed";
+"TabBarUISearchBtn" = "Search";
+"TabBarUIInboxBtn" = "Inbox";
+"TabBarUIProfileBtn" = "Profile";
 
 // MARK: Profile
 
