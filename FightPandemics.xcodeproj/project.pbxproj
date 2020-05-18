@@ -639,6 +639,7 @@
 			buildConfigurationList = 2F9EFE61245DFB1900E86700 /* Build configuration list for PBXNativeTarget "FightPandemics" */;
 			buildPhases = (
 				7B36C1FC9B93A09FE337CAB7 /* [CP] Check Pods Manifest.lock */,
+				4994B09C2472F85E00175C5D /* SwitfFormat */,
 				2F9EFE49245DFB1700E86700 /* Sources */,
 				2F9EFE4A245DFB1700E86700 /* Frameworks */,
 				2F9EFE4B245DFB1700E86700 /* Resources */,
@@ -766,6 +767,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		4994B09C2472F85E00175C5D /* SwitfFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwitfFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --swiftversion \"5.0\" . \"${SRCROOT}\"\n";
 		};
 		7B36C1FC9B93A09FE337CAB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
