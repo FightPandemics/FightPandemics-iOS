@@ -27,12 +27,10 @@
 import UIKit
 
 extension UINavigationBar {
-
     /// Removes hairline from bottom of nav bar.
     func removeHairline() {
         isTranslucent = false
         backgroundColor = .white
         shadowImage = UIImage()
     }
-
 }

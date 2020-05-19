@@ -27,7 +27,6 @@
 import UIKit
 
 class BottomModal {
-
     let body: UIViewController
     let height: CGFloat
 
@@ -50,5 +49,4 @@ class BottomModal {
     func dismiss(then: @escaping () -> Void) {
         presentingViewController?.dismiss(animated: true, completion: then)
     }
-
 }

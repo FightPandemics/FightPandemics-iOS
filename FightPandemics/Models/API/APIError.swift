@@ -32,11 +32,10 @@ enum APIError: Error, LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .httpClientError(let error):
+        case let .httpClientError(error):
             return error.localizedDescription
-        case .unimplemented(let endpoint):
+        case let .unimplemented(endpoint):
             return "API endpoint not yet implemented: \(endpoint)"
         }
     }
-
 }

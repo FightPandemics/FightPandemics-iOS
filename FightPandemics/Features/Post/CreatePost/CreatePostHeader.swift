@@ -27,7 +27,6 @@
 import UIKit
 
 class CreatePostHeader: UIView {
-
     var closeAction: (() -> Void)?
 
     private var createPostTitle = UILabel()
@@ -36,7 +35,7 @@ class CreatePostHeader: UIView {
     private var questionLbl = UILabel()
     private var sepLine = UIView()
 
-    func setUp () {
+    func setUp() {
         //  header title
         createPostTitle.text = "CreatePostFormTitle".localized
         createPostTitle.textAlignment = .left
@@ -75,7 +74,7 @@ class CreatePostHeader: UIView {
         setUpConstraints()
     }
 
-    private func setUpConstraints () {
+    private func setUpConstraints() {
         createPostTitle.makeSubview(of: self)
             .width(154)
             .height(27)
@@ -108,5 +107,4 @@ class CreatePostHeader: UIView {
     @objc private func cancelButtonTapped() {
         closeAction?()
     }
-
 }

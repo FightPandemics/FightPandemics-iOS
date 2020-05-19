@@ -28,7 +28,6 @@ import Foundation
 
 /// HTTP client returning JSON that utilizes a URL session.
 class HTTPClient {
-
     // MARK: - Properties
 
     /// URL session used for requests.
@@ -65,17 +64,17 @@ class HTTPClient {
                                         modelType: T.Type,
                                         completion: @escaping (Result<T, HTTPClientError>) -> Void) {
         sendJSONRequest(httpRequest) { [weak self] result in
-            guard let `self` = self else { return }
+            guard let self = self else { return }
 
             switch result {
-            case .success(let response):
+            case let .success(response):
                 do {
                     let model = try self.decoder.decode(modelType.self, from: response.data)
                     completion(.success(model))
                 } catch {
                     completion(.failure(.jsonParsingFailed))
                 }
-            case .failure(let error):
+            case let .failure(error):
                 completion(.failure(error))
             }
         }
@@ -84,10 +83,10 @@ class HTTPClient {
     func sendJSONRequest(_ httpRequest: HTTPRequest,
                          completion: @escaping (Result<(data: Data, json: JSON), HTTPClientError>) -> Void) {
         urlSession.httpRequest(httpRequest) { [weak self] result in
-            guard let `self` = self else { return }
+            guard let self = self else { return }
 
             switch result {
-            case .success(let data):
+            case let .success(data):
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: self.options)
 
@@ -100,10 +99,9 @@ class HTTPClient {
                 } catch {
                     completion(.failure(.invalidJSON(value: data)))
                 }
-            case .failure(let error):
+            case let .failure(error):
                 completion(.failure(.httpRequestError(error: error)))
             }
         }
     }
-
 }

@@ -28,7 +28,6 @@ import Foundation
 
 /// Reads files containing JSON.
 final class JSONFileReader {
-
     // MARK: - Properties
 
     let decoder: JSONDecoder
@@ -61,5 +60,4 @@ final class JSONFileReader {
             return .failure(.error(value: error))
         }
     }
-
 }

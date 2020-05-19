@@ -27,7 +27,6 @@
 import Foundation
 
 final class FightPandemicsAPI: API {
-
     // MARK: - Properties
 
     let baseURL: String
@@ -36,7 +35,7 @@ final class FightPandemicsAPI: API {
 
     // MARK: - Init/Deinit
 
-    init( baseURL: String, httpClient: HTTPClient, jsonFileReader: JSONFileReader) {
+    init(baseURL: String, httpClient: HTTPClient, jsonFileReader: JSONFileReader) {
         self.baseURL = baseURL
         self.httpClient = httpClient
         self.jsonFileReader = jsonFileReader
@@ -46,7 +45,7 @@ final class FightPandemicsAPI: API {
 
     // MARK: API
 
-    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void) {
+    func logIn(email _: String, password _: String, completion: @escaping (Result<User, APIError>) -> Void) {
         assertionFailure("API not implemented yet")
         completion(.failure(.unimplemented(endpoint: "/login")))
     }
@@ -82,5 +81,4 @@ final class FightPandemicsAPI: API {
             completion(downloadedLicenses)
         }
     }
-
 }

@@ -27,7 +27,6 @@
 import UIKit
 
 class PostFooter: UIView {
-
     private var likeImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
     private var likeLbl = UILabel()
     private var commentImg = UIImageView(image: #imageLiteral(resourceName: "favorite_24px"))
@@ -73,8 +72,8 @@ class PostFooter: UIView {
         makeConstraints()
     }
 
-    private func makeConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
+    private func makeConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
         addWidthConstraint(UIScreen.main.bounds.width - 47)
         addHeightConstraint(140)
         likeImg.makeSubview(of: self)
@@ -101,5 +100,4 @@ class PostFooter: UIView {
             .top(to: \.topAnchor, constant: 70)
             .leading(to: \.leadingAnchor, constant: 25)
     }
-
 }

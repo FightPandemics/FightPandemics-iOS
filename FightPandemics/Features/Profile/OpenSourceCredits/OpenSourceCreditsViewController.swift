@@ -27,7 +27,6 @@
 import UIKit
 
 final class OpenSourceCreditsViewController: UITableViewController {
-
     // MARK: - Properties
 
     var api: API!
@@ -63,11 +62,10 @@ final class OpenSourceCreditsViewController: UITableViewController {
     }
 
     private func setupUI() {
-        self.title = "OpenSourceCreditsTitle".localized
+        title = "OpenSourceCreditsTitle".localized
         loadingSpinner.makeSubview(of: view)
             .center()
     }
-
 }
 
 // MARK: - Protocol conformance
@@ -75,12 +73,11 @@ final class OpenSourceCreditsViewController: UITableViewController {
 // MARK: UITableViewDataSource
 
 extension OpenSourceCreditsViewController {
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in _: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return downloadedLicenses.count
     }
 
@@ -92,7 +89,7 @@ extension OpenSourceCreditsViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_: UITableView, estimatedHeightForRowAt _: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 }

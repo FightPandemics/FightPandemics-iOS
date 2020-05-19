@@ -31,21 +31,21 @@ open class OpenSourceTableViewCell: UITableViewCell {
 
     // MARK: - Lifecycle
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    override init(style _: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        self.setUp()
+        setUp()
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
     // MARK: - Instance methods
 
     func configure(license: (OpenSourceLicense, HTML)) {
-        self.textLabel?.attributedText = attributedContent(license: license)
-        self.textLabel?.textColor = .black
-        self.backgroundColor = .white
+        textLabel?.attributedText = attributedContent(license: license)
+        textLabel?.textColor = .black
+        backgroundColor = .white
     }
 
     // MARK: - Private instance methods
@@ -64,5 +64,4 @@ open class OpenSourceTableViewCell: UITableViewCell {
         content.append(NSAttributedString(string: license.1, attributes: detailAttributes))
         return content
     }
-
 }

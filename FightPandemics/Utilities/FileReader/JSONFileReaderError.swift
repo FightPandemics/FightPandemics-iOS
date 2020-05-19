@@ -32,11 +32,10 @@ enum JSONFileReaderError: Error, LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .fileNotFound(let fileName):
+        case let .fileNotFound(fileName):
             return "File not found: \(fileName)"
-        case .error(let error):
+        case let .error(error):
             return error.localizedDescription
         }
     }
-
 }

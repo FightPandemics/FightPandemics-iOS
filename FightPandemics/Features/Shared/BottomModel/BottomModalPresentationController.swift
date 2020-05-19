@@ -75,9 +75,9 @@ class BottomModalPresentationController: UIPresentationController {
         presentedView?.layer.cornerRadius = 10
     }
 
-    override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+    override func size(forChildContentContainer _: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
         let safeAreaInsetsBottom = containerView?.safeAreaInsets.bottom ?? CGFloat(0)
-        return CGSize(width: parentSize.width, height: (height + safeAreaInsetsBottom))
+        return CGSize(width: parentSize.width, height: height + safeAreaInsetsBottom)
     }
 
     override var frameOfPresentedViewInContainerView: CGRect {
@@ -96,7 +96,7 @@ extension BottomModalPresentationController {
         dimmingView.addGestureRecognizer(recognizer)
     }
 
-    @objc func dismiss(recognizer: UITapGestureRecognizer) {
+    @objc func dismiss(recognizer _: UITapGestureRecognizer) {
         presentingViewController.dismiss(animated: true)
     }
 }

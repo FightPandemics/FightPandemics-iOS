@@ -43,5 +43,4 @@ struct User: Decodable {
         }
         return "\(firstName.first!)\(lastName.first!)".uppercased()
     }
-
 }

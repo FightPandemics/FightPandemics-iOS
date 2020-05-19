@@ -35,28 +35,30 @@ class PostVisibilitySelectionView: UIView {
     private var anyoneBtn = UIButton()
     private var closeBtn = UIButton()
     private var confirmBtn = UIButton()
-    func setUp () {
+    func setUp() {
         setUpUpper()
         setUpButtons()
         setUpLower()
         setUpConstraints()
     }
-    func setUpUpper () {
+
+    func setUpUpper() {
         topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
         topLine.frame.size.width = 116
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
         topLine.layer.masksToBounds = true
         topLine.layer.cornerRadius = topLine.frame.size.height / 2
-        self.addSubview(topLine)
+        addSubview(topLine)
         questionLbl.text = "VisibilityTitle".localized
         questionLbl.font = Fonts.poppinsBold.customFont(size: 16)
         questionLbl.textAlignment = .center
         questionLbl.numberOfLines = 0
-        self.addSubview(questionLbl)
+        addSubview(questionLbl)
     }
-    func setUpButtons () {
-        neighborBtn.setAttributedTitle(NSAttributedString(string: "VisibilityNeighborBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+
+    func setUpButtons() {
+        neighborBtn.setAttributedTitle(NSAttributedString(string: "VisibilityNeighborBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         neighborBtn.setTitleColor(UIColor.white, for: .selected)
         neighborBtn.frame.size.height = 45
         neighborBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -64,8 +66,8 @@ class PostVisibilitySelectionView: UIView {
         neighborBtn.clipsToBounds = true
         neighborBtn.layer.masksToBounds = true
         neighborBtn.layer.cornerRadius = 4
-        self.addSubview(neighborBtn)
-        cityBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCityBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        addSubview(neighborBtn)
+        cityBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCityBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         cityBtn.setTitleColor(UIColor.white, for: .selected)
         cityBtn.frame.size.height = 45
         cityBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -73,8 +75,8 @@ class PostVisibilitySelectionView: UIView {
         cityBtn.clipsToBounds = true
         cityBtn.layer.masksToBounds = true
         cityBtn.layer.cornerRadius = 4
-        self.addSubview(cityBtn)
-        countryBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCountryBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        addSubview(cityBtn)
+        countryBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCountryBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         countryBtn.setTitleColor(UIColor.white, for: .selected)
         countryBtn.frame.size.height = 45
         countryBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -82,8 +84,8 @@ class PostVisibilitySelectionView: UIView {
         countryBtn.clipsToBounds = true
         countryBtn.layer.masksToBounds = true
         countryBtn.layer.cornerRadius = 4
-        self.addSubview(countryBtn)
-        anyoneBtn.setAttributedTitle(NSAttributedString(string: "VisibilityAnyoneBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        addSubview(countryBtn)
+        anyoneBtn.setAttributedTitle(NSAttributedString(string: "VisibilityAnyoneBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         anyoneBtn.setTitleColor(UIColor.white, for: .selected)
         anyoneBtn.frame.size.height = 45
         anyoneBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -91,9 +93,10 @@ class PostVisibilitySelectionView: UIView {
         anyoneBtn.clipsToBounds = true
         anyoneBtn.layer.masksToBounds = true
         anyoneBtn.layer.cornerRadius = 4
-        self.addSubview(anyoneBtn)
+        addSubview(anyoneBtn)
     }
-    func setUpLower () {
+
+    func setUpLower() {
         closeBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCloseBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         closeBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         closeBtn.frame.size.height = 45
@@ -103,7 +106,7 @@ class PostVisibilitySelectionView: UIView {
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
         closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         closeBtn.layer.borderWidth = 1
-        self.addSubview(closeBtn)
+        addSubview(closeBtn)
         confirmBtn.setAttributedTitle(NSAttributedString(string: "VisibilityConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         confirmBtn.frame.size.height = 45
@@ -113,15 +116,17 @@ class PostVisibilitySelectionView: UIView {
         confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
         confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         confirmBtn.layer.borderWidth = 1
-        self.addSubview(confirmBtn)
+        addSubview(confirmBtn)
     }
-    func setUpConstraints () {
+
+    func setUpConstraints() {
         setUpUpperConstraints()
         setUpButtonsConstraints()
         setUpLowerConstraints()
     }
-    func setUpUpperConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
+
+    func setUpUpperConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
         topLine.makeSubview(of: self)
             .width(116)
             .height(4)
@@ -134,14 +139,14 @@ class PostVisibilitySelectionView: UIView {
             .width(294)
             .height(22)
     }
-    func setUpButtonsConstraints () {
 
+    func setUpButtonsConstraints() {
         neighborBtn.makeSubview(of: self)
             .centerX(to: \.centerXAnchor, constant: 0)
             .top(to: \.topAnchor, constant: 86)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
 
         cityBtn.makeSubview(of: self)
@@ -149,7 +154,7 @@ class PostVisibilitySelectionView: UIView {
             .top(to: \.topAnchor, constant: 143)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
 
         countryBtn.makeSubview(of: self)
@@ -157,7 +162,7 @@ class PostVisibilitySelectionView: UIView {
             .top(to: \.topAnchor, constant: 200)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
 
         anyoneBtn.makeSubview(of: self)
@@ -165,23 +170,21 @@ class PostVisibilitySelectionView: UIView {
             .top(to: \.topAnchor, constant: 257)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
-
     }
-    func setUpLowerConstraints () {
 
+    func setUpLowerConstraints() {
         closeBtn.makeSubview(of: self)
-            .width(((UIScreen.main.bounds.width - 63) / 2))
+            .width((UIScreen.main.bounds.width - 63) / 2)
             .height(45)
             .top(to: \.topAnchor, constant: 335)
             .left(to: \.leftAnchor, constant: 22)
 
         confirmBtn.makeSubview(of: self)
-            .width(((UIScreen.main.bounds.width - 63) / 2))
+            .width((UIScreen.main.bounds.width - 63) / 2)
             .height(45)
             .top(to: \.topAnchor, constant: 335)
             .right(to: \.rightAnchor, constant: 22)
-
     }
 }

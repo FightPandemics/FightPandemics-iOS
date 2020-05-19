@@ -27,21 +27,18 @@
 import UIKit
 
 /// View assumed to have a state and follow usage compatible with being constrained programmatically.
-protocol ConstrainableView: class {
+protocol ConstrainableView: AnyObject {
     var superview: UIView? { get }
     var target: UIView { get }
 }
 
 extension UIView: ConstrainableView {
-
     var target: UIView {
         return self
     }
-
 }
 
 extension ConstrainableView {
-
     /// Adds this view as a child of the provided view. Prefer over `addSubview`.
     ///  - Postcondition: After calling, this view will be prepared to work with programmatic constraints.
     /// - Parameter other: View to make this view a child of.
@@ -96,7 +93,7 @@ extension ConstrainableView {
         _ constant: CGFloat,
         relation: NSLayoutConstraint.Relation = .equal,
         priority: UILayoutPriority = .required
-        ) -> Self {
+    ) -> Self {
         target.addWidthConstraint(constant, relation: relation, priority: priority)
         return self
     }
@@ -109,7 +106,7 @@ extension ConstrainableView {
         constant: CGFloat = 0,
         relation: NSLayoutConstraint.Relation = .equal,
         priority: UILayoutPriority = .required
-        ) -> Self where XAxisDimension: NSLayoutDimension {
+    ) -> Self where XAxisDimension: NSLayoutDimension {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addWidthConstraint(to: dimension, of: view!, multiplier: multiplier, constant: constant, relation: relation, priority: priority)
@@ -121,7 +118,7 @@ extension ConstrainableView {
         _ constant: CGFloat,
         relation: NSLayoutConstraint.Relation = .equal,
         priority: UILayoutPriority = .required
-        ) -> Self {
+    ) -> Self {
         target.addHeightConstraint(constant, relation: relation, priority: priority)
         return self
     }
@@ -134,7 +131,7 @@ extension ConstrainableView {
         constant: CGFloat = 0,
         relation: NSLayoutConstraint.Relation = .equal,
         priority: UILayoutPriority = .required
-        ) -> Self where YAxisDimension: NSLayoutDimension {
+    ) -> Self where YAxisDimension: NSLayoutDimension {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addHeightConstraint(to: dimension, of: view!, multiplier: multiplier, constant: constant, relation: relation, priority: priority)
@@ -150,7 +147,7 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addLeadingConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
@@ -164,7 +161,7 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addTrailingConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
@@ -178,7 +175,7 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addLeftConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
@@ -192,7 +189,7 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addRightConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
@@ -206,7 +203,7 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> Self where XAxisAnchor: NSLayoutXAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addCenterXConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
@@ -222,7 +219,7 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where YAxisAnchor: NSLayoutYAxisAnchor {
+    ) -> Self where YAxisAnchor: NSLayoutYAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addTopConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
@@ -236,7 +233,7 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where YAxisAnchor: NSLayoutYAxisAnchor {
+    ) -> Self where YAxisAnchor: NSLayoutYAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addBottomConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
@@ -250,11 +247,10 @@ extension ConstrainableView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> Self where YAxisAnchor: NSLayoutYAxisAnchor {
+    ) -> Self where YAxisAnchor: NSLayoutYAxisAnchor {
         let view = otherView ?? superview
         precondition(view != nil, "ConstrainableView assumes a view to constrain to.")
         target.addCenterYConstraint(to: anchor, of: view!, relation: relation, constant: constant, priority: priority)
         return self
     }
-
 }

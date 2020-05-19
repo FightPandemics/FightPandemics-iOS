@@ -42,9 +42,8 @@ enum HTTPClientError: Error, LocalizedError {
             return "Invalid JSON"
         case .jsonParsingFailed:
             return "JSON Parsing failed"
-        case .httpRequestError(let error):
+        case let .httpRequestError(error):
             return error.localizedDescription
         }
     }
-
 }

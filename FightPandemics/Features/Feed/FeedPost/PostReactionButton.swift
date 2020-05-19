@@ -33,7 +33,6 @@ enum PostReactionButtonType {
 }
 
 class PostReactionButton: UIButton {
-
     private var type: PostReactionButtonType
 
     init(_ type: PostReactionButtonType) {
@@ -42,7 +41,7 @@ class PostReactionButton: UIButton {
         configureButton()
     }
 
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -55,7 +54,7 @@ class PostReactionButton: UIButton {
     }
 
     @objc func tap() {
-        self.isSelected.toggle()
+        isSelected.toggle()
     }
 
     private func configureButton() {
@@ -79,5 +78,4 @@ class PostReactionButton: UIButton {
         setTitleColor(#colorLiteral(red: 0.5764705882, green: 0.5764705882, blue: 0.5764705882, alpha: 1), for: .normal)
         addTarget(self, action: #selector(tap), for: .touchUpInside)
     }
-
 }

@@ -28,7 +28,6 @@ import UIKit
 
 /// View that fakes the appearance of the Launch Screen in order to perform Auto-Login.
 final class AutoLoginFakeLaunchScreen {
-
     private let rootWindow: UIWindow?
     private let containerView = UIView()
     private let loadingSpinner = UIActivityIndicatorView(style: .medium)
@@ -60,5 +59,4 @@ final class AutoLoginFakeLaunchScreen {
             self?.containerView.removeFromSuperview()
         })
     }
-
 }

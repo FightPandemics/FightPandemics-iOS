@@ -27,7 +27,6 @@
 import UIKit
 
 final class LogInViewController: UIViewController {
-
     // MARK: - Properties
 
     var navigator: Navigator!
@@ -72,7 +71,7 @@ final class LogInViewController: UIViewController {
             switch result {
             case .success:
                 self?.navigator.dismissLogIn()
-            case .failure(let error):
+            case let .failure(error):
                 // TODO: Error handling
                 print(error)
             }
@@ -80,11 +79,10 @@ final class LogInViewController: UIViewController {
     }
 
     private func enableForm() {
-         navigationItem.rightBarButtonItem?.isEnabled = true
+        navigationItem.rightBarButtonItem?.isEnabled = true
     }
 
     private func disableForm() {
         navigationItem.rightBarButtonItem?.isEnabled = false
     }
-
 }
