@@ -5,6 +5,7 @@ Thank you to the service providers and open source creators that help power the 
 ## Open Source
 
 * [realm/SwiftLint](https://github.com/realm/SwiftLint)
+* [nicklockwood/SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 * Inspiration for constraints from [jdisho/VanillaConstraints](https://github.com/jdisho/VanillaConstraints)
 * Inspiration for OSS Credits screen from [floriangbh/OpenSourceController](https://github.com/floriangbh/OpenSourceController)
 
