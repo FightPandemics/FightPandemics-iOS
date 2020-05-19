@@ -57,14 +57,14 @@ class IndividualOrg: UIView {
         descriptiveLbl.numberOfLines = 0
     }
     func setUpLower () {
-        individualBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgIndividualButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        individualBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgIndividualButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         individualBtn.frame.size.height = 45
         individualBtn.frame.size.width = UIScreen.main.bounds.width - 46
         individualBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
         individualBtn.clipsToBounds = true
         individualBtn.layer.masksToBounds = true
         individualBtn.layer.cornerRadius = 4
-        organizationBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgOrganizationButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        organizationBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgOrganizationButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         organizationBtn.frame.size.height = 45
         organizationBtn.frame.size.width = UIScreen.main.bounds.width - 46
         organizationBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
