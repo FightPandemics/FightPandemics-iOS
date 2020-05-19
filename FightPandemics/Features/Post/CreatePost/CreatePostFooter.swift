@@ -27,7 +27,6 @@
 import UIKit
 
 class CreatePostFooter: UIView {
-
     private var sepLine = UIView()
     private var questionLbl = UILabel()
     private var shareBtn = UIButton()
@@ -36,13 +35,13 @@ class CreatePostFooter: UIView {
     private var tagsBtn = UIButton()
     private var postBtn = UIButton()
 
-    func setUp () {
+    func setUp() {
         setUpUpper()
         setUpLower()
         makeConstraints()
     }
 
-    private func setUpUpper () {
+    private func setUpUpper() {
         // separator line
         sepLine.backgroundColor = UIColor(hexString: "#D7D7D7")
         sepLine.frame.size.width = UIScreen.main.bounds.width
@@ -84,7 +83,7 @@ class CreatePostFooter: UIView {
         durationBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
     }
 
-    private func setUpLower () {
+    private func setUpLower() {
         // tags label
         tagsLbl.text = "CreatePostAddTagsCTA".localized
         tagsLbl.textAlignment = .left
@@ -123,7 +122,7 @@ class CreatePostFooter: UIView {
     }
 
     private func makeConstraints() {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
         sepLine.makeSubview(of: self)
             .width(UIScreen.main.bounds.width)
             .height(1)
@@ -163,5 +162,4 @@ class CreatePostFooter: UIView {
             .leading(to: \.leadingAnchor, constant: 23)
             .trailing(to: \.trailingAnchor, constant: 24)
     }
-
 }

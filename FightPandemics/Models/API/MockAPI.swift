@@ -27,7 +27,6 @@
 import Foundation
 
 final class MockAPI: API {
-
     let jsonFileReader: JSONFileReader
     let realAPI: FightPandemicsAPI
     let latency: DispatchTimeInterval
@@ -40,12 +39,12 @@ final class MockAPI: API {
         self.latency = latency
     }
 
-    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void) {
+    func logIn(email: String, password _: String, completion: @escaping (Result<User, APIError>) -> Void) {
         let user = jsonFileReader.read(fileNamed: "User", modelType: User.self)
 
         simulateNetworkDelay(then: {
             switch user {
-            case .success(let user):
+            case let .success(user):
                 guard email == user.email else {
                     completion(.failure(.httpClientError(value: .httpRequestError(error: .responseError(error: NSError(domain: "com.fp.fp", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid credentials"]))))))
                     return
@@ -73,5 +72,4 @@ final class MockAPI: API {
             then()
         }
     }
-
 }

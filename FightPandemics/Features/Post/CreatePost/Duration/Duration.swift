@@ -35,27 +35,29 @@ class Duration: UIView {
     private var foreverBtn = UIButton()
     private var closeBtn = UIButton()
     private var confirmBtn = UIButton()
-    func setUp () {
+    func setUp() {
         setUpUpper()
         setUpButtons()
         setUpLower()
         setUpConstraints()
     }
-    func setUpUpper () {
+
+    func setUpUpper() {
         topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
         topLine.frame.size.width = 116
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
         topLine.layer.masksToBounds = true
         topLine.layer.cornerRadius = topLine.frame.size.height / 2
-        self.addSubview(topLine)
+        addSubview(topLine)
         questionLbl.text = "VisibilityTitle".localized
         questionLbl.font = Fonts.poppinsBold.customFont(size: 16)
         questionLbl.textAlignment = .center
         questionLbl.numberOfLines = 0
-        self.addSubview(questionLbl)
+        addSubview(questionLbl)
     }
-    func setUpButtons () {
+
+    func setUpButtons() {
         dayBtn.setAttributedTitle(NSAttributedString(string: "VisibilityNeighborBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         dayBtn.setTitleColor(UIColor.white, for: .selected)
         dayBtn.frame.size.height = 45
@@ -64,7 +66,7 @@ class Duration: UIView {
         dayBtn.clipsToBounds = true
         dayBtn.layer.masksToBounds = true
         dayBtn.layer.cornerRadius = 4
-        self.addSubview(dayBtn)
+        addSubview(dayBtn)
         weekBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCityBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         weekBtn.setTitleColor(UIColor.white, for: .selected)
         weekBtn.frame.size.height = 45
@@ -73,7 +75,7 @@ class Duration: UIView {
         weekBtn.clipsToBounds = true
         weekBtn.layer.masksToBounds = true
         weekBtn.layer.cornerRadius = 4
-        self.addSubview(weekBtn)
+        addSubview(weekBtn)
         monthBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCountryBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         monthBtn.setTitleColor(UIColor.white, for: .selected)
         monthBtn.frame.size.height = 45
@@ -82,7 +84,7 @@ class Duration: UIView {
         monthBtn.clipsToBounds = true
         monthBtn.layer.masksToBounds = true
         monthBtn.layer.cornerRadius = 4
-        self.addSubview(monthBtn)
+        addSubview(monthBtn)
         foreverBtn.setAttributedTitle(NSAttributedString(string: "VisibilityAnyoneBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         foreverBtn.setTitleColor(UIColor.white, for: .selected)
         foreverBtn.frame.size.height = 45
@@ -91,9 +93,10 @@ class Duration: UIView {
         foreverBtn.clipsToBounds = true
         foreverBtn.layer.masksToBounds = true
         foreverBtn.layer.cornerRadius = 4
-        self.addSubview(foreverBtn)
+        addSubview(foreverBtn)
     }
-    func setUpLower () {
+
+    func setUpLower() {
         closeBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCloseBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         closeBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         closeBtn.frame.size.height = 45
@@ -103,7 +106,7 @@ class Duration: UIView {
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
         closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         closeBtn.layer.borderWidth = 1
-        self.addSubview(closeBtn)
+        addSubview(closeBtn)
         confirmBtn.setAttributedTitle(NSAttributedString(string: "VisibilityConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         confirmBtn.frame.size.height = 45
@@ -113,15 +116,17 @@ class Duration: UIView {
         confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
         confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         confirmBtn.layer.borderWidth = 1
-        self.addSubview(confirmBtn)
+        addSubview(confirmBtn)
     }
-    func setUpConstraints () {
+
+    func setUpConstraints() {
         setUpUpperConstraints()
         setUpButtonsConstraints()
         setUpLowerConstraints()
     }
-    func setUpUpperConstraints () {
-        self.translatesAutoresizingMaskIntoConstraints = false
+
+    func setUpUpperConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
         topLine.makeSubview(of: self)
             .width(116)
             .height(4)
@@ -134,14 +139,14 @@ class Duration: UIView {
             .width(294)
             .height(22)
     }
-    func setUpButtonsConstraints () {
 
+    func setUpButtonsConstraints() {
         dayBtn.makeSubview(of: self)
             .centerX(to: \.centerXAnchor, constant: 0)
             .top(to: \.topAnchor, constant: 86)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
 
         weekBtn.makeSubview(of: self)
@@ -149,7 +154,7 @@ class Duration: UIView {
             .top(to: \.topAnchor, constant: 143)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
 
         monthBtn.makeSubview(of: self)
@@ -157,7 +162,7 @@ class Duration: UIView {
             .top(to: \.topAnchor, constant: 200)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
 
         foreverBtn.makeSubview(of: self)
@@ -165,23 +170,21 @@ class Duration: UIView {
             .top(to: \.topAnchor, constant: 257)
             .left(to: \.leftAnchor, constant: 23)
             .right(to: \.rightAnchor, constant: 23)
-            .width((UIScreen.main.bounds.width - 46))
+            .width(UIScreen.main.bounds.width - 46)
             .height(45)
-
     }
-    func setUpLowerConstraints () {
 
+    func setUpLowerConstraints() {
         closeBtn.makeSubview(of: self)
-            .width(((UIScreen.main.bounds.width - 63) / 2))
+            .width((UIScreen.main.bounds.width - 63) / 2)
             .height(45)
             .top(to: \.topAnchor, constant: 335)
             .left(to: \.leftAnchor, constant: 22)
 
         confirmBtn.makeSubview(of: self)
-            .width(((UIScreen.main.bounds.width - 63) / 2))
+            .width((UIScreen.main.bounds.width - 63) / 2)
             .height(45)
             .top(to: \.topAnchor, constant: 335)
             .right(to: \.rightAnchor, constant: 22)
-
     }
 }

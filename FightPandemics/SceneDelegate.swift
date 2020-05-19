@@ -27,14 +27,13 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
     private(set) var currentEnvironment: Environment!
     private(set) var navigator: Navigator!
 
     func scene(_ scene: UIScene,
-               willConnectTo session: UISceneSession,
-               options connectionOptions: UIScene.ConnectionOptions) {
+               willConnectTo _: UISceneSession,
+               options _: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window`
         // to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -44,18 +43,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
 
         #if RELEASE
-        self.currentEnvironment = .production
+            currentEnvironment = .production
         #else
-        self.currentEnvironment = .mock
+            currentEnvironment = .mock
         #endif
 
         setupDependencies()
-        self.navigator.installRootTabBar()
+        navigator.installRootTabBar()
     }
 
     private func setupDependencies() {
         let api: API
-        switch self.currentEnvironment! {
+        switch currentEnvironment! {
         case .production:
             api = FightPandemicsAPI(baseURL: "https://api.fightpandemics.com",
                                     httpClient: HTTPClient(),
@@ -73,13 +72,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let autoLoginFakeLaunchScreen = AutoLoginFakeLaunchScreen(rootWindow: window)
         let sessionManager = SessionManager(api: api, authState: .guest)
-        self.navigator = Navigator(rootWindow: window,
-                                   api: api,
-                                   autoLoginFakeLaunchScreen: autoLoginFakeLaunchScreen,
-                                   sessionManager: sessionManager)
+        navigator = Navigator(rootWindow: window,
+                              api: api,
+                              autoLoginFakeLaunchScreen: autoLoginFakeLaunchScreen,
+                              sessionManager: sessionManager)
     }
 
-    func sceneDidDisconnect(_ scene: UIScene) {
+    func sceneDidDisconnect(_: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
@@ -87,25 +86,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // (see `application:didDiscardSceneSessions` instead).
     }
 
-    func sceneDidBecomeActive(_ scene: UIScene) {
+    func sceneDidBecomeActive(_: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
 
-    func sceneWillResignActive(_ scene: UIScene) {
+    func sceneWillResignActive(_: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
     }
 
-    func sceneWillEnterForeground(_ scene: UIScene) {
+    func sceneWillEnterForeground(_: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
     }
 
-    func sceneDidEnterBackground(_ scene: UIScene) {
+    func sceneDidEnterBackground(_: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
 }
