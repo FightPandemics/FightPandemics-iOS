@@ -1,0 +1,14 @@
+[
+    {
+        "title": "OpenSourceController",
+        "url": "https://raw.githubusercontent.com/floriangbh/OpenSourceController/master/LICENSE"
+    },
+    {
+        "title": "SwiftLint",
+        "url": "https://raw.githubusercontent.com/realm/SwiftLint/master/LICENSE"
+    },
+    {
+        "title": "VanillaConstraints",
+        "url": "https://raw.githubusercontent.com/jdisho/VanillaConstraints/master/LICENSE"
+    }
+]

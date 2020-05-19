@@ -43,6 +43,11 @@
 		2F0C3C6A2471E0F70002B384 /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C3C692471E0F70002B384 /* Filters.storyboard */; };
 		2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C3C6B2471E1130002B384 /* FiltersModal.swift */; };
 		2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */; };
+		2F426B97247339A9007A4796 /* OpenSourceCredits.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F426B96247339A9007A4796 /* OpenSourceCredits.json */; };
+		2F426BA024735B89007A4796 /* OpenSourceLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426B9F24735B89007A4796 /* OpenSourceLicense.swift */; };
+		2F426BA6247365FB007A4796 /* OpenSourceCreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426BA5247365FB007A4796 /* OpenSourceCreditsViewController.swift */; };
+		2F426BA92473682E007A4796 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426BA82473682E007A4796 /* HTML.swift */; };
+		2F426BAF24736E3D007A4796 /* OpenSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F426BAE24736E3D007A4796 /* OpenSourceTableViewCell.swift */; };
 		2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE462468785200750785 /* HTTPClientError.swift */; };
 		2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE472468785200750785 /* HTTPRequestError.swift */; };
 		2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72CE482468785200750785 /* HTTPRequest.swift */; };
@@ -65,10 +70,9 @@
 		2FB342042468FFCC007E397F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB342032468FFCC007E397F /* Navigator.swift */; };
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
-		C0E5EDF824705CC200F42319 /* PostVisibilitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */; };
-		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
+		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
 		DC807E5F246FB1C000046D67 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5E246FB1C000046D67 /* Organization.swift */; };
@@ -145,6 +149,11 @@
 		2F0C3C692471E0F70002B384 /* Filters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filters.storyboard; sourceTree = "<group>"; };
 		2F0C3C6B2471E1130002B384 /* FiltersModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersModal.swift; sourceTree = "<group>"; };
 		2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
+		2F426B96247339A9007A4796 /* OpenSourceCredits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OpenSourceCredits.json; sourceTree = "<group>"; };
+		2F426B9F24735B89007A4796 /* OpenSourceLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceLicense.swift; sourceTree = "<group>"; };
+		2F426BA5247365FB007A4796 /* OpenSourceCreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceCreditsViewController.swift; sourceTree = "<group>"; };
+		2F426BA82473682E007A4796 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
+		2F426BAE24736E3D007A4796 /* OpenSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceTableViewCell.swift; sourceTree = "<group>"; };
 		2F72CE462468785200750785 /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		2F72CE472468785200750785 /* HTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
 		2F72CE482468785200750785 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -263,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				2F04218D246CCD40005FB1D0 /* Profile.storyboard */,
+				2F0C3C452471B6550002B384 /* OpenSourceCredits */,
 				2F04218F246CCD4A005FB1D0 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -331,6 +341,16 @@
 			path = Constraints;
 			sourceTree = "<group>";
 		};
+		2F0C3C452471B6550002B384 /* OpenSourceCredits */ = {
+			isa = PBXGroup;
+			children = (
+				2F426BA5247365FB007A4796 /* OpenSourceCreditsViewController.swift */,
+				2F426BAE24736E3D007A4796 /* OpenSourceTableViewCell.swift */,
+				2F426B9F24735B89007A4796 /* OpenSourceLicense.swift */,
+			);
+			path = OpenSourceCredits;
+			sourceTree = "<group>";
+		};
 		2F0C3C682471E0EF0002B384 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +374,14 @@
 				2F426B3B2472C2A3007A4796 /* PostVisibilitySelectionView.swift */,
 			);
 			path = Visibility;
+			sourceTree = "<group>";
+		};
+		2F426BA724736826007A4796 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				2F426BA82473682E007A4796 /* HTML.swift */,
+			);
+			path = HTML;
 			sourceTree = "<group>";
 		};
 		2F72CE452468785200750785 /* Networking */ = {
@@ -446,6 +474,7 @@
 				2F0C3C3E246ECA460002B384 /* Constraints */,
 				2FB341EA2468F841007E397F /* Extensions */,
 				DC807E67247027C700046D67 /* FileReader */,
+				2F426BA724736826007A4796 /* HTML */,
 				2FB342022468FFC3007E397F /* Navigation */,
 				2F72CE452468785200750785 /* Networking */,
 				DC807E6C247027CF00046D67 /* SessionManager */,
@@ -582,6 +611,7 @@
 				DDDB55022468ACC3008EA75A /* Fonts */,
 				2F9EFE59245DFB1900E86700 /* Assets.xcassets */,
 				2F04212F246A25CF005FB1D0 /* Localizable.strings */,
+				2F426B96247339A9007A4796 /* OpenSourceCredits.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -685,6 +715,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F426B97247339A9007A4796 /* OpenSourceCredits.json in Resources */,
 				DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */,
 				2F0B515F246E084400BE42BC /* Menu.storyboard in Resources */,
 				DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */,
@@ -765,8 +796,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F426BA92473682E007A4796 /* HTML.swift in Sources */,
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
 				2F04219E246CE99C005FB1D0 /* Success.swift in Sources */,
+				2F426BA6247365FB007A4796 /* OpenSourceCreditsViewController.swift in Sources */,
 				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
 				2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
@@ -801,6 +834,7 @@
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */,
 				2F042190246CCD4A005FB1D0 /* ProfileViewController.swift in Sources */,
+				2F426BA024735B89007A4796 /* OpenSourceLicense.swift in Sources */,
 				2F0421A4246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift in Sources */,
 				C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
@@ -820,6 +854,7 @@
 				DDF9290C2472055600973488 /* PostTagCell.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
 				DC807E5B246FB02300046D67 /* Entity.swift in Sources */,
+				2F426BAF24736E3D007A4796 /* OpenSourceTableViewCell.swift in Sources */,
 				2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,

@@ -1,8 +1,8 @@
 //
-//  API.swift
+//  OpenSourceLicense.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/10/20.
+//  Created by Harlan Kellaway on 5/18/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,15 +26,30 @@
 
 import Foundation
 
-protocol API {
+struct OpenSourceLicense: Decodable {
 
-    // MARK: - Auth
+    let title: String
+    let urlString: String
 
-    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void)
-    func logOut(completion: @escaping (Result<Success, APIError>) -> Void)
+    var url: URL? {
+        return URL(string: urlString)
+    }
 
-    // MARK: - Profile
+    enum CodingKeys: String, CodingKey {
+        case title
+        case url
+    }
 
-    func downloadOpenSourceLicenses(completion: @escaping ([(license: OpenSourceLicense, details: HTML)]) -> Void)
+    init(title: String, urlString: String) {
+        self.title = title
+        self.urlString = urlString
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let title = try container.decode(String.self, forKey: .title)
+        let urlString = try container.decode(String.self, forKey: .url)
+        self.init(title: title, urlString: urlString)
+    }
 
 }

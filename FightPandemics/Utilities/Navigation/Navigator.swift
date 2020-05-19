@@ -41,13 +41,15 @@ final class Navigator {
     private var profileNavigationController: RootNavigationController?
     private var presentedBottomModal: BottomModal?
 
+    private let api: API
     private let autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen
     private let sessionManager: SessionManager
 
     // MARK: - Init/Deinit
 
-    init(rootWindow: UIWindow?, autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen, sessionManager: SessionManager) {
+    init(rootWindow: UIWindow?, api: API, autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen, sessionManager: SessionManager) {
         self.rootWindow = rootWindow
+        self.api = api
         self.autoLoginFakeLaunchScreen = autoLoginFakeLaunchScreen
         self.sessionManager = sessionManager
     }
@@ -116,6 +118,10 @@ final class Navigator {
         rootTabBar?.dismiss(animated: true, completion: nil)
     }
 
+    func navigateToOpenSourceCredits() {
+        profileNavigationController?.pushViewController(openSourceCreditsViewController(), animated: true)
+    }
+
     // MARK: Private instance methods
 
     private func rootTabBarController() -> RootTabBarController {
@@ -177,6 +183,13 @@ final class Navigator {
         profileViewController.navigator = self
         profileViewController.sessionManager = sessionManager
         return profileViewController
+    }
+
+    private func openSourceCreditsViewController() -> OpenSourceCreditsViewController {
+        let openSourceCreditsViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "OpenSourceCreditsViewController") as! OpenSourceCreditsViewController
+        openSourceCreditsViewController.api = api
+        openSourceCreditsViewController.navigator = self
+        return openSourceCreditsViewController
     }
 
     private func menuViewController() -> MenuViewController {

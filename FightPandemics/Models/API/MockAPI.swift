@@ -29,11 +29,14 @@ import Foundation
 final class MockAPI: API {
 
     let jsonFileReader: JSONFileReader
+    let realAPI: FightPandemicsAPI
     let latency: DispatchTimeInterval
 
     init(jsonFileReader: JSONFileReader = JSONFileReader(),
+         realAPI: FightPandemicsAPI,
          latency: DispatchTimeInterval = .seconds(1)) {
         self.jsonFileReader = jsonFileReader
+        self.realAPI = realAPI
         self.latency = latency
     }
 
@@ -58,6 +61,11 @@ final class MockAPI: API {
         simulateNetworkDelay(then: {
             completion(.success(Success()))
         })
+    }
+
+    func downloadOpenSourceLicenses(completion: @escaping ([(license: OpenSourceLicense, details: HTML)]) -> Void) {
+        // No need to mock response
+        realAPI.downloadOpenSourceLicenses(completion: completion)
     }
 
     private func simulateNetworkDelay(then: @escaping () -> Void) {

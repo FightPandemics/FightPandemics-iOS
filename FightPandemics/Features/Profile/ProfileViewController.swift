@@ -33,6 +33,8 @@ final class ProfileViewController: UIViewController {
     var navigator: Navigator!
     var sessionManager: SessionManager!
 
+    private var button = UIButton()
+
     // MARK: - Overrides
 
     // MARK: View life-cycle
@@ -48,10 +50,22 @@ final class ProfileViewController: UIViewController {
     // MARK: Private instance methods
 
     private func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(logOut))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(logOut))
+        button.makeSubview(of: view)
+            .center()
+            .width(100)
+            .height(50)
+        button.backgroundColor = .systemBlue
+        button.setTitle("OSS", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(oss), for: .touchUpInside)
+    }
+
+    @objc private func oss() {
+        navigator.navigateToOpenSourceCredits()
     }
 
     @objc private func logOut() {
