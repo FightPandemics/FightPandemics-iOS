@@ -22,5 +22,23 @@
             </objects>
             <point key="canvasLocation" x="172" y="183"/>
         </scene>
+        <!--Open Source Credits View Controller-->
+        <scene sceneID="z6X-bk-uiy">
+            <objects>
+                <tableViewController storyboardIdentifier="OpenSourceCreditsViewController" id="0pb-Ti-eiV" customClass="OpenSourceCreditsViewController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NeO-Ia-Hs2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="0pb-Ti-eiV" id="1YQ-Jf-1ZC"/>
+                            <outlet property="delegate" destination="0pb-Ti-eiV" id="HlD-VZ-3Sn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJz-Gg-SyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="183"/>
+        </scene>
     </scenes>
 </document>

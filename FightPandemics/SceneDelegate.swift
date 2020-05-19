@@ -57,16 +57,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let api: API
         switch self.currentEnvironment! {
         case .production:
-            api = FightPandemicsAPI(baseURL: "https://api.fightpandemics.com", httpClient: HTTPClient())
+            api = FightPandemicsAPI(baseURL: "https://api.fightpandemics.com",
+                                    httpClient: HTTPClient(),
+                                    jsonFileReader: JSONFileReader())
         case .staging:
-            api = FightPandemicsAPI(baseURL: "https://staging-api.fightpandemics.com", httpClient: HTTPClient())
+            api = FightPandemicsAPI(baseURL: "https://staging-api.fightpandemics.com",
+                                    httpClient: HTTPClient(),
+                                    jsonFileReader: JSONFileReader())
         case .mock:
-            api = MockAPI()
+            let wrappedAPI = FightPandemicsAPI(baseURL: "",
+                                               httpClient: HTTPClient(),
+                                               jsonFileReader: JSONFileReader())
+            api = MockAPI(realAPI: wrappedAPI)
         }
 
         let autoLoginFakeLaunchScreen = AutoLoginFakeLaunchScreen(rootWindow: window)
         let sessionManager = SessionManager(api: api, authState: .guest)
         self.navigator = Navigator(rootWindow: window,
+                                   api: api,
                                    autoLoginFakeLaunchScreen: autoLoginFakeLaunchScreen,
                                    sessionManager: sessionManager)
     }

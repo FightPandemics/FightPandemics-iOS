@@ -1,8 +1,8 @@
 //
-//  API.swift
+//  HTML.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/10/20.
+//  Created by Harlan Kellaway on 5/18/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,15 +26,4 @@
 
 import Foundation
 
-protocol API {
-
-    // MARK: - Auth
-
-    func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void)
-    func logOut(completion: @escaping (Result<Success, APIError>) -> Void)
-
-    // MARK: - Profile
-
-    func downloadOpenSourceLicenses(completion: @escaping ([(license: OpenSourceLicense, details: HTML)]) -> Void)
-
-}
+typealias HTML = String

@@ -32,12 +32,14 @@ final class FightPandemicsAPI: API {
 
     let baseURL: String
     let httpClient: HTTPClient
+    let jsonFileReader: JSONFileReader
 
     // MARK: - Init/Deinit
 
-    init( baseURL: String, httpClient: HTTPClient) {
+    init( baseURL: String, httpClient: HTTPClient, jsonFileReader: JSONFileReader) {
         self.baseURL = baseURL
         self.httpClient = httpClient
+        self.jsonFileReader = jsonFileReader
     }
 
     // MARK: - Protocol conformance
@@ -52,6 +54,33 @@ final class FightPandemicsAPI: API {
     func logOut(completion: @escaping (Result<Success, APIError>) -> Void) {
         assertionFailure("API not implemented yet")
         completion(.failure(.unimplemented(endpoint: "/logout")))
+    }
+
+    func downloadOpenSourceLicenses(completion: @escaping ([(license: OpenSourceLicense, details: HTML)]) -> Void) {
+        let licenses = (try? jsonFileReader.read(fileNamed: "OpenSourceCredits", modelType: [OpenSourceLicense].self).get()) ?? []
+        let licenseGroup = DispatchGroup()
+        var downloadedLicenses: [(license: OpenSourceLicense, details: HTML)] = []
+
+        for license in licenses {
+            licenseGroup.enter()
+
+            guard let url = license.url else {
+                licenseGroup.leave()
+                continue
+            }
+
+            httpClient.urlSession.httpRequest(.init(url: url)) { result in
+                if let data = try? result.get(), let html = HTML(data: data, encoding: String.Encoding.utf8) {
+                    downloadedLicenses.append((license, html))
+                }
+
+                licenseGroup.leave()
+            }
+        }
+
+        licenseGroup.notify(queue: .main) {
+            completion(downloadedLicenses)
+        }
     }
 
 }
