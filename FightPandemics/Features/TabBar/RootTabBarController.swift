@@ -94,24 +94,62 @@ final class RootTabBarController: UITabBarController {
             return
         }
 
-        feedTabBarItem.image = UIImage(named: "logo")
-        searchTabBarItem.image = UIImage(named: "logo")
-        profileTabBarItem.image = UIImage(named: "logo")
-        menuTabBarItem.image = UIImage(named: "logo")
+        tabBarInitialSetUp()
+
+        feedTabBarItem.image = UIImage(named: "feed")
+        searchTabBarItem.image = UIImage(named: "search")
+        profileTabBarItem.image = UIImage(named: "inbox")
+        menuTabBarItem.image = UIImage(named: "profile")
+
+        feedTabBarItem.title = "TabBarFeedBtn".localized
+        searchTabBarItem.title = "TabBarSearchBtn".localized
+        profileTabBarItem.title = "TabBarInboxBtn".localized
+        menuTabBarItem.title = "TabBarProfileBtn".localized
+
+        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
+        searchTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
+        profileTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
+        menuTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
 
         feedTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -15, vertical: 0)
-        searchTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -20, vertical: 0)
-        profileTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 20, vertical: 0)
+        searchTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -30, vertical: 0)
+        profileTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 30, vertical: 0)
         menuTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
 
         let postButton = UIButton()
         postButton.frame.size = CGSize(width: 44, height: 44)
-        postButton.backgroundColor = UIColor(hexString: "#425AF2")
-        postButton.layer.cornerRadius = 22
-        postButton.layer.masksToBounds = true
+        postButton.setImage(UIImage(named: "post"), for: .normal)
         postButton.center = CGPoint(x: tabBar.frame.width / 2, y: 24)
         tabBar.addSubview(postButton)
         postButton.addTarget(self, action: #selector(selectPostTab), for: .touchUpInside)
+    }
+
+    private func tabBarInitialSetUp() {
+        tabBar.tintColor = .black
+        tabBar.items?[0].setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
+        tabBar.barTintColor = .white
+        tabBar.backgroundImage = UIImage()
+        tabBar.backgroundColor = .white
+        tabBar.clipsToBounds = true
+        tabBar.layer.cornerRadius = 10
+        tabBar.layer.masksToBounds = true
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowRadius = 8
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabBar.layer.shadowOpacity = 1
+        tabBar.layer.borderWidth = 0
+        tabBar.shadowImage = UIImage()
+        let itemView = tabBar.items?[0].value(forKey: "view") as? UIView
+        let dotView = UIView()
+        dotView.backgroundColor = UIColor(hexString: "#425AF2")
+        dotView.tag = 100
+        dotView.frame.size.width = 6
+        dotView.frame.size.height = 6
+        dotView.layer.cornerRadius = 3
+        dotView.layer.masksToBounds = true
+        dotView.frame.origin.x = ((itemView?.frame.size.width)! / 2) - 18
+        dotView.frame.origin.y = 40
+        tabBar.addSubview(dotView)
     }
 
     @objc private func selectPostTab() {
@@ -135,12 +173,34 @@ final class RootTabBarController: UITabBarController {
 // MARK: UITabBarControllerDelegate
 
 extension RootTabBarController: UITabBarControllerDelegate {
-
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if viewController is MenuViewController {
-            return false
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
+        tabBar.tintColor = .black
+        let itemView = item.value(forKey: "view") as? UIView
+        var addend = CGFloat()
+        if tabBar.items?.firstIndex(of: item) == 0 {
+            addend = -19
+        } else if tabBar.items?.firstIndex(of: item) == 1 {
+            addend = -35
+        } else if tabBar.items?.firstIndex(of: item) == 2 {
+            addend = 27
+        } else if tabBar.items?.firstIndex(of: item) == 3 {
+            addend = 12
         }
-        return true
+        let dotView = UIView()
+        if tabBar.viewWithTag(100) != nil {
+            tabBar.viewWithTag(100)?.removeFromSuperview()
+        }
+        dotView.backgroundColor = UIColor(hexString: "#425AF2")
+        dotView.tag = 100
+        dotView.frame.size = CGSize(width: 6, height: 6)
+        dotView.layer.cornerRadius = 3
+        dotView.layer.masksToBounds = true
+        dotView.frame.origin.x = (itemView?.frame.origin.x)! + ((itemView?.frame.size.width)! / 2) + addend
+        dotView.frame.origin.y = 40
+        tabBar.addSubview(dotView)
+        self.tabBar.layoutIfNeeded()
+        self.tabBar.layoutSubviews()
     }
-
 }
