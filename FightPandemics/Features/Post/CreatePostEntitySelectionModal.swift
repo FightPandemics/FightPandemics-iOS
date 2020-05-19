@@ -27,7 +27,6 @@
 import UIKit
 
 final class CreatePostEntitySelectionModal: UIViewController {
-
     // MARK: - Properties
 
     var navigator: Navigator!
@@ -65,5 +64,4 @@ final class CreatePostEntitySelectionModal: UIViewController {
             self?.navigator.navigateToCreatePost(postingEntity: .organization(value: mockOrganization))
         }
     }
-
 }

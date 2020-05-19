@@ -27,7 +27,6 @@
 import Foundation
 
 struct OpenSourceLicense: Decodable {
-
     let title: String
     let urlString: String
 
@@ -51,5 +50,4 @@ struct OpenSourceLicense: Decodable {
         let urlString = try container.decode(String.self, forKey: .url)
         self.init(title: title, urlString: urlString)
     }
-
 }

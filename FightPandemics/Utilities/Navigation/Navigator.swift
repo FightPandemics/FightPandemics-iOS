@@ -30,7 +30,6 @@ import UIKit
 
 /// Performs all navigation between screens.
 final class Navigator {
-
     // MARK: - Properties
 
     private var rootWindow: UIWindow?
@@ -38,6 +37,7 @@ final class Navigator {
     private var logInNavigationController: UINavigationController?
     private var feedNavigationController: RootNavigationController?
     private var searchNavigationController: RootNavigationController?
+    private var inboxNavigationController: RootNavigationController?
     private var profileNavigationController: RootNavigationController?
     private var presentedBottomModal: BottomModal?
 
@@ -82,7 +82,7 @@ final class Navigator {
 
         let bottomModal = BottomModal(body: filtersModal(),
                                       height: 307)
-        self.presentedBottomModal = bottomModal
+        presentedBottomModal = bottomModal
         bottomModal.present(on: rootTabBar)
     }
 
@@ -97,7 +97,7 @@ final class Navigator {
 
         let bottomModal = BottomModal(body: createPostEntitySelectionModal(),
                                       height: 332)
-        self.presentedBottomModal = bottomModal
+        presentedBottomModal = bottomModal
         bottomModal.present(on: rootTabBar)
     }
 
@@ -127,7 +127,7 @@ final class Navigator {
     private func rootTabBarController() -> RootTabBarController {
         let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
-        self.rootTabBar = rootTabBarController
+        rootTabBar = rootTabBarController
         rootTabBarController.autoLoginFakeLaunchScreen = autoLoginFakeLaunchScreen
         rootTabBarController.navigator = self
         rootTabBarController.sessionManager = sessionManager
@@ -139,6 +139,10 @@ final class Navigator {
         self.searchNavigationController = searchNavigationController
         searchNavigationController?.navigator = self
         searchNavigationController?.pushViewController(searchViewController(), animated: false)
+        let inboxNavigationController = rootTabBarController.navController(.inbox)
+        self.inboxNavigationController = inboxNavigationController
+        inboxNavigationController?.navigator = self
+        inboxNavigationController?.pushViewController(inboxViewController(), animated: false)
         let profileNavigationController = rootTabBarController.navController(.profile)
         self.profileNavigationController = profileNavigationController
         profileNavigationController?.navigator = self
@@ -177,6 +181,12 @@ final class Navigator {
         return createPostViewController
     }
 
+    private func inboxViewController() -> InboxViewController {
+        let inboxViewController = UIStoryboard(name: "Inbox", bundle: nil)
+            .instantiateViewController(withIdentifier: "InboxViewController") as! InboxViewController
+        return inboxViewController
+    }
+
     private func profileViewController() -> ProfileViewController {
         let profileViewController = UIStoryboard(name: "Profile", bundle: nil)
             .instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
@@ -190,12 +200,6 @@ final class Navigator {
         openSourceCreditsViewController.api = api
         openSourceCreditsViewController.navigator = self
         return openSourceCreditsViewController
-    }
-
-    private func menuViewController() -> MenuViewController {
-        let menuViewController = UIStoryboard(name: "Menu", bundle: nil)
-            .instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
-        return menuViewController
     }
 
     private func logInNavController() -> UINavigationController {
@@ -213,5 +217,4 @@ final class Navigator {
         logInViewController.sessionManager = sessionManager
         return logInViewController
     }
-
 }

@@ -29,7 +29,6 @@ import Foundation
 import UIKit
 
 final class SessionManager {
-
     // MARK: - Types
 
     enum AuthState {
@@ -79,10 +78,10 @@ final class SessionManager {
     func logIn(email: String, password: String, completion: @escaping (Result<Success, SessionManagerError>) -> Void) {
         api.logIn(email: email, password: password) { [weak self] result in
             switch result {
-            case .success(let user):
+            case let .success(user):
                 self?.authState = .loggedIn(user: user)
                 completion(.success(Success()))
-            case .failure(let error):
+            case let .failure(error):
                 completion(.failure(.apiError(value: error)))
             }
         }
@@ -99,7 +98,7 @@ final class SessionManager {
 
     // MARK: Private instance methods
 
-    private func storeCredentials(_ credentials: AuthCredentials) {
+    private func storeCredentials(_: AuthCredentials) {
         // Store credentials in keychain
     }
 
@@ -114,5 +113,4 @@ final class SessionManager {
     private func clearCredentials() {
         // Clear credentials from keychain
     }
-
 }

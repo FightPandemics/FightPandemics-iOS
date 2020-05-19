@@ -41,7 +41,7 @@ class PostCreationTagView: UIView {
 
     private var tagCount: Int? {
         didSet {
-             addTagButton.setTitle(addTagButtonTitle, for: .normal)
+            addTagButton.setTitle(addTagButtonTitle, for: .normal)
         }
     }
 
@@ -104,7 +104,7 @@ class PostCreationTagView: UIView {
 
     private let topLiner = UIView()
 
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -144,33 +144,31 @@ private extension PostCreationTagView {
 }
 
 extension PostCreationTagView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         return mockTags.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostTagCell.reuseIdentifier, for: indexPath) as? PostTagCell
-            else { return UICollectionViewCell() }
+        else { return UICollectionViewCell() }
         let tag = mockTags[indexPath.row]
         cell.updateLabel(with: tag)
         return cell
-
     }
 }
 
 extension PostCreationTagView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, minimumInteritemSpacingForSectionAt _: Int) -> CGFloat {
         return 8
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, minimumLineSpacingForSectionAt _: Int) -> CGFloat {
         return 14
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? PostTagCell
-            else { return}
+        else { return }
         if cell.backgroundColor == #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1) {
             cell.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9568627451, blue: 0.9960784314, alpha: 1)
             cell.titleLabel.textColor = #colorLiteral(red: 0.2588235294, green: 0.3529411765, blue: 0.9490196078, alpha: 1)

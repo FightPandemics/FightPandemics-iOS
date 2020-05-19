@@ -1,8 +1,8 @@
 //
-//  MenuViewController.swift
+//  InboxViewController.swift
 //  FightPandemics
 //
-//  Created by Harlan Kellaway on 5/14/20.
+//  Created by Harlan Kellaway on 5/19/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,6 +26,4 @@
 
 import UIKit
 
-final class MenuViewController: UIViewController {
-
-}
+final class InboxViewController: UIViewController {}

@@ -31,9 +31,8 @@ enum SessionManagerError: Error, LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .apiError(let error):
+        case let .apiError(error):
             return error.localizedDescription
         }
     }
-
 }

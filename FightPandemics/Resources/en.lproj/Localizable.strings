@@ -48,6 +48,10 @@
 "Tag-Btn-With-One-Selected-Tag" = "Add 1 Tag";
 "Tag-Btn-With-Many-Selected-Tags" = "Add %@ Tags";
 "Choose-Tags-Title" = "Choose Tags";
+"TabBarFeedBtn" = "Feed";
+"TabBarSearchBtn" = "Search";
+"TabBarInboxBtn" = "Inbox";
+"TabBarProfileBtn" = "Profile";
 
 // MARK: Profile
 
