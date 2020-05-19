@@ -27,7 +27,6 @@
 import UIKit
 
 final class RootNavigationController: UINavigationController {
-
     // MARK: - Properties
 
     var navigator: Navigator!
@@ -68,5 +67,4 @@ final class RootNavigationController: UINavigationController {
     @objc private func filterButtonTapped() {
         navigator.navigateToFiltersModal()
     }
-
 }

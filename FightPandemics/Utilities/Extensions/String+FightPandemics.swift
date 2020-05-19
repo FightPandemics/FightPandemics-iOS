@@ -27,7 +27,6 @@
 import Foundation
 
 extension String {
-
     /// Localized string for key.
     var localized: String {
         return NSLocalizedString(self, comment: "")
@@ -42,5 +41,4 @@ extension String {
         String(format: NSLocalizedString(self, tableName: nil, bundle: .main, value: "", comment: ""),
                arguments: params)
     }
-
 }

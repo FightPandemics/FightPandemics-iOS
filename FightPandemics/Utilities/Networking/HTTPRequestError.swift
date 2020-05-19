@@ -38,14 +38,13 @@ enum HTTPRequestError: Error, LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .responseError(let error):
+        case let .responseError(error):
             return error.localizedDescription
-        case .incompleteResponse(_, let response):
+        case let .incompleteResponse(_, response):
             let urlResponseString = response == nil ? "nil" : response!.description
             return "Incomplete response: \(urlResponseString)"
-        case .errorStatusCode(let statusCode):
+        case let .errorStatusCode(statusCode):
             return "Error Status Code: \(statusCode)"
         }
     }
-
 }

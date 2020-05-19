@@ -27,7 +27,6 @@
 import UIKit
 
 class CreatePostViewController: UIViewController {
-
     var postingEntity: Entity!
     var navigator: Navigator!
 
@@ -42,29 +41,28 @@ class CreatePostViewController: UIViewController {
     }
 
     private func setupUI() {
-        self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
-        self.createPostBody.setUp()
-        self.createPostFooter.setUp()
-        self.createPostHeader.setUp()
-        self.createPostHeader.closeAction = { [weak self] in
+        createPostBody.setUp()
+        createPostFooter.setUp()
+        createPostHeader.setUp()
+        createPostHeader.closeAction = { [weak self] in
             self?.navigator.dismissCreatePost()
         }
 
         let firstView = UIView()
-        firstView.frame = CGRect(x: 0, y: 80, width: (UIScreen.main.bounds.width - 47), height: 400)
-        self.view.addSubview(firstView)
+        firstView.frame = CGRect(x: 0, y: 80, width: UIScreen.main.bounds.width - 47, height: 400)
+        view.addSubview(firstView)
         firstView.addSubview(createPostHeader)
 
         let secondView = UIView()
-        secondView.frame = CGRect(x: 0, y: 243, width: (UIScreen.main.bounds.width - 47), height: 300)
-        self.view.addSubview(secondView)
+        secondView.frame = CGRect(x: 0, y: 243, width: UIScreen.main.bounds.width - 47, height: 300)
+        view.addSubview(secondView)
         secondView.addSubview(createPostBody)
 
         let thirdView = UIView()
-        thirdView.frame = CGRect(x: 0, y: 530, width: (UIScreen.main.bounds.width - 47), height: 300)
-        self.view.addSubview(thirdView)
+        thirdView.frame = CGRect(x: 0, y: 530, width: UIScreen.main.bounds.width - 47, height: 300)
+        view.addSubview(thirdView)
         thirdView.addSubview(createPostFooter)
     }
-
 }

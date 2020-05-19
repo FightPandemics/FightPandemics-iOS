@@ -34,13 +34,14 @@ class IndividualOrg: UIView {
     private var organizationBtn = UIButton()
     private var closeBtn = UIButton()
     private var confirmBtn = UIButton()
-    func setUp () {
+    func setUp() {
         setUpUpper()
         setUpLower()
         makeConstraints()
     }
-    func setUpUpper () {
-       topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
+
+    func setUpUpper() {
+        topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
         topLine.frame.size.width = 116
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
@@ -56,7 +57,8 @@ class IndividualOrg: UIView {
         descriptiveLbl.textAlignment = .center
         descriptiveLbl.numberOfLines = 0
     }
-    func setUpLower () {
+
+    func setUpLower() {
         individualBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgIndividualButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         individualBtn.frame.size.height = 45
         individualBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -90,7 +92,8 @@ class IndividualOrg: UIView {
         confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         confirmBtn.layer.borderWidth = 1
     }
-    func makeConstraints () {
+
+    func makeConstraints() {
         topLine.makeSubview(of: self)
             .centerX(to: \.centerXAnchor, constant: 23)
             .top(to: \.topAnchor, constant: 12)

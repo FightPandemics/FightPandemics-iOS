@@ -26,6 +26,4 @@
 
 import UIKit
 
-final class InboxViewController: UIViewController {
-
-}
+final class InboxViewController: UIViewController {}

@@ -26,5 +26,4 @@
 
 import UIKit
 
-final class FeedViewController: UIViewController {
-}
+final class FeedViewController: UIViewController {}

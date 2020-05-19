@@ -42,16 +42,15 @@ import UIKit
 // present(viewControllerToPresent, animated: true, completion: nil)
 
 class BottomModalTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
-
     let height: CGFloat
 
     init(height: CGFloat) {
         self.height = height
     }
 
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source _: UIViewController) -> UIPresentationController? {
         BottomModalPresentationController(presentedViewController: presented,
-                                 presenting: presenting,
-                                 height: height)
+                                          presenting: presenting,
+                                          height: height)
     }
 }

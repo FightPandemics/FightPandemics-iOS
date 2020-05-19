@@ -27,7 +27,6 @@
 import UIKit
 
 final class FiltersModal: UIViewController {
-
     var navigator: Navigator!
 
     override func viewDidLoad() {
@@ -46,5 +45,4 @@ final class FiltersModal: UIViewController {
         button.setTitle("Request Location Permission", for: .normal)
         button.setTitleColor(.white, for: .normal)
     }
-
 }

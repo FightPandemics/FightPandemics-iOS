@@ -27,13 +27,12 @@
 import UIKit
 
 class FeedPost: UIView {
-
     private var typeLabel = UILabel()
     private var titleLabel = UILabel()
     private var bodyLabel = UILabel()
     private var moreButton = UIButton()
 
-    func setUp (title: String, body: String, type: String) {
+    func setUp(title: String, body: String, type: String) {
         // type label
         typeLabel.text = "  \(type) ."
         typeLabel.textAlignment = .center
@@ -72,7 +71,7 @@ class FeedPost: UIView {
         makeConstraints()
     }
 
-    private func makeConstraints () {
+    private func makeConstraints() {
         typeLabel.makeSubview(of: self)
             .leading(to: \.leadingAnchor, constant: 23)
             .top(to: \.topAnchor, constant: 74)

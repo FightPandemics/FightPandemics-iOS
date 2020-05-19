@@ -27,7 +27,6 @@
 import Foundation
 
 protocol API {
-
     // MARK: - Auth
 
     func logIn(email: String, password: String, completion: @escaping (Result<User, APIError>) -> Void)
@@ -36,5 +35,4 @@ protocol API {
     // MARK: - Profile
 
     func downloadOpenSourceLicenses(completion: @escaping ([(license: OpenSourceLicense, details: HTML)]) -> Void)
-
 }

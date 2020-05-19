@@ -28,7 +28,6 @@ import Foundation
 import UIKit
 
 class TagView: UIView {
-
     var title: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
@@ -67,26 +66,25 @@ class TagView: UIView {
             .pinToEdges().height(22)
         addTapGesture()
 
-        self.backgroundColor = UIColor(named: "TagBackgroundGrayColor")
-        self.layer.cornerRadius = 5
+        backgroundColor = UIColor(named: "TagBackgroundGrayColor")
+        layer.cornerRadius = 5
     }
 
     func addTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(makeSelection))
-        self.addGestureRecognizer(tapGesture)
+        addGestureRecognizer(tapGesture)
     }
 
     @objc
     func makeSelection() {
-        self.isSelected.toggle()
+        isSelected.toggle()
 
         if isSelected {
-            self.backgroundColor = UIColor(named: "TagBackgroundColor")
+            backgroundColor = UIColor(named: "TagBackgroundColor")
             title.textColor = UIColor(named: "TagLabelColor")
         } else {
-            self.backgroundColor = UIColor(named: "TagBackgroundGrayColor")
+            backgroundColor = UIColor(named: "TagBackgroundGrayColor")
             title.textColor = UIColor(named: "DarkGrayTextColor")
         }
     }
-
 }

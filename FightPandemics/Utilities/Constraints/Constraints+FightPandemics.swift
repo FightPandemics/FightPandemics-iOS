@@ -30,7 +30,6 @@ import UIKit
 /// - Remark: Inspired by jdisho/VanillaConstraints.
 
 extension UIView {
-
     // MARK: NSLayoutDimension
 
     @discardableResult
@@ -53,7 +52,7 @@ extension UIView {
         constant: CGFloat = 0,
         relation: NSLayoutConstraint.Relation = .equal,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where XAxisDimension: NSLayoutDimension {
+    ) -> NSLayoutConstraint? where XAxisDimension: NSLayoutDimension {
         guard let otherView = otherView else { return nil }
         return widthAnchor
             .constraint(to: otherView[keyPath: dimension], multiplier: multiplier, relation: relation)
@@ -82,7 +81,7 @@ extension UIView {
         constant: CGFloat = 0,
         relation: NSLayoutConstraint.Relation = .equal,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where YAxisDimension: NSLayoutDimension {
+    ) -> NSLayoutConstraint? where YAxisDimension: NSLayoutDimension {
         guard let otherView = otherView else { return nil }
         return heightAnchor
             .constraint(to: otherView[keyPath: dimension], multiplier: multiplier, relation: relation)
@@ -100,7 +99,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
         guard let otherView = otherView else { return nil }
         return leadingAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -116,7 +115,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
         guard let otherView = otherView else { return nil }
         return trailingAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -132,7 +131,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
         guard let otherView = otherView else { return nil }
         return leftAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -148,7 +147,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
         guard let otherView = otherView else { return nil }
         return rightAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -164,7 +163,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
+    ) -> NSLayoutConstraint? where XAxisAnchor: NSLayoutXAxisAnchor {
         guard let otherView = otherView else { return nil }
         return centerXAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -182,7 +181,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where YAxisAnchor: NSLayoutYAxisAnchor {
+    ) -> NSLayoutConstraint? where YAxisAnchor: NSLayoutYAxisAnchor {
         guard let otherView = otherView else { return nil }
         return topAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -198,7 +197,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where YAxisAnchor: NSLayoutYAxisAnchor {
+    ) -> NSLayoutConstraint? where YAxisAnchor: NSLayoutYAxisAnchor {
         guard let otherView = otherView else { return nil }
         return bottomAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -214,7 +213,7 @@ extension UIView {
         relation: NSLayoutConstraint.Relation = .equal,
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required
-        ) -> NSLayoutConstraint? where YAxisAnchor: NSLayoutYAxisAnchor {
+    ) -> NSLayoutConstraint? where YAxisAnchor: NSLayoutYAxisAnchor {
         guard let otherView = otherView else { return nil }
         return centerYAnchor
             .constraint(to: otherView[keyPath: anchor], relation: relation)
@@ -222,18 +221,16 @@ extension UIView {
             .priority(priority)
             .activate()
     }
-
 }
 
 // MARK: - NSLayoutDimension
 
 extension NSLayoutDimension {
-
     fileprivate func constraint(
         to dimension: NSLayoutDimension,
         multiplier: CGFloat,
         relation: NSLayoutConstraint.Relation
-        ) -> NSLayoutConstraint {
+    ) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return constraint(equalTo: dimension, multiplier: multiplier)
@@ -249,7 +246,7 @@ extension NSLayoutDimension {
     fileprivate func constraint(
         toConstant constant: CGFloat,
         relation: NSLayoutConstraint.Relation = .equal
-        ) -> NSLayoutConstraint {
+    ) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return constraint(equalToConstant: constant)
@@ -261,13 +258,11 @@ extension NSLayoutDimension {
             fatalError("Unexpected value provided by framework.")
         }
     }
-
 }
 
 // MARK: - NSLayoutXAxisAnchor
 
 extension NSLayoutXAxisAnchor {
-
     fileprivate func constraint(to anchor: NSLayoutXAxisAnchor,
                                 relation: NSLayoutConstraint.Relation) -> NSLayoutConstraint {
         switch relation {
@@ -281,13 +276,11 @@ extension NSLayoutXAxisAnchor {
             fatalError("Unexpected value provided by framework.")
         }
     }
-
 }
 
 // MARK: - NSLayoutYAxisAnchor
 
 extension NSLayoutYAxisAnchor {
-
     fileprivate func constraint(to anchor: NSLayoutYAxisAnchor,
                                 relation: NSLayoutConstraint.Relation) -> NSLayoutConstraint {
         switch relation {
@@ -301,13 +294,11 @@ extension NSLayoutYAxisAnchor {
             fatalError("Unexpected value provided by framework.")
         }
     }
-
 }
 
 // MARK: - NSLayoutConstraint
 
 extension NSLayoutConstraint {
-
     fileprivate func priority(_ priority: UILayoutPriority) -> Self {
         self.priority = priority
         return self
@@ -327,5 +318,4 @@ extension NSLayoutConstraint {
         isActive = false
         return self
     }
-
 }

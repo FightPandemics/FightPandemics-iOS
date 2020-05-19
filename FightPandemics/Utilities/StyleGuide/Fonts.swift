@@ -27,7 +27,6 @@
 import UIKit
 
 enum Fonts {
-
     // Regular
 
     case dmSansRegular
@@ -77,7 +76,7 @@ private extension UIFont {
     }
 
     static func poppinsRegular(size: CGFloat) -> UIFont {
-       UIFont(name: "Poppins-Regular", size: size)!
+        UIFont(name: "Poppins-Regular", size: size)!
     }
 
     static func dmSansMedium(size: CGFloat) -> UIFont {
@@ -89,14 +88,14 @@ private extension UIFont {
     }
 
     static func dmSansBold(size: CGFloat) -> UIFont {
-         UIFont(name: "DMSans-Bold", size: size)!
-     }
+        UIFont(name: "DMSans-Bold", size: size)!
+    }
 
     static func openSansBold(size: CGFloat) -> UIFont {
-         UIFont(name: "OpenSans-Bold", size: size)!
-     }
+        UIFont(name: "OpenSans-Bold", size: size)!
+    }
 
     static func poppinsBold(size: CGFloat) -> UIFont {
-         UIFont(name: "Poppins-Bold", size: size)!
-     }
+        UIFont(name: "Poppins-Bold", size: size)!
+    }
 }

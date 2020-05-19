@@ -27,7 +27,6 @@
 import UIKit
 
 final class RootTabBarController: UITabBarController {
-
     // MARK: - Types
 
     enum Tab: Int, CaseIterable {
@@ -53,7 +52,7 @@ final class RootTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.delegate = self
+        delegate = self
         customizeTabBar()
     }
 
@@ -186,7 +185,6 @@ final class RootTabBarController: UITabBarController {
             }
         }
     }
-
 }
 
 // MARK: - Protocol conformance
@@ -194,8 +192,7 @@ final class RootTabBarController: UITabBarController {
 // MARK: UITabBarControllerDelegate
 
 extension RootTabBarController: UITabBarControllerDelegate {
-
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    func tabBarController(_: UITabBarController, didSelect viewController: UIViewController) {
         guard let tab = tabForViewController(viewController), let item = tabBarItem(tab) else {
             return
         }
@@ -225,9 +222,8 @@ extension RootTabBarController: UITabBarControllerDelegate {
         dotView.frame.origin.x = (itemView?.frame.origin.x)! + ((itemView?.frame.size.width)! / 2) + addend
         dotView.frame.origin.y = 40
         tabBar.addSubview(dotView)
-        self.tabBar.layoutIfNeeded()
-        self.tabBar.layoutSubviews()
-        self.tabBar.bringSubviewToFront(postButton)
+        tabBar.layoutIfNeeded()
+        tabBar.layoutSubviews()
+        tabBar.bringSubviewToFront(postButton)
     }
-
 }

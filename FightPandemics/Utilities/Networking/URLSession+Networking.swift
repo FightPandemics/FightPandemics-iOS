@@ -27,31 +27,29 @@
 import Foundation
 
 extension URLSession {
-
     func httpRequest(_ httpRequest: HTTPRequest,
                      completion: @escaping (Result<Data, HTTPRequestError>) -> Void) {
-            _ = dataTask(with: httpRequest, completionHandler: { (data, response, error) in
-                if let error = error {
-                    completion(.failure(.responseError(error: error)))
-                    return
-                }
+        _ = dataTask(with: httpRequest, completionHandler: { data, response, error in
+            if let error = error {
+                completion(.failure(.responseError(error: error)))
+                return
+            }
 
-                guard
-                    let unwrappedData = data,
-                    let httpResponse = response as? HTTPURLResponse else {
-                        completion(.failure(.incompleteResponse(data: data, response: response as? HTTPURLResponse)))
-                        return
-                }
+            guard
+                let unwrappedData = data,
+                let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(.incompleteResponse(data: data, response: response as? HTTPURLResponse)))
+                return
+            }
 
-                let successStatusCodes: Range<Int> = 200..<300
+            let successStatusCodes: Range<Int> = 200 ..< 300
 
-                guard successStatusCodes.contains(httpResponse.statusCode) else {
-                    completion(.failure(.errorStatusCode(value: httpResponse.statusCode)))
-                    return
-                }
+            guard successStatusCodes.contains(httpResponse.statusCode) else {
+                completion(.failure(.errorStatusCode(value: httpResponse.statusCode)))
+                return
+            }
 
-                completion(.success(unwrappedData))
+            completion(.success(unwrappedData))
             }).resume()
     }
-
 }

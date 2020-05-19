@@ -27,11 +27,10 @@
 import UIKit
 
 class CreatePostBody: UIView {
-
     private var title = UITextField()
     private var body = UITextView()
 
-    func setUp () {
+    func setUp() {
         // set Up Title
         title.attributedPlaceholder = NSAttributedString(string: "CreatePostFormBodyTitlePlaceholder".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#939393")])
         title.backgroundColor = UIColor.clear
@@ -54,5 +53,4 @@ class CreatePostBody: UIView {
             .leading(to: \.leadingAnchor, constant: 25)
             .top(to: \.bottomAnchor, of: title, constant: 15)
     }
-
 }
