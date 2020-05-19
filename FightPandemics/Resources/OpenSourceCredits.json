@@ -11,4 +11,8 @@
         "title": "VanillaConstraints",
         "url": "https://raw.githubusercontent.com/jdisho/VanillaConstraints/master/LICENSE"
     }
+    {
+        "title": "SwiftFormat",
+        "url": "https://raw.githubusercontent.com/nicklockwood/SwiftFormat/master/LICENSE.md"
+    }
 ]
