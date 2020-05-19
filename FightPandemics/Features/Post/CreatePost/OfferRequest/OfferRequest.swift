@@ -66,7 +66,7 @@ class OfferRequest: UIView {
         reqBtn.layer.masksToBounds = true
         reqBtn.layer.cornerRadius = 4
         self.addSubview(reqBtn)
-        closeBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestCloseBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+        closeBtn.setAttributedTitle(NSAttributedString(string: "CloseButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         closeBtn.clipsToBounds = true
         closeBtn.backgroundColor = UIColor.clear
         closeBtn.layer.masksToBounds = true
@@ -74,7 +74,7 @@ class OfferRequest: UIView {
         closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         closeBtn.layer.borderWidth = 1
         self.addSubview(closeBtn)
-        confirmBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+        confirmBtn.setAttributedTitle(NSAttributedString(string: "ConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.clipsToBounds = true
         confirmBtn.backgroundColor = UIColor.clear
         confirmBtn.layer.masksToBounds = true

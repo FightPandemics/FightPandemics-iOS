@@ -74,7 +74,7 @@ class PostCreationTagView: UIView {
         button.layer.borderWidth = 1
         button.layer.cornerRadius = Dimension.buttonHeight / 2
         button.layer.masksToBounds = true
-        button.setTitle("Close-Button-Text".localized, for: .normal)
+        button.setTitle("CloseButton".localized, for: .normal)
         button.titleLabel?.font = Fonts.poppinsRegular.customFont(size: 15)
         button.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
         return button
