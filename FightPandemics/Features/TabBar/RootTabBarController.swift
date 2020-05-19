@@ -34,8 +34,8 @@ final class RootTabBarController: UITabBarController {
         case feed = 0
         case search = 1
         case post = -1 // Post tab not indexed through `viewControllers` array
-        case profile = 2
-        case menu = 3
+        case inbox = 2
+        case profile = 3
     }
 
     // MARK: - Properties
@@ -67,22 +67,20 @@ final class RootTabBarController: UITabBarController {
 
     func selectTab(_ tab: Tab) {
         switch tab {
-        case .feed, .search, .profile:
+        case .feed, .search, .profile, .inbox:
             selectedIndex = tab.rawValue
         case .post:
             selectPostTab()
-        case .menu:
-            return
         }
     }
 
     func tabBarItem(_ tab: Tab) -> UITabBarItem? {
-        assert(tab.rawValue >= 0 && tab.rawValue <= Tab.allCases.count - 2, "Invalid Tab index")
+        assert(tab.rawValue >= 0 && tab.rawValue <= Tab.allCases.count - 1, "Invalid Tab index")
         return tabBar.items?[tab.rawValue]
     }
 
     func navController(_ tab: Tab) -> RootNavigationController? {
-        assert(tab.rawValue >= 0 && tab.rawValue <= Tab.allCases.count - 2, "Invalid Tab index")
+        assert(tab.rawValue >= 0 && tab.rawValue <= Tab.allCases.count - 1, "Invalid Tab index")
         return viewControllers?[tab.rawValue] as? RootNavigationController
     }
 
@@ -91,8 +89,8 @@ final class RootTabBarController: UITabBarController {
     private func customizeTabBar() {
         guard let feedTabBarItem = tabBarItem(.feed),
             let searchTabBarItem = tabBarItem(.search),
-            let profileTabBarItem = tabBarItem(.profile),
-            let menuTabBarItem = tabBarItem(.menu) else {
+            let inboxTabBarItem = tabBarItem(.inbox),
+            let profileTabBarItem = tabBarItem(.profile) else {
             return
         }
 
@@ -100,23 +98,23 @@ final class RootTabBarController: UITabBarController {
 
         feedTabBarItem.image = UIImage(named: "feed")
         searchTabBarItem.image = UIImage(named: "search")
-        profileTabBarItem.image = UIImage(named: "inbox")
-        menuTabBarItem.image = UIImage(named: "profile")
+        inboxTabBarItem.image = UIImage(named: "inbox")
+        profileTabBarItem.image = UIImage(named: "profile")
 
         feedTabBarItem.title = "TabBarFeedBtn".localized
         searchTabBarItem.title = "TabBarSearchBtn".localized
-        profileTabBarItem.title = "TabBarInboxBtn".localized
-        menuTabBarItem.title = "TabBarProfileBtn".localized
+        inboxTabBarItem.title = "TabBarInboxBtn".localized
+        profileTabBarItem.title = "TabBarProfileBtn".localized
 
         feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
         searchTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
+        inboxTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
         profileTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
-        menuTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
 
         feedTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -15, vertical: 0)
         searchTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -30, vertical: 0)
-        profileTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 30, vertical: 0)
-        menuTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
+        inboxTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 30, vertical: 0)
+        profileTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
 
         let postButton = UIButton()
         self.postButton = postButton
@@ -161,10 +159,6 @@ final class RootTabBarController: UITabBarController {
     }
 
     private func tabForViewController(_ viewController: UIViewController) -> Tab? {
-        if viewController is MenuViewController {
-            return .menu
-        }
-
         guard let viewController = (viewController as? RootNavigationController)?.viewControllers.first else {
             return nil
         }
@@ -174,13 +168,15 @@ final class RootTabBarController: UITabBarController {
             return .feed
         case is SearchViewController:
             return .search
+        case is InboxViewController:
+            return .inbox
         case is ProfileViewController:
             return .profile
         default:
             return nil
         }
     }
-    
+
     private func attemptAutoLogIn() {
         autoLoginFakeLaunchScreen.show()
         sessionManager.autoLogIn { [weak self] result in

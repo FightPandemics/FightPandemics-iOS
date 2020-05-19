@@ -47,7 +47,7 @@
         <!--Item-->
         <scene sceneID="k0h-U9-chT">
             <objects>
-                <viewController storyboardIdentifier="ProfileNavigationController" id="5hA-s4-0UP" customClass="RootNavigationController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuRootNavigationController" id="5hA-s4-0UP" customClass="RootNavigationController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ial-8c-L3p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Item-->
         <scene sceneID="08I-dY-Gjc">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="2wg-et-ii0" customClass="MenuViewController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileRootNavigationController" id="2wg-et-ii0" customClass="RootNavigationController" customModule="FightPandemics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WqT-E1-7QD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
