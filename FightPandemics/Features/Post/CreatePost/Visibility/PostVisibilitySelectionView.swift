@@ -56,7 +56,7 @@ class PostVisibilitySelectionView: UIView {
         self.addSubview(questionLbl)
     }
     func setUpButtons () {
-        neighborBtn.setAttributedTitle(NSAttributedString(string: "VisibilityNeighborBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        neighborBtn.setAttributedTitle(NSAttributedString(string: "VisibilityNeighborBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         neighborBtn.setTitleColor(UIColor.white, for: .selected)
         neighborBtn.frame.size.height = 45
         neighborBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -65,7 +65,7 @@ class PostVisibilitySelectionView: UIView {
         neighborBtn.layer.masksToBounds = true
         neighborBtn.layer.cornerRadius = 4
         self.addSubview(neighborBtn)
-        cityBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCityBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        cityBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCityBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         cityBtn.setTitleColor(UIColor.white, for: .selected)
         cityBtn.frame.size.height = 45
         cityBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -74,7 +74,7 @@ class PostVisibilitySelectionView: UIView {
         cityBtn.layer.masksToBounds = true
         cityBtn.layer.cornerRadius = 4
         self.addSubview(cityBtn)
-        countryBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCountryBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        countryBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCountryBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         countryBtn.setTitleColor(UIColor.white, for: .selected)
         countryBtn.frame.size.height = 45
         countryBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -83,7 +83,7 @@ class PostVisibilitySelectionView: UIView {
         countryBtn.layer.masksToBounds = true
         countryBtn.layer.cornerRadius = 4
         self.addSubview(countryBtn)
-        anyoneBtn.setAttributedTitle(NSAttributedString(string: "VisibilityAnyoneBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        anyoneBtn.setAttributedTitle(NSAttributedString(string: "VisibilityAnyoneBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         anyoneBtn.setTitleColor(UIColor.white, for: .selected)
         anyoneBtn.frame.size.height = 45
         anyoneBtn.frame.size.width = UIScreen.main.bounds.width - 46

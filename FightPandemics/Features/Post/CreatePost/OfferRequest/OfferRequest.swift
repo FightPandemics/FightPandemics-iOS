@@ -52,14 +52,14 @@ class OfferRequest: UIView {
         self.addSubview(questionLbl)
     }
     func setUpLower () {
-        offerBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestOfferBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        offerBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestOfferBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         offerBtn.setTitleColor(UIColor.white, for: .selected)
         offerBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
         offerBtn.clipsToBounds = true
         offerBtn.layer.masksToBounds = true
         offerBtn.layer.cornerRadius = 4
         self.addSubview(offerBtn)
-        reqBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestRequestBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        reqBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestRequestBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         reqBtn.setTitleColor(UIColor.white, for: .selected)
         reqBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
         reqBtn.clipsToBounds = true
