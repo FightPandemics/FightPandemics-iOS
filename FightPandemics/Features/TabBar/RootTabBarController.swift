@@ -44,6 +44,8 @@ final class RootTabBarController: UITabBarController {
     var navigator: Navigator!
     var sessionManager: SessionManager!
 
+    private var postButton: UIButton!
+
     // MARK: - Overrides
 
     // MARK: View life-cycle
@@ -117,11 +119,13 @@ final class RootTabBarController: UITabBarController {
         menuTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
 
         let postButton = UIButton()
+        self.postButton = postButton
         postButton.frame.size = CGSize(width: 44, height: 44)
         postButton.setImage(UIImage(named: "post"), for: .normal)
         postButton.center = CGPoint(x: tabBar.frame.width / 2, y: 24)
         tabBar.addSubview(postButton)
         postButton.addTarget(self, action: #selector(selectPostTab), for: .touchUpInside)
+        tabBar.bringSubviewToFront(postButton)
     }
 
     private func tabBarInitialSetUp() {
@@ -156,6 +160,27 @@ final class RootTabBarController: UITabBarController {
         navigator.navigateToCreatePostEntitySelectionModal()
     }
 
+    private func tabForViewController(_ viewController: UIViewController) -> Tab? {
+        if viewController is MenuViewController {
+            return .menu
+        }
+
+        guard let viewController = (viewController as? RootNavigationController)?.viewControllers.first else {
+            return nil
+        }
+
+        switch viewController {
+        case is FeedViewController:
+            return .feed
+        case is SearchViewController:
+            return .search
+        case is ProfileViewController:
+            return .profile
+        default:
+            return nil
+        }
+    }
+    
     private func attemptAutoLogIn() {
         autoLoginFakeLaunchScreen.show()
         sessionManager.autoLogIn { [weak self] result in
@@ -173,8 +198,12 @@ final class RootTabBarController: UITabBarController {
 // MARK: UITabBarControllerDelegate
 
 extension RootTabBarController: UITabBarControllerDelegate {
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        guard let tab = tabForViewController(viewController), let item = tabBarItem(tab) else {
+            return
+        }
+
         item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
         tabBar.tintColor = .black
         let itemView = item.value(forKey: "view") as? UIView
@@ -202,5 +231,7 @@ extension RootTabBarController: UITabBarControllerDelegate {
         tabBar.addSubview(dotView)
         self.tabBar.layoutIfNeeded()
         self.tabBar.layoutSubviews()
+        self.tabBar.bringSubviewToFront(postButton)
     }
+
 }
