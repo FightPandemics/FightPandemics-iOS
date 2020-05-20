@@ -43,7 +43,7 @@ class CreatePostFooter: UIView {
 
     private func setUpUpper() {
         // separator line
-        sepLine.backgroundColor = UIColor(hexString: "#D7D7D7")
+        sepLine.backgroundColor = UIColor.fightPandemicsLightGrey()
         sepLine.frame.size.width = UIScreen.main.bounds.width
         sepLine.frame.size.height = 2
         // first question label
@@ -58,20 +58,20 @@ class CreatePostFooter: UIView {
         shareBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
         shareBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
         shareBtn.clipsToBounds = true
-        shareBtn.backgroundColor = UIColor(hexString: "#F3F4FE")
+        shareBtn.backgroundColor = UIColor.fightPandemicsGhostWhite()
         shareBtn.layer.masksToBounds = true
         shareBtn.frame.size.width = 140
         shareBtn.frame.size.height = 29
         shareBtn.layer.borderWidth = 0
         shareBtn.layer.cornerRadius = 4
         shareBtn.semanticContentAttribute = .forceRightToLeft
-        shareBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
+        shareBtn.setTitleColor(UIColor.fightPandemicsNeonBlue(), for: .normal)
         // duration button
         durationBtn.setTitle("CreatePostAudienceDuration".localized, for: .normal)
         durationBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
         durationBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
         durationBtn.clipsToBounds = true
-        durationBtn.backgroundColor = UIColor(hexString: "#F3F4FE")
+        durationBtn.backgroundColor = UIColor.fightPandemicsGhostWhite()
         durationBtn.layer.masksToBounds = true
         durationBtn.frame.size.width = 128
         durationBtn.frame.size.height = 29
@@ -80,7 +80,7 @@ class CreatePostFooter: UIView {
         durationBtn.sizeToFit()
         durationBtn.layoutIfNeeded()
         durationBtn.semanticContentAttribute = .forceRightToLeft
-        durationBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
+        durationBtn.setTitleColor(UIColor.fightPandemicsNeonBlue(), for: .normal)
     }
 
     private func setUpLower() {
@@ -96,7 +96,7 @@ class CreatePostFooter: UIView {
         tagsBtn.setImage(#imageLiteral(resourceName: "tag"), for: .normal)
         tagsBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
         tagsBtn.clipsToBounds = true
-        tagsBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        tagsBtn.backgroundColor = UIColor(named: "#F2F2F2")
         tagsBtn.layer.masksToBounds = true
         tagsBtn.frame.size.width = 90
         tagsBtn.frame.size.height = 29
@@ -111,7 +111,7 @@ class CreatePostFooter: UIView {
         postBtn.setTitleColor(UIColor.white, for: .normal)
         postBtn.titleLabel?.font = Fonts.poppinsBold.customFont(size: 18)
         postBtn.clipsToBounds = true
-        postBtn.backgroundColor = UIColor(hexString: "#425AF2")
+        postBtn.backgroundColor = UIColor.fightPandemicsNeonBlue()
         postBtn.layer.masksToBounds = true
         postBtn.frame.size.width = UIScreen.main.bounds.width - 47
         postBtn.frame.size.height = 54

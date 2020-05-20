@@ -34,7 +34,7 @@ class AvatarView: UIView {
         frame.size.height = 35
         let xOrigin = CGFloat(avatar.frame.width)
         let label = UILabel(frame: CGRect(x: 9 + xOrigin, y: 0, width: 167, height: 20))
-        label.textColor = UIColor(hexString: "#282828")
+        label.textColor = UIColor.fightPandemicsNero()
         label.textAlignment = .left
         label.font = UIFont(name: "System", size: 14)
         let imageView = UIImageView(frame: CGRect(x: 9 + xOrigin, y: 25, width: 6, height: 6))
@@ -43,7 +43,7 @@ class AvatarView: UIView {
         // wireframe version's width was 113 which was too small
         let locLable = UILabel(frame: CGRect(x: 22 + xOrigin, y: 21, width: 153, height: 14))
         locLable.text = user.location
-        locLable.textColor = UIColor(hexString: "#939393")
+        locLable.textColor = UIColor.fightPandemicsSuvaGrey()
         locLable.textAlignment = .left
         locLable.font = UIFont(name: "System", size: 11)
         locLable.makeSubview(of: avatar)
