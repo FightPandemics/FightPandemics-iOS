@@ -107,8 +107,6 @@ class PostVisibilitySelectionView: UIView {
         closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         closeBtn.layer.borderWidth = 1
 
-        addSubview(closeBtn)
-        confirmBtn.setAttributedTitle(NSAttributedString(string: "VisibilityConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         self.addSubview(closeBtn)
         confirmBtn.setAttributedTitle(NSAttributedString(string: "ConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
