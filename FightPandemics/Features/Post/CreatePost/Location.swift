@@ -34,7 +34,6 @@ class Location: UIView {
     private var multiplierH = CGFloat()
     private var locInfoView = UIView()
     func setUp() {
-        isUserInteractionEnabled = true
         multiplierW = (UIScreen.main.bounds.width / 375)
         multiplierH = (UIScreen.main.bounds.height / 812)
         topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
@@ -57,16 +56,21 @@ class Location: UIView {
     }
 
     @objc func plusBtnTapped() {
-        locInfoView.frame = CGRect(origin: CGPoint(x: 0, y: 72), size: CGSize(width: frame.size.width, height: self.frame.size.height - 72))
-        addSubview(locInfoView)
+        plusBtn.isSelected = !plusBtn.isSelected
+        if plusBtn.isSelected {
+            locInfoView.frame = CGRect(origin: CGPoint(x: 0, y: 72), size: CGSize(width: frame.size.width, height: frame.size.height - 72))
+            addSubview(locInfoView)
 
-        locInfoView.makeSubview(of: self)
-            .width(UIScreen.main.bounds.width)
-            .height(self.frame.size.height - 72)
-            .left(to: \.leftAnchor, constant: 0)
-            .right(to: \.rightAnchor, constant: 0)
-            .top(to: \.topAnchor, constant: 72)
-            .bottom(to: \.bottomAnchor, constant: 0)
+            locInfoView.makeSubview(of: self)
+                .width(UIScreen.main.bounds.width)
+                .height(frame.size.height - 72)
+                .left(to: \.leftAnchor, constant: 0)
+                .right(to: \.rightAnchor, constant: 0)
+                .top(to: \.topAnchor, constant: 72)
+                .bottom(to: \.bottomAnchor, constant: 0)
+        } else {
+            locInfoView.removeFromSuperview()
+        }
     }
 
     func setUpConstraints() {
@@ -82,13 +86,11 @@ class Location: UIView {
             .height(28 * multiplierH)
             .left(to: \.leftAnchor, constant: 28 * multiplierW)
             .top(to: \.topAnchor, constant: 44 * multiplierH)
-            .right(to: \.rightAnchor, constant: -((UIScreen.main.bounds.width - 146) * multiplierW))
 
         plusBtn.makeSubview(of: self)
             .width(24 * multiplierW)
             .height(24 * multiplierH)
             .right(to: \.rightAnchor, constant: -(25 * multiplierW))
             .top(to: \.topAnchor, constant: 46 * multiplierH)
-            .left(to: \.leftAnchor, constant: (UIScreen.main.bounds.width - 90) * multiplierW)
     }
 }
