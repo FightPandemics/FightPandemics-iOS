@@ -59,6 +59,7 @@ final class RootNavigationController: UINavigationController {
 
     private func setupUI() {
         navigationBar.prefersLargeTitles = true
+        navigationBar.configure()
         navigationBar.removeHairline()
     }
 
