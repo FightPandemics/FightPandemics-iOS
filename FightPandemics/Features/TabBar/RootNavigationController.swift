@@ -61,7 +61,7 @@ final class RootNavigationController: UINavigationController {
                                                   style: .plain,
                                                   target: self,
                                                   action: #selector(filterButtonTapped))
-        navigationBar.tintColor = UIColor(hexString: "#425AF2")
+        navigationBar.tintColor = UIColor.fightPandemicsNeonBlue()
     }
 
     @objc private func filterButtonTapped() {
