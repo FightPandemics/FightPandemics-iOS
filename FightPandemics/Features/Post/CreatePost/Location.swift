@@ -32,7 +32,9 @@ class Location: UIView {
     private var topLine = UIView()
     private var multiplierW = CGFloat()
     private var multiplierH = CGFloat()
+    private var locInfoView = UIView()
     func setUp() {
+        isUserInteractionEnabled = true
         multiplierW = (UIScreen.main.bounds.width / 375)
         multiplierH = (UIScreen.main.bounds.height / 812)
         topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
@@ -46,9 +48,25 @@ class Location: UIView {
         addSubview(locationLbl)
         plusBtn.setImage(UIImage(named: "plus"), for: .normal)
         plusBtn.setImage(UIImage(named: "minus"), for: .selected)
+        plusBtn.isUserInteractionEnabled = true
+        plusBtn.clipsToBounds = true
         plusBtn.frame.size = CGSize(width: 24 * multiplierW, height: 24 * multiplierH)
+        plusBtn.addTarget(self, action: #selector(plusBtnTapped), for: .touchUpInside)
         addSubview(plusBtn)
         setUpConstraints()
+    }
+
+    @objc func plusBtnTapped() {
+        locInfoView.frame = CGRect(origin: CGPoint(x: 0, y: 72), size: CGSize(width: frame.size.width, height: self.frame.size.height - 72))
+        addSubview(locInfoView)
+
+        locInfoView.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width)
+            .height(self.frame.size.height - 72)
+            .left(to: \.leftAnchor, constant: 0)
+            .right(to: \.rightAnchor, constant: 0)
+            .top(to: \.topAnchor, constant: 72)
+            .bottom(to: \.bottomAnchor, constant: 0)
     }
 
     func setUpConstraints() {
