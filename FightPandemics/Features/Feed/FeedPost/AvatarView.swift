@@ -41,11 +41,11 @@ class AvatarView: UIView {
         imageView.image = #imageLiteral(resourceName: "logo")
         imageView.makeSubview(of: avatar)
         // wireframe version's width was 113 which was too small
-        let locLable = UILabel(frame: CGRect(x: 22 + xOrigin, y: 21, width: 153, height: 14))
-        locLable.text = user.location
-        locLable.textColor = UIColor.fightPandemicsSuvaGrey()
-        locLable.textAlignment = .left
-        locLable.font = UIFont(name: "System", size: 11)
-        locLable.makeSubview(of: avatar)
+        let locLabel = UILabel(frame: CGRect(x: 22 + xOrigin, y: 21, width: 153, height: 14))
+        locLabel.text = user.location
+        locLabel.textColor = UIColor(hexString: "#939393")
+        locLabel.textAlignment = .left
+        locLabel.font = UIFont(name: "System", size: 11)
+        locLabel.makeSubview(of: avatar)
     }
 }
