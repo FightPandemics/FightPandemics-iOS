@@ -58,7 +58,7 @@ class PostCreationTagView: UIView {
 
     private lazy var addTagButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(hexString: "#425AF2")
+        button.backgroundColor = UIColor.fightPandemicsNeonBlue()
         button.layer.cornerRadius = Dimension.buttonHeight / 2
         button.layer.masksToBounds = true
         button.setTitle(addTagButtonTitle, for: .normal)
@@ -70,13 +70,13 @@ class PostCreationTagView: UIView {
     private var closeButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        button.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = Dimension.buttonHeight / 2
         button.layer.masksToBounds = true
         button.setTitle("CloseButton".localized, for: .normal)
         button.titleLabel?.font = Fonts.poppinsRegular.customFont(size: 15)
-        button.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
+        button.setTitleColor(UIColor.fightPandemicsNeonBlue(), for: .normal)
         return button
     }()
 
@@ -84,7 +84,7 @@ class PostCreationTagView: UIView {
         let label = UILabel()
         label.font = Fonts.poppinsBold.customFont(size: 16)
         label.text = "Choose-Tags-Title".localized
-        label.textColor = UIColor(hexString: "#282828")
+        label.textColor = UIColor.fightPandemicsNero()
         return label
     }()
 
@@ -117,7 +117,7 @@ private extension PostCreationTagView {
         stackView.spacing = Dimension.stackViewSpacing
         stackView.distribution = .fillEqually
 
-        topLiner.backgroundColor = UIColor(hexString: "#F3F4FE")
+        topLiner.backgroundColor = UIColor.fightPandemicsGhostWhite()
         topLiner.makeSubview(of: self)
             .top(to: \.topAnchor, constant: 10.8)
             .centerX(to: \.centerXAnchor)

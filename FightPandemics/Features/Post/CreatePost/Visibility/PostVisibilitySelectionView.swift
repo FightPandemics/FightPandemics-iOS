@@ -43,7 +43,7 @@ class PostVisibilitySelectionView: UIView {
     }
 
     func setUpUpper() {
-        topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
+        topLine.backgroundColor = UIColor.fightPandemicsGhostWhite()
         topLine.frame.size.width = 116
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
@@ -62,7 +62,7 @@ class PostVisibilitySelectionView: UIView {
         neighborBtn.setTitleColor(UIColor.white, for: .selected)
         neighborBtn.frame.size.height = 45
         neighborBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        neighborBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        neighborBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         neighborBtn.clipsToBounds = true
         neighborBtn.layer.masksToBounds = true
         neighborBtn.layer.cornerRadius = 4
@@ -71,7 +71,7 @@ class PostVisibilitySelectionView: UIView {
         cityBtn.setTitleColor(UIColor.white, for: .selected)
         cityBtn.frame.size.height = 45
         cityBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        cityBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        cityBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         cityBtn.clipsToBounds = true
         cityBtn.layer.masksToBounds = true
         cityBtn.layer.cornerRadius = 4
@@ -80,7 +80,7 @@ class PostVisibilitySelectionView: UIView {
         countryBtn.setTitleColor(UIColor.white, for: .selected)
         countryBtn.frame.size.height = 45
         countryBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        countryBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        countryBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         countryBtn.clipsToBounds = true
         countryBtn.layer.masksToBounds = true
         countryBtn.layer.cornerRadius = 4
@@ -89,7 +89,7 @@ class PostVisibilitySelectionView: UIView {
         anyoneBtn.setTitleColor(UIColor.white, for: .selected)
         anyoneBtn.frame.size.height = 45
         anyoneBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        anyoneBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        anyoneBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         anyoneBtn.clipsToBounds = true
         anyoneBtn.layer.masksToBounds = true
         anyoneBtn.layer.cornerRadius = 4
@@ -104,7 +104,7 @@ class PostVisibilitySelectionView: UIView {
         closeBtn.backgroundColor = UIColor.clear
         closeBtn.layer.masksToBounds = true
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
-        closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        closeBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         closeBtn.layer.borderWidth = 1
 
         self.addSubview(closeBtn)
@@ -115,7 +115,7 @@ class PostVisibilitySelectionView: UIView {
         confirmBtn.backgroundColor = UIColor.clear
         confirmBtn.layer.masksToBounds = true
         confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
-        confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        confirmBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         confirmBtn.layer.borderWidth = 1
         addSubview(confirmBtn)
     }

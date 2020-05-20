@@ -39,9 +39,9 @@ class FeedPost: UIView {
         typeLabel.font = UIFont(name: "System", size: 11)
         typeLabel.sizeToFit()
         typeLabel.layoutIfNeeded()
-        typeLabel.textColor = UIColor(hexString: "#425AF2")
+        typeLabel.textColor = UIColor.fightPandemicsNeonBlue()
         typeLabel.backgroundColor = UIColor.clear
-        typeLabel.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        typeLabel.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         typeLabel.layer.borderWidth = 1
         typeLabel.layer.cornerRadius = typeLabel.frame.size.height / 2
         // title label
@@ -51,7 +51,7 @@ class FeedPost: UIView {
         titleLabel.numberOfLines = 0
         titleLabel.sizeToFit()
         titleLabel.layoutIfNeeded()
-        titleLabel.textColor = UIColor(hexString: "#282828")
+        titleLabel.textColor = UIColor.fightPandemicsNero()
         titleLabel.backgroundColor = UIColor.clear
         // body label
         bodyLabel.text = body
@@ -60,11 +60,11 @@ class FeedPost: UIView {
         bodyLabel.numberOfLines = 0
         bodyLabel.sizeToFit()
         bodyLabel.layoutIfNeeded()
-        bodyLabel.textColor = UIColor(hexString: "#282828")
+        bodyLabel.textColor = UIColor.fightPandemicsNero()
         bodyLabel.backgroundColor = UIColor.clear
         // more button
         moreButton.setTitle("FeedPostViewMoreCTA".localized, for: .normal)
-        moreButton.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
+        moreButton.setTitleColor(UIColor.fightPandemicsNeonBlue(), for: .normal)
         moreButton.titleLabel?.font = UIFont(name: "System", size: 16)
         moreButton.contentHorizontalAlignment = .left
         moreButton.backgroundColor = UIColor.clear

@@ -52,6 +52,7 @@
 "TabBarSearchBtn" = "Search";
 "TabBarInboxBtn" = "Inbox";
 "TabBarProfileBtn" = "Profile";
+"LocationLbl" = "Location";
 
 // MARK: Profile
 

@@ -41,7 +41,7 @@ class IndividualOrg: UIView {
     }
 
     func setUpUpper() {
-        topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
+        topLine.backgroundColor = UIColor.fightPandemicsGhostWhite()
         topLine.frame.size.width = 116
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
@@ -62,14 +62,14 @@ class IndividualOrg: UIView {
         individualBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgIndividualButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         individualBtn.frame.size.height = 45
         individualBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        individualBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        individualBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         individualBtn.clipsToBounds = true
         individualBtn.layer.masksToBounds = true
         individualBtn.layer.cornerRadius = 4
         organizationBtn.setAttributedTitle(NSAttributedString(string: "IndividualOrgOrganizationButton".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         organizationBtn.frame.size.height = 45
         organizationBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        organizationBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        organizationBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         organizationBtn.clipsToBounds = true
         organizationBtn.layer.masksToBounds = true
         organizationBtn.layer.cornerRadius = 4
@@ -80,7 +80,7 @@ class IndividualOrg: UIView {
         closeBtn.backgroundColor = UIColor.clear
         closeBtn.layer.masksToBounds = true
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
-        closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        closeBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         closeBtn.layer.borderWidth = 1
         confirmBtn.setAttributedTitle(NSAttributedString(string: "ConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
@@ -89,7 +89,7 @@ class IndividualOrg: UIView {
         confirmBtn.backgroundColor = UIColor.clear
         confirmBtn.layer.masksToBounds = true
         confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
-        confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        confirmBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         confirmBtn.layer.borderWidth = 1
     }
 

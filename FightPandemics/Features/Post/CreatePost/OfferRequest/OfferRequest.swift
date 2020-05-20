@@ -40,7 +40,7 @@ class OfferRequest: UIView {
     }
 
     func setUpUpper() {
-        topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
+        topLine.backgroundColor = UIColor.fightPandemicsGhostWhite()
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
         topLine.layer.masksToBounds = true
@@ -56,14 +56,14 @@ class OfferRequest: UIView {
     func setUpLower() {
         offerBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestOfferBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         offerBtn.setTitleColor(UIColor.white, for: .selected)
-        offerBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        offerBtn.backgroundColor = UIColor.fightPandemicsGhostWhite()
         offerBtn.clipsToBounds = true
         offerBtn.layer.masksToBounds = true
         offerBtn.layer.cornerRadius = 4
         addSubview(offerBtn)
         reqBtn.setAttributedTitle(NSAttributedString(string: "OfferRequestRequestBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         reqBtn.setTitleColor(UIColor.white, for: .selected)
-        reqBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        reqBtn.backgroundColor = UIColor.fightPandemicsSuvaGrey()
         reqBtn.clipsToBounds = true
         reqBtn.layer.masksToBounds = true
         reqBtn.layer.cornerRadius = 4
@@ -73,7 +73,7 @@ class OfferRequest: UIView {
         closeBtn.backgroundColor = UIColor.clear
         closeBtn.layer.masksToBounds = true
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
-        closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        closeBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         closeBtn.layer.borderWidth = 1
         self.addSubview(closeBtn)
         confirmBtn.setAttributedTitle(NSAttributedString(string: "ConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
@@ -81,7 +81,7 @@ class OfferRequest: UIView {
         confirmBtn.backgroundColor = UIColor.clear
         confirmBtn.layer.masksToBounds = true
         confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
-        confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        confirmBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         confirmBtn.layer.borderWidth = 1
         addSubview(confirmBtn)
     }
