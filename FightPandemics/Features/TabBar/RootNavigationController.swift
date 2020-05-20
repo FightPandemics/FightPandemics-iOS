@@ -44,6 +44,7 @@ final class RootNavigationController: UINavigationController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        addNavBarLogo()
         addFilterButton()
     }
 
@@ -52,6 +53,7 @@ final class RootNavigationController: UINavigationController {
     // MARK: Private instance methods
 
     private func setupUI() {
+        navigationBar.prefersLargeTitles = true
         navigationBar.removeHairline()
     }
 
@@ -62,6 +64,13 @@ final class RootNavigationController: UINavigationController {
                                                   target: self,
                                                   action: #selector(filterButtonTapped))
         navigationBar.tintColor = UIColor.fightPandemicsNeonBlue()
+    }
+
+    private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "nav-logo"))
+    private let filterButton = UIButton()
+
+    private func addNavBarLogo() {
+
     }
 
     @objc private func filterButtonTapped() {
