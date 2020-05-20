@@ -94,6 +94,3 @@ class Location: UIView {
             .top(to: \.topAnchor, constant: 46 * multiplierH)
     }
 }
-
-
-
