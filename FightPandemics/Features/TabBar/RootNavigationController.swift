@@ -48,6 +48,11 @@ final class RootNavigationController: UINavigationController {
         addFilterButton()
     }
 
+    // MARK: Private instance properties
+
+    private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "nav-logo"))
+    private let filterButton = UIButton()
+
     // MARK: - Instance methods
 
     // MARK: Private instance methods
@@ -65,9 +70,6 @@ final class RootNavigationController: UINavigationController {
                                                   action: #selector(filterButtonTapped))
         navigationBar.tintColor = UIColor.fightPandemicsNeonBlue()
     }
-
-    private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "nav-logo"))
-    private let filterButton = UIButton()
 
     private func addNavBarLogo() {
 
