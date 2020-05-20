@@ -48,7 +48,7 @@ final class CreatePostEntitySelectionModal: UIViewController {
     // MARK: Private instance methods
 
     private func setupUI() {
-        confirmButton.backgroundColor = UIColor(hexString: "#425AF2")
+        confirmButton.backgroundColor = UIColor.fightPandemicsNeonBlue()
         confirmButton.setTitle("IndividualOrgConfirmButton".localized, for: .normal)
         confirmButton.setTitleColor(.white, for: .normal)
         confirmButton.makeSubview(of: view)

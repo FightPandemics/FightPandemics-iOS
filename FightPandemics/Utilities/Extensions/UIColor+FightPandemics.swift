@@ -28,21 +28,19 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    convenience init(hexString: String, alpha: CGFloat = 1.0) {
-        var hexFormatted: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
-
-        if hexFormatted.hasPrefix("#") {
-            hexFormatted = String(hexFormatted.dropFirst())
-        }
-
-        assert(hexFormatted.count == 6, "Invalid hex code used.")
-
-        var rgbValue: UInt64 = 0
-        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
-
-        self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-                  green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-                  blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-                  alpha: alpha)
+    public convenience init(hexRGB value: UInt) {
+        let red = CGFloat((value >> 16) & 0xFF) / 255
+        let green = CGFloat((value >> 8) & 0xFF) / 255
+        let blue = CGFloat((value >> 0) & 0xFF) / 255
+        self.init(red: red, green: green, blue: blue, alpha: 1)
     }
+
+    // MARK: FightPandemics Palette
+
+    @objc public static func fightPandemicsNeonBlue() -> UIColor { return UIColor(hexRGB: 0x425AF2) }
+    @objc public static func fightPandemicsGhostWhite() -> UIColor { return UIColor(hexRGB: 0xF3F4FE) }
+    @objc public static func fightPandemicsLightGrey() -> UIColor { return UIColor(hexRGB: 0xD7D7D7) }
+    @objc public static func fightPandemicsNero() -> UIColor { return UIColor(hexRGB: 0x282828) }
+    @objc public static func fightPandemicsSuvaGrey() -> UIColor { return UIColor(hexRGB: 0x939393) }
+    @objc public static func fightPandemicsWhiteSmoke() -> UIColor { return UIColor(hexRGB: 0xF2F2F2) }
 }

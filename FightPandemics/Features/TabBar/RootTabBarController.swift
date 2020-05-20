@@ -137,12 +137,11 @@ final class RootTabBarController: UITabBarController {
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.shadowRadius = 8
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-        tabBar.layer.shadowOpacity = 1
         tabBar.layer.borderWidth = 0
         tabBar.shadowImage = UIImage()
         let itemView = tabBar.items?[0].value(forKey: "view") as? UIView
         let dotView = UIView()
-        dotView.backgroundColor = UIColor(hexString: "#425AF2")
+        dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
         dotView.tag = 100
         dotView.frame.size.width = 6
         dotView.frame.size.height = 6
@@ -214,7 +213,7 @@ extension RootTabBarController: UITabBarControllerDelegate {
         if tabBar.viewWithTag(100) != nil {
             tabBar.viewWithTag(100)?.removeFromSuperview()
         }
-        dotView.backgroundColor = UIColor(hexString: "#425AF2")
+        dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
         dotView.tag = 100
         dotView.frame.size = CGSize(width: 6, height: 6)
         dotView.layer.cornerRadius = 3

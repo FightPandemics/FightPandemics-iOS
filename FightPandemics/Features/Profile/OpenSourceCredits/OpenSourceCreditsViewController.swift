@@ -55,7 +55,7 @@ final class OpenSourceCreditsViewController: UITableViewController {
     private func downloadLicenses() {
         loadingSpinner.startAnimating()
         api.downloadOpenSourceLicenses { [weak self] downloadedLicenses in
-            self?.downloadedLicenses = downloadedLicenses
+            self?.downloadedLicenses = downloadedLicenses.sorted { $0.0.title.lowercased() < $1.0.title.lowercased() }
             self?.loadingSpinner.stopAnimating()
             self?.tableView.reloadData()
         }

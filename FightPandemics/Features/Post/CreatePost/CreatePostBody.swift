@@ -32,7 +32,7 @@ class CreatePostBody: UIView {
 
     func setUp() {
         // set Up Title
-        title.attributedPlaceholder = NSAttributedString(string: "CreatePostFormBodyTitlePlaceholder".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#939393")])
+        title.attributedPlaceholder = NSAttributedString(string: "CreatePostFormBodyTitlePlaceholder".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
         title.backgroundColor = UIColor.clear
         title.layer.backgroundColor = UIColor.clear.cgColor
         title.layer.borderWidth = 0
@@ -45,7 +45,7 @@ class CreatePostBody: UIView {
         // set up body
         body.text = "CreatePostFormBodyContentPlaceholder".localized
         body.textAlignment = .left
-        body.textColor = UIColor(hexString: "#939393")
+        body.textColor = UIColor.fightPandemicsSuvaGrey()
         body.font = Fonts.poppinsRegular.customFont(size: 14)
         body.makeSubview(of: self)
             .width(310)

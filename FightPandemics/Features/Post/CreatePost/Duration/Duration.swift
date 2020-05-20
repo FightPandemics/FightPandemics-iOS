@@ -43,7 +43,7 @@ class Duration: UIView {
     }
 
     func setUpUpper() {
-        topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
+        topLine.backgroundColor = UIColor.fightPandemicsGhostWhite()
         topLine.frame.size.width = 116
         topLine.frame.size.height = 4
         topLine.clipsToBounds = true
@@ -61,7 +61,7 @@ class Duration: UIView {
         dayBtn.setTitleColor(UIColor.white, for: .selected)
         dayBtn.frame.size.height = 45
         dayBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        dayBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        dayBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         dayBtn.clipsToBounds = true
         dayBtn.layer.masksToBounds = true
         dayBtn.layer.cornerRadius = 4
@@ -70,7 +70,7 @@ class Duration: UIView {
         weekBtn.setTitleColor(UIColor.white, for: .selected)
         weekBtn.frame.size.height = 45
         weekBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        weekBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        weekBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         weekBtn.clipsToBounds = true
         weekBtn.layer.masksToBounds = true
         weekBtn.layer.cornerRadius = 4
@@ -79,7 +79,7 @@ class Duration: UIView {
         monthBtn.setTitleColor(UIColor.white, for: .selected)
         monthBtn.frame.size.height = 45
         monthBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        monthBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        monthBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         monthBtn.clipsToBounds = true
         monthBtn.layer.masksToBounds = true
         monthBtn.layer.cornerRadius = 4
@@ -88,7 +88,7 @@ class Duration: UIView {
         foreverBtn.setTitleColor(UIColor.white, for: .selected)
         foreverBtn.frame.size.height = 45
         foreverBtn.frame.size.width = UIScreen.main.bounds.width - 46
-        foreverBtn.backgroundColor = UIColor(hexString: "#F2F2F2")
+        foreverBtn.backgroundColor = UIColor.fightPandemicsWhiteSmoke()
         foreverBtn.clipsToBounds = true
         foreverBtn.layer.masksToBounds = true
         foreverBtn.layer.cornerRadius = 4
@@ -96,24 +96,24 @@ class Duration: UIView {
     }
 
     func setUpLower() {
-        closeBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCloseBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+        closeBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCloseBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
         closeBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         closeBtn.frame.size.height = 45
         closeBtn.clipsToBounds = true
         closeBtn.backgroundColor = UIColor.clear
         closeBtn.layer.masksToBounds = true
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
-        closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        closeBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         closeBtn.layer.borderWidth = 1
         addSubview(closeBtn)
-        confirmBtn.setAttributedTitle(NSAttributedString(string: "VisibilityConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+        confirmBtn.setAttributedTitle(NSAttributedString(string: "VisibilityConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         confirmBtn.frame.size.height = 45
         confirmBtn.clipsToBounds = true
         confirmBtn.backgroundColor = UIColor.clear
         confirmBtn.layer.masksToBounds = true
         confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
-        confirmBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        confirmBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         confirmBtn.layer.borderWidth = 1
         addSubview(confirmBtn)
     }

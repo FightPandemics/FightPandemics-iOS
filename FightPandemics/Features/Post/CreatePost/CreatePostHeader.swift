@@ -47,6 +47,7 @@ class CreatePostHeader: UIView {
         //  close button
         cancelButton.setImage(#imageLiteral(resourceName: "x"), for: .normal)
         cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        cancelButton.contentVerticalAlignment = UIControl.ContentVerticalAlignment.top
         // question label
         questionLbl.text = "CreatePostFormSubtitle".localized
         questionLbl.textAlignment = .left
@@ -55,20 +56,20 @@ class CreatePostHeader: UIView {
         questionLbl.frame.size.width = 229
         //  selection button
         selectionBtn.setTitle("CreatePostTypeSelectionCTA".localized, for: .normal)
-        selectionBtn.setTitleColor(UIColor(hexString: "#425AF2"), for: .normal)
+        selectionBtn.setTitleColor(UIColor.fightPandemicsNeonBlue(), for: .normal)
         selectionBtn.setImage(#imageLiteral(resourceName: "chevron-down"), for: .normal)
         selectionBtn.titleLabel?.font = Fonts.dmSansRegular.customFont(size: 12)
         selectionBtn.frame.size.width = 131
         selectionBtn.frame.size.height = 29
         selectionBtn.layer.cornerRadius = 4
-        selectionBtn.backgroundColor = UIColor(hexString: "#F3F4FE")
+        selectionBtn.backgroundColor = UIColor.fightPandemicsGhostWhite()
         selectionBtn.layer.masksToBounds = true
         selectionBtn.clipsToBounds = true
         selectionBtn.layer.borderWidth = 0
         selectionBtn.sizeToFit()
         selectionBtn.layoutIfNeeded()
         selectionBtn.semanticContentAttribute = .forceRightToLeft
-        sepLine.backgroundColor = UIColor(hexString: "#D7D7D7")
+        sepLine.backgroundColor = UIColor.fightPandemicsLightGrey()
         sepLine.frame.size.width = UIScreen.main.bounds.width
         sepLine.frame.size.height = 1
         setUpConstraints()
