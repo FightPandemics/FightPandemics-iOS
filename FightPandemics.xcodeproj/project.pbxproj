@@ -73,6 +73,7 @@
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		C018DD7E2475D5D200EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7D2475D5D200EEB3FC /* Location.swift */; };
+		C018DD802475D76B00EEB3FC /* LocationCellZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7F2475D76B00EEB3FC /* LocationCellZipCode.swift */; };
 		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
@@ -185,6 +186,7 @@
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		C018DD7D2475D5D200EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C018DD7F2475D76B00EEB3FC /* LocationCellZipCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellZipCode.swift; sourceTree = "<group>"; };
 		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				2F0C3C692471E0F70002B384 /* Filters.storyboard */,
 				2F0C3C6B2471E1130002B384 /* FiltersModal.swift */,
 				C018DD7D2475D5D200EEB3FC /* Location.swift */,
+				C018DD7F2475D76B00EEB3FC /* LocationCellZipCode.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -833,6 +836,7 @@
 				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
 				2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */,
 				DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */,
+				C018DD802475D76B00EEB3FC /* LocationCellZipCode.swift in Sources */,
 				2F042199246CE4B3005FB1D0 /* LogInViewController.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
