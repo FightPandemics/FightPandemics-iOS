@@ -58,6 +58,7 @@
 "TabBarInboxBtn" = "Inbox";
 "TabBarProfileBtn" = "Profile";
 "LocationLbl" = "Location";
+"FilterLocationCellSearchBar" = "Zip code, neighborhood or city";
 
 // MARK: Profile
 

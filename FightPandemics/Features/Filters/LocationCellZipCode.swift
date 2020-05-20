@@ -29,7 +29,7 @@ import UIKit
 class LocationCellZipCode: UIView {
     private var searchBar = UITextField()
     func setUp() {
-        searchBar.attributedPlaceholder = NSAttributedString(string: "Zip code, neighborhood or city", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 16), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
+        searchBar.attributedPlaceholder = NSAttributedString(string: "FilterLocationCellSearchBar".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 16), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#979797")])
         searchBar.backgroundColor = UIColor(hexString: "#F2F2F2")
         let magImg = UIImageView()
         magImg.image = UIImage(named: "search")
