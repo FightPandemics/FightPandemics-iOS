@@ -71,6 +71,6 @@ class Location: UIView {
             .height(24 * multiplierH)
             .right(to: \.rightAnchor, constant: -(25 * multiplierW))
             .top(to: \.topAnchor, constant: 46 * multiplierH)
-            .left(to: \.leftAnchor, constant: (UIScreen.main.bounds.width - 70) * multiplierW)
+            .left(to: \.leftAnchor, constant: (UIScreen.main.bounds.width - 90) * multiplierW)
     }
 }
