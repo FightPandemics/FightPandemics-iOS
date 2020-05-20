@@ -95,6 +95,7 @@ class PostVisibilitySelectionView: UIView {
         anyoneBtn.layer.cornerRadius = 4
         addSubview(anyoneBtn)
     }
+
     func setUpLower () {
         closeBtn.setAttributedTitle(NSAttributedString(string: "CloseButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         closeBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
@@ -105,6 +106,9 @@ class PostVisibilitySelectionView: UIView {
         closeBtn.layer.cornerRadius = closeBtn.frame.size.height / 2
         closeBtn.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
         closeBtn.layer.borderWidth = 1
+
+        addSubview(closeBtn)
+        confirmBtn.setAttributedTitle(NSAttributedString(string: "VisibilityConfirmBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         self.addSubview(closeBtn)
         confirmBtn.setAttributedTitle(NSAttributedString(string: "ConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
