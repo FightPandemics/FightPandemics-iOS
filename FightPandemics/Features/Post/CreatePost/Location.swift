@@ -30,48 +30,47 @@ class Location: UIView {
     private var locationLbl = UILabel()
     private var plusBtn = UIButton()
     private var topLine = UIView()
-    private var muliplyerW = CGFloat()
-    private var muliplyerH = CGFloat()
+    private var multiplierW = CGFloat()
+    private var multiplierH = CGFloat()
     func setUp() {
-        muliplyerW = (UIScreen.main.bounds.width / 375)
-        muliplyerH = (UIScreen.main.bounds.height / 812)
+        multiplierW = (UIScreen.main.bounds.width / 375)
+        multiplierH = (UIScreen.main.bounds.height / 812)
         topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
-        topLine.frame.size = CGSize(width: 116 * muliplyerW, height: 4 * muliplyerH)
+        topLine.frame.size = CGSize(width: 116 * multiplierW, height: 4 * multiplierH)
         topLine.clipsToBounds = true
         topLine.layer.masksToBounds = true
         topLine.layer.cornerRadius = topLine.frame.size.height / 2
-        self.addSubview(topLine)
-        locationLbl.attributedText = NSAttributedString(string: "LocationLbl".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 16 * muliplyerW), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#282828")])
+        addSubview(topLine)
+        locationLbl.attributedText = NSAttributedString(string: "LocationLbl".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 16 * multiplierW), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#282828")])
         locationLbl.textAlignment = .left
-        self.addSubview(locationLbl)
+        addSubview(locationLbl)
         plusBtn.setImage(UIImage(named: "plus"), for: .normal)
         plusBtn.setImage(UIImage(named: "minus"), for: .selected)
-        plusBtn.frame.size = CGSize(width: 24 * muliplyerW, height: 24 * muliplyerH)
-        self.addSubview(plusBtn)
+        plusBtn.frame.size = CGSize(width: 24 * multiplierW, height: 24 * multiplierH)
+        addSubview(plusBtn)
         setUpConstraints()
     }
+
     func setUpConstraints() {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
         topLine.makeSubview(of: self)
-            .width(116 * muliplyerW)
-            .height(4 * muliplyerH)
-            .top(to: \.topAnchor, constant: 12 * muliplyerW)
+            .width(116 * multiplierW)
+            .height(4 * multiplierH)
+            .top(to: \.topAnchor, constant: 12 * multiplierW)
             .centerX(to: \.centerXAnchor, constant: 0)
 
         locationLbl.makeSubview(of: self)
-            .width(118 * muliplyerW)
-            .height(28 * muliplyerH)
-            .left(to: \.leftAnchor, constant: 28 * muliplyerW)
-            .top(to: \.topAnchor, constant: 44 * muliplyerH)
-            .right(to: \.rightAnchor, constant: -((UIScreen.main.bounds.width - (186 * muliplyerW)) * muliplyerW))
+            .width(118 * multiplierW)
+            .height(28 * multiplierH)
+            .left(to: \.leftAnchor, constant: 28 * multiplierW)
+            .top(to: \.topAnchor, constant: 44 * multiplierH)
+            .right(to: \.rightAnchor, constant: -((UIScreen.main.bounds.width - 146) * multiplierW))
 
         plusBtn.makeSubview(of: self)
-            .width(24 * muliplyerW)
-            .height(24 * muliplyerH)
-            .right(to: \.rightAnchor, constant: -(25 * muliplyerW))
-            .top(to: \.topAnchor, constant: 46 * muliplyerH)
-            .left(to: \.leftAnchor, constant: ((UIScreen.main.bounds.width - (80 * muliplyerW)) * muliplyerW))
+            .width(24 * multiplierW)
+            .height(24 * multiplierH)
+            .right(to: \.rightAnchor, constant: -(25 * multiplierW))
+            .top(to: \.topAnchor, constant: 46 * multiplierH)
+            .left(to: \.leftAnchor, constant: (UIScreen.main.bounds.width - 70) * multiplierW)
     }
 }
-
-
