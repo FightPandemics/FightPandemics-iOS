@@ -35,6 +35,7 @@ class FeedPrototypeViewController: UIViewController {
     private var postFooter = PostFooter()
     private var indivOrg = IndividualOrg()
     private var visibility = PostVisibilitySelectionView()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
