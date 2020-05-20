@@ -47,6 +47,7 @@ class CreatePostHeader: UIView {
         //  close button
         cancelButton.setImage(#imageLiteral(resourceName: "x"), for: .normal)
         cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        cancelButton.contentVerticalAlignment = UIControl.ContentVerticalAlignment.top
         // question label
         questionLbl.text = "CreatePostFormSubtitle".localized
         questionLbl.textAlignment = .left
