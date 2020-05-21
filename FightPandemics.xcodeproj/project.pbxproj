@@ -72,10 +72,8 @@
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
-
 		C018DD7E2475D5D200EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7D2475D5D200EEB3FC /* Location.swift */; };
 		C018DD802475D76B00EEB3FC /* LocationCellZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7F2475D76B00EEB3FC /* LocationCellZipCode.swift */; };
-
 		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
@@ -187,10 +185,8 @@
 		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
-
 		C018DD7D2475D5D200EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C018DD7F2475D76B00EEB3FC /* LocationCellZipCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellZipCode.swift; sourceTree = "<group>"; };
-
 		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
@@ -319,7 +315,6 @@
 				2F0B5165246E0DF200BE42BC /* CreatePostBody.swift */,
 				DDF929092471814700973488 /* PostCreationTagView.swift */,
 				DDF9290B2472055600973488 /* PostTagCell.swift */,
-				C018DD7B2474AF7B00EEB3FC /* Location.swift */,
 			);
 			path = CreatePost;
 			sourceTree = "<group>";
@@ -859,9 +854,7 @@
 				2F0C3C672471DE660002B384 /* UINavigationBar+FightPandemics.swift in Sources */,
 				0322FA13246E23D0009507D7 /* TagView.swift in Sources */,
 				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
-
 				C018DD7E2475D5D200EEB3FC /* Location.swift in Sources */,
-
 				DC807E6A247027C700046D67 /* JSONFileReader.swift in Sources */,
 				2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */,
 				2F0C3C652471DB2D0002B384 /* RootNavigationController.swift in Sources */,

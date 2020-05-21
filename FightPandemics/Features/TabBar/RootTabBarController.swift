@@ -137,6 +137,7 @@ final class RootTabBarController: UITabBarController {
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.shadowRadius = 8
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabBar.layer.shadowOpacity = 1
         tabBar.layer.borderWidth = 0
         tabBar.shadowImage = UIImage()
         let itemView = tabBar.items?[0].value(forKey: "view") as? UIView
