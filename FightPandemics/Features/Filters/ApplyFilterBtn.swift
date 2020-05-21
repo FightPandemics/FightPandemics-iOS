@@ -24,4 +24,24 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
+
+class ApplyFilterBtn: UIView {
+    private var applyFilterBtn = UIButton()
+    func setUp() {
+        applyFilterBtn.setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
+        applyFilterBtn.backgroundColor = UIColor.fightPandemicsNeonBlue()
+        applyFilterBtn.frame.size.height = 45
+        applyFilterBtn.clipsToBounds = true
+        applyFilterBtn.layer.cornerRadius = applyFilterBtn.frame.size.height / 2
+        applyFilterBtn.layer.borderWidth = 1
+        applyFilterBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
+        applyFilterBtn.makeSubview(of: self)
+            .width(158)
+            .height(45)
+            .top(to: \.topAnchor, constant: 0)
+            .left(to: \.leftAnchor, constant: 0)
+            .right(to: \.rightAnchor, constant: 0)
+    }
+}
+

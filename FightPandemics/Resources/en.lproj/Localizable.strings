@@ -57,6 +57,8 @@
 "TabBarInboxBtn" = "Inbox";
 "TabBarProfileBtn" = "Profile";
 "LocationLbl" = "Location";
+"ClearFilterBtn" = "Clear filters";
+"ApplyFilterBtn" = "Apply filters";
 
 // MARK: Profile
 
