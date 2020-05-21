@@ -50,10 +50,10 @@ class Avatar: UIView {
         label.layer.masksToBounds = true
         label.layer.cornerRadius = frame.size.height / 2
         label.font = UIFont(name: "System", size: 18)
-        label.textColor = UIColor(hexString: "#425AF2")
-        label.backgroundColor = UIColor(hexString: "#F3F4FE")
+        label.textColor = UIColor.fightPandemicsNeonBlue()
+        label.backgroundColor = UIColor.fightPandemicsGhostWhite()
         label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor(hexString: "#425AF2").cgColor
+        label.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         label.makeSubview(of: self)
     }
 

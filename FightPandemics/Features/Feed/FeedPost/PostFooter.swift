@@ -42,7 +42,7 @@ class PostFooter: UIView {
         // like label
         likeLbl.text = "\(likeNum)"
         likeLbl.textAlignment = .left
-        likeLbl.textColor = UIColor(hexString: "#939393")
+        likeLbl.textColor = UIColor.fightPandemicsSuvaGrey()
         likeLbl.font = UIFont(name: "System", size: 14)
         // comment image
         commentImg.frame.size.width = 20
@@ -50,7 +50,7 @@ class PostFooter: UIView {
         // comment label
         commentLbl.text = "\(commentNum)"
         commentLbl.textAlignment = .left
-        commentLbl.textColor = UIColor(hexString: "#939393")
+        commentLbl.textColor = UIColor.fightPandemicsSuvaGrey()
         commentLbl.font = UIFont(name: "System", size: 14)
         // send image
         sendImg.frame.size.width = 20
@@ -58,7 +58,7 @@ class PostFooter: UIView {
         // send label
         sendLbl.text = "\(sendNum)"
         sendLbl.textAlignment = .left
-        sendLbl.textColor = UIColor(hexString: "#939393")
+        sendLbl.textColor = UIColor.fightPandemicsSuvaGrey()
         sendLbl.font = UIFont(name: "System", size: 14)
         // comment text field
         cmtTextField.frame.size.width = CGFloat(UIScreen.main.bounds.width - 47)
@@ -68,7 +68,7 @@ class PostFooter: UIView {
         cmtTextField.layer.cornerRadius = cmtTextField.frame.size.height / 2
         cmtTextField.layer.masksToBounds = true
         cmtTextField.layer.borderWidth = 0
-        cmtTextField.backgroundColor = UIColor(hexString: "#F6F7FB")
+        cmtTextField.backgroundColor = UIColor.fightPandemicsSuvaGrey()
         makeConstraints()
     }
 
