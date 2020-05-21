@@ -56,9 +56,8 @@ class Duration: UIView {
         questionLbl.numberOfLines = 0
         addSubview(questionLbl)
     }
-
-    func setUpButtons() {
-        dayBtn.setAttributedTitle(NSAttributedString(string: "VisibilityNeighborBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+    func setUpButtons () {
+        dayBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveDay".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         dayBtn.setTitleColor(UIColor.white, for: .selected)
         dayBtn.frame.size.height = 45
         dayBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -66,8 +65,8 @@ class Duration: UIView {
         dayBtn.clipsToBounds = true
         dayBtn.layer.masksToBounds = true
         dayBtn.layer.cornerRadius = 4
-        addSubview(dayBtn)
-        weekBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCityBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        self.addSubview(dayBtn)
+        weekBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveWeek".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         weekBtn.setTitleColor(UIColor.white, for: .selected)
         weekBtn.frame.size.height = 45
         weekBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -75,8 +74,8 @@ class Duration: UIView {
         weekBtn.clipsToBounds = true
         weekBtn.layer.masksToBounds = true
         weekBtn.layer.cornerRadius = 4
-        addSubview(weekBtn)
-        monthBtn.setAttributedTitle(NSAttributedString(string: "VisibilityCountryBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        self.addSubview(weekBtn)
+        monthBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveMonth".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         monthBtn.setTitleColor(UIColor.white, for: .selected)
         monthBtn.frame.size.height = 45
         monthBtn.frame.size.width = UIScreen.main.bounds.width - 46
@@ -84,8 +83,8 @@ class Duration: UIView {
         monthBtn.clipsToBounds = true
         monthBtn.layer.masksToBounds = true
         monthBtn.layer.cornerRadius = 4
-        addSubview(monthBtn)
-        foreverBtn.setAttributedTitle(NSAttributedString(string: "VisibilityAnyoneBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        self.addSubview(monthBtn)
+        foreverBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveForever".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         foreverBtn.setTitleColor(UIColor.white, for: .selected)
         foreverBtn.frame.size.height = 45
         foreverBtn.frame.size.width = UIScreen.main.bounds.width - 46

@@ -37,6 +37,10 @@
 "IndividualOrgCloseButton" = "Close";
 "IndividualOrgConfirmButton" = "Confirm";
 "VisibilityTitle" = "Who can see this post?";
+"VisibilityActiveDay" = "A day";
+"VisibilityActiveWeek" = "A week";
+"VisibilityActiveMonth" = "A month";
+"VisibilityActiveForever" = "Forever";
 "VisibilityNeighborBtn" = "My neighborhood";
 "VisibilityCityBtn" = "My city";
 "VisibilityCountryBtn" = "My country";
