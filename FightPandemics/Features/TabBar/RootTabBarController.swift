@@ -68,6 +68,36 @@ final class RootTabBarController: UITabBarController {
         switch tab {
         case .feed, .search, .profile, .inbox:
             selectedIndex = tab.rawValue
+
+            guard let item = tabBarItem(tab) else { return }
+            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
+            tabBar.tintColor = .black
+            let itemView = item.value(forKey: "view") as? UIView
+            var addend = CGFloat()
+            if tabBar.items?.firstIndex(of: item) == 0 {
+                addend = -19
+            } else if tabBar.items?.firstIndex(of: item) == 1 {
+                addend = -35
+            } else if tabBar.items?.firstIndex(of: item) == 2 {
+                addend = 27
+            } else if tabBar.items?.firstIndex(of: item) == 3 {
+                addend = 12
+            }
+            let dotView = UIView()
+            if tabBar.viewWithTag(100) != nil {
+                tabBar.viewWithTag(100)?.removeFromSuperview()
+            }
+            dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
+            dotView.tag = 100
+            dotView.frame.size = CGSize(width: 6, height: 6)
+            dotView.layer.cornerRadius = 3
+            dotView.layer.masksToBounds = true
+            dotView.frame.origin.x = (itemView?.frame.origin.x)! + ((itemView?.frame.size.width)! / 2) + addend
+            dotView.frame.origin.y = 40
+            tabBar.addSubview(dotView)
+            tabBar.layoutIfNeeded()
+            tabBar.layoutSubviews()
+            tabBar.bringSubviewToFront(postButton)
         case .post:
             selectPostTab()
         }
@@ -156,25 +186,6 @@ final class RootTabBarController: UITabBarController {
         navigator.navigateToCreatePostEntitySelectionModal()
     }
 
-    private func tabForViewController(_ viewController: UIViewController) -> Tab? {
-        guard let viewController = (viewController as? RootNavigationController)?.viewControllers.first else {
-            return nil
-        }
-
-        switch viewController {
-        case is FeedViewController:
-            return .feed
-        case is SearchViewController:
-            return .search
-        case is InboxViewController:
-            return .inbox
-        case is ProfileViewController:
-            return .profile
-        default:
-            return nil
-        }
-    }
-
     private func attemptAutoLogIn() {
         autoLoginFakeLaunchScreen.show()
         sessionManager.autoLogIn { [weak self] result in
@@ -192,37 +203,24 @@ final class RootTabBarController: UITabBarController {
 
 extension RootTabBarController: UITabBarControllerDelegate {
     func tabBarController(_: UITabBarController, didSelect viewController: UIViewController) {
-        guard let tab = tabForViewController(viewController), let item = tabBarItem(tab) else {
+        guard let viewController = (viewController as? RootNavigationController)?.viewControllers.first else {
             return
         }
 
-        item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
-        tabBar.tintColor = .black
-        let itemView = item.value(forKey: "view") as? UIView
-        var addend = CGFloat()
-        if tabBar.items?.firstIndex(of: item) == 0 {
-            addend = -19
-        } else if tabBar.items?.firstIndex(of: item) == 1 {
-            addend = -35
-        } else if tabBar.items?.firstIndex(of: item) == 2 {
-            addend = 27
-        } else if tabBar.items?.firstIndex(of: item) == 3 {
-            addend = 12
+        let tab: Tab
+        switch viewController {
+        case is FeedViewController:
+            tab = .feed
+        case is SearchViewController:
+            tab = .search
+        case is InboxViewController:
+            tab = .inbox
+        case is ProfileViewController:
+            tab = .profile
+        default:
+            return
         }
-        let dotView = UIView()
-        if tabBar.viewWithTag(100) != nil {
-            tabBar.viewWithTag(100)?.removeFromSuperview()
-        }
-        dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
-        dotView.tag = 100
-        dotView.frame.size = CGSize(width: 6, height: 6)
-        dotView.layer.cornerRadius = 3
-        dotView.layer.masksToBounds = true
-        dotView.frame.origin.x = (itemView?.frame.origin.x)! + ((itemView?.frame.size.width)! / 2) + addend
-        dotView.frame.origin.y = 40
-        tabBar.addSubview(dotView)
-        tabBar.layoutIfNeeded()
-        tabBar.layoutSubviews()
-        tabBar.bringSubviewToFront(postButton)
+
+        selectTab(tab)
     }
 }
