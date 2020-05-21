@@ -54,6 +54,7 @@ final class RootTabBarController: UITabBarController {
 
         delegate = self
         customizeTabBar()
+        selectTab(.feed)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -68,35 +69,7 @@ final class RootTabBarController: UITabBarController {
         switch tab {
         case .feed, .search, .profile, .inbox:
             selectedIndex = tab.rawValue
-
-            guard let item = tabBarItem(tab) else { return }
-            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
-            tabBar.tintColor = .black
-            let itemView = item.value(forKey: "view") as? UIView
-            var addend = CGFloat()
-            if tabBar.items?.firstIndex(of: item) == 0 {
-                addend = -19
-            } else if tabBar.items?.firstIndex(of: item) == 1 {
-                addend = -35
-            } else if tabBar.items?.firstIndex(of: item) == 2 {
-                addend = 27
-            } else if tabBar.items?.firstIndex(of: item) == 3 {
-                addend = 12
-            }
-            let dotView = UIView()
-            if tabBar.viewWithTag(100) != nil {
-                tabBar.viewWithTag(100)?.removeFromSuperview()
-            }
-            dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
-            dotView.tag = 100
-            dotView.frame.size = CGSize(width: 6, height: 6)
-            dotView.layer.cornerRadius = 3
-            dotView.layer.masksToBounds = true
-            dotView.frame.origin.x = (itemView?.frame.origin.x)! + ((itemView?.frame.size.width)! / 2) + addend
-            dotView.frame.origin.y = 40
-            tabBar.addSubview(dotView)
-            tabBar.layoutIfNeeded()
-            tabBar.layoutSubviews()
+            addDotToTab(tab: tab)
             tabBar.bringSubviewToFront(postButton)
         case .post:
             selectPostTab()
@@ -116,48 +89,7 @@ final class RootTabBarController: UITabBarController {
     // MARK: Private instance methods
 
     private func customizeTabBar() {
-        guard let feedTabBarItem = tabBarItem(.feed),
-            let searchTabBarItem = tabBarItem(.search),
-            let inboxTabBarItem = tabBarItem(.inbox),
-            let profileTabBarItem = tabBarItem(.profile) else {
-            return
-        }
-
-        tabBarInitialSetUp()
-
-        feedTabBarItem.image = UIImage(named: "feed")
-        searchTabBarItem.image = UIImage(named: "search")
-        inboxTabBarItem.image = UIImage(named: "inbox")
-        profileTabBarItem.image = UIImage(named: "profile")
-
-        feedTabBarItem.title = "TabBarFeedBtn".localized
-        searchTabBarItem.title = "TabBarSearchBtn".localized
-        inboxTabBarItem.title = "TabBarInboxBtn".localized
-        profileTabBarItem.title = "TabBarProfileBtn".localized
-
-        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
-        searchTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
-        inboxTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
-        profileTabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
-
-        feedTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -15, vertical: 0)
-        searchTabBarItem.titlePositionAdjustment = UIOffset(horizontal: -30, vertical: 0)
-        inboxTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 30, vertical: 0)
-        profileTabBarItem.titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
-
-        let postButton = UIButton()
-        self.postButton = postButton
-        postButton.frame.size = CGSize(width: 44, height: 44)
-        postButton.setImage(UIImage(named: "post"), for: .normal)
-        postButton.center = CGPoint(x: tabBar.frame.width / 2, y: 24)
-        tabBar.addSubview(postButton)
-        postButton.addTarget(self, action: #selector(selectPostTab), for: .touchUpInside)
-        tabBar.bringSubviewToFront(postButton)
-    }
-
-    private func tabBarInitialSetUp() {
         tabBar.tintColor = .black
-        tabBar.items?[0].setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
         tabBar.barTintColor = .white
         tabBar.backgroundImage = UIImage()
         tabBar.backgroundColor = .white
@@ -169,17 +101,96 @@ final class RootTabBarController: UITabBarController {
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
         tabBar.layer.borderWidth = 0
         tabBar.shadowImage = UIImage()
-        let itemView = tabBar.items?[0].value(forKey: "view") as? UIView
+
+        customizeTabBarItem(tab: .feed)
+        customizeTabBarItem(tab: .search)
+        customizeTabBarItem(tab: .inbox)
+        customizeTabBarItem(tab: .profile)
+
+        let postButton = UIButton()
+        self.postButton = postButton
+        postButton.frame.size = CGSize(width: 44, height: 44)
+        postButton.setImage(UIImage(named: "post"), for: .normal)
+        postButton.center = CGPoint(x: tabBar.frame.width / 2, y: 24)
+        tabBar.addSubview(postButton)
+        postButton.addTarget(self, action: #selector(selectPostTab), for: .touchUpInside)
+        tabBar.bringSubviewToFront(postButton)
+    }
+
+    private func customizeTabBarItem(tab: Tab) {
+        let item = tabBarItem(tab)
+        var titleKey: String = ""
+        var imageName: String = ""
+        var horizontalOffset: CGFloat = 0
+        switch tab {
+        case .feed:
+            titleKey = "TabBarFeedBtn"
+            imageName = "feed"
+            horizontalOffset = -15
+        case .search:
+            titleKey = "TabBarSearchBtn"
+            imageName = "search"
+            horizontalOffset = -30
+        case .inbox:
+            titleKey = "TabBarInboxBtn"
+            imageName = "inbox"
+            horizontalOffset = 30
+        case .profile:
+            titleKey = "TabBarProfileBtn"
+            imageName = "profile"
+            horizontalOffset = 15
+        case .post:
+            break
+        }
+        item?.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
+        item?.image = UIImage(named: imageName)
+        item?.title = titleKey.localized
+        item?.titlePositionAdjustment = UIOffset(horizontal: horizontalOffset, vertical: 0)
+    }
+
+    private func addDotToTab(tab: Tab) {
+        guard let item = tabBarItem(tab), let dotView = tabDotView(tab: tab) else {
+            return
+        }
+        let dotViewIdentifier = 100
+        if tabBar.viewWithTag(dotViewIdentifier) != nil {
+            tabBar.viewWithTag(dotViewIdentifier)?.removeFromSuperview()
+        }
+        dotView.tag = dotViewIdentifier
+        tabBar.addSubview(dotView)
+        tabBar.layoutIfNeeded()
+        tabBar.layoutSubviews()
+        item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear],
+                                    for: .selected)
+    }
+
+    private func tabDotView(tab: Tab) -> UIView? {
+        guard let item = tabBarItem(tab), let itemView = item.value(forKey: "view") as? UIView else {
+            return nil
+        }
+
+        var addend = CGFloat()
+        switch tab {
+        case .feed:
+            addend = -19
+        case .search:
+            addend = -35
+        case .inbox:
+            addend = 27
+        case .profile:
+            addend = 12
+        case .post:
+            break
+        }
+
         let dotView = UIView()
         dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
-        dotView.tag = 100
-        dotView.frame.size.width = 6
-        dotView.frame.size.height = 6
+        dotView.frame.size = CGSize(width: 6, height: 6)
         dotView.layer.cornerRadius = 3
         dotView.layer.masksToBounds = true
-        dotView.frame.origin.x = ((itemView?.frame.size.width)! / 2) - 18
+        dotView.frame.origin.x = itemView.frame.origin.x + (itemView.frame.size.width / 2) + addend
         dotView.frame.origin.y = 40
-        tabBar.addSubview(dotView)
+        return dotView
     }
 
     @objc private func selectPostTab() {
