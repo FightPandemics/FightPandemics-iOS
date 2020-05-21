@@ -36,13 +36,13 @@ class Location: UIView {
     func setUp() {
         multiplierW = (UIScreen.main.bounds.width / 375)
         multiplierH = (UIScreen.main.bounds.height / 812)
-        topLine.backgroundColor = UIColor(hexString: "#F3F4FE")
+        topLine.backgroundColor = UIColor.fightPandemicsGhostWhite()
         topLine.frame.size = CGSize(width: 116 * multiplierW, height: 4 * multiplierH)
         topLine.clipsToBounds = true
         topLine.layer.masksToBounds = true
         topLine.layer.cornerRadius = topLine.frame.size.height / 2
         addSubview(topLine)
-        locationLbl.attributedText = NSAttributedString(string: "LocationLbl".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 16 * multiplierW), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#282828")])
+        locationLbl.attributedText = NSAttributedString(string: "LocationLbl".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 16 * multiplierW), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
         locationLbl.textAlignment = .left
         addSubview(locationLbl)
         plusBtn.setImage(UIImage(named: "plus"), for: .normal)

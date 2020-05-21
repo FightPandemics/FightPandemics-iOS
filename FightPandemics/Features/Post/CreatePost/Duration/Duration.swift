@@ -56,7 +56,8 @@ class Duration: UIView {
         questionLbl.numberOfLines = 0
         addSubview(questionLbl)
     }
-    func setUpButtons () {
+
+    func setUpButtons() {
         dayBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveDay".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         dayBtn.setTitleColor(UIColor.white, for: .selected)
         dayBtn.frame.size.height = 45
@@ -65,7 +66,7 @@ class Duration: UIView {
         dayBtn.clipsToBounds = true
         dayBtn.layer.masksToBounds = true
         dayBtn.layer.cornerRadius = 4
-        self.addSubview(dayBtn)
+        addSubview(dayBtn)
         weekBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveWeek".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         weekBtn.setTitleColor(UIColor.white, for: .selected)
         weekBtn.frame.size.height = 45
@@ -74,7 +75,7 @@ class Duration: UIView {
         weekBtn.clipsToBounds = true
         weekBtn.layer.masksToBounds = true
         weekBtn.layer.cornerRadius = 4
-        self.addSubview(weekBtn)
+        addSubview(weekBtn)
         monthBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveMonth".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         monthBtn.setTitleColor(UIColor.white, for: .selected)
         monthBtn.frame.size.height = 45
@@ -83,7 +84,7 @@ class Duration: UIView {
         monthBtn.clipsToBounds = true
         monthBtn.layer.masksToBounds = true
         monthBtn.layer.cornerRadius = 4
-        self.addSubview(monthBtn)
+        addSubview(monthBtn)
         foreverBtn.setAttributedTitle(NSAttributedString(string: "VisibilityActiveForever".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         foreverBtn.setTitleColor(UIColor.white, for: .selected)
         foreverBtn.frame.size.height = 45
@@ -95,8 +96,8 @@ class Duration: UIView {
         addSubview(foreverBtn)
     }
 
-    func setUpLower () {
-        closeBtn.setAttributedTitle(NSAttributedString(string: "CloseButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+    func setUpLower() {
+        closeBtn.setAttributedTitle(NSAttributedString(string: "CloseButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
         closeBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         closeBtn.frame.size.height = 45
         closeBtn.clipsToBounds = true
@@ -106,8 +107,8 @@ class Duration: UIView {
         closeBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         closeBtn.layer.borderWidth = 1
 
-        self.addSubview(closeBtn)
-        confirmBtn.setAttributedTitle(NSAttributedString(string: "ConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#425AF2")]), for: .normal)
+        addSubview(closeBtn)
+        confirmBtn.setAttributedTitle(NSAttributedString(string: "ConfirmButton".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
         confirmBtn.frame.size.width = ((UIScreen.main.bounds.width - 63) / 2)
         confirmBtn.frame.size.height = 45
         confirmBtn.clipsToBounds = true
