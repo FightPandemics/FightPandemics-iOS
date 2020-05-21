@@ -24,4 +24,33 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+
+import UIKit
+
+class LocationCellSearch: UIView {
+    private var searchBar = UITextField()
+    func setUp() {
+        searchBar.attributedPlaceholder = NSAttributedString(string: "FilterLocationCellSearchBar".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 16), NSAttributedString.Key.foregroundColor: UIColor(named: "#979797")!])
+        searchBar.backgroundColor = UIColor(named: "#F2F2F2")
+        let magImg = UIImageView()
+        magImg.image = UIImage(named: "search")
+        let lView = UIView()
+        lView.addSubview(magImg)
+        magImg.frame = CGRect(x: 15, y: 15, width: 20, height: 20)
+        lView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        searchBar.leftViewMode = .always
+        searchBar.leftView = lView
+        searchBar.clipsToBounds = true
+        searchBar.layer.masksToBounds = true
+        searchBar.frame.size.height = 50
+        searchBar.layer.cornerRadius = searchBar.frame.size.height / 2
+        searchBar.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width - 50)
+            .height(50)
+            .left(to: \.leftAnchor, constant: 28)
+            .right(to: \.rightAnchor, constant: 23)
+            .top(to: \.topAnchor, constant: 0)
+    }
+}
+
+
