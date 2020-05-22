@@ -75,6 +75,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigator = Navigator(rootWindow: window,
                               api: api,
                               autoLoginFakeLaunchScreen: autoLoginFakeLaunchScreen,
+                              locationServices: LocationServices.shared,
                               sessionManager: sessionManager)
     }
 

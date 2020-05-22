@@ -69,6 +69,8 @@
 		2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB341F82468F9F0007E397F /* RootTabBarController.swift */; };
 		2FB342042468FFCC007E397F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB342032468FFCC007E397F /* Navigator.swift */; };
 		2FB34207246901DA007E397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB34205246901DA007E397F /* LaunchScreen.storyboard */; };
+		2FF5627C2475F0D000194144 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5627B2475F0D000194144 /* LocationServices.swift */; };
+		2FF5627E2476035C00194144 /* LocationServicesObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5627D2476035C00194144 /* LocationServicesObserver.swift */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
@@ -178,6 +180,8 @@
 		2FB341F82468F9F0007E397F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		2FB342032468FFCC007E397F /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		2FB34206246901DA007E397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2FF5627B2475F0D000194144 /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
+		2FF5627D2476035C00194144 /* LocationServicesObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServicesObserver.swift; sourceTree = "<group>"; };
 		49D0B0B12467BC6E007B3762 /* FightPandemicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightPandemicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -478,6 +482,7 @@
 				2FB341EA2468F841007E397F /* Extensions */,
 				DC807E67247027C700046D67 /* FileReader */,
 				2F426BA724736826007A4796 /* HTML */,
+				2FF5627A2475F0BB00194144 /* Location */,
 				2FB342022468FFC3007E397F /* Navigation */,
 				2F72CE452468785200750785 /* Networking */,
 				DC807E6C247027CF00046D67 /* SessionManager */,
@@ -528,6 +533,15 @@
 				2FB342032468FFCC007E397F /* Navigator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		2FF5627A2475F0BB00194144 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				2FF5627B2475F0D000194144 /* LocationServices.swift */,
+				2FF5627D2476035C00194144 /* LocationServicesObserver.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		49D0B0B22467BC6E007B3762 /* FightPandemicsUITests */ = {
@@ -834,6 +848,7 @@
 				2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */,
 				DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */,
 				2F042199246CE4B3005FB1D0 /* LogInViewController.swift in Sources */,
+				2FF5627C2475F0D000194144 /* LocationServices.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
@@ -856,6 +871,7 @@
 				2F0C3C652471DB2D0002B384 /* RootNavigationController.swift in Sources */,
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */,
+				2FF5627E2476035C00194144 /* LocationServicesObserver.swift in Sources */,
 				2F042190246CCD4A005FB1D0 /* ProfileViewController.swift in Sources */,
 				2F426BA024735B89007A4796 /* OpenSourceLicense.swift in Sources */,
 				2F0421A4246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift in Sources */,
