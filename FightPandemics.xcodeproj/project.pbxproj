@@ -73,6 +73,8 @@
 		2FF5627E2476035C00194144 /* LocationServicesObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5627D2476035C00194144 /* LocationServicesObserver.swift */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
+		976A98CB24782B8600604FFA /* GeneratedImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A98CA24782B8600604FFA /* GeneratedImagesList.swift */; };
+		976A98CD24782BC500604FFA /* GeneratedStoryboardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		C018DD7C2474AF7B00EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7B2474AF7B00EEB3FC /* Location.swift */; };
 		C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD812477113800EEB3FC /* LocationCellSearch.swift */; };
@@ -194,6 +196,8 @@
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		976A98CA24782B8600604FFA /* GeneratedImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedImagesList.swift; sourceTree = "<group>"; };
+		976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedStoryboardsList.swift; sourceTree = "<group>"; };
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		C018DD7B2474AF7B00EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -590,6 +594,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		976A98C924782B4500604FFA /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				976A98CA24782B8600604FFA /* GeneratedImagesList.swift */,
+				976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		C013ACD8246FF3C500F22BE7 /* OfferRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +667,7 @@
 		DDDB55012468ACAC008EA75A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				976A98C924782B4500604FFA /* Constant */,
 				DDDB55022468ACC3008EA75A /* Fonts */,
 				2F9EFE59245DFB1900E86700 /* Assets.xcassets */,
 				2F04212F246A25CF005FB1D0 /* Localizable.strings */,
@@ -693,6 +707,7 @@
 				2F9EFE4A245DFB1700E86700 /* Frameworks */,
 				2F9EFE4B245DFB1700E86700 /* Resources */,
 				2F9EFE8E245E251C00E86700 /* SwiftLint */,
+				976A98C824782AA400604FFA /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -860,6 +875,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		976A98C824782AA400604FFA /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexit 0\n$PODS_ROOT/SwiftGen/bin/swiftgen xcassets -t swift4 \"$PROJECT_DIR/FightPandemics/Resources/Assets.xcassets\" --output \"$PROJECT_DIR/FightPandemics/Resources/Constant/GeneratedImagesList.swift\"\n$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t scenes-swift4 \"$PROJECT_DIR/FightPandemics\" --output \"$PROJECT_DIR/FightPandemics/Resources/Constant/GeneratedStoryboardsList.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -933,8 +966,10 @@
 				DDF9290C2472055600973488 /* PostTagCell.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
 				DC807E5B246FB02300046D67 /* Entity.swift in Sources */,
+				976A98CB24782B8600604FFA /* GeneratedImagesList.swift in Sources */,
 				2F426BAF24736E3D007A4796 /* OpenSourceTableViewCell.swift in Sources */,
 				2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */,
+				976A98CD24782BC500604FFA /* GeneratedStoryboardsList.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,
 				2F0C3C42246ECA660002B384 /* ConstrainableView.swift in Sources */,
