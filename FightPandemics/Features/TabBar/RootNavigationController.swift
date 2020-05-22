@@ -63,7 +63,7 @@ final class RootNavigationController: UINavigationController {
 
     private func addFilterButton() {
         viewControllers.first?.navigationItem
-            .rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon-nav-filter"),
+            .rightBarButtonItem = UIBarButtonItem(image: Asset.iconNavFilter.image,
                                                   style: .plain,
                                                   target: self,
                                                   action: #selector(filterButtonTapped))

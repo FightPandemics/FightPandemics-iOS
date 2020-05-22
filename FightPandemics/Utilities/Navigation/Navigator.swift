@@ -26,8 +26,6 @@
 
 import UIKit
 
-// swiftlint:disable force_cast
-
 /// Performs all navigation between screens.
 final class Navigator {
     // MARK: - Properties
@@ -130,8 +128,7 @@ final class Navigator {
     // MARK: Private instance methods
 
     private func rootTabBarController() -> RootTabBarController {
-        let rootTabBarController = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "RootTabBarController") as! RootTabBarController
+        let rootTabBarController = StoryboardScene.Main.rootTabBarController.instantiate()
         rootTabBar = rootTabBarController
         rootTabBarController.autoLoginFakeLaunchScreen = autoLoginFakeLaunchScreen
         rootTabBarController.navigator = self
@@ -156,69 +153,62 @@ final class Navigator {
     }
 
     private func filtersModal() -> FiltersModal {
-        let filtersModal = UIStoryboard(name: "Filters", bundle: nil).instantiateViewController(withIdentifier: "FiltersModal") as! FiltersModal
-        filtersModal.locationServices = locationServices
+        let filtersModal = StoryboardScene.Filters.filtersModal.instantiate()
         filtersModal.navigator = self
         return filtersModal
     }
 
     private func feedViewController() -> FeedViewController {
-        let feedViewController = UIStoryboard(name: "Feed", bundle: nil)
-            .instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+        let feedViewController = StoryboardScene.Feed.feedViewController.instantiate()
         return feedViewController
     }
 
     private func searchViewController() -> SearchViewController {
-        let searchViewController = UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        let searchViewController = StoryboardScene.Search.searchViewController.instantiate()
         return searchViewController
     }
 
     private func createPostEntitySelectionModal() -> CreatePostEntitySelectionModal {
-        let createPostModal = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostEntitySelectionModal") as! CreatePostEntitySelectionModal
+        let createPostModal = StoryboardScene.Post.createPostEntitySelectionModal.instantiate()
         createPostModal.navigator = self
         return createPostModal
     }
 
     private func createPostViewController(postingEntity: Entity) -> CreatePostViewController {
-        let createPostViewController = UIStoryboard(name: "Post", bundle: nil).instantiateViewController(withIdentifier: "CreatePostViewController") as! CreatePostViewController
+        let createPostViewController = StoryboardScene.Post.createPostViewController.instantiate()
         createPostViewController.postingEntity = postingEntity
         createPostViewController.navigator = self
         return createPostViewController
     }
 
     private func inboxViewController() -> InboxViewController {
-        let inboxViewController = UIStoryboard(name: "Inbox", bundle: nil)
-            .instantiateViewController(withIdentifier: "InboxViewController") as! InboxViewController
+        let inboxViewController = StoryboardScene.Inbox.inboxViewController.instantiate()
         return inboxViewController
     }
 
     private func profileViewController() -> ProfileViewController {
-        let profileViewController = UIStoryboard(name: "Profile", bundle: nil)
-            .instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        let profileViewController = StoryboardScene.Profile.profileViewController.instantiate()
         profileViewController.navigator = self
         profileViewController.sessionManager = sessionManager
         return profileViewController
     }
 
     private func openSourceCreditsViewController() -> OpenSourceCreditsViewController {
-        let openSourceCreditsViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "OpenSourceCreditsViewController") as! OpenSourceCreditsViewController
+        let openSourceCreditsViewController = StoryboardScene.Profile.openSourceCreditsViewController.instantiate()
         openSourceCreditsViewController.api = api
         openSourceCreditsViewController.navigator = self
         return openSourceCreditsViewController
     }
 
     private func logInNavController() -> UINavigationController {
-        let logInNavigationController = UIStoryboard(name: "Auth", bundle: nil)
-            .instantiateViewController(withIdentifier: "LogInNavigationController") as! UINavigationController
+        let logInNavigationController = StoryboardScene.Auth.logInNavigationController.instantiate()
         self.logInNavigationController = logInNavigationController
         logInNavigationController.pushViewController(logInViewController(), animated: false)
         return logInNavigationController
     }
 
     private func logInViewController() -> LogInViewController {
-        let logInViewController = UIStoryboard(name: "Auth", bundle: nil)
-            .instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
+        let logInViewController = StoryboardScene.Auth.logInViewController.instantiate()
         logInViewController.navigator = self
         logInViewController.sessionManager = sessionManager
         return logInViewController

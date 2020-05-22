@@ -6,5 +6,6 @@ target 'FightPandemics' do
 
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
-
+  pod 'SwiftGen', '~> 6.0'
+  
 end

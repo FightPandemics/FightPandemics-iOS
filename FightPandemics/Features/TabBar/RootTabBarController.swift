@@ -110,7 +110,7 @@ final class RootTabBarController: UITabBarController {
         let postButton = UIButton()
         self.postButton = postButton
         postButton.frame.size = CGSize(width: 44, height: 44)
-        postButton.setImage(UIImage(named: "post"), for: .normal)
+        postButton.setImage(Asset.post.image, for: .normal)
         postButton.center = CGPoint(x: tabBar.frame.width / 2, y: 24)
         tabBar.addSubview(postButton)
         postButton.addTarget(self, action: #selector(selectPostTab), for: .touchUpInside)
@@ -119,31 +119,27 @@ final class RootTabBarController: UITabBarController {
 
     private func customizeTabBarItem(tab: Tab) {
         let item = tabBarItem(tab)
-        var titleKey: String = ""
-        var imageName: String = ""
-        var horizontalOffset: CGFloat = 0
+        var titleKey: String = "TabBarFeedBtn"
+        var iconImage: UIImage = Asset.feed.image
+        var horizontalOffset: CGFloat = -15
         switch tab {
-        case .feed:
-            titleKey = "TabBarFeedBtn"
-            imageName = "feed"
-            horizontalOffset = -15
         case .search:
             titleKey = "TabBarSearchBtn"
-            imageName = "search"
+            iconImage = Asset.search.image
             horizontalOffset = -30
         case .inbox:
             titleKey = "TabBarInboxBtn"
-            imageName = "inbox"
+            iconImage = Asset.inbox.image
             horizontalOffset = 30
         case .profile:
             titleKey = "TabBarProfileBtn"
-            imageName = "profile"
+            iconImage = Asset.profile.image
             horizontalOffset = 15
-        case .post:
+        case .post, .feed:
             break
         }
         item?.setTitleTextAttributes([NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12)], for: .normal)
-        item?.image = UIImage(named: imageName)
+        item?.image = iconImage
         item?.title = titleKey.localized
         item?.titlePositionAdjustment = UIOffset(horizontal: horizontalOffset, vertical: 0)
     }
