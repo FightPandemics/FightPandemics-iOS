@@ -26,30 +26,21 @@
 
 import UIKit
 
-class ApplyFilterBtn: UIView {
-    private var applyFilterBtn = UIButton()
+class ApplyFilterBtn: UIButton {
     func setUp(filtersSelected: Bool, clearFiltersTapped: Bool) {
         if !filtersSelected || clearFiltersTapped {
-            applyFilterBtn.setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .selected)
-            applyFilterBtn.backgroundColor = UIColor.clear
+            setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .selected)
+            backgroundColor = UIColor.clear
         }
-        applyFilterBtn.setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
-        applyFilterBtn.backgroundColor = UIColor.fightPandemicsNeonBlue()
-        applyFilterBtn.frame.size.height = 45
-        applyFilterBtn.clipsToBounds = true
-        applyFilterBtn.layer.cornerRadius = applyFilterBtn.frame.size.height / 2
-        applyFilterBtn.layer.borderWidth = 1
-        applyFilterBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
-        applyFilterBtn.addTarget(self, action: #selector(applyFilter), for: .touchUpInside)
-        applyFilterBtn.makeSubview(of: self)
-            .width(158)
-            .height(45)
-            .top(to: \.topAnchor, constant: 0)
-            .left(to: \.leftAnchor, constant: 0)
-            .right(to: \.rightAnchor, constant: 0)
+        setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
+        backgroundColor = UIColor.fightPandemicsNeonBlue()
+        frame.size.height = 45
+        clipsToBounds = true
+        layer.cornerRadius = frame.size.height / 2
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
+        addTarget(self, action: #selector(applyFilter), for: .touchUpInside)
     }
-    @objc func applyFilter () {
-        
-    }
-}
 
+    @objc func applyFilter() {}
+}
