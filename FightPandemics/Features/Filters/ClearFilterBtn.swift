@@ -26,21 +26,14 @@
 
 import UIKit
 
-class ClearFilterBtn: UIView {
-    private var clearFilterBtn = UIButton()
+class ClearFilterBtn: UIButton {
     func setUp() {
-        clearFilterBtn.setAttributedTitle(NSAttributedString(string: "Clear Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
-        clearFilterBtn.backgroundColor = UIColor.clear
-        clearFilterBtn.frame.size.height = 45
-        clearFilterBtn.clipsToBounds = true
-        clearFilterBtn.layer.cornerRadius = clearFilterBtn.frame.size.height / 2
-        clearFilterBtn.layer.borderWidth = 1
-        clearFilterBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
-        clearFilterBtn.makeSubview(of: self)
-            .width(158)
-            .height(45)
-            .top(to: \.topAnchor, constant: 0)
-            .left(to: \.leftAnchor, constant: 0)
-            .right(to: \.rightAnchor, constant: 0)
+        setAttributedTitle(NSAttributedString(string: "Clear Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
+        backgroundColor = UIColor.clear
+        frame.size.height = 45
+        clipsToBounds = true
+        layer.cornerRadius = frame.size.height / 2
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
     }
 }
