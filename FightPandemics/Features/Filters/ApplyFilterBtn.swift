@@ -28,7 +28,11 @@ import UIKit
 
 class ApplyFilterBtn: UIView {
     private var applyFilterBtn = UIButton()
-    func setUp() {
+    func setUp(firltersSelected: Bool, clearFiltersTapped: Bool) {
+        if !firltersSelected || clearFiltersTapped {
+            applyFilterBtn.setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .selected)
+            applyFilterBtn.backgroundColor = UIColor.clear
+        }
         applyFilterBtn.setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
         applyFilterBtn.backgroundColor = UIColor.fightPandemicsNeonBlue()
         applyFilterBtn.frame.size.height = 45
@@ -36,12 +40,16 @@ class ApplyFilterBtn: UIView {
         applyFilterBtn.layer.cornerRadius = applyFilterBtn.frame.size.height / 2
         applyFilterBtn.layer.borderWidth = 1
         applyFilterBtn.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
+        applyFilterBtn.addTarget(self, action: #selector(applyFilter), for: .touchUpInside)
         applyFilterBtn.makeSubview(of: self)
             .width(158)
             .height(45)
             .top(to: \.topAnchor, constant: 0)
             .left(to: \.leftAnchor, constant: 0)
             .right(to: \.rightAnchor, constant: 0)
+    }
+    @objc func applyFilter () {
+        
     }
 }
 
