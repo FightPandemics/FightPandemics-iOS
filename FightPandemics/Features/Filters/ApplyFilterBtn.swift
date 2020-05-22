@@ -28,8 +28,8 @@ import UIKit
 
 class ApplyFilterBtn: UIView {
     private var applyFilterBtn = UIButton()
-    func setUp(firltersSelected: Bool, clearFiltersTapped: Bool) {
-        if !firltersSelected || clearFiltersTapped {
+    func setUp(filtersSelected: Bool, clearFiltersTapped: Bool) {
+        if !filtersSelected || clearFiltersTapped {
             applyFilterBtn.setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .selected)
             applyFilterBtn.backgroundColor = UIColor.clear
         }
