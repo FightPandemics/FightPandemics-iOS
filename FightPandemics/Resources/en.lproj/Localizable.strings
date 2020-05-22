@@ -62,3 +62,7 @@
 
 "OpenSourceCreditsTitle" = "Open Source Libraries";
 "LogOutCTA" = "Log Out";
+
+// MARK: Miscellaneous
+
+"LocationServicesDeniedCTA" = "Enable Location Services in Settings to search nearby";

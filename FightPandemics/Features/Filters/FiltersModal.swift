@@ -27,22 +27,51 @@
 import UIKit
 
 final class FiltersModal: UIViewController {
+    // MARK: - Properties
+
+    var locationServices: LocationServices!
     var navigator: Navigator!
+
+    private var locationServicesDeniedLabel = UILabel()
+
+    // MARK: - Init/Deinit
+
+    deinit {
+        locationServices.removeObserver(self)
+    }
+
+    // MARK: - Overrides
+
+    // MARK: View life-cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        locationServices.addObserver(self)
+        locationServices.requestPermission()
     }
 
+    // MARK: - Instance mtehods
+
     private func setupUI() {
-        let button = UIButton()
-        button.makeSubview(of: view)
+        locationServicesDeniedLabel.numberOfLines = 0
+        locationServicesDeniedLabel.textAlignment = .center
+        locationServicesDeniedLabel.makeSubview(of: view)
             .center()
-            .width(250)
-            .height(50)
-        button.backgroundColor = .systemBlue
-        button.setTitle("Request Location Permission", for: .normal)
-        button.setTitleColor(.white, for: .normal)
+            .leading(to: \.leadingAnchor, constant: 8)
+            .trailing(to: \.trailingAnchor, constant: -8)
+        locationServicesDeniedLabel.text = "LocationServicesDeniedCTA".localized
+        locationServicesDeniedLabel.isHidden = !locationServices.isPermissionDenied
+    }
+}
+
+// MARK: - Protocol conformance
+
+// MARK: LocationServicesObserver
+
+extension FiltersModal: LocationServicesObserver {
+    func locationServicesPermissionsDidChange() {
+        locationServicesDeniedLabel.isHidden = !locationServices.isPermissionDenied
     }
 }

@@ -43,14 +43,19 @@ final class Navigator {
 
     private let api: API
     private let autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen
+    private let locationServices: LocationServices
     private let sessionManager: SessionManager
 
     // MARK: - Init/Deinit
 
-    init(rootWindow: UIWindow?, api: API, autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen, sessionManager: SessionManager) {
+    init(rootWindow: UIWindow?, api: API,
+         autoLoginFakeLaunchScreen: AutoLoginFakeLaunchScreen,
+         locationServices: LocationServices,
+         sessionManager: SessionManager) {
         self.rootWindow = rootWindow
         self.api = api
         self.autoLoginFakeLaunchScreen = autoLoginFakeLaunchScreen
+        self.locationServices = locationServices
         self.sessionManager = sessionManager
     }
 
@@ -152,6 +157,7 @@ final class Navigator {
 
     private func filtersModal() -> FiltersModal {
         let filtersModal = UIStoryboard(name: "Filters", bundle: nil).instantiateViewController(withIdentifier: "FiltersModal") as! FiltersModal
+        filtersModal.locationServices = locationServices
         filtersModal.navigator = self
         return filtersModal
     }
