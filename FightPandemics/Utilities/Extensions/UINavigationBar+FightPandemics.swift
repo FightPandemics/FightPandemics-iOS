@@ -29,11 +29,10 @@ import UIKit
 extension UINavigationBar {
     /// Configures the navigation bar appearance
     func configure() {
-        prefersLargeTitles = true
         let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
         appearance.shadowColor = .clear
         appearance.backgroundColor = .white
+        appearance.titlePositionAdjustment = UIOffset(horizontal: -80, vertical: 0)
 
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().standardAppearance = appearance

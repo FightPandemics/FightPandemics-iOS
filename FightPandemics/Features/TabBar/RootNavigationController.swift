@@ -71,7 +71,7 @@ final class RootNavigationController: UINavigationController {
     }
 
     private func addNavBarLogo() {
-
+        viewControllers.first?.navigationItem.titleView = logoImageView
     }
 
     @objc private func filterButtonTapped() {
