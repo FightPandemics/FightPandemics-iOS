@@ -29,20 +29,16 @@ import UIKit
 extension UINavigationBar {
     /// Configures the navigation bar appearance
     func configure() {
-        if #available(iOS 13.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = .white
+        prefersLargeTitles = true
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.shadowColor = .clear
+        appearance.backgroundColor = .white
 
-            UINavigationBar.appearance().tintColor = .white
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().compactAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        } else {
-            UINavigationBar.appearance().tintColor = .white
-            UINavigationBar.appearance().barTintColor = .white
-            UINavigationBar.appearance().isTranslucent = false
-        }
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
 
     /// Removes hairline from bottom of nav bar.
