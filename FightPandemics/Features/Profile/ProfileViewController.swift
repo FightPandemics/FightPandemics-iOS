@@ -33,6 +33,7 @@ final class ProfileViewController: UIViewController {
     var sessionManager: SessionManager!
 
     private var button = UIButton()
+    private var logOutButton = UIButton()
 
     // MARK: - Overrides
 
@@ -49,10 +50,14 @@ final class ProfileViewController: UIViewController {
     // MARK: Private instance methods
 
     private func setupUI() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOutCTA".localized,
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(logOut))
+        logOutButton.makeSubview(of: view)
+            .top(to: \.topAnchor, constant: 120)
+            .leading(to: \.leadingAnchor, constant: 8)
+            .height(30)
+        logOutButton.setTitle("LogOutCTA".localized, for: .normal)
+        logOutButton.setTitleColor(.black, for: .normal)
+        logOutButton.addTarget(self, action: #selector(logOut), for: .touchUpInside)
+
         button.makeSubview(of: view)
             .center()
             .width(100)
