@@ -58,9 +58,7 @@ final class RootNavigationController: UINavigationController {
     // MARK: Private instance methods
 
     private func setupUI() {
-        navigationBar.prefersLargeTitles = true
         navigationBar.configure()
-        navigationBar.removeHairline()
     }
 
     private func addFilterButton() {
