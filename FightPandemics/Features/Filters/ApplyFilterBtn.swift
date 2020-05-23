@@ -32,10 +32,12 @@ class ApplyFilterBtn: UIButton {
         super.init(frame: CGRect.zero)
         setUp()
     }
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setUp()
     }
+
     func setUp() {
         btnSelection = false
         setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
@@ -47,6 +49,7 @@ class ApplyFilterBtn: UIButton {
         layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         addTarget(self, action: #selector(btnSelect), for: .touchUpInside)
     }
+
     @objc func btnSelect() {
         btnSelection = !btnSelection!
         if btnSelection == true {
