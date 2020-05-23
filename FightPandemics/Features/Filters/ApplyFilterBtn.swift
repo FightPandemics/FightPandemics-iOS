@@ -27,20 +27,34 @@
 import UIKit
 
 class ApplyFilterBtn: UIButton {
-    func setUp(filtersSelected: Bool, clearFiltersTapped: Bool) {
-        if !filtersSelected || clearFiltersTapped {
-            setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .selected)
-            backgroundColor = UIColor.clear
-        }
-        setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
-        backgroundColor = UIColor.fightPandemicsNeonBlue()
+    private var btnSelection: Bool?
+    override init(frame _: CGRect) {
+        super.init(frame: CGRect.zero)
+        setUp()
+    }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setUp()
+    }
+    func setUp() {
+        btnSelection = false
+        setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
+        backgroundColor = UIColor.clear
         frame.size.height = 45
         clipsToBounds = true
         layer.cornerRadius = frame.size.height / 2
         layer.borderWidth = 1
         layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
-        addTarget(self, action: #selector(applyFilter), for: .touchUpInside)
+        addTarget(self, action: #selector(btnSelect), for: .touchUpInside)
     }
-
-    @objc func applyFilter() {}
+    @objc func btnSelect() {
+        btnSelection = !btnSelection!
+        if btnSelection == true {
+            setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .selected)
+            backgroundColor = UIColor.fightPandemicsNeonBlue()
+        } else {
+            setAttributedTitle(NSAttributedString(string: "Apply Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
+            backgroundColor = UIColor.clear
+        }
+    }
 }
