@@ -59,6 +59,7 @@
 "LocationLbl" = "Location";
 "ClearFilterBtn" = "Clear filters";
 "ApplyFilterBtn" = "Apply filters";
+"FilterLocationCellSearchBar" = "Zip code, neighborhood or city";
 
 // MARK: Profile
 
