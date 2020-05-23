@@ -79,6 +79,7 @@
 		C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */; };
 		C018DD862477313F00EEB3FC /* ApplyFilterBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD852477313F00EEB3FC /* ApplyFilterBtn.swift */; };
 		C018DD892479C41D00EEB3FC /* FeedCatTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD882479C41D00EEB3FC /* FeedCatTag.swift */; };
+		C018DD8B2479D9C900EEB3FC /* FeedOfferReqTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD8A2479D9C900EEB3FC /* FeedOfferReqTime.swift */; };
 		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
@@ -197,6 +198,7 @@
 		C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFilterBtn.swift; sourceTree = "<group>"; };
 		C018DD852477313F00EEB3FC /* ApplyFilterBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterBtn.swift; sourceTree = "<group>"; };
 		C018DD882479C41D00EEB3FC /* FeedCatTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCatTag.swift; sourceTree = "<group>"; };
+		C018DD8A2479D9C900EEB3FC /* FeedOfferReqTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOfferReqTime.swift; sourceTree = "<group>"; };
 		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				C018DD882479C41D00EEB3FC /* FeedCatTag.swift */,
+				C018DD8A2479D9C900EEB3FC /* FeedOfferReqTime.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				2F9EFE51245DFB1700E86700 /* AppDelegate.swift in Sources */,
 				2F0B5167246E0DF200BE42BC /* CreatePostHeader.swift in Sources */,
 				DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */,
+				C018DD8B2479D9C900EEB3FC /* FeedOfferReqTime.swift in Sources */,
 				2F0C3C672471DE660002B384 /* UINavigationBar+FightPandemics.swift in Sources */,
 				0322FA13246E23D0009507D7 /* TagView.swift in Sources */,
 				2F72CE5F2468793C00750785 /* FightPandemicsAPI.swift in Sources */,
