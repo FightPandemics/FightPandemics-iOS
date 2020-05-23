@@ -75,12 +75,10 @@
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		C018DD7C2474AF7B00EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7B2474AF7B00EEB3FC /* Location.swift */; };
-
+		C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD812477113800EEB3FC /* LocationCellSearch.swift */; };
 		C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */; };
 		C018DD862477313F00EEB3FC /* ApplyFilterBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD852477313F00EEB3FC /* ApplyFilterBtn.swift */; };
-
-		C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD812477113800EEB3FC /* LocationCellSearch.swift */; };
-
+		C018DD892479C41D00EEB3FC /* FeedCatTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD882479C41D00EEB3FC /* FeedCatTag.swift */; };
 		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
@@ -195,12 +193,10 @@
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		C018DD7B2474AF7B00EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-
+		C018DD812477113800EEB3FC /* LocationCellSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellSearch.swift; sourceTree = "<group>"; };
 		C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFilterBtn.swift; sourceTree = "<group>"; };
 		C018DD852477313F00EEB3FC /* ApplyFilterBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterBtn.swift; sourceTree = "<group>"; };
-
-		C018DD812477113800EEB3FC /* LocationCellSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellSearch.swift; sourceTree = "<group>"; };
-
+		C018DD882479C41D00EEB3FC /* FeedCatTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCatTag.swift; sourceTree = "<group>"; };
 		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
@@ -257,6 +253,7 @@
 		2F0420F5246A0D0D005FB1D0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				C018DD872479C26E00EEB3FC /* Card */,
 				2F0420F6246A0E71005FB1D0 /* Feed.storyboard */,
 				2F0420FA246A0EBA005FB1D0 /* FeedPost */,
 				2F042189246CCBFA005FB1D0 /* FeedViewController.swift */,
@@ -366,12 +363,9 @@
 			children = (
 				2F0C3C692471E0F70002B384 /* Filters.storyboard */,
 				2F0C3C6B2471E1130002B384 /* FiltersModal.swift */,
-
 				C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */,
 				C018DD852477313F00EEB3FC /* ApplyFilterBtn.swift */,
-
 				C018DD812477113800EEB3FC /* LocationCellSearch.swift */,
-
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -594,6 +588,14 @@
 				C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */,
 			);
 			path = OfferRequest;
+			sourceTree = "<group>";
+		};
+		C018DD872479C26E00EEB3FC /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				C018DD882479C41D00EEB3FC /* FeedCatTag.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		C0E5EDF92470AA2D00F42319 /* Duration */ = {
@@ -887,6 +889,7 @@
 				C018DD7C2474AF7B00EEB3FC /* Location.swift in Sources */,
 				DC807E6A247027C700046D67 /* JSONFileReader.swift in Sources */,
 				2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */,
+				C018DD892479C41D00EEB3FC /* FeedCatTag.swift in Sources */,
 				2F0C3C652471DB2D0002B384 /* RootNavigationController.swift in Sources */,
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */,
