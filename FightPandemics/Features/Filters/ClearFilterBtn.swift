@@ -31,10 +31,12 @@ class ClearFilterBtn: UIButton {
         super.init(frame: CGRect.zero)
         setUp()
     }
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setUp()
     }
+
     func setUp() {
         setAttributedTitle(NSAttributedString(string: "Clear Filters", attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 15), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
         backgroundColor = UIColor.clear
