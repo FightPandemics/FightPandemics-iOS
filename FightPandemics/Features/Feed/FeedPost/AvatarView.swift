@@ -27,26 +27,36 @@
 import UIKit
 
 class AvatarView: UIView {
+    private var userNameLbl = UILabel()
+    private var userLocLbl = UILabel()
+    private var dotView = UIView()
     func setUp(user: User, avatar: Avatar) {
-        frame.origin.x = avatar.frame.origin.x
-        frame.origin.y = avatar.frame.origin.y
-        frame.size.width = 230
-        frame.size.height = 35
-        let xOrigin = CGFloat(avatar.frame.width)
-        let label = UILabel(frame: CGRect(x: 9 + xOrigin, y: 0, width: 167, height: 20))
-        label.textColor = UIColor.fightPandemicsNero()
-        label.textAlignment = .left
-        label.font = UIFont(name: "System", size: 14)
-        let imageView = UIImageView(frame: CGRect(x: 9 + xOrigin, y: 25, width: 6, height: 6))
-        imageView.image = #imageLiteral(resourceName: "logo")
-        imageView.makeSubview(of: avatar)
-        // wireframe version's width was 113 which was too small
-
-        let locLabel = UILabel(frame: CGRect(x: 22 + xOrigin, y: 21, width: 153, height: 14))
-        locLabel.text = user.location
-        locLabel.textColor = UIColor.fightPandemicsSuvaGrey()
-        locLabel.textAlignment = .left
-        locLabel.font = UIFont(name: "System", size: 11)
-        locLabel.makeSubview(of: avatar)
+        userNameLbl.attributedText = NSAttributedString(string: user.firstName + " " + user.lastName, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        userNameLbl.textAlignment = .left
+        userNameLbl.sizeToFit()
+        userNameLbl.lineBreakMode = .byClipping
+        userNameLbl.makeSubview(of: self)
+            .width((userNameLbl.attributedText?.size().width)! + 30)
+            .height(20)
+            .left(to: \.leftAnchor, constant: 0)
+            .top(to: \.topAnchor, constant: 0)
+        dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
+        dotView.frame.size = CGSize(width: 6, height: 6)
+        dotView.layer.masksToBounds = true
+        dotView.layer.cornerRadius = dotView.frame.size.height / 2
+        dotView.makeSubview(of: self)
+            .width(6)
+            .height(6)
+            .left(to: \.leftAnchor, constant: 0)
+            .top(to: \.topAnchor, constant: 25)
+        userLocLbl.attributedText = NSAttributedString(string: user.location!, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
+        userLocLbl.textAlignment = .left
+        userLocLbl.sizeToFit()
+        userLocLbl.lineBreakMode = .byClipping
+        userLocLbl.makeSubview(of: self)
+            .width((userLocLbl.attributedText?.size().width)! + 30)
+            .height(15)
+            .left(to: \.leftAnchor, constant: 10)
+            .top(to: \.topAnchor, constant: 21)
     }
 }
