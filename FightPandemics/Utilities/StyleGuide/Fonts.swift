@@ -47,6 +47,7 @@ enum Fonts {
     case poppinsBold
     case worksansBold
 
+    // swiftlint:disable cyclomatic_complexity
     func customFont(size: CGFloat) -> UIFont {
         switch self {
         case .dmSansRegular:
