@@ -24,4 +24,32 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
+
+class FeedTitle: UIView {
+    private var titleLbl = UILabel()
+    var title: String
+    init(title: String) {
+        self.title = title
+        super.init(frame: .zero)
+        setUp()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func setUp() {
+        titleLbl.attributedText = NSAttributedString(string: self.title, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        titleLbl.numberOfLines = 0
+        titleLbl.lineBreakMode = .byWordWrapping
+        titleLbl.makeSubview(of: self)
+            .width(UIScreen.main.bounds.size.width)
+            .height(heighOfTitle(title: self.title))
+    }
+
+    func heighOfTitle(title: String) -> CGFloat {
+        let boundingBox = NSString(string: title).boundingRect(with: CGSize(width: (UIScreen.main.bounds.width - 40), height: .greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22)], context: nil)
+        return boundingBox.height
+    }
+}
