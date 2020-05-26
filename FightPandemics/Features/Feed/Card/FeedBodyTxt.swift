@@ -45,7 +45,7 @@ class FeedBodyTxt: UIView {
         bodyLbl.lineBreakMode = .byWordWrapping
         bodyLbl.makeSubview(of: self)
             .width(UIScreen.main.bounds.width - 40)
-            .height(110, relation: .lessThanOrEqual, priority: .required)
+            .height(heighOfBody(text: text))
     }
     func heighOfBody(text: String) -> CGFloat {
         let boundingBox = NSString(string: text).boundingRect(with: CGSize(width: (UIScreen.main.bounds.width - 40), height: .greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22)], context: nil)
