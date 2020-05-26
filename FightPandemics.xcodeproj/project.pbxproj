@@ -80,6 +80,9 @@
 		C018DD862477313F00EEB3FC /* ApplyFilterBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD852477313F00EEB3FC /* ApplyFilterBtn.swift */; };
 		C018DD892479C41D00EEB3FC /* FeedCatTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD882479C41D00EEB3FC /* FeedCatTag.swift */; };
 		C018DD8B2479D9C900EEB3FC /* FeedOfferReqTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD8A2479D9C900EEB3FC /* FeedOfferReqTime.swift */; };
+		C018DD94247C987900EEB3FC /* FeedTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD93247C987900EEB3FC /* FeedTitle.swift */; };
+		C018DD96247C988700EEB3FC /* FeedBodyTxt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD95247C988700EEB3FC /* FeedBodyTxt.swift */; };
+		C018DD98247C989800EEB3FC /* FeedViewMoreBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD97247C989800EEB3FC /* FeedViewMoreBtn.swift */; };
 		C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5EDFA2470AA4E00F42319 /* Duration.swift */; };
 		DC807E59246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */; };
 		DC807E5B246FB02300046D67 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E5A246FB02300046D67 /* Entity.swift */; };
@@ -199,6 +202,9 @@
 		C018DD852477313F00EEB3FC /* ApplyFilterBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFilterBtn.swift; sourceTree = "<group>"; };
 		C018DD882479C41D00EEB3FC /* FeedCatTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCatTag.swift; sourceTree = "<group>"; };
 		C018DD8A2479D9C900EEB3FC /* FeedOfferReqTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOfferReqTime.swift; sourceTree = "<group>"; };
+		C018DD93247C987900EEB3FC /* FeedTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTitle.swift; sourceTree = "<group>"; };
+		C018DD95247C988700EEB3FC /* FeedBodyTxt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBodyTxt.swift; sourceTree = "<group>"; };
+		C018DD97247C989800EEB3FC /* FeedViewMoreBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewMoreBtn.swift; sourceTree = "<group>"; };
 		C0E5EDF724705CC200F42319 /* PostVisibilitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibilitySelectionView.swift; sourceTree = "<group>"; };
 		C0E5EDFA2470AA4E00F42319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		DC807E58246FAC8B00046D67 /* CreatePostEntitySelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostEntitySelectionModal.swift; sourceTree = "<group>"; };
@@ -597,6 +603,9 @@
 			children = (
 				C018DD882479C41D00EEB3FC /* FeedCatTag.swift */,
 				C018DD8A2479D9C900EEB3FC /* FeedOfferReqTime.swift */,
+				C018DD93247C987900EEB3FC /* FeedTitle.swift */,
+				C018DD95247C988700EEB3FC /* FeedBodyTxt.swift */,
+				C018DD97247C989800EEB3FC /* FeedViewMoreBtn.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -898,14 +907,17 @@
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */,
 				2FF5627E2476035C00194144 /* LocationServicesObserver.swift in Sources */,
+				C018DD94247C987900EEB3FC /* FeedTitle.swift in Sources */,
 				2F042190246CCD4A005FB1D0 /* ProfileViewController.swift in Sources */,
 				2F426BA024735B89007A4796 /* OpenSourceLicense.swift in Sources */,
 				2F0421A4246D04B9005FB1D0 /* AutoLogInFakeLaunchScreen.swift in Sources */,
 				C0E5EDFB2470AA4E00F42319 /* Duration.swift in Sources */,
+				C018DD98247C989800EEB3FC /* FeedViewMoreBtn.swift in Sources */,
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
 				C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
+				C018DD96247C988700EEB3FC /* FeedBodyTxt.swift in Sources */,
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
