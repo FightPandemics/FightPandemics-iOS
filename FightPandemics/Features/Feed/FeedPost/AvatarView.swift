@@ -30,7 +30,7 @@ class AvatarView: UIView {
     private var userNameLbl = UILabel()
     private var userLocLbl = UILabel()
     private var dotView = UIView()
-    func setUp(user: User, avatar: Avatar) {
+    func setUp(user: User, avatar _: Avatar) {
         userNameLbl.attributedText = NSAttributedString(string: user.firstName + " " + user.lastName, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
         userNameLbl.textAlignment = .left
         userNameLbl.sizeToFit()

@@ -35,21 +35,22 @@ class FeedTitle: UIView {
         setUp()
     }
 
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     func setUp() {
-        titleLbl.attributedText = NSAttributedString(string: self.title, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        titleLbl.attributedText = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
         titleLbl.numberOfLines = 0
         titleLbl.lineBreakMode = .byWordWrapping
+        titleLbl.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         titleLbl.makeSubview(of: self)
-            .width(UIScreen.main.bounds.size.width)
-            .height(heighOfTitle(title: self.title))
+            .width(UIScreen.main.bounds.size.width - 40)
+            .height(heighOfTitle(title: title))
     }
 
     func heighOfTitle(title: String) -> CGFloat {
-        let boundingBox = NSString(string: title).boundingRect(with: CGSize(width: (UIScreen.main.bounds.width - 40), height: .greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22)], context: nil)
+        let boundingBox = NSString(string: title).boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 40, height: .greatestFiniteMagnitude), options: NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22)], context: nil)
         return boundingBox.height
     }
 }

@@ -28,44 +28,35 @@ import UIKit
 
 class FeedBodyTxt: UIView {
     private var bodyLbl = UILabel()
+    private var viewMore = FeedViewMoreBtn()
     var text: String
     init(text: String) {
         self.text = text
         super.init(frame: .zero)
         setUp()
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     func setUp() {
-        bodyLbl.attributedText = NSAttributedString(string: self.text, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        bodyLbl.attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
         bodyLbl.textAlignment = .left
         bodyLbl.numberOfLines = 0
         bodyLbl.lineBreakMode = .byWordWrapping
         bodyLbl.makeSubview(of: self)
             .width(UIScreen.main.bounds.width - 40)
             .height(heighOfBody(text: text))
+        viewMore.makeSubview(of: self)
+            .width(85)
+            .height(16)
+            .right(to: \.rightAnchor, constant: -5)
+            .bottom(to: \.bottomAnchor, constant: -5)
     }
+
     func heighOfBody(text: String) -> CGFloat {
-        let boundingBox = NSString(string: text).boundingRect(with: CGSize(width: (UIScreen.main.bounds.width - 40), height: .greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22)], context: nil)
+        let boundingBox = NSString(string: text).boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 40, height: .greatestFiniteMagnitude), options: NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 14)], context: nil)
         return boundingBox.height
-    }
-    func lastWordPosition(text: String) -> CGPoint {
-        let lblSize = CGSize(width: (UIScreen.main.bounds.width - 40), height: .infinity)
-        let layoutManager = NSLayoutManager()
-        let textStorage = NSTextStorage(attributedString: NSAttributedString(string: text, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 14)]))
-        let textContainer = NSTextContainer(size: lblSize)
-        layoutManager.addTextContainer(textContainer)
-        textStorage.addLayoutManager(layoutManager)
-        
-        textContainer.lineFragmentPadding = 0
-        textContainer.lineBreakMode = .byWordWrapping
-        textContainer.maximumNumberOfLines = 6
-        
-        let lastGlyphIndex = layoutManager.glyphIndexForCharacter(at: text.count - 1)
-        let lastLineFragmentRect = layoutManager.lineFragmentUsedRect(forGlyphAt: lastGlyphIndex, effectiveRange: nil)
-        
-        return CGPoint(x: lastLineFragmentRect.maxX, y: lastLineFragmentRect.maxY)
     }
 }

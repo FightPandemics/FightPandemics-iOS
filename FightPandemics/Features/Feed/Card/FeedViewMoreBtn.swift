@@ -31,12 +31,13 @@ class FeedViewMoreBtn: UIButton {
         super.init(frame: frame)
         setUp()
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     func setUp() {
-        self.setAttributedTitle(NSAttributedString(string: "View More", attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 14)]), for: .normal)
-        self.backgroundColor = UIColor.clear
+        setAttributedTitle(NSAttributedString(string: " ... View More", attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
+        backgroundColor = UIColor.white
     }
 }
