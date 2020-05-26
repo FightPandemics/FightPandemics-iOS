@@ -49,7 +49,7 @@ class Avatar: UIView {
         label.clipsToBounds = true
         label.layer.masksToBounds = true
         label.layer.cornerRadius = frame.size.height / 2
-        label.font = UIFont(name: "System", size: 18)
+        label.font = Fonts.poppinsRegular.customFont(size: 16)
         label.textColor = UIColor.fightPandemicsNeonBlue()
         label.backgroundColor = UIColor.fightPandemicsGhostWhite()
         label.layer.borderWidth = 1
