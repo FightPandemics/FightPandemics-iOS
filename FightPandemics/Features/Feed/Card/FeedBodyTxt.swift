@@ -24,4 +24,48 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
+
+class FeedBodyTxt: UIView {
+    private var bodyLbl = UILabel()
+    var text: String
+    init(text: String) {
+        self.text = text
+        super.init(frame: .zero)
+        setUp()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    func setUp() {
+        bodyLbl.attributedText = NSAttributedString(string: self.text, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        bodyLbl.textAlignment = .left
+        bodyLbl.numberOfLines = 0
+        bodyLbl.lineBreakMode = .byWordWrapping
+        bodyLbl.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width - 40)
+            .height(110, relation: .lessThanOrEqual, priority: .required)
+    }
+    func heighOfBody(text: String) -> CGFloat {
+        let boundingBox = NSString(string: text).boundingRect(with: CGSize(width: (UIScreen.main.bounds.width - 40), height: .greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22)], context: nil)
+        return boundingBox.height
+    }
+    func lastWordPosition(text: String) -> CGPoint {
+        let lblSize = CGSize(width: (UIScreen.main.bounds.width - 40), height: .infinity)
+        let layoutManager = NSLayoutManager()
+        let textStorage = NSTextStorage(attributedString: NSAttributedString(string: text, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 14)]))
+        let textContainer = NSTextContainer(size: lblSize)
+        layoutManager.addTextContainer(textContainer)
+        textStorage.addLayoutManager(layoutManager)
+        
+        textContainer.lineFragmentPadding = 0
+        textContainer.lineBreakMode = .byWordWrapping
+        textContainer.maximumNumberOfLines = 6
+        
+        let lastGlyphIndex = layoutManager.glyphIndexForCharacter(at: text.count - 1)
+        let lastLineFragmentRect = layoutManager.lineFragmentUsedRect(forGlyphAt: lastGlyphIndex, effectiveRange: nil)
+        
+        return CGPoint(x: lastLineFragmentRect.maxX, y: lastLineFragmentRect.maxY)
+    }
+}
