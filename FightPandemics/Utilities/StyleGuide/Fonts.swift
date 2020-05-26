@@ -32,17 +32,20 @@ enum Fonts {
     case dmSansRegular
     case openSansRegular
     case poppinsRegular
+    case worksansRegular
 
     // Medium
 
     case dmSansMedium
     case poppinsMedium
+    case worksansMedium
 
     // Bold
 
     case dmSansBold
     case openSansBold
     case poppinsBold
+    case worksansBold
 
     func customFont(size: CGFloat) -> UIFont {
         switch self {
@@ -52,16 +55,22 @@ enum Fonts {
             return .openSansRegular(size: size)
         case .poppinsRegular:
             return .poppinsRegular(size: size)
+        case .worksansRegular:
+            return .worksansRegular(size: size)
         case .dmSansMedium:
             return .dmSansMedium(size: size)
         case .poppinsMedium:
             return .poppinsMedium(size: size)
+        case .worksansMedium:
+            return .worksansMedium(size: size)
         case .dmSansBold:
             return .dmSansBold(size: size)
         case .openSansBold:
             return .openSansBold(size: size)
         case .poppinsBold:
             return .poppinsBold(size: size)
+        case .worksansBold:
+            return .worksansBold(size: size)
         }
     }
 }
@@ -79,12 +88,20 @@ private extension UIFont {
         UIFont(name: "Poppins-Regular", size: size)!
     }
 
+    static func worksansRegular(size: CGFloat) -> UIFont {
+        UIFont(name: "WorkSans-Regular", size: size)!
+    }
+
     static func dmSansMedium(size: CGFloat) -> UIFont {
         UIFont(name: "DMSans-Medium", size: size)!
     }
 
     static func poppinsMedium(size: CGFloat) -> UIFont {
         UIFont(name: "Poppins-Medium", size: size)!
+    }
+
+    static func worksansMedium(size: CGFloat) -> UIFont {
+        UIFont(name: "WorkSans-Medium", size: size)!
     }
 
     static func dmSansBold(size: CGFloat) -> UIFont {
@@ -97,5 +114,9 @@ private extension UIFont {
 
     static func poppinsBold(size: CGFloat) -> UIFont {
         UIFont(name: "Poppins-Bold", size: size)!
+    }
+
+    static func worksansBold(size: CGFloat) -> UIFont {
+        UIFont(name: "WorkSans-Bold", size: size)!
     }
 }

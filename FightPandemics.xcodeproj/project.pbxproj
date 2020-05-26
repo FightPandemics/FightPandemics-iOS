@@ -92,6 +92,9 @@
 		DC807E6F247027CF00046D67 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E6D247027CF00046D67 /* SessionManager.swift */; };
 		DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E6E247027CF00046D67 /* SessionManagerError.swift */; };
 		DC807E73247027D800046D67 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E72247027D800046D67 /* Fonts.swift */; };
+		DDBF1455247D49B5004E4771 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1454247D49B5004E4771 /* WorkSans-Medium.otf */; };
+		DDBF1457247D49C2004E4771 /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1456247D49C2004E4771 /* WorkSans-Regular.otf */; };
+		DDBF1459247D49D6004E4771 /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1458247D49D6004E4771 /* WorkSans-Bold.otf */; };
 		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
 		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
 		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
@@ -212,6 +215,9 @@
 		DC807E6D247027CF00046D67 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		DC807E6E247027CF00046D67 /* SessionManagerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManagerError.swift; sourceTree = "<group>"; };
 		DC807E72247027D800046D67 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		DDBF1454247D49B5004E4771 /* WorkSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.otf"; sourceTree = "<group>"; };
+		DDBF1456247D49C2004E4771 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.otf"; sourceTree = "<group>"; };
+		DDBF1458247D49D6004E4771 /* WorkSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.otf"; sourceTree = "<group>"; };
 		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
 		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -662,6 +668,9 @@
 				DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */,
 				DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */,
 				DDDB55092468AEA7008EA75A /* Poppins-Regular.otf */,
+				DDBF1454247D49B5004E4771 /* WorkSans-Medium.otf */,
+				DDBF1458247D49D6004E4771 /* WorkSans-Bold.otf */,
+				DDBF1456247D49C2004E4771 /* WorkSans-Regular.otf */,
 				DDDB550D2468B05F008EA75A /* OpenSans-Regular.ttf */,
 				DDDB55112468B2E3008EA75A /* DMSans-Bold.ttf */,
 				DDDB550F2468B08D008EA75A /* OpenSans-Bold.ttf */,
@@ -760,14 +769,17 @@
 				DDDB55102468B08D008EA75A /* OpenSans-Bold.ttf in Resources */,
 				DDDB550E2468B05F008EA75A /* OpenSans-Regular.ttf in Resources */,
 				2F04212D246A25CF005FB1D0 /* Localizable.strings in Resources */,
+				DDBF1455247D49B5004E4771 /* WorkSans-Medium.otf in Resources */,
 				2F72CE6724687CD100750785 /* User.json in Resources */,
 				2F0B515A246E008400BE42BC /* Post.storyboard in Resources */,
+				DDBF1457247D49C2004E4771 /* WorkSans-Regular.otf in Resources */,
 				2F0420F7246A0E71005FB1D0 /* Feed.storyboard in Resources */,
 				2F042197246CE4A7005FB1D0 /* Auth.storyboard in Resources */,
 				DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */,
 				DDDB550A2468AEA7008EA75A /* Poppins-Regular.otf in Resources */,
 				2FB341F62468F984007E397F /* Main.storyboard in Resources */,
 				2F426BBE24749BB7007A4796 /* Inbox.storyboard in Resources */,
+				DDBF1459247D49D6004E4771 /* WorkSans-Bold.otf in Resources */,
 				DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */,
 				DDDB55122468B2E3008EA75A /* DMSans-Bold.ttf in Resources */,
 				2F9EFE5A245DFB1900E86700 /* Assets.xcassets in Resources */,
