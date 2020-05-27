@@ -73,6 +73,8 @@
 		2FF5627E2476035C00194144 /* LocationServicesObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5627D2476035C00194144 /* LocationServicesObserver.swift */; };
 		49D0B0B42467BC6E007B3762 /* FightPandemicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */; };
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
+		A6F9B239247E0EC100048631 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F9B238247E0EC100048631 /* PillButton.swift */; };
+		A6F9B23B247E0F0200048631 /* PillButtonPrototypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F9B23A247E0F0200048631 /* PillButtonPrototypeVC.swift */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		C018DD7C2474AF7B00EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7B2474AF7B00EEB3FC /* Location.swift */; };
 		C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD812477113800EEB3FC /* LocationCellSearch.swift */; };
@@ -194,6 +196,8 @@
 		49D0B0B32467BC6E007B3762 /* FightPandemicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPandemicsUITests.swift; sourceTree = "<group>"; };
 		49D0B0B52467BC6E007B3762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
+		A6F9B238247E0EC100048631 /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
+		A6F9B23A247E0F0200048631 /* PillButtonPrototypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButtonPrototypeVC.swift; sourceTree = "<group>"; };
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		C018DD7B2474AF7B00EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 		0322FA11246E23BC009507D7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A6F9B237247E0E9700048631 /* PillButton */,
 				DC807E60246FB36F00046D67 /* BottomModel */,
 				0322FA12246E23D0009507D7 /* TagView.swift */,
 			);
@@ -590,6 +595,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A6F9B237247E0E9700048631 /* PillButton */ = {
+			isa = PBXGroup;
+			children = (
+				A6F9B238247E0EC100048631 /* PillButton.swift */,
+				A6F9B23A247E0F0200048631 /* PillButtonPrototypeVC.swift */,
+			);
+			path = PillButton;
+			sourceTree = "<group>";
+		};
 		C013ACD8246FF3C500F22BE7 /* OfferRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -873,6 +887,7 @@
 				2F426BA6247365FB007A4796 /* OpenSourceCreditsViewController.swift in Sources */,
 				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
 				2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */,
+				A6F9B23B247E0F0200048631 /* PillButtonPrototypeVC.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
 				2F72CE4E2468785200750785 /* HTTPRequestError.swift in Sources */,
 				DC807E65246FB37000046D67 /* BottomModal.swift in Sources */,
@@ -919,6 +934,7 @@
 				C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
+				A6F9B239247E0EC100048631 /* PillButton.swift in Sources */,
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
 				C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */,
