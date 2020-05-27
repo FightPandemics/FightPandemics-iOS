@@ -37,7 +37,7 @@ class FeedViewMoreBtn: UIButton {
     }
 
     func setUp() {
-        setAttributedTitle(NSAttributedString(string: " ... View More", attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
+        setAttributedTitle(NSAttributedString(string: "ViewMoreBtn".localized, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()]), for: .normal)
         backgroundColor = UIColor.white
     }
 }

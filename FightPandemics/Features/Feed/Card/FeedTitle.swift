@@ -43,7 +43,6 @@ class FeedTitle: UIView {
         titleLbl.attributedText = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
         titleLbl.numberOfLines = 0
         titleLbl.lineBreakMode = .byWordWrapping
-        titleLbl.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         titleLbl.makeSubview(of: self)
             .width(UIScreen.main.bounds.size.width - 40)
             .height(heighOfTitle(title: title))

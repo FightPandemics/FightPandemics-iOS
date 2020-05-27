@@ -41,15 +41,16 @@ class FeedBodyTxt: UIView {
     }
 
     func setUp() {
-        bodyLbl.attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        let newTxt = text.components(separatedBy: " ").dropLast().dropLast().dropLast().joined(separator: " ")
+        bodyLbl.attributedText = NSAttributedString(string: newTxt, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
         bodyLbl.textAlignment = .left
         bodyLbl.numberOfLines = 0
         bodyLbl.lineBreakMode = .byWordWrapping
         bodyLbl.makeSubview(of: self)
             .width(UIScreen.main.bounds.width - 40)
-            .height(heighOfBody(text: text))
+            .height(heighOfBody(text: newTxt))
         viewMore.makeSubview(of: self)
-            .width(85)
+            .width(72)
             .height(16)
             .right(to: \.rightAnchor, constant: -5)
             .bottom(to: \.bottomAnchor, constant: -5)
