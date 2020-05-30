@@ -30,6 +30,9 @@
 "CreatePostAddTagsCTA" = "Add tags to help boost your visibility.";
 "CreatePostTagPlaceholder" = "Add a tag";
 "CreatePostCTAButtonCTA" = "Post";
+"PostCreationAlertTitle" = "All finished!";
+"PostCreationAlertMessage" = "Keep an eye on your post for comments or direct messages from people!";
+"PostCreationAlertButtonTitle" = "View Post";
 "IndividualOrgTitle" = "Create a post";
 "IndividualOrgDescriptiveText" = "Before you can create a post, are you posting on behalf of an organization?";
 "IndividualOrgIndividualButton" = "Individual";

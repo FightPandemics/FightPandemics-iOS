@@ -97,6 +97,7 @@
 		DDBF1455247D49B5004E4771 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1454247D49B5004E4771 /* WorkSans-Medium.otf */; };
 		DDBF1457247D49C2004E4771 /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1456247D49C2004E4771 /* WorkSans-Regular.otf */; };
 		DDBF1459247D49D6004E4771 /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1458247D49D6004E4771 /* WorkSans-Bold.otf */; };
+		DDBF147D24815591004E4771 /* PostCreationSuccessAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF147C24815591004E4771 /* PostCreationSuccessAlert.swift */; };
 		DDDB55042468ACF5008EA75A /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */; };
 		DDDB55062468ADF9008EA75A /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */; };
 		DDDB55082468AE5A008EA75A /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */; };
@@ -222,6 +223,7 @@
 		DDBF1454247D49B5004E4771 /* WorkSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.otf"; sourceTree = "<group>"; };
 		DDBF1456247D49C2004E4771 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.otf"; sourceTree = "<group>"; };
 		DDBF1458247D49D6004E4771 /* WorkSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.otf"; sourceTree = "<group>"; };
+		DDBF147C24815591004E4771 /* PostCreationSuccessAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreationSuccessAlert.swift; sourceTree = "<group>"; };
 		DDDB55032468ACF5008EA75A /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
 		DDDB55052468ADF9008EA75A /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		DDDB55072468AE5A008EA75A /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				DDF929092471814700973488 /* PostCreationTagView.swift */,
 				DDF9290B2472055600973488 /* PostTagCell.swift */,
 				C018DD7B2474AF7B00EEB3FC /* Location.swift */,
+				DDBF147C24815591004E4771 /* PostCreationSuccessAlert.swift */,
 			);
 			path = CreatePost;
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 				DC807E73247027D800046D67 /* Fonts.swift in Sources */,
 				2F04218A246CCBFA005FB1D0 /* FeedViewController.swift in Sources */,
 				2F04210D246A1021005FB1D0 /* Avatar.swift in Sources */,
+				DDBF147D24815591004E4771 /* PostCreationSuccessAlert.swift in Sources */,
 				2F72CE522468785200750785 /* HTTPMethod.swift in Sources */,
 				2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */,
 				DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */,
