@@ -75,6 +75,7 @@
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		976A98CB24782B8600604FFA /* GeneratedImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A98CA24782B8600604FFA /* GeneratedImagesList.swift */; };
 		976A98CD24782BC500604FFA /* GeneratedStoryboardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */; };
+		A681817C2482050A00E7EA43 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A681817B2482050A00E7EA43 /* PillButton.swift */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		C018DD7C2474AF7B00EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7B2474AF7B00EEB3FC /* Location.swift */; };
 		C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD812477113800EEB3FC /* LocationCellSearch.swift */; };
@@ -203,6 +204,7 @@
 		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		976A98CA24782B8600604FFA /* GeneratedImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedImagesList.swift; sourceTree = "<group>"; };
 		976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedStoryboardsList.swift; sourceTree = "<group>"; };
+		A681817B2482050A00E7EA43 /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		C018DD7B2474AF7B00EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				DC807E60246FB36F00046D67 /* BottomModel */,
 				0322FA12246E23D0009507D7 /* TagView.swift */,
+				A681817B2482050A00E7EA43 /* PillButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -971,6 +974,7 @@
 				C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
+				A681817C2482050A00E7EA43 /* PillButton.swift in Sources */,
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
 				DD7B70122487B12B00B9988B /* FeedViewCell.swift in Sources */,
