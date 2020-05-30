@@ -45,10 +45,10 @@ class FeedTitle: UIView {
         titleLbl.lineBreakMode = .byWordWrapping
         titleLbl.makeSubview(of: self)
             .width(UIScreen.main.bounds.size.width - 40)
-            .height(heighOfTitle(title: title))
+            .height(heightOfTitle(title: title))
     }
 
-    func heighOfTitle(title: String) -> CGFloat {
+    func heightOfTitle(title: String) -> CGFloat {
         let boundingBox = NSString(string: title).boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 40, height: .greatestFiniteMagnitude), options: NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22)], context: nil)
         return boundingBox.height
     }

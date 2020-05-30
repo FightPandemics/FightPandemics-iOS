@@ -44,20 +44,21 @@ class FeedBodyTxt: UIView {
         let newTxt = text.components(separatedBy: " ").dropLast().dropLast().dropLast().joined(separator: " ")
         bodyLbl.attributedText = NSAttributedString(string: newTxt, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
         bodyLbl.textAlignment = .left
-        bodyLbl.numberOfLines = 0
+        bodyLbl.numberOfLines = 5
         bodyLbl.lineBreakMode = .byWordWrapping
         bodyLbl.makeSubview(of: self)
             .width(UIScreen.main.bounds.width - 40)
-            .height(heighOfBody(text: newTxt))
+            .height(heightOfBody(text: newTxt))
         viewMore.makeSubview(of: self)
             .width(72)
             .height(16)
-            .right(to: \.rightAnchor, constant: -5)
-            .bottom(to: \.bottomAnchor, constant: -5)
+            .right(to: \.rightAnchor, of: bodyLbl, constant: -5)
+            .bottom(to: \.bottomAnchor, of: bodyLbl, constant: -15)
     }
 
-    func heighOfBody(text: String) -> CGFloat {
-        let boundingBox = NSString(string: text).boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 40, height: .greatestFiniteMagnitude), options: NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 14)], context: nil)
+    func heightOfBody(text: String) -> CGFloat {
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        let boundingBox = NSString(string: text).boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 40, height: .greatestFiniteMagnitude), options: options, attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 14)], context: nil)
         return boundingBox.height
     }
 }
