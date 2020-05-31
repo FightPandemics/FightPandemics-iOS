@@ -47,7 +47,7 @@ class FeedBodyTxt: UIView {
         bodyLbl.numberOfLines = 5
         bodyLbl.lineBreakMode = .byWordWrapping
         bodyLbl.makeSubview(of: self)
-            .width(UIScreen.main.bounds.width - 40)
+            .width(self.frame.size.width)
             .height(heightOfBody(text: newTxt))
         viewMore.makeSubview(of: self)
             .width(72)
