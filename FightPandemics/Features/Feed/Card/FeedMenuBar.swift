@@ -36,7 +36,7 @@ class FeedMenuBar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var feedViewController: FeedViewController?
+    weak var feedViewController: FeedViewController?
 
     private let menuOptions = ["FeedMenuAllTitle", "FeedMenuOffersTitle", "FeedMenuRequestsTitle"]
 
