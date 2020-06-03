@@ -94,6 +94,10 @@
 		DC807E6F247027CF00046D67 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E6D247027CF00046D67 /* SessionManager.swift */; };
 		DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E6E247027CF00046D67 /* SessionManagerError.swift */; };
 		DC807E73247027D800046D67 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC807E72247027D800046D67 /* Fonts.swift */; };
+		DD7B700C24875D8800B9988B /* FeedMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B700B24875D8800B9988B /* FeedMenuBar.swift */; };
+		DD7B700E2487618B00B9988B /* FeedMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B700D2487618B00B9988B /* FeedMenuCell.swift */; };
+		DD7B70102487A05F00B9988B /* FeedPostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B700F2487A05F00B9988B /* FeedPostDataSource.swift */; };
+		DD7B70122487B12B00B9988B /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B70112487B12B00B9988B /* FeedViewCell.swift */; };
 		DDBF1455247D49B5004E4771 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1454247D49B5004E4771 /* WorkSans-Medium.otf */; };
 		DDBF1457247D49C2004E4771 /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1456247D49C2004E4771 /* WorkSans-Regular.otf */; };
 		DDBF1459247D49D6004E4771 /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDBF1458247D49D6004E4771 /* WorkSans-Bold.otf */; };
@@ -220,6 +224,10 @@
 		DC807E6D247027CF00046D67 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		DC807E6E247027CF00046D67 /* SessionManagerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManagerError.swift; sourceTree = "<group>"; };
 		DC807E72247027D800046D67 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		DD7B700B24875D8800B9988B /* FeedMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMenuBar.swift; sourceTree = "<group>"; };
+		DD7B700D2487618B00B9988B /* FeedMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMenuCell.swift; sourceTree = "<group>"; };
+		DD7B700F2487A05F00B9988B /* FeedPostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostDataSource.swift; sourceTree = "<group>"; };
+		DD7B70112487B12B00B9988B /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
 		DDBF1454247D49B5004E4771 /* WorkSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.otf"; sourceTree = "<group>"; };
 		DDBF1456247D49C2004E4771 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.otf"; sourceTree = "<group>"; };
 		DDBF1458247D49D6004E4771 /* WorkSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.otf"; sourceTree = "<group>"; };
@@ -284,6 +292,7 @@
 				2F042109246A1021005FB1D0 /* FeedPost.swift */,
 				2F04210B246A1021005FB1D0 /* PostFooter.swift */,
 				2F0C3C43246F51BA0002B384 /* PostReactionButton.swift */,
+				DD7B700F2487A05F00B9988B /* FeedPostDataSource.swift */,
 			);
 			path = FeedPost;
 			sourceTree = "<group>";
@@ -619,6 +628,9 @@
 			children = (
 				C018DD882479C41D00EEB3FC /* FeedCatTag.swift */,
 				C018DD8A2479D9C900EEB3FC /* FeedOfferReqTime.swift */,
+				DD7B700B24875D8800B9988B /* FeedMenuBar.swift */,
+				DD7B700D2487618B00B9988B /* FeedMenuCell.swift */,
+				DD7B70112487B12B00B9988B /* FeedViewCell.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -904,6 +916,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F426BA92473682E007A4796 /* HTML.swift in Sources */,
+				DD7B700E2487618B00B9988B /* FeedMenuCell.swift in Sources */,
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
 				2F04219E246CE99C005FB1D0 /* Success.swift in Sources */,
 				2F426BA6247365FB007A4796 /* OpenSourceCreditsViewController.swift in Sources */,
@@ -921,6 +934,7 @@
 				DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */,
 				2F042199246CE4B3005FB1D0 /* LogInViewController.swift in Sources */,
 				2FF5627C2475F0D000194144 /* LocationServices.swift in Sources */,
+				DD7B700C24875D8800B9988B /* FeedMenuBar.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
 				2FB341EC2468F841007E397F /* UIColor+FightPandemics.swift in Sources */,
 				2F72CE562468789000750785 /* User.swift in Sources */,
@@ -943,6 +957,7 @@
 				DC807E6A247027C700046D67 /* JSONFileReader.swift in Sources */,
 				2F04210F246A1021005FB1D0 /* AvatarView.swift in Sources */,
 				C018DD892479C41D00EEB3FC /* FeedCatTag.swift in Sources */,
+				DD7B70102487A05F00B9988B /* FeedPostDataSource.swift in Sources */,
 				2F0C3C652471DB2D0002B384 /* RootNavigationController.swift in Sources */,
 				2FB342042468FFCC007E397F /* Navigator.swift in Sources */,
 				2F0C3C44246F51BB0002B384 /* PostReactionButton.swift in Sources */,
@@ -958,6 +973,7 @@
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
+				DD7B70122487B12B00B9988B /* FeedViewCell.swift in Sources */,
 				C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */,
 				DC807E64246FB37000046D67 /* BottomModalTransitionDelegate.swift in Sources */,
 				2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */,
