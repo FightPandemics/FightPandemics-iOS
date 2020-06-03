@@ -38,7 +38,7 @@ class FeedMenuBar: UIView {
 
     var feedViewController: FeedViewController?
 
-    private let menuOptions = ["All", "Offers", "Requests"]
+    private let menuOptions = ["FeedMenuAllTitle", "FeedMenuOffersTitle", "FeedMenuRequestsTitle"]
 
     lazy var menuCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -85,7 +85,7 @@ extension FeedMenuBar: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         let text = menuOptions[indexPath.row]
-        cell.updateLabel(with: text)
+        cell.updateLabel(with: text.localized)
         return cell
     }
 }

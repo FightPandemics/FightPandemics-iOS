@@ -16,6 +16,9 @@
 
 "FeedPostViewMoreCTA" = "View More";
 "FeedPostWriteCommentCTA" = "Write a comment";
+"FeedMenuAllTitle" = "All";
+"FeedMenuOffersTitle" = "Offers";
+"FeedMenuRequestsTitle" = "Requests";
 
 // MARK: Post
 
