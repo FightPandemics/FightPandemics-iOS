@@ -1,5 +1,5 @@
 //
-//  CommentReplyBtn.swift
+//  CommentFooter.swift
 //  FightPandemics
 //
 //  Created by ehsan sat on 6/5/20.

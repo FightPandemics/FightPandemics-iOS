@@ -77,9 +77,7 @@
 		976A98CD24782BC500604FFA /* GeneratedStoryboardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */; };
 		A681817C2482050A00E7EA43 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A681817B2482050A00E7EA43 /* PillButton.swift */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
-		C016A4D7248987520012B185 /* CommentLikeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016A4D6248987520012B185 /* CommentLikeBtn.swift */; };
-		C016A4D9248987640012B185 /* CommentReplyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016A4D8248987640012B185 /* CommentReplyBtn.swift */; };
-		C016A4DB248987DB0012B185 /* CommentTimeLbl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016A4DA248987DB0012B185 /* CommentTimeLbl.swift */; };
+		C016A4DD248AC1C30012B185 /* CommentFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016A4DC248AC1C30012B185 /* CommentFooter.swift */; };
 		C018DD7C2474AF7B00EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7B2474AF7B00EEB3FC /* Location.swift */; };
 		C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD812477113800EEB3FC /* LocationCellSearch.swift */; };
 		C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */; };
@@ -210,9 +208,7 @@
 		A681817B2482050A00E7EA43 /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
-		C016A4D6248987520012B185 /* CommentLikeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLikeBtn.swift; sourceTree = "<group>"; };
-		C016A4D8248987640012B185 /* CommentReplyBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReplyBtn.swift; sourceTree = "<group>"; };
-		C016A4DA248987DB0012B185 /* CommentTimeLbl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTimeLbl.swift; sourceTree = "<group>"; };
+		C016A4DC248AC1C30012B185 /* CommentFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFooter.swift; sourceTree = "<group>"; };
 		C018DD7B2474AF7B00EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C018DD812477113800EEB3FC /* LocationCellSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellSearch.swift; sourceTree = "<group>"; };
 		C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFilterBtn.swift; sourceTree = "<group>"; };
@@ -640,9 +636,7 @@
 				DD7B700B24875D8800B9988B /* FeedMenuBar.swift */,
 				DD7B700D2487618B00B9988B /* FeedMenuCell.swift */,
 				DD7B70112487B12B00B9988B /* FeedViewCell.swift */,
-				C016A4D6248987520012B185 /* CommentLikeBtn.swift */,
-				C016A4D8248987640012B185 /* CommentReplyBtn.swift */,
-				C016A4DA248987DB0012B185 /* CommentTimeLbl.swift */,
+				C016A4DC248AC1C30012B185 /* CommentFooter.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -927,6 +921,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C016A4DD248AC1C30012B185 /* CommentFooter.swift in Sources */,
 				2F426BA92473682E007A4796 /* HTML.swift in Sources */,
 				DD7B700E2487618B00B9988B /* FeedMenuCell.swift in Sources */,
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
@@ -987,9 +982,7 @@
 				2F0C3C40246ECA5C0002B384 /* Constraints+FightPandemics.swift in Sources */,
 				2F042110246A1021005FB1D0 /* PostFooter.swift in Sources */,
 				DD7B70122487B12B00B9988B /* FeedViewCell.swift in Sources */,
-				C016A4D7248987520012B185 /* CommentLikeBtn.swift in Sources */,
 				C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */,
-				C016A4D9248987640012B185 /* CommentReplyBtn.swift in Sources */,
 				DC807E64246FB37000046D67 /* BottomModalTransitionDelegate.swift in Sources */,
 				2F0420F9246A0E7E005FB1D0 /* FeedPrototypeViewController.swift in Sources */,
 				2F72CE4F2468785200750785 /* HTTPRequest.swift in Sources */,
@@ -1005,7 +998,6 @@
 				2F426BAF24736E3D007A4796 /* OpenSourceTableViewCell.swift in Sources */,
 				2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */,
 				976A98CD24782BC500604FFA /* GeneratedStoryboardsList.swift in Sources */,
-				C016A4DB248987DB0012B185 /* CommentTimeLbl.swift in Sources */,
 				2F72CE5D2468793300750785 /* MockAPI.swift in Sources */,
 				2F042194246CD022005FB1D0 /* SearchViewController.swift in Sources */,
 				2F0C3C42246ECA660002B384 /* ConstrainableView.swift in Sources */,
