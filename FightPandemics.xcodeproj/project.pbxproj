@@ -78,6 +78,7 @@
 		A681817C2482050A00E7EA43 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A681817B2482050A00E7EA43 /* PillButton.swift */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		C016A4DD248AC1C30012B185 /* CommentFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016A4DC248AC1C30012B185 /* CommentFooter.swift */; };
+		C016A4E12493EFAA0012B185 /* CommentAddBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016A4E02493EFAA0012B185 /* CommentAddBox.swift */; };
 		C018DD7C2474AF7B00EEB3FC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD7B2474AF7B00EEB3FC /* Location.swift */; };
 		C018DD822477113800EEB3FC /* LocationCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD812477113800EEB3FC /* LocationCellSearch.swift */; };
 		C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */; };
@@ -209,6 +210,7 @@
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		C016A4DC248AC1C30012B185 /* CommentFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFooter.swift; sourceTree = "<group>"; };
+		C016A4E02493EFAA0012B185 /* CommentAddBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAddBox.swift; sourceTree = "<group>"; };
 		C018DD7B2474AF7B00EEB3FC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C018DD812477113800EEB3FC /* LocationCellSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellSearch.swift; sourceTree = "<group>"; };
 		C018DD83247722FB00EEB3FC /* ClearFilterBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFilterBtn.swift; sourceTree = "<group>"; };
@@ -637,6 +639,7 @@
 				DD7B700D2487618B00B9988B /* FeedMenuCell.swift */,
 				DD7B70112487B12B00B9988B /* FeedViewCell.swift */,
 				C016A4DC248AC1C30012B185 /* CommentFooter.swift */,
+				C016A4E02493EFAA0012B185 /* CommentAddBox.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -940,6 +943,7 @@
 				2F0B5168246E0DF200BE42BC /* CreatePostBody.swift in Sources */,
 				DC807E70247027CF00046D67 /* SessionManagerError.swift in Sources */,
 				2F042199246CE4B3005FB1D0 /* LogInViewController.swift in Sources */,
+				C016A4E12493EFAA0012B185 /* CommentAddBox.swift in Sources */,
 				2FF5627C2475F0D000194144 /* LocationServices.swift in Sources */,
 				DD7B700C24875D8800B9988B /* FeedMenuBar.swift in Sources */,
 				2F04210E246A1021005FB1D0 /* FeedPost.swift in Sources */,
