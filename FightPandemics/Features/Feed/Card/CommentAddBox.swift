@@ -24,4 +24,76 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
+
+class CommentAddBox: UIView, UITextFieldDelegate {
+    lazy var commentBoxTxtField: UITextField = {
+        let commentBox = UITextField()
+        commentBox.delegate = self
+        let leftPadding = UIView(frame: CGRect(x: 0, y: 0, width: 33, height: 50))
+        commentBox.leftView = leftPadding
+        commentBox.leftViewMode = .always
+        commentBox.backgroundColor = UIColor.fightPandemicsLightGrey()
+        commentBox.attributedPlaceholder = NSAttributedString(string: "Write a comment ...", attributes: [NSAttributedString.Key.font: Fonts.poppinsMedium.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
+        commentBox.frame.size = CGSize(width: UIScreen.main.bounds.width - 46, height: 46)
+        commentBox.layer.masksToBounds = true
+        commentBox.layer.cornerRadius = commentBox.frame.height / 2
+        return commentBox
+    }()
+
+    lazy var sendButton: UIButton = {
+        let sendBtn = UIButton()
+        sendBtn.setImage(#imageLiteral(resourceName: "send"), for: .normal)
+        sendBtn.imageView?.contentMode = .scaleAspectFit
+        sendBtn.frame.size = CGSize(width: 20, height: 20)
+        sendBtn.isHidden = true
+        sendBtn.addTarget(self, action: #selector(sendBtnPressed), for: .touchUpInside)
+        return sendBtn
+    }()
+
+    var sendBtn = UIButton()
+    init() {
+        super.init(frame: CGRect.zero)
+        makeConstraints()
+    }
+
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    @objc func sendBtnPressed() {
+        commentBoxTxtField.resignFirstResponder()
+        sendButton.isHidden = false
+    }
+
+    private func makeConstraints() {
+        commentBoxTxtField.makeSubview(of: self)
+            .width(UIScreen.main.bounds.width - 50)
+            .height(46)
+            .left(to: \.leftAnchor, constant: 18)
+            .top(to: \.topAnchor, constant: 9)
+            .bottom(to: \.bottomAnchor, constant: -7)
+    }
+
+    func textFieldDidBeginEditing(_: UITextField) {
+        UIView.animate(withDuration: 1) {
+            self.commentBoxTxtField.makeSubview(of: self)
+                .width(UIScreen.main.bounds.width - 50)
+                .left(to: \.leftAnchor, constant: 5)
+                .top(to: \.topAnchor, constant: 9)
+                .bottom(to: \.bottomAnchor, constant: -7)
+            self.commentBoxTxtField.layoutIfNeeded()
+            self.sendButton.isHidden = false
+            self.sendButton.makeSubview(of: self)
+                .right(to: \.rightAnchor, constant: -13)
+                .top(to: \.topAnchor, constant: 21)
+                .bottom(to: \.bottomAnchor, constant: -21)
+        }
+    }
+
+    func textFieldDidEndEditing(_: UITextField) {}
+
+    func textFieldShouldReturn(_: UITextField) -> Bool {
+        return false
+    }
+}
