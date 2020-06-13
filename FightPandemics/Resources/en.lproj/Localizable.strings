@@ -66,6 +66,7 @@
 "ClearFilterBtn" = "Clear filters";
 "ApplyFilterBtn" = "Apply filters";
 "FilterLocationCellSearchBar" = "Zip code, neighborhood or city";
+"CommentBoxPlaceholder" = "Write a comment ...";
 
 // MARK: Profile
 
