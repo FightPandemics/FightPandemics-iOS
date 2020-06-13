@@ -33,7 +33,7 @@ class CommentAddBox: UIView, UITextFieldDelegate {
         let leftPadding = UIView(frame: CGRect(x: 0, y: 0, width: 33, height: 50))
         commentBox.leftView = leftPadding
         commentBox.leftViewMode = .always
-        commentBox.backgroundColor = UIColor.fightPandemicsLightGrey()
+        commentBox.backgroundColor = UIColor.fightPandemicsGhostWhite()
         commentBox.attributedPlaceholder = NSAttributedString(string: "Write a comment ...".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsMedium.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
         commentBox.frame.size = CGSize(width: UIScreen.main.bounds.width - 46, height: 46)
         commentBox.layer.masksToBounds = true
@@ -45,7 +45,7 @@ class CommentAddBox: UIView, UITextFieldDelegate {
         let sendBtn = UIButton()
         sendBtn.setImage(#imageLiteral(resourceName: "send"), for: .normal)
         sendBtn.imageView?.contentMode = .scaleAspectFit
-        sendBtn.frame.size = CGSize(width: 20, height: 20)
+        sendBtn.frame.size = CGSize(width: 25, height: 25)
         sendBtn.isHidden = true
         sendBtn.addTarget(self, action: #selector(sendBtnPressed), for: .touchUpInside)
         return sendBtn
@@ -84,9 +84,11 @@ class CommentAddBox: UIView, UITextFieldDelegate {
             self.commentBoxTxtField.layoutIfNeeded()
             self.sendButton.isHidden = false
             self.sendButton.makeSubview(of: self)
-                .right(to: \.rightAnchor, constant: -13)
-                .top(to: \.topAnchor, constant: 21)
-                .bottom(to: \.bottomAnchor, constant: -21)
+                .width(25)
+                .height(25)
+                .right(to: \.rightAnchor, constant: -10)
+                .top(to: \.topAnchor, constant: 18)
+                .bottom(to: \.bottomAnchor, constant: -18)
         }
     }
 
