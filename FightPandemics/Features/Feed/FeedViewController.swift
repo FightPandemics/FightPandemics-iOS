@@ -30,17 +30,8 @@ final class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        commentAdd.makeSubview(of: view)
-            .width(view.frame.size.width)
-            .height(60)
-            .left(to: \.leftAnchor, constant: 0)
-            .right(to: \.rightAnchor, constant: 0)
-            .top(to: \.topAnchor, constant: 200)
-        commentAdd.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
-
-    private var commentAdd = CommentAddBox()
-
+    
     private let feedMenuBar = FeedMenuBar()
 
     private lazy var collectionView: UICollectionView = {
