@@ -34,7 +34,7 @@ class CommentAddBox: UIView, UITextFieldDelegate {
         commentBox.leftView = leftPadding
         commentBox.leftViewMode = .always
         commentBox.backgroundColor = UIColor.fightPandemicsLightGrey()
-        commentBox.attributedPlaceholder = NSAttributedString(string: "Write a comment ...", attributes: [NSAttributedString.Key.font: Fonts.poppinsMedium.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
+        commentBox.attributedPlaceholder = NSAttributedString(string: "Write a comment ...".localized, attributes: [NSAttributedString.Key.font: Fonts.poppinsMedium.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
         commentBox.frame.size = CGSize(width: UIScreen.main.bounds.width - 46, height: 46)
         commentBox.layer.masksToBounds = true
         commentBox.layer.cornerRadius = commentBox.frame.height / 2
@@ -51,7 +51,6 @@ class CommentAddBox: UIView, UITextFieldDelegate {
         return sendBtn
     }()
 
-    var sendBtn = UIButton()
     init() {
         super.init(frame: CGRect.zero)
         makeConstraints()
