@@ -27,7 +27,6 @@
 import UIKit
 
 class PillButton: UIButton {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -39,24 +38,24 @@ class PillButton: UIButton {
     enum PillButtonType {
         case regular, outline, bold
     }
-    
+
     init(buttonType: PillButtonType, title: String) {
         super.init(frame: .zero)
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         backgroundColor = .blue
         layer.cornerRadius = 25
-    
+
         switch buttonType {
-            case .regular:
+        case .regular:
             titleLabel?.font = Fonts.poppinsRegular.customFont(size: 22)
-            case .outline:
+        case .outline:
             titleLabel?.font = Fonts.poppinsRegular.customFont(size: 22)
             setTitleColor(.blue, for: .normal)
             layer.borderWidth = 1
             layer.borderColor = UIColor.blue.cgColor
             backgroundColor = .clear
-            case .bold:
+        case .bold:
             titleLabel?.font = Fonts.poppinsBold.customFont(size: 22)
         }
     }
