@@ -1,5 +1,5 @@
 //
-//  Offer-Request-Card.swift
+//  OfferRequestCard.swift
 //  FightPandemics
 //
 //  Created by Luciano Schillagi on 6/15/20.
@@ -27,15 +27,13 @@
 import UIKit
 
 class OfferRequestCard: UIStackView {
-    // MARK: Properties 📥
-
     var header = HeaderOfferRequestCard(postedDate: "Posted 14hrs ago",
                                         offer: "Offers",
                                         supplyType: "Medical Supplies")
 
-    var subHeader = SubHeaderOfferRequestCard(iniciales: "AM",
-                                              nombre: "Ana Muller",
-                                              ubicacion: "Berlin, Germany")
+    var subHeader = SubHeaderOfferRequestCard(initials: "AM",
+                                              name: "Ana Muller",
+                                              location: "Berlin, Germany")
 
     var body = BodyOfferRequestCard(tit: "I have 100 face Masks to give away",
                                     message: "I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. please contact m ...")
@@ -66,15 +64,11 @@ class OfferRequestCard: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: UI Methods ⚙️
-
     func setUp() {
         header.translatesAutoresizingMaskIntoConstraints = false
         subHeader.translatesAutoresizingMaskIntoConstraints = false
         body.translatesAutoresizingMaskIntoConstraints = false
         footer.translatesAutoresizingMaskIntoConstraints = false
-
-        // Configure the vertical stack
         axis = NSLayoutConstraint.Axis.vertical
         distribution = UIStackView.Distribution.fillProportionally
         alignment = .fill
@@ -85,4 +79,3 @@ class OfferRequestCard: UIStackView {
         addArrangedSubview(footer)
     }
 }
-

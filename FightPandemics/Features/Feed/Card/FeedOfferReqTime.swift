@@ -27,60 +27,34 @@
 import UIKit
 
 enum OfferRequestType: String {
-    case offer = "Offer"
-    case request = "Request"
+    case offers = "Offers   •"
+    case requests = "Requests  •"
 }
 
-class FeedOfferReqTime: UIView {
+class FeedOfferReqTime: UIStackView {
     private var offerReqLbl = UILabel()
     private var timeStampLbl = UILabel()
-    private var dotView = UIView()
+
     private var offerReq: OfferRequestType
     var timeStamp: String?
+
     init(offerReq: OfferRequestType, timeStamp: String) {
         self.offerReq = offerReq
         self.timeStamp = timeStamp
         super.init(frame: .zero)
-        setUp()
-    }
 
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    func setUp() {
         offerReqLbl.attributedText = NSAttributedString(string: offerReq.rawValue, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
-        offerReqLbl.sizeToFit()
-        offerReqLbl.layoutIfNeeded()
-        offerReqLbl.lineBreakMode = .byClipping
-        addSubview(offerReqLbl)
-        dotView.backgroundColor = UIColor.fightPandemicsNeonBlue()
-        dotView.frame.size = CGSize(width: 2, height: 2)
-        dotView.layer.masksToBounds = true
-        dotView.layer.cornerRadius = dotView.frame.size.height / 2
-        addSubview(dotView)
-        timeStampLbl.attributedText = NSAttributedString(string: timeStamp!, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
-        timeStampLbl.sizeToFit()
-        timeStampLbl.layoutIfNeeded()
-        timeStampLbl.lineBreakMode = .byClipping
-        addSubview(timeStampLbl)
-        makeConstraints()
+
+        timeStampLbl.attributedText = NSAttributedString(string: timeStamp, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
+
+        axis = NSLayoutConstraint.Axis.horizontal
+        distribution = .fillProportionally
+        translatesAutoresizingMaskIntoConstraints = false
+        addArrangedSubview(offerReqLbl)
+        addArrangedSubview(timeStampLbl)
     }
 
-    func makeConstraints() {
-        offerReqLbl.makeSubview(of: self)
-            .width((offerReqLbl.attributedText?.size().width)!)
-            .height(16)
-            .right(to: \.leftAnchor, of: dotView, relation: .equal, constant: -7, priority: .required)
-        dotView.makeSubview(of: self)
-            .width(2)
-            .height(2)
-            .top(to: \.topAnchor, constant: 8)
-            .left(to: \.rightAnchor, of: offerReqLbl, relation: .equal, constant: 7, priority: .required)
-            .right(to: \.leftAnchor, of: timeStampLbl, relation: .equal, constant: -9, priority: .required)
-        timeStampLbl.makeSubview(of: self)
-            .width((timeStampLbl.attributedText?.size().width)!)
-            .height(16)
-            .left(to: \.rightAnchor, of: dotView, constant: 9)
+    required init(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

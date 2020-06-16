@@ -26,29 +26,30 @@
 
 import UIKit
 
-class FeedCatTag: UIView {
-    private var categoryLbl = UILabel()
+class FeedCatTag: UILabel {
     var categoryTagTxt: String
+
     init(categoryTagTxt: String) {
         self.categoryTagTxt = categoryTagTxt
         super.init(frame: .zero)
-        setUp()
+        frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        widthAnchor.constraint(equalToConstant: frame.width).isActive = true
+        heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        attributedText = NSAttributedString(string: categoryTagTxt,
+                                            attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
+
+        backgroundColor = UIColor.fightPandemicsGhostWhite()
+
+        textAlignment = .center
+        layer.masksToBounds = true
+        layer.cornerRadius = 4
+
+//        makeSubview(of: self)
+//            .width(frame.size.width)
+//            .height(30)
     }
 
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    func setUp() {
-        categoryLbl.attributedText = NSAttributedString(string: categoryTagTxt, attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
-        categoryLbl.backgroundColor = UIColor.fightPandemicsGhostWhite()
-        let lblWidth = (categoryLbl.attributedText?.size().width)
-        categoryLbl.frame.size = CGSize(width: lblWidth! + 20, height: 30)
-        categoryLbl.textAlignment = .center
-        categoryLbl.layer.masksToBounds = true
-        categoryLbl.layer.cornerRadius = 4
-        categoryLbl.makeSubview(of: self)
-            .width(categoryLbl.frame.size.width)
-            .height(30)
     }
 }

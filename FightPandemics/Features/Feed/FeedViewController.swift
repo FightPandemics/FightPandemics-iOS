@@ -91,11 +91,11 @@ extension FeedViewController: UICollectionViewDataSource {
         }
 
         if indexPath.row == 0 {
-            cell.backgroundColor = .orange
+            cell.setupView()
         } else if indexPath.row == 1 {
-            cell.backgroundColor = .green
+            cell.setupView()
         } else {
-            cell.backgroundColor = .purple
+            cell.setupView()
         }
         return cell
     }

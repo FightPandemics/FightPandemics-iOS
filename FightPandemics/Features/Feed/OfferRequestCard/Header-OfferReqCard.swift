@@ -24,4 +24,22 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
+
+class HeaderOfferRequestCard: UIStackView {
+    let feedOfferRequestTime = FeedOfferReqTime(offerReq: .offers, timeStamp: "Posted 14hrs Ago")
+    let feedCategoryTag = FeedCatTag(categoryTagTxt: "Medical Supplies")
+
+    init(postedDate _: String, offer _: String, supplyType _: String) {
+        super.init(frame: .zero)
+        axis = NSLayoutConstraint.Axis.horizontal
+        distribution = UIStackView.Distribution.fillProportionally
+        translatesAutoresizingMaskIntoConstraints = false
+        addArrangedSubview(feedOfferRequestTime)
+        addArrangedSubview(feedCategoryTag)
+    }
+
+    required init(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

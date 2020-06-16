@@ -24,4 +24,34 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
+
+class BodyOfferRequestCard: UIStackView {
+    var title = UILabel()
+    var subTitle = UITextView()
+
+    init(tit: String, message: String) {
+        super.init(frame: .zero)
+
+        title.frame = CGRect(x: 0, y: 400, width: 200, height: 200)
+        title.attributedText = NSAttributedString(string: tit,
+                                                  attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        title.widthAnchor.constraint(equalToConstant: title.frame.width).isActive = true
+        title.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+
+        subTitle.frame = CGRect(x: 0, y: 400, width: 200, height: 600)
+        subTitle.attributedText = NSAttributedString(string: message,
+                                                     attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        subTitle.widthAnchor.constraint(equalToConstant: subTitle.frame.width).isActive = true
+        subTitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
+
+        axis = NSLayoutConstraint.Axis.vertical
+        translatesAutoresizingMaskIntoConstraints = false
+        addArrangedSubview(title)
+        addArrangedSubview(subTitle)
+    }
+
+    required init(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

@@ -75,6 +75,11 @@
 		7DEF116C7BC2A4F6BA56F4F0 /* Pods_FightPandemics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */; };
 		976A98CB24782B8600604FFA /* GeneratedImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A98CA24782B8600604FFA /* GeneratedImagesList.swift */; };
 		976A98CD24782BC500604FFA /* GeneratedStoryboardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */; };
+		A60FA8AD2498618B00B790DB /* OfferRequestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60FA8AC2498618B00B790DB /* OfferRequestCard.swift */; };
+		A60FA8AF2498621900B790DB /* Header-OfferReqCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60FA8AE2498621900B790DB /* Header-OfferReqCard.swift */; };
+		A60FA8B12498625200B790DB /* Subheader-OfferReqCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60FA8B02498625200B790DB /* Subheader-OfferReqCard.swift */; };
+		A60FA8B32498627F00B790DB /* Body-OfferReqCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60FA8B22498627F00B790DB /* Body-OfferReqCard.swift */; };
+		A60FA8B5249862AD00B790DB /* Footer-OfferReqCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60FA8B4249862AD00B790DB /* Footer-OfferReqCard.swift */; };
 		A681817C2482050A00E7EA43 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A681817B2482050A00E7EA43 /* PillButton.swift */; };
 		C013ACDA246FF3E200F22BE7 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */; };
 		C016A4DD248AC1C30012B185 /* CommentFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C016A4DC248AC1C30012B185 /* CommentFooter.swift */; };
@@ -205,6 +210,11 @@
 		74D3F30914E75C1D9DB78030 /* Pods-FightPandemics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightPandemics.debug.xcconfig"; path = "Target Support Files/Pods-FightPandemics/Pods-FightPandemics.debug.xcconfig"; sourceTree = "<group>"; };
 		976A98CA24782B8600604FFA /* GeneratedImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedImagesList.swift; sourceTree = "<group>"; };
 		976A98CC24782BC500604FFA /* GeneratedStoryboardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedStoryboardsList.swift; sourceTree = "<group>"; };
+		A60FA8AC2498618B00B790DB /* OfferRequestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequestCard.swift; sourceTree = "<group>"; };
+		A60FA8AE2498621900B790DB /* Header-OfferReqCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Header-OfferReqCard.swift"; sourceTree = "<group>"; };
+		A60FA8B02498625200B790DB /* Subheader-OfferReqCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subheader-OfferReqCard.swift"; sourceTree = "<group>"; };
+		A60FA8B22498627F00B790DB /* Body-OfferReqCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Body-OfferReqCard.swift"; sourceTree = "<group>"; };
+		A60FA8B4249862AD00B790DB /* Footer-OfferReqCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Footer-OfferReqCard.swift"; sourceTree = "<group>"; };
 		A681817B2482050A00E7EA43 /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
 		AC14540D23239E4E26F554CF /* Pods_FightPandemics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightPandemics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C013ACD9246FF3E200F22BE7 /* OfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
@@ -280,6 +290,7 @@
 		2F0420F5246A0D0D005FB1D0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				A60FA8AB2498612200B790DB /* OfferRequestCard */,
 				C018DD872479C26E00EEB3FC /* Card */,
 				2F0420F6246A0E71005FB1D0 /* Feed.storyboard */,
 				2F0420FA246A0EBA005FB1D0 /* FeedPost */,
@@ -620,6 +631,18 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		A60FA8AB2498612200B790DB /* OfferRequestCard */ = {
+			isa = PBXGroup;
+			children = (
+				A60FA8AC2498618B00B790DB /* OfferRequestCard.swift */,
+				A60FA8AE2498621900B790DB /* Header-OfferReqCard.swift */,
+				A60FA8B02498625200B790DB /* Subheader-OfferReqCard.swift */,
+				A60FA8B22498627F00B790DB /* Body-OfferReqCard.swift */,
+				A60FA8B4249862AD00B790DB /* Footer-OfferReqCard.swift */,
+			);
+			path = OfferRequestCard;
+			sourceTree = "<group>";
+		};
 		C013ACD8246FF3C500F22BE7 /* OfferRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -927,6 +950,7 @@
 				2F72CE502468785200750785 /* JSON.swift in Sources */,
 				2F04219E246CE99C005FB1D0 /* Success.swift in Sources */,
 				2F426BA6247365FB007A4796 /* OpenSourceCreditsViewController.swift in Sources */,
+				A60FA8B5249862AD00B790DB /* Footer-OfferReqCard.swift in Sources */,
 				2FB341F92468F9F0007E397F /* RootTabBarController.swift in Sources */,
 				2F0C3C6C2471E1130002B384 /* FiltersModal.swift in Sources */,
 				2F72CE5B2468790200750785 /* APIError.swift in Sources */,
@@ -976,6 +1000,7 @@
 				2F72CE4D2468785200750785 /* HTTPClientError.swift in Sources */,
 				2F72CE532468785200750785 /* HTTPClient.swift in Sources */,
 				C018DD84247722FB00EEB3FC /* ClearFilterBtn.swift in Sources */,
+				A60FA8B12498625200B790DB /* Subheader-OfferReqCard.swift in Sources */,
 				2F0B515C246E009400BE42BC /* CreatePostViewController.swift in Sources */,
 				2F0B516B246E15B400BE42BC /* IndividualOrg.swift in Sources */,
 				A681817C2482050A00E7EA43 /* PillButton.swift in Sources */,
@@ -993,8 +1018,11 @@
 				DC807E66246FB37000046D67 /* BottomModalPresentationController.swift in Sources */,
 				DDF9290C2472055600973488 /* PostTagCell.swift in Sources */,
 				2F9EFE53245DFB1700E86700 /* SceneDelegate.swift in Sources */,
+				A60FA8AF2498621900B790DB /* Header-OfferReqCard.swift in Sources */,
 				DC807E5B246FB02300046D67 /* Entity.swift in Sources */,
 				976A98CB24782B8600604FFA /* GeneratedImagesList.swift in Sources */,
+				A60FA8B32498627F00B790DB /* Body-OfferReqCard.swift in Sources */,
+				A60FA8AD2498618B00B790DB /* OfferRequestCard.swift in Sources */,
 				2F426BAF24736E3D007A4796 /* OpenSourceTableViewCell.swift in Sources */,
 				2F426B3C2472C2A3007A4796 /* PostVisibilitySelectionView.swift in Sources */,
 				976A98CD24782BC500604FFA /* GeneratedStoryboardsList.swift in Sources */,

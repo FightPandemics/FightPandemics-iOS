@@ -9,11 +9,10 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - SwiftLint
   trunk:
     - SwiftFormat
     - SwiftGen
+    - SwiftLint
 
 SPEC CHECKSUMS:
   SwiftFormat: b72e592ea0979aeee53f6052abff291181364933
