@@ -27,17 +27,20 @@
 import UIKit
 
 class OfferRequestCard: UIStackView {
-    var header = HeaderOfferRequestCard(postedDate: "Posted 14hrs ago",
-                                        offer: "Offers",
-                                        supplyType: "Medical Supplies")
 
-    var subHeader = SubHeaderOfferRequestCard(initials: "AM",
-                                              name: "Ana Muller",
-                                              location: "Berlin, Germany")
+    var headerStack = HeaderOfferRequestCard(postedDate: "Posted 14hrs ago",
+                                             offer: "Offers",
+                                             supplyType: "Medical Supplies")
 
-    var body = BodyOfferRequestCard(tit: "I have 100 face Masks to give away",
-                                    message: "I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. please contact m ...")
-    var footer = FooterOfferRequestCard(numOfLikes: 4, numOfComments: 7)
+    var subHeaderStack = SubHeaderOfferRequestCard(initials: "AM",
+                                                   name: "Ana Muller",
+                                                   location: "Berlin, Germany")
+
+    var bodyStack = BodyOfferRequestCard(tit: "I have 100 face Masks to give away",
+                                         message: "I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. please contact m ...")
+
+    var footerStack = FooterOfferRequestCard(numOfLikes: 4,
+                                             numOfComments: 7)
 
     override init(frame _: CGRect) {
         super.init(frame: .zero)
@@ -46,36 +49,28 @@ class OfferRequestCard: UIStackView {
     init() {
         super.init(frame: .zero)
 
-        header.translatesAutoresizingMaskIntoConstraints = false
-        subHeader.translatesAutoresizingMaskIntoConstraints = false
-        body.translatesAutoresizingMaskIntoConstraints = false
-        footer.translatesAutoresizingMaskIntoConstraints = false
+        headerStack.translatesAutoresizingMaskIntoConstraints = false
+        subHeaderStack.translatesAutoresizingMaskIntoConstraints = false
+        bodyStack.translatesAutoresizingMaskIntoConstraints = false
+        footerStack.translatesAutoresizingMaskIntoConstraints = false
 
-        axis = NSLayoutConstraint.Axis.vertical
-        distribution = UIStackView.Distribution.fillProportionally
+        // Offer Request Card Constraints
         translatesAutoresizingMaskIntoConstraints = false
-        addArrangedSubview(header)
-        addArrangedSubview(subHeader)
-        addArrangedSubview(body)
-        addArrangedSubview(footer)
+        axis = .vertical
+        distribution = .fillProportionally
+        spacing = 10
+        addArrangedSubview(headerStack)
+        addArrangedSubview(subHeaderStack)
+        addArrangedSubview(bodyStack)
+        addArrangedSubview(footerStack)
+
+        // Footer to Card Constraints
+        footerStack.makeSubview(of: self)
+            .right(to: \.rightAnchor,
+                   constant: -160)
     }
 
     required init(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    func setUp() {
-        header.translatesAutoresizingMaskIntoConstraints = false
-        subHeader.translatesAutoresizingMaskIntoConstraints = false
-        body.translatesAutoresizingMaskIntoConstraints = false
-        footer.translatesAutoresizingMaskIntoConstraints = false
-        axis = NSLayoutConstraint.Axis.vertical
-        distribution = UIStackView.Distribution.fillProportionally
-        alignment = .fill
-        translatesAutoresizingMaskIntoConstraints = false
-        addArrangedSubview(header)
-        addArrangedSubview(subHeader)
-        addArrangedSubview(body)
-        addArrangedSubview(footer)
     }
 }

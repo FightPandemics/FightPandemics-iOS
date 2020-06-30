@@ -27,28 +27,58 @@
 import UIKit
 
 class BodyOfferRequestCard: UIStackView {
-    var title = UILabel()
-    var subTitle = UITextView()
+
+    private var titleTextView = UITextView()
+    private var contentTextView = UITextView()
+    private var moreBtn = UIButton()
 
     init(tit: String, message: String) {
         super.init(frame: .zero)
 
-        title.frame = CGRect(x: 0, y: 400, width: 200, height: 200)
-        title.attributedText = NSAttributedString(string: tit,
-                                                  attributes: [NSAttributedString.Key.font: Fonts.poppinsBold.customFont(size: 22), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
-        title.widthAnchor.constraint(equalToConstant: title.frame.width).isActive = true
-        title.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        titleTextView.attributedText = NSAttributedString(string: tit,
+                                                          attributes: [.font: Fonts.poppinsBold.customFont(size: 22),
+                                                                       .foregroundColor: UIColor.fightPandemicsNero()])
+        
+        contentTextView.attributedText = NSAttributedString(string: message,
+                                                            attributes: [.font: Fonts.poppinsRegular.customFont(size: 14), .foregroundColor: UIColor.fightPandemicsNero()])
 
-        subTitle.frame = CGRect(x: 0, y: 400, width: 200, height: 600)
-        subTitle.attributedText = NSAttributedString(string: message,
-                                                     attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
-        subTitle.widthAnchor.constraint(equalToConstant: subTitle.frame.width).isActive = true
-        subTitle.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        moreBtn.setTitle("FeedPostViewMoreCTA".localized, for: .normal)
+        moreBtn.setTitleColor(UIColor.fightPandemicsNeonBlue(), for: .normal)
+        moreBtn.titleLabel?.font = UIFont(name: "System", size: 14)
 
-        axis = NSLayoutConstraint.Axis.vertical
+        // Vertical Stack Config
+        axis = .vertical
+        distribution = .fillProportionally
         translatesAutoresizingMaskIntoConstraints = false
-        addArrangedSubview(title)
-        addArrangedSubview(subTitle)
+        addArrangedSubview(titleTextView)
+        addArrangedSubview(contentTextView)
+        addArrangedSubview(moreBtn)
+
+        // Title Constraints
+        titleTextView.makeSubview(of: self)
+            .top(to: \.topAnchor,
+                 relation: .equal,
+                 constant: 8,
+                 priority: .required)
+            .leading(to: \.leadingAnchor)
+            .width(UIScreen.main.bounds.width - 40)
+            .height(80)
+
+        // Content Constraints
+        contentTextView.makeSubview(of: self)
+            .top(to: \.bottomAnchor,
+                 of: titleTextView,
+                 relation: .equal,
+                 constant: 30,
+                 priority: .required)
+            .leading(to: \.leadingAnchor)
+            .width(UIScreen.main.bounds.width)
+            .height(120)
+
+        // Contraints to More Button
+        moreBtn.makeSubview(of: self)
+            .right(to: \.rightAnchor, constant: 270) 
+            .bottom(to: \.bottomAnchor, constant: 10)
     }
 
     required init(coder _: NSCoder) {

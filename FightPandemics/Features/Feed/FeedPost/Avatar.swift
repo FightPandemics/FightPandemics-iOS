@@ -27,19 +27,15 @@
 import UIKit
 
 class Avatar: UIView {
-    func setUp(user: User, image: UIImage? = nil) {
+    func setUp(user: String, image: UIImage? = nil) {
         if let image = image {
             setUpWithImage(image: image)
         } else {
-            setUpWithInitials(initials: user.initials)
+            setUpWithInitials(initials: user)
         }
     }
 
     private func setUpWithInitials(initials: String?) {
-        frame.origin.x = 23
-        frame.origin.y = 23
-        frame.size.width = 35
-        frame.size.height = 35
         let label = UILabel()
         label.text = initials
         label.textAlignment = .center
@@ -48,13 +44,17 @@ class Avatar: UIView {
         label.frame.size.height = frame.size.height
         label.clipsToBounds = true
         label.layer.masksToBounds = true
-        label.layer.cornerRadius = frame.size.height / 2
-        label.font = UIFont(name: "System", size: 18)
+        label.layer.cornerRadius = 20
+        label.attributedText = NSAttributedString(string: initials!,
+                                                  attributes: [NSAttributedString.Key.font: Fonts.poppinsMedium.customFont(size: 14), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        label.font = UIFont(name: "System", size: 14)
         label.textColor = UIColor.fightPandemicsNeonBlue()
         label.backgroundColor = UIColor.fightPandemicsGhostWhite()
         label.layer.borderWidth = 1
         label.layer.borderColor = UIColor.fightPandemicsNeonBlue().cgColor
         label.makeSubview(of: self)
+            .width(40)
+            .height(40)
     }
 
     private func setUpWithImage(image: UIImage) {

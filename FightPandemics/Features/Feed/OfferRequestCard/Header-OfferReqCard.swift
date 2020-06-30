@@ -27,13 +27,14 @@
 import UIKit
 
 class HeaderOfferRequestCard: UIStackView {
+
     let feedOfferRequestTime = FeedOfferReqTime(offerReq: .offers, timeStamp: "Posted 14hrs Ago")
     let feedCategoryTag = FeedCatTag(categoryTagTxt: "Medical Supplies")
 
     init(postedDate _: String, offer _: String, supplyType _: String) {
         super.init(frame: .zero)
-        axis = NSLayoutConstraint.Axis.horizontal
-        distribution = UIStackView.Distribution.fillProportionally
+        axis = .horizontal
+        distribution = .fillProportionally
         translatesAutoresizingMaskIntoConstraints = false
         addArrangedSubview(feedOfferRequestTime)
         addArrangedSubview(feedCategoryTag)

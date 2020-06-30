@@ -31,6 +31,7 @@ class FeedViewCell: UICollectionViewCell {
 
     var characters = ["Link", "Zelda", "Ganondorf", "Midna"]
 
+    // The Offer Request Card (Feed)
     let offerReqCard = OfferRequestCard()
 
     let postCardTableView = UITableView()
@@ -44,11 +45,13 @@ class FeedViewCell: UICollectionViewCell {
     }
 
     func setupView() {
+        // Offer Request Card Constraints
         offerReqCard.makeSubview(of: contentView)
-            .pinToEdges(withInsets: UIEdgeInsets(top: 20,
-                                                 left: 20,
-                                                 bottom: 20,
-                                                 right: -20))
+            .top(to: \.topAnchor, constant: 20)
+            .left(to: \.leftAnchor, constant: 20)
+            .right(to: \.rightAnchor, constant: -20)
+            .width(UIScreen.main.bounds.width)
+            .height(400)
     }
 }
 
