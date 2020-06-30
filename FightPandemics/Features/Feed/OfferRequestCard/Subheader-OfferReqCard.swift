@@ -27,7 +27,6 @@
 import UIKit
 
 class SubHeaderOfferRequestCard: UIStackView {
-
     private let avatar = Avatar()
     private let userName = UILabel()
     private let userLocationName = UILabel()

@@ -27,7 +27,6 @@
 import UIKit
 
 class BodyOfferRequestCard: UIStackView {
-
     private var titleTextView = UITextView()
     private var contentTextView = UITextView()
     private var moreBtn = UIButton()
@@ -38,7 +37,7 @@ class BodyOfferRequestCard: UIStackView {
         titleTextView.attributedText = NSAttributedString(string: tit,
                                                           attributes: [.font: Fonts.poppinsBold.customFont(size: 22),
                                                                        .foregroundColor: UIColor.fightPandemicsNero()])
-        
+
         contentTextView.attributedText = NSAttributedString(string: message,
                                                             attributes: [.font: Fonts.poppinsRegular.customFont(size: 14), .foregroundColor: UIColor.fightPandemicsNero()])
 
@@ -77,7 +76,7 @@ class BodyOfferRequestCard: UIStackView {
 
         // Contraints to More Button
         moreBtn.makeSubview(of: self)
-            .right(to: \.rightAnchor, constant: 270) 
+            .right(to: \.rightAnchor, constant: 270)
             .bottom(to: \.bottomAnchor, constant: 10)
     }
 

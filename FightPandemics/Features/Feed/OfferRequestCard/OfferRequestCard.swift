@@ -27,45 +27,33 @@
 import UIKit
 
 class OfferRequestCard: UIStackView {
-
-    var headerStack = HeaderOfferRequestCard(postedDate: "Posted 14hrs ago",
-                                             offer: "Offers",
-                                             supplyType: "Medical Supplies")
-
-    var subHeaderStack = SubHeaderOfferRequestCard(initials: "AM",
-                                                   name: "Ana Muller",
-                                                   location: "Berlin, Germany")
-
-    var bodyStack = BodyOfferRequestCard(tit: "I have 100 face Masks to give away",
-                                         message: "I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. I have a small store and I would like to give away 100 mask but I don’t know where, please contact me if you need them. please contact m ...")
-
-    var footerStack = FooterOfferRequestCard(numOfLikes: 4,
-                                             numOfComments: 7)
-
     override init(frame _: CGRect) {
         super.init(frame: .zero)
     }
 
-    init() {
+    required init(headerData: HeaderOfferRequestCard,
+                  subHeaderData: SubHeaderOfferRequestCard,
+                  bodyData: BodyOfferRequestCard,
+                  footerData: FooterOfferRequestCard) {
         super.init(frame: .zero)
 
-        headerStack.translatesAutoresizingMaskIntoConstraints = false
-        subHeaderStack.translatesAutoresizingMaskIntoConstraints = false
-        bodyStack.translatesAutoresizingMaskIntoConstraints = false
-        footerStack.translatesAutoresizingMaskIntoConstraints = false
+        headerData.translatesAutoresizingMaskIntoConstraints = false
+        subHeaderData.translatesAutoresizingMaskIntoConstraints = false
+        bodyData.translatesAutoresizingMaskIntoConstraints = false
+        footerData.translatesAutoresizingMaskIntoConstraints = false
 
         // Offer Request Card Constraints
         translatesAutoresizingMaskIntoConstraints = false
         axis = .vertical
         distribution = .fillProportionally
         spacing = 10
-        addArrangedSubview(headerStack)
-        addArrangedSubview(subHeaderStack)
-        addArrangedSubview(bodyStack)
-        addArrangedSubview(footerStack)
+        addArrangedSubview(headerData)
+        addArrangedSubview(subHeaderData)
+        addArrangedSubview(bodyData)
+        addArrangedSubview(footerData)
 
         // Footer to Card Constraints
-        footerStack.makeSubview(of: self)
+        footerData.makeSubview(of: self)
             .right(to: \.rightAnchor,
                    constant: -160)
     }

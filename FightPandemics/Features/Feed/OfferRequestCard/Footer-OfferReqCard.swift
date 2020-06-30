@@ -27,7 +27,6 @@
 import UIKit
 
 class FooterOfferRequestCard: UIStackView {
-
     // Like
     private var likeStack = UIStackView()
     private var likeBtn = PostReactionButton(type: .like)

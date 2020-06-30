@@ -27,11 +27,10 @@
 import UIKit
 
 class HeaderOfferRequestCard: UIStackView {
-
     let feedOfferRequestTime = FeedOfferReqTime(offerReq: .offers, timeStamp: "Posted 14hrs Ago")
     let feedCategoryTag = FeedCatTag(categoryTagTxt: "Medical Supplies")
 
-    init(postedDate _: String, offer _: String, supplyType _: String) {
+    init(postedDate _: String, reqOrOffer _: String, supplyType _: String) {
         super.init(frame: .zero)
         axis = .horizontal
         distribution = .fillProportionally

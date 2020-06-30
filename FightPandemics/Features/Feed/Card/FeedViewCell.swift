@@ -32,7 +32,7 @@ class FeedViewCell: UICollectionViewCell {
     var characters = ["Link", "Zelda", "Ganondorf", "Midna"]
 
     // The Offer Request Card (Feed)
-    let offerReqCard = OfferRequestCard()
+    let offerReqCard = OfferRequestCard(headerData: .init(postedDate: "P", reqOrOffer: "O", supplyType: "M"), subHeaderData: .init(initials: "AM", name: "Ana Muller", location: "Berlin, Germany"), bodyData: .init(tit: "I", message: "E"), footerData: .init(numOfLikes: 4, numOfComments: 7))
 
     let postCardTableView = UITableView()
 
