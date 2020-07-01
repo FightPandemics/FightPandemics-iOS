@@ -32,21 +32,14 @@ class FeedCatTag: UILabel {
     init(categoryTagTxt: String) {
         self.categoryTagTxt = categoryTagTxt
         super.init(frame: .zero)
-        frame = CGRect(x: 0, y: 0, width: 150, height: 50)
-        widthAnchor.constraint(equalToConstant: frame.width).isActive = true
-        heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        widthAnchor.constraint(equalToConstant: 131).isActive = true
+        heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         attributedText = NSAttributedString(string: categoryTagTxt,
-                                            attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
-
+                                            attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 11), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
         backgroundColor = UIColor.fightPandemicsGhostWhite()
-
         textAlignment = .center
         layer.masksToBounds = true
         layer.cornerRadius = 4
-
-//        makeSubview(of: self)
-//            .width(frame.size.width)
-//            .height(30)
     }
 
     required init?(coder _: NSCoder) {

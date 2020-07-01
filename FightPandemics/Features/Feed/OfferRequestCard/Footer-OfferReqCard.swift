@@ -50,9 +50,14 @@ class FooterOfferRequestCard: UIStackView {
         numberOfComments.translatesAutoresizingMaskIntoConstraints = false
         sendBtn.translatesAutoresizingMaskIntoConstraints = false
 
-        // Pass the number of likes and comments
+        let fontConfig = Fonts.poppinsRegular.customFont(size: 12)
+        let grayColor = UIColor.fightPandemicsSuvaGrey()
         numberOfLikes.text = String(numOfLikes)
+        numberOfLikes.font = fontConfig
+        numberOfLikes.textColor = grayColor
         numberOfComments.text = String(numOfComments)
+        numberOfComments.font = fontConfig
+        numberOfComments.textColor = grayColor
 
         // Like Stack Config
         likeStack.axis = .horizontal

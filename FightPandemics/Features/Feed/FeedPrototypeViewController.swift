@@ -38,31 +38,5 @@ class FeedPrototypeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        setupUI()
     }
-
-//    private func setupUI() {
-//        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-//
-//        avatar.setUp(user: mockUser, image: nil)
-//        avatarView = AvatarView()
-//        avatarView.setUp(user: mockUser, avatar: avatar)
-//        indivOrg.setUp()
-//        visibility.setUp()
-//
-//        let body = "Does anyone have an extra pack of disinfecting Clorox wipes? I would be very grateful if you could sell me one. Two people in our family have chronic pulmonary diseases, including my son. We are isolated, but my husband might infect us, as he works with people a lot."
-//        let title = "Disinfecting clorox wipes needed"
-//
-//        feedPost.setUp(title: title, body: body + body, type: "Medical Supplies")
-//        postFooter.setUp(likeNum: 12, commentNum: 13, sendNum: 14)
-//
-//        let firstView = UIView()
-//        firstView.frame = CGRect(x: 0, y: 50, width: UIScreen.main.bounds.width, height: 600)
-//        firstView.makeSubview(of: view)
-//        visibility.makeSubview(of: firstView)
-//        let secondView = UIView()
-//        secondView.frame = CGRect(x: 0, y: 530, width: UIScreen.main.bounds.width - 47, height: 300)
-//        view.addSubview(secondView)
-//    }
 }

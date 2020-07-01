@@ -58,27 +58,16 @@ class PostReactionButton: UIButton {
     }
 
     private func configureButton() {
-//        translatesAutoresizingMaskIntoConstraints = false
-//        let rightPadding: CGFloat
-
-//        backgroundColor = .yellow
-
         imageView?.contentMode = .scaleAspectFit
         switch type {
         case .like:
-//            rightPadding = 0 // 9.8
             setImage(#imageLiteral(resourceName: "heart"), for: .normal)
             setImage(#imageLiteral(resourceName: "heart_filled"), for: .selected)
         case .comments:
-//            rightPadding = 11.8
             setImage(#imageLiteral(resourceName: "message-square"), for: .normal)
         case .send:
-//            rightPadding = 0.0
             setImage(#imageLiteral(resourceName: "send"), for: .normal)
         }
-//        imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//        titleLabel?.font = Fonts.poppinsRegular.customFont(size: 14)
-//        setTitleColor(#colorLiteral(red: 0.5764705882, green: 0.5764705882, blue: 0.5764705882, alpha: 1), for: .normal)
         addTarget(self, action: #selector(tap), for: .touchUpInside)
     }
 }

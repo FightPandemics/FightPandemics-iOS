@@ -55,7 +55,7 @@ class OfferRequestCard: UIStackView {
         // Footer to Card Constraints
         footerData.makeSubview(of: self)
             .right(to: \.rightAnchor,
-                   constant: -160)
+                   constant: -190)
     }
 
     required init(coder _: NSCoder) {

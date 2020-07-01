@@ -43,7 +43,7 @@ class BodyOfferRequestCard: UIStackView {
 
         moreBtn.setTitle("FeedPostViewMoreCTA".localized, for: .normal)
         moreBtn.setTitleColor(UIColor.fightPandemicsNeonBlue(), for: .normal)
-        moreBtn.titleLabel?.font = UIFont(name: "System", size: 14)
+        moreBtn.titleLabel?.font = Fonts.poppinsRegular.customFont(size: 14)
 
         // Vertical Stack Config
         axis = .vertical
