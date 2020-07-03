@@ -52,8 +52,14 @@ class BodyOfferRequestCard: UIStackView {
         addArrangedSubview(titleTextView)
         addArrangedSubview(contentTextView)
         addArrangedSubview(moreBtn)
+        makeConstraints()
+    }
 
-        // Title Constraints
+    required init(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func makeConstraints() {
         titleTextView.makeSubview(of: self)
             .top(to: \.topAnchor,
                  relation: .equal,
@@ -62,8 +68,6 @@ class BodyOfferRequestCard: UIStackView {
             .leading(to: \.leadingAnchor)
             .width(UIScreen.main.bounds.width - 40)
             .height(80)
-
-        // Content Constraints
         contentTextView.makeSubview(of: self)
             .top(to: \.bottomAnchor,
                  of: titleTextView,
@@ -73,14 +77,8 @@ class BodyOfferRequestCard: UIStackView {
             .leading(to: \.leadingAnchor)
             .width(UIScreen.main.bounds.width)
             .height(120)
-
-        // Contraints to More Button
         moreBtn.makeSubview(of: self)
             .right(to: \.rightAnchor, constant: 270)
             .bottom(to: \.bottomAnchor, constant: 10)
-    }
-
-    required init(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

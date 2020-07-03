@@ -37,9 +37,18 @@ class HeaderOfferRequestCard: UIStackView {
         translatesAutoresizingMaskIntoConstraints = false
         addArrangedSubview(feedOfferRequestTime)
         addArrangedSubview(feedCategoryTag)
+        makeConstraints()
     }
 
     required init(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func makeConstraints() {
+        feedOfferRequestTime.makeSubview(of: self)
+            .width(160)
+            .right(to: \.leftAnchor,
+                   of: feedCategoryTag,
+                   constant: -81)
     }
 }

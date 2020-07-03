@@ -32,8 +32,7 @@ class FeedCatTag: UILabel {
     init(categoryTagTxt: String) {
         self.categoryTagTxt = categoryTagTxt
         super.init(frame: .zero)
-        widthAnchor.constraint(equalToConstant: 131).isActive = true
-        heightAnchor.constraint(equalToConstant: 30.0).isActive = true
+        heightAnchor.constraint(equalToConstant: 38.0).isActive = true
         attributedText = NSAttributedString(string: categoryTagTxt,
                                             attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 11), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
         backgroundColor = UIColor.fightPandemicsGhostWhite()

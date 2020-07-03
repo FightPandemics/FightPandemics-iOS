@@ -43,9 +43,9 @@ class FeedOfferReqTime: UIStackView {
         self.timeStamp = timeStamp
         super.init(frame: .zero)
 
-        offerReqLbl.attributedText = NSAttributedString(string: offerReq.rawValue, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
+        offerReqLbl.attributedText = NSAttributedString(string: offerReq.rawValue, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 11), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
 
-        timeStampLbl.attributedText = NSAttributedString(string: timeStamp, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 12), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
+        timeStampLbl.attributedText = NSAttributedString(string: timeStamp, attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 11), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
 
         axis = NSLayoutConstraint.Axis.horizontal
         distribution = .fillProportionally

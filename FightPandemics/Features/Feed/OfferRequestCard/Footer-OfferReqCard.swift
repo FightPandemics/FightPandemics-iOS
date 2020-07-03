@@ -61,7 +61,7 @@ class FooterOfferRequestCard: UIStackView {
 
         // Like Stack Config
         likeStack.axis = .horizontal
-        likeStack.distribution = .fillProportionally
+        likeStack.distribution = .fillEqually
 
         // Add arranged subviews to Like Stack
         likeStack.addArrangedSubview(likeBtn)
@@ -69,7 +69,7 @@ class FooterOfferRequestCard: UIStackView {
 
         // Comment Stack Config
         commentStack.axis = .horizontal
-        commentStack.distribution = .fillProportionally
+        commentStack.distribution = .fillEqually
 
         // Add arranged subviews to Comment Stack
         commentStack.addArrangedSubview(commentsBtn)

@@ -45,13 +45,12 @@ class FeedViewCell: UICollectionViewCell {
     }
 
     func setupView() {
-        // Offer Request Card Constraints
         offerReqCard.makeSubview(of: contentView)
             .top(to: \.topAnchor, constant: 20)
             .left(to: \.leftAnchor, constant: 20)
             .right(to: \.rightAnchor, constant: -20)
             .width(UIScreen.main.bounds.width)
-            .height(400)
+            .height(375)
     }
 }
 

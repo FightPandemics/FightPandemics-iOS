@@ -28,8 +28,9 @@ import UIKit
 
 class SubHeaderOfferRequestCard: UIStackView {
     private let avatar = Avatar()
-    private let userName = UILabel()
-    private let userLocationName = UILabel()
+    private let userNameLbl = UILabel()
+    private let pointLbl = UILabel()
+    private let userLocationLbl = UILabel()
     private let userLocationStackView = UIStackView()
     private let userNameAndLocationStackView = UIStackView()
 
@@ -40,35 +41,36 @@ class SubHeaderOfferRequestCard: UIStackView {
         avatar.setUp(user: initials)
 
         // User Name
-        userName.translatesAutoresizingMaskIntoConstraints = false
-        userName.attributedText = NSAttributedString(string: name,
-                                                     attributes: [NSAttributedString.Key.font: Fonts.poppinsMedium.customFont(size: 16), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        userNameLbl.translatesAutoresizingMaskIntoConstraints = false
+        userNameLbl.attributedText = NSAttributedString(string: name,
+                                                        attributes: [NSAttributedString.Key.font: Fonts.poppinsMedium.customFont(size: 16), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
 
         // Point
-        let point = UIImage(systemName: "circle.fill")
-        let pointImageView = UIImageView(image: point)
-        let size = CGSize(width: 10, height: 10)
-        pointImageView.size(size)
-        pointImageView.translatesAutoresizingMaskIntoConstraints = false
+        let colorBlueCircle = UIColor(red: 66.0 / 255.0,
+                                      green: 90.0 / 255.0,
+                                      blue: 242.0 / 255.0,
+                                      alpha: 1.0)
+        pointLbl.attributedText = NSAttributedString(string: "•",
+                                                     attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 20), NSAttributedString.Key.foregroundColor: colorBlueCircle])
 
         // User Location
-        userLocationName.translatesAutoresizingMaskIntoConstraints = false
-        userLocationName.attributedText = NSAttributedString(string: location,
-                                                             attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 11), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNero()])
+        userLocationLbl.translatesAutoresizingMaskIntoConstraints = false
+        userLocationLbl.attributedText = NSAttributedString(string: location,
+                                                            attributes: [NSAttributedString.Key.font: Fonts.poppinsRegular.customFont(size: 11), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsSuvaGrey()])
 
         // User Location Stack View
         userLocationStackView.translatesAutoresizingMaskIntoConstraints = false
+        userLocationStackView.axis = .horizontal
         userLocationStackView.distribution = .fillProportionally
         userLocationStackView.spacing = 5
-        userLocationStackView.axis = .horizontal
-        userLocationStackView.addArrangedSubview(pointImageView)
-        userLocationStackView.addArrangedSubview(userLocationName)
+        userLocationStackView.addArrangedSubview(pointLbl)
+        userLocationStackView.addArrangedSubview(userLocationLbl)
 
         // User Name & Location Stack View
         userNameAndLocationStackView.translatesAutoresizingMaskIntoConstraints = false
         userNameAndLocationStackView.axis = .vertical
         userNameAndLocationStackView.distribution = .fillProportionally
-        userNameAndLocationStackView.addArrangedSubview(userName)
+        userNameAndLocationStackView.addArrangedSubview(userNameLbl)
         userNameAndLocationStackView.addArrangedSubview(userLocationStackView)
 
         // Subheader Stack View
@@ -78,21 +80,25 @@ class SubHeaderOfferRequestCard: UIStackView {
         distribution = .fillProportionally
         addArrangedSubview(avatar)
         addArrangedSubview(userNameAndLocationStackView)
+        makeConstraints()
+    }
 
-        // Constraints
+    required init(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func makeConstraints() {
         avatar.makeSubview(of: self)
             .top(to: \.topAnchor, relation: .equal, constant: 8, priority: .required)
             .leading(to: \.leadingAnchor)
             .width(50)
             .height(35)
         userNameAndLocationStackView.makeSubview(of: self)
-            .top(to: \.topAnchor)
-            .leading(to: \.trailingAnchor, of: avatar, constant: 10)
+            .top(to: \.topAnchor, relation: .equal, constant: 8, priority: .required)
+            .leading(to: \.trailingAnchor, of: avatar, constant: 5)
             .width(100)
             .height(35)
-    }
-
-    required init(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        pointLbl.makeSubview(of: userLocationStackView)
+            .right(to: \.leftAnchor, of: userLocationLbl, relation: .equal, constant: 14, priority: .required)
     }
 }
