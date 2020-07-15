@@ -1,8 +1,8 @@
 //
-//  FeedViewController.swift
+//  Header-OfferReqCard.swift
 //  FightPandemics
 //
-//  Created by ehsan sat on 5/11/20.
+//  Created by Luciano Schillagi on 6/15/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,17 +26,29 @@
 
 import UIKit
 
-class FeedPrototypeViewController: UIViewController {
-    var mockUser = User(id: "123", firstName: "Lily", lastName: "Luke", email: "lily@luke.co", location: "Manchester, UK")
+class HeaderOfferRequestCard: UIStackView {
+    let feedOfferRequestTime = FeedOfferReqTime(offerReq: .offers, timeStamp: "Posted 14hrs Ago")
+    let feedCategoryTag = FeedCatTag(categoryTagTxt: "Medical Supplies")
 
-    private var avatar = Avatar()
-    private var avatarView = AvatarView()
-    private var feedPost = FeedPost()
-    private var postFooter = PostFooter()
-    private var indivOrg = IndividualOrg()
-    private var visibility = PostVisibilitySelectionView()
+    init(postedDate _: String, reqOrOffer _: String, supplyType _: String) {
+        super.init(frame: .zero)
+        axis = .horizontal
+        distribution = .fillProportionally
+        translatesAutoresizingMaskIntoConstraints = false
+        addArrangedSubview(feedOfferRequestTime)
+        addArrangedSubview(feedCategoryTag)
+        makeConstraints()
+    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    required init(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func makeConstraints() {
+        feedOfferRequestTime.makeSubview(of: self)
+            .width(160)
+            .right(to: \.leftAnchor,
+                   of: feedCategoryTag,
+                   constant: -81)
     }
 }

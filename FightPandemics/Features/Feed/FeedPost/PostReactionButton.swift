@@ -28,14 +28,22 @@ import UIKit
 
 enum PostReactionButtonType {
     case like
-    case message
+    case comments
     case send
 }
 
 class PostReactionButton: UIButton {
     private var type: PostReactionButtonType
 
-    init(_ type: PostReactionButtonType) {
+    var count: Int? {
+        didSet {
+            if let count = count, type == .like || type == .comments {
+                setTitle(String(count), for: .normal)
+            }
+        }
+    }
+
+    init(type: PostReactionButtonType) {
         self.type = type
         super.init(frame: .zero)
         configureButton()
@@ -45,37 +53,21 @@ class PostReactionButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var count: Int? {
-        didSet {
-            if let count = count, type == .like || type == .message {
-                setTitle(String(count), for: .normal)
-            }
-        }
-    }
-
     @objc func tap() {
         isSelected.toggle()
     }
 
     private func configureButton() {
-        translatesAutoresizingMaskIntoConstraints = false
-        let rightPadding: CGFloat
         imageView?.contentMode = .scaleAspectFit
         switch type {
         case .like:
-            rightPadding = 9.8
             setImage(#imageLiteral(resourceName: "heart"), for: .normal)
             setImage(#imageLiteral(resourceName: "heart_filled"), for: .selected)
-        case .message:
-            rightPadding = 11.8
+        case .comments:
             setImage(#imageLiteral(resourceName: "message-square"), for: .normal)
         case .send:
-            rightPadding = 0.0
             setImage(#imageLiteral(resourceName: "send"), for: .normal)
         }
-        imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: rightPadding)
-        titleLabel?.font = Fonts.poppinsRegular.customFont(size: 14)
-        setTitleColor(#colorLiteral(red: 0.5764705882, green: 0.5764705882, blue: 0.5764705882, alpha: 1), for: .normal)
         addTarget(self, action: #selector(tap), for: .touchUpInside)
     }
 }

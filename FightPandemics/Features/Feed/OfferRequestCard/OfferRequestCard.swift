@@ -1,8 +1,8 @@
 //
-//  FeedCatTag.swift
+//  OfferRequestCard.swift
 //  FightPandemics
 //
-//  Created by ehsan sat on 5/24/20.
+//  Created by Luciano Schillagi on 6/15/20.
 //
 //  Copyright (c) 2020 FightPandemics
 //
@@ -26,22 +26,39 @@
 
 import UIKit
 
-class FeedCatTag: UILabel {
-    var categoryTagTxt: String
-
-    init(categoryTagTxt: String) {
-        self.categoryTagTxt = categoryTagTxt
+class OfferRequestCard: UIStackView {
+    override init(frame _: CGRect) {
         super.init(frame: .zero)
-        heightAnchor.constraint(equalToConstant: 38.0).isActive = true
-        attributedText = NSAttributedString(string: categoryTagTxt,
-                                            attributes: [NSAttributedString.Key.font: Fonts.dmSansRegular.customFont(size: 11), NSAttributedString.Key.foregroundColor: UIColor.fightPandemicsNeonBlue()])
-        backgroundColor = UIColor.fightPandemicsGhostWhite()
-        textAlignment = .center
-        layer.masksToBounds = true
-        layer.cornerRadius = 4
     }
 
-    required init?(coder _: NSCoder) {
+    required init(headerData: HeaderOfferRequestCard,
+                  subHeaderData: SubHeaderOfferRequestCard,
+                  bodyData: BodyOfferRequestCard,
+                  footerData: FooterOfferRequestCard) {
+        super.init(frame: .zero)
+
+        headerData.translatesAutoresizingMaskIntoConstraints = false
+        subHeaderData.translatesAutoresizingMaskIntoConstraints = false
+        bodyData.translatesAutoresizingMaskIntoConstraints = false
+        footerData.translatesAutoresizingMaskIntoConstraints = false
+
+        // Offer Request Card Constraints
+        translatesAutoresizingMaskIntoConstraints = false
+        axis = .vertical
+        distribution = .fillProportionally
+        spacing = 10
+        addArrangedSubview(headerData)
+        addArrangedSubview(subHeaderData)
+        addArrangedSubview(bodyData)
+        addArrangedSubview(footerData)
+
+        // Footer to Card Constraints
+        footerData.makeSubview(of: self)
+            .right(to: \.rightAnchor,
+                   constant: -190)
+    }
+
+    required init(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

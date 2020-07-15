@@ -28,11 +28,39 @@ import UIKit
 
 class FeedViewCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: self)
+
+    var characters = ["Link", "Zelda", "Ganondorf", "Midna"]
+
+    // The Offer Request Card (Feed)
+    let offerReqCard = OfferRequestCard(headerData: .init(postedDate: "P", reqOrOffer: "O", supplyType: "M"), subHeaderData: .init(initials: "AM", name: "Ana Muller", location: "Berlin, Germany"), bodyData: .init(tit: "I", message: "E"), footerData: .init(numOfLikes: 4, numOfComments: 7))
+
+    let postCardTableView = UITableView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
 
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func setupView() {
+        offerReqCard.makeSubview(of: contentView)
+            .top(to: \.topAnchor, constant: 20)
+            .left(to: \.leftAnchor, constant: 20)
+            .right(to: \.rightAnchor, constant: -20)
+            .width(UIScreen.main.bounds.width)
+            .height(375)
+    }
+}
+
+extension FeedViewCell: UITableViewDataSource {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return characters.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = characters[indexPath.row]
+        return cell
     }
 }

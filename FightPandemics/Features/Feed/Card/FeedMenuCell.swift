@@ -28,6 +28,7 @@ import UIKit
 
 class FeedMenuCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: self)
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
