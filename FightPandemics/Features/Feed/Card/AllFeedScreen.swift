@@ -35,6 +35,7 @@ class AllFeedScreen: BaseCell {
     }()
 
     var dataSource: UICollectionViewDiffableDataSource<Section, Post>!
+    private let refreshControl = UIRefreshControl()
 
     override func setupViews() {
         collectionView.register(cellType: FeedCell.self)
@@ -63,6 +64,7 @@ class AllFeedScreen: BaseCell {
         })
         collectionView.dataSource = dataSource
         fetchPost()
+        configureRefreshControl()
     }
 
     func fetchPost() {
@@ -72,6 +74,20 @@ class AllFeedScreen: BaseCell {
         snapShot.appendSections([.main])
         snapShot.appendItems(posts)
         dataSource.apply(snapShot)
+    }
+
+    private func configureRefreshControl() {
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshFeedData), for: .valueChanged)
+    }
+
+    @objc private func refreshFeedData() {
+        // Call fetchPost() to fetch new data
+
+        // Call this when the data has been fetched to stop the refresh animation
+        DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
+        }
     }
 
     private func createLayout() -> UICollectionViewLayout {
