@@ -31,8 +31,8 @@ final class FeedViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
     }
-    
-    private let feedMenuBar = FeedMenuBar()
+
+    private let feedMenuBar = MenuBar()
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -71,7 +71,9 @@ private extension FeedViewController {
             .width(to: \.widthAnchor)
             .height(57)
 
-        collectionView.register(FeedViewCell.self, forCellWithReuseIdentifier: FeedViewCell.reuseIdentifier)
+        collectionView.register(cellType: AllFeedScreen.self)
+        collectionView.register(cellType: OfferFeedScreen.self)
+        collectionView.register(cellType: RequestFeedScreen.self)
         collectionView.makeSubview(of: view)
             .top(to: \.bottomAnchor, of: feedMenuBar, relation: .equal, constant: 8, priority: .required)
             .leading(to: \.leadingAnchor)
@@ -86,16 +88,14 @@ extension FeedViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedViewCell.reuseIdentifier, for: indexPath) as? FeedViewCell else {
-            return UICollectionViewCell()
-        }
+        let cell: UICollectionViewCell
 
         if indexPath.row == 0 {
-            cell.backgroundColor = .orange
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllFeedScreen.reuseIdentifier, for: indexPath)
         } else if indexPath.row == 1 {
-            cell.backgroundColor = .green
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: OfferFeedScreen.reuseIdentifier, for: indexPath)
         } else {
-            cell.backgroundColor = .purple
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: RequestFeedScreen.reuseIdentifier, for: indexPath)
         }
         return cell
     }
