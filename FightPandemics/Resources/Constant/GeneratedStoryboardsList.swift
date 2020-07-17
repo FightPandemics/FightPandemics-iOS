@@ -27,8 +27,6 @@ internal enum StoryboardScene {
 
         internal static let initialScene = InitialSceneType<FightPandemics.FeedViewController>(storyboard: Feed.self)
 
-        internal static let feedPrototypeViewController = SceneType<FightPandemics.FeedPrototypeViewController>(storyboard: Feed.self, identifier: "FeedPrototypeViewController")
-
         internal static let feedViewController = SceneType<FightPandemics.FeedViewController>(storyboard: Feed.self, identifier: "FeedViewController")
     }
 
